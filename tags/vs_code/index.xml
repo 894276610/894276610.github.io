@@ -23,18 +23,20 @@
 其实还有很多专注Markdown文本编辑的软件
  Typora Joplin Cmd Markdown  如果你选择VS code, 那么可能需要安装以下插件：
  Markdown Toc 生成目录 Markdown All in One 实现基本语法 Markdown Preview Enhanced 实现预览效果
-点击VS code 软件内图标输入相应插件并下载  基本操作   换行
-行末加两个空格再按回车
-  加粗，倾斜
+点击VS code 软件内图标输入相应插件并下载  基本操作  换行
+行末加两个空格再按回车 加粗，倾斜
 **加粗** =&amp;gt; 加粗
 快捷键 Ctrl + B
 *倾斜* =&amp;gt; 倾斜
 快捷键 Ctrl + I
-  标题格式
+ 标题格式
 ### 三级标题
 #### 四级标题
 最多支持六级标题
-  插入图片</description>
+ 插入图片
+![注释](图片地址)
+插入网站图片：
+[![UaC6ns.th.jpg](https://s1.ax1x.com/2020/07/14/UaC6ns.th.jpg)](https://imgchr.com/i/UaC6ns)</description>
     </item>
     
   </channel>
