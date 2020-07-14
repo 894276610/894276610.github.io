@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on 云居小栈</title>
+    <link>https://894276610.github.io/post/</link>
+    <description>Recent content in Posts on 云居小栈</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 14 Jul 2020 17:42:54 +0800</lastBuildDate>
+    
+	<atom:link href="https://894276610.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Markdown基础</title>
+      <link>https://894276610.github.io/post/markdownlanguage/</link>
+      <pubDate>Tue, 14 Jul 2020 17:42:54 +0800</pubDate>
+      
+      <guid>https://894276610.github.io/post/markdownlanguage/</guid>
+      <description>Markdown编辑注重键盘操作，省去费时的鼠标操作，享受码字过程以及优质排版。
+这篇博客简单记录一下基本的Markdown使用入门
+关键字： MARKDOWN VS_CODE
+ 准备工作 基本操作 参考文献 其他花絮  准备工作 VS code有丰富的插件，可以支持Markdown编辑以及预览
+其实还有很多专注Markdown文本编辑的软件
+ Typora Joplin Cmd Markdown  如果你选择VS code, 那么可能需要安装以下插件：
+ Markdown Toc 生成目录 Markdown All in One 实现基本语法 Markdown Preview Enhanced 实现预览效果
+点击VS code 软件内图标输入相应插件并下载   基本操作   换行
+行末加两个空格再按回车
+  加粗，倾斜
+**加粗** =&amp;gt; 加粗
+快捷键 Ctrl + B
+*倾斜* =&amp;gt; 倾斜
+快捷键 Ctrl + I
+  标题格式
+### 三级标题
+#### 四级标题</description>
+    </item>
+    
+    <item>
+      <title>搭建博客(HUGO)</title>
+      <link>https://894276610.github.io/post/hugo_try/</link>
+      <pubDate>Tue, 14 Jul 2020 14:24:47 +0800</pubDate>
+      
+      <guid>https://894276610.github.io/post/hugo_try/</guid>
+      <description>这篇博客总结了使用HUGO在Linux系统搭建部署博客的基本步骤
+关键词： HUGO LINUX GITHUB GIT
+1. 下载安装HUGO 1.1 从Github下载HUGO安装包 Github的gohugo发布了一系列安装包
+可以下载.deb 文件来安装到linux系统中
+1.2 安装HUGO 在终端输入安装命令
+sudo dpkg -i yourpackage.deb  2.建立本地站点 2.1让HUGO软件帮我们创建本地空站点 hugo new site yoursitename  2.2下载并应用网页主题 网页主题模板库地址：https://themes.gohugo.io/
+选好模板，按照模板下方文档的提示GIT CLONE
+在终端进入yoursitename/themes文件夹下
+git clone UrlOfTheme  2.3创建本地站点草稿 hugo server -t yourtheme --buildDrafts  创建之后可以在本地端口1313查看网页
+3.增加博客内容 3.1新建一篇博客 hugo new post/blogname.md  这个.md文件内容即为博客内容
+3.2注意draft参数修改为false 在自动生成的日期下方一行有draft参数
+为了在真正生成网页时看到博客内容
+需要将其修改为
+draft: false
+4.建立GITHUB仓库 在github 新建仓库(repository)
+仓库名称格式设为 yourgithubname.github.io
+格式别弄错！
+5.部署网页 5.1生成部署文件public hugo --theme=yourtheme --baseUrl=&amp;quot;https://yourgithubname.github.io/&amp;quot; --buildDrafts  5.</description>
+    </item>
+    
+    <item>
+      <title>Bolg</title>
+      <link>https://894276610.github.io/post/firstblog/</link>
+      <pubDate>Sun, 12 Jul 2020 15:01:05 +0800</pubDate>
+      
+      <guid>https://894276610.github.io/post/firstblog/</guid>
+      <description>This is my first blog!</description>
+    </item>
+    
+  </channel>
+</rss>
