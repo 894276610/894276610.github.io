@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on My New Hugo Site</title>
+    <title>Posts on 云居小栈</title>
     <link>https://894276610.github.io/post/</link>
-    <description>Recent content in Posts on My New Hugo Site</description>
+    <description>Recent content in Posts on 云居小栈</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 14 Jul 2020 14:24:47 +0800</lastBuildDate>
@@ -17,7 +17,7 @@
       <pubDate>Tue, 14 Jul 2020 14:24:47 +0800</pubDate>
       
       <guid>https://894276610.github.io/post/hugo_try/</guid>
-      <description>搭建博客(HUGO) 这篇博客总结了使用HUGO在Linux系统搭建部署博客的基本步骤
+      <description>这篇博客总结了使用HUGO在Linux系统搭建部署博客的基本步骤
 关键词： HUGO LINUX GITHUB GIT
 1. 下载安装HUGO 1.1 从Github下载HUGO安装包 Github的gohugo发布了一系列安装包
 可以下载.deb 文件来安装到linux系统中
