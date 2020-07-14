@@ -2,33 +2,48 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on My New Hugo Site</title>
-    <link>https://894276610.github.io/post/</link>
+    <link>http://example.org/post/</link>
     <description>Recent content in Posts on My New Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 12 Jul 2020 23:36:33 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 12 Jul 2020 15:01:05 +0800</lastBuildDate>
     
-	<atom:link href="https://894276610.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://example.org/post/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>LogHugo</title>
-      <link>https://894276610.github.io/post/loghugo/</link>
-      <pubDate>Sun, 12 Jul 2020 23:36:33 +0800</pubDate>
-      
-      <guid>https://894276610.github.io/post/loghugo/</guid>
-      <description>这篇博客总结了使用HUGO在Linux系统搭建部署博客的基本步骤。 关键词： HUGO LINUX GITHUB GIT
-1.下载安装HUGO 1.1从Github下载HUGO安装包 Github的gohugo发布了一系列安装包 可以下载.deb 文件来安装到linux系统中 1.2安装HUGO 在终端输入安装命令 sudo dpkg -i yourpackage.deb 2.建立本地站点 2.1让HUGO软件帮我们创建本地空站点 hugo new site yoursitename 2.2下载并应用网页主题 网页主题模板库地址：https://themes.gohugo.io/ 选好模板，按照模板下方文档的提示GIT CLONE 在终端进入yoursitename/themes文件夹下 git clone UrlInThemeDocument 2.3创建本地站点草稿 hugo server -t yourtheme &amp;ndash;buildDrafts 创建之后可以在本地端口1313查看网页 3.增加博客内容 3.1新建一篇博客 hugo new post/blogname.md 这个.md文件内容即为博客内容 3.2注意draft参数修改为false 在自动生成的日期下方一行有draft参数 为了在真正生成网页时看到博客内容 需要将其修改为 draft: false 4.建立GITHUB仓库 在github 新建仓库(repository) 仓库名称格式设为 yourgithubname.github.io 格式别弄错！
-5.部署网页 5.1生成部署文件public hugo &amp;ndash;theme=yourtheme &amp;ndash;baseUrl=&amp;quot;https://yourgithubname.github.io/&amp;rdquo; &amp;ndash;bildDrafts 5.2将public文件夹推送至仓库 路径切换到 public, 使用 git 命令管理代码并推送至仓库 git init git add .</description>
-    </item>
     
     <item>
       <title>Bolg</title>
-      <link>https://894276610.github.io/post/bolg/</link>
+      <link>http://example.org/post/firstblog/</link>
       <pubDate>Sun, 12 Jul 2020 15:01:05 +0800</pubDate>
       
-      <guid>https://894276610.github.io/post/bolg/</guid>
+      <guid>http://example.org/post/firstblog/</guid>
       <description>This is my first blog!</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://example.org/post/hugo_first_try/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/post/hugo_first_try/</guid>
+      <description>搭建博客(HUGO) 这篇博客总结了使用HUGO在Linux系统搭建部署博客的基本步骤
+关键词： HUGO LINUX GITHUB GIT
+1. 下载安装HUGO 1.1 从Github下载HUGO安装包 Github的gohugo发布了一系列安装包
+可以下载.deb 文件来安装到linux系统中
+1.2 安装HUGO 在终端输入安装命令
+sudo dpkg -i yourpackage.deb  2.建立本地站点 2.1让HUGO软件帮我们创建本地空站点 hugo new site yoursitename 2.2下载并应用网页主题 网页主题模板库地址：https://themes.gohugo.io/
+选好模板，按照模板下方文档的提示GIT CLONE
+在终端进入yoursitename/themes文件夹下
+git clone UrlOfTheme  2.3创建本地站点草稿 hugo server -t yourtheme --buildDrafts 创建之后可以在本地端口1313查看网页
+3.增加博客内容 3.1新建一篇博客 hugo new post/blogname.md 这个.md文件内容即为博客内容
+3.2注意draft参数修改为false 在自动生成的日期下方一行有draft参数
+为了在真正生成网页时看到博客内容
+需要将其修改为
+draft: false
+4.建立GITHUB仓库 在github 新建仓库(repository)
+仓库名称格式设为 yourgithubname.github.io
+格式别弄错！
+5.部署网页 5.1生成部署文件public hugo --theme=yourtheme --baseUrl=&amp;quot;https://yourgithubname.github.io/&amp;quot; --buildDrafts 5.</description>
     </item>
     
   </channel>
