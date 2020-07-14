@@ -6,9 +6,28 @@
     <description>Recent content in Tags on 云居小栈</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Tue, 14 Jul 2020 17:42:54 +0800</lastBuildDate>
     
 	<atom:link href="https://894276610.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>MARKDOWN</title>
+      <link>https://894276610.github.io/tags/markdown/</link>
+      <pubDate>Tue, 14 Jul 2020 17:42:54 +0800</pubDate>
+      
+      <guid>https://894276610.github.io/tags/markdown/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>VS_CODE</title>
+      <link>https://894276610.github.io/tags/vs_code/</link>
+      <pubDate>Tue, 14 Jul 2020 17:42:54 +0800</pubDate>
+      
+      <guid>https://894276610.github.io/tags/vs_code/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>

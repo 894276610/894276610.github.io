@@ -19,7 +19,6 @@
       <guid>https://894276610.github.io/post/markdownlanguage/</guid>
       <description>Markdown编辑注重键盘操作，省去费时的鼠标操作，享受码字过程以及优质排版。
 这篇博客简单记录一下基本的Markdown使用入门
-关键字： MARKDOWN VS_CODE
  准备工作 基本操作 参考文献 其他花絮  准备工作 VS code有丰富的插件，可以支持Markdown编辑以及预览
 其实还有很多专注Markdown文本编辑的软件
  Typora Joplin Cmd Markdown  如果你选择VS code, 那么可能需要安装以下插件：
@@ -33,7 +32,9 @@
 快捷键 Ctrl + I
   标题格式
 ### 三级标题
-#### 四级标题</description>
+#### 四级标题
+最多支持六级标题
+  插入图片</description>
     </item>
     
     <item>
