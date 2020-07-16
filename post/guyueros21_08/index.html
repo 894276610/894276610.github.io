@@ -12,12 +12,12 @@
     
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="[学习笔记]古月ROS入门21讲——第八讲"/>
-<meta name="twitter:description" content="第八讲 ROS 命令行的使用  第八讲 ROS 命令行的使用  ROS 命令行工具  Workspace 相关命令 Package 相关命令   参考文献（References）    ROS 命令行工具 常用命令
- rostopic rosservice rosnode rosparam rosmsg rossrv  Workspace 相关命令  Create workspace   mkdir catkin_ws &amp;&amp; cd catkin_ws wstool init src catkin_make source devel/setup.bash  catkin_make是在catkin工作区中构建代码的便捷工具。 catkin_make遵循catkin工作区的标准布局 source命令功能：使Shell读入指定的Shell程序文件并依次执行文件中的所有语句 source命令通常用于重新执行刚修改的初始化文件，使之立即生效，而不必注销并重新登录  Add Repo to Workspace roscd; cd ../src wstool set repo_name \ --git http://github.com/org/repo_name.git \ --version=kinetic-devel wstool up    roscd是ros系统中的命令，它可以直接切换到指定目录（ros系统中的软件包） roscd只能切换到那些路径已经包含在ROS_PACKAGE_PATH环境变量中的软件包"/>
+<meta name="twitter:description" content="1. 第八讲 ROS 命令行的使用  1. 第八讲 ROS 命令行的使用  1.1. ROS 命令行工具  1.1.1. Workspace 相关命令 1.1.2. Package 相关命令 1.1.3. CMakeLists.txt 1.1.4. RUNNING SYSTEM   1.2. 启动小海龟 1.3. 分析小海龟话题和服务 1.4. 使用命令行工具让海龟动起来 （话题通讯） 1.5. 添加新海龟 （服务通讯） 1.6. 话题记录和复现 1.7. 参考文献（References）    1.1. ROS 命令行工具 常用命令
+ rostopic rosservice rosnode rosparam rosmsg rossrv  1.1.1. Workspace 相关命令  Create workspace   mkdir catkin_ws &amp;&amp; cd catkin_ws wstool init src catkin_make source devel/setup."/>
 
     <meta property="og:title" content="[学习笔记]古月ROS入门21讲——第八讲" />
-<meta property="og:description" content="第八讲 ROS 命令行的使用  第八讲 ROS 命令行的使用  ROS 命令行工具  Workspace 相关命令 Package 相关命令   参考文献（References）    ROS 命令行工具 常用命令
- rostopic rosservice rosnode rosparam rosmsg rossrv  Workspace 相关命令  Create workspace   mkdir catkin_ws &amp;&amp; cd catkin_ws wstool init src catkin_make source devel/setup.bash  catkin_make是在catkin工作区中构建代码的便捷工具。 catkin_make遵循catkin工作区的标准布局 source命令功能：使Shell读入指定的Shell程序文件并依次执行文件中的所有语句 source命令通常用于重新执行刚修改的初始化文件，使之立即生效，而不必注销并重新登录  Add Repo to Workspace roscd; cd ../src wstool set repo_name \ --git http://github.com/org/repo_name.git \ --version=kinetic-devel wstool up    roscd是ros系统中的命令，它可以直接切换到指定目录（ros系统中的软件包） roscd只能切换到那些路径已经包含在ROS_PACKAGE_PATH环境变量中的软件包" />
+<meta property="og:description" content="1. 第八讲 ROS 命令行的使用  1. 第八讲 ROS 命令行的使用  1.1. ROS 命令行工具  1.1.1. Workspace 相关命令 1.1.2. Package 相关命令 1.1.3. CMakeLists.txt 1.1.4. RUNNING SYSTEM   1.2. 启动小海龟 1.3. 分析小海龟话题和服务 1.4. 使用命令行工具让海龟动起来 （话题通讯） 1.5. 添加新海龟 （服务通讯） 1.6. 话题记录和复现 1.7. 参考文献（References）    1.1. ROS 命令行工具 常用命令
+ rostopic rosservice rosnode rosparam rosmsg rossrv  1.1.1. Workspace 相关命令  Create workspace   mkdir catkin_ws &amp;&amp; cd catkin_ws wstool init src catkin_make source devel/setup." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://894276610.github.io/post/guyueros21_08/" />
 <meta property="article:published_time" content="2020-07-16T21:20:13+08:00" />
@@ -61,23 +61,30 @@
         </div></div>
     </header>
     <div class="post-content">
-      <h1 id="第八讲-ros-命令行的使用">第八讲 ROS 命令行的使用</h1>
+      <h1 id="1-第八讲-ros-命令行的使用">1. 第八讲 ROS 命令行的使用</h1>
 <!-- raw HTML omitted -->
 <ul>
-<li><a href="#%E7%AC%AC%E5%85%AB%E8%AE%B2-ros-%E5%91%BD%E4%BB%A4%E8%A1%8C%E7%9A%84%E4%BD%BF%E7%94%A8">第八讲 ROS 命令行的使用</a>
+<li><a href="#1-%E7%AC%AC%E5%85%AB%E8%AE%B2-ros-%E5%91%BD%E4%BB%A4%E8%A1%8C%E7%9A%84%E4%BD%BF%E7%94%A8">1. 第八讲 ROS 命令行的使用</a>
 <ul>
-<li><a href="#ros-%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%B7%A5%E5%85%B7">ROS 命令行工具</a>
+<li><a href="#11-ros-%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%B7%A5%E5%85%B7">1.1. ROS 命令行工具</a>
 <ul>
-<li><a href="#workspace-%E7%9B%B8%E5%85%B3%E5%91%BD%E4%BB%A4">Workspace 相关命令</a></li>
-<li><a href="#package-%E7%9B%B8%E5%85%B3%E5%91%BD%E4%BB%A4">Package 相关命令</a></li>
+<li><a href="#111-workspace-%E7%9B%B8%E5%85%B3%E5%91%BD%E4%BB%A4">1.1.1. Workspace 相关命令</a></li>
+<li><a href="#112-package-%E7%9B%B8%E5%85%B3%E5%91%BD%E4%BB%A4">1.1.2. Package 相关命令</a></li>
+<li><a href="#113-cmakeliststxt">1.1.3. CMakeLists.txt</a></li>
+<li><a href="#114-running-system">1.1.4. RUNNING SYSTEM</a></li>
 </ul>
 </li>
-<li><a href="#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AEreferences">参考文献（References）</a></li>
+<li><a href="#12-%E5%90%AF%E5%8A%A8%E5%B0%8F%E6%B5%B7%E9%BE%9F">1.2. 启动小海龟</a></li>
+<li><a href="#13-%E5%88%86%E6%9E%90%E5%B0%8F%E6%B5%B7%E9%BE%9F%E8%AF%9D%E9%A2%98%E5%92%8C%E6%9C%8D%E5%8A%A1">1.3. 分析小海龟话题和服务</a></li>
+<li><a href="#14-%E4%BD%BF%E7%94%A8%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%B7%A5%E5%85%B7%E8%AE%A9%E6%B5%B7%E9%BE%9F%E5%8A%A8%E8%B5%B7%E6%9D%A5-%E8%AF%9D%E9%A2%98%E9%80%9A%E8%AE%AF">1.4. 使用命令行工具让海龟动起来 （话题通讯）</a></li>
+<li><a href="#15-%E6%B7%BB%E5%8A%A0%E6%96%B0%E6%B5%B7%E9%BE%9F-%E6%9C%8D%E5%8A%A1%E9%80%9A%E8%AE%AF">1.5. 添加新海龟 （服务通讯）</a></li>
+<li><a href="#16-%E8%AF%9D%E9%A2%98%E8%AE%B0%E5%BD%95%E5%92%8C%E5%A4%8D%E7%8E%B0">1.6. 话题记录和复现</a></li>
+<li><a href="#17-%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AEreferences">1.7. 参考文献（References）</a></li>
 </ul>
 </li>
 </ul>
 <!-- raw HTML omitted -->
-<h2 id="ros-命令行工具">ROS 命令行工具</h2>
+<h2 id="11-ros-命令行工具">1.1. ROS 命令行工具</h2>
 <p>常用命令</p>
 <ul>
 <li>rostopic</li>
@@ -87,7 +94,7 @@
 <li>rosmsg</li>
 <li>rossrv</li>
 </ul>
-<h3 id="workspace-相关命令">Workspace 相关命令</h3>
+<h3 id="111-workspace-相关命令">1.1.1. Workspace 相关命令</h3>
 <ol>
 <li>Create workspace</li>
 </ol>
@@ -123,7 +130,7 @@ wstool up
 rosdep update
 rosdep install --from-paths src  --ignore-src \
 --rosdistro=${ROS_DISTRO} -y
-</code></pre><h3 id="package-相关命令">Package 相关命令</h3>
+</code></pre><h3 id="112-package-相关命令">1.1.2. Package 相关命令</h3>
 <ol>
 <li>
 <p>Create a package</p>
@@ -154,7 +161,7 @@ bloom-release --track kinetic --ros-distro kinetic repo_name
 <li>Publish diagnostics</li>
 <li>Desktop dependencies in a separate package</li>
 </ul>
-<h3 id="cmakeliststxt">CMakeLists.txt</h3>
+<h3 id="113-cmakeliststxt">1.1.3. CMakeLists.txt</h3>
 <ol>
 <li>skeleton(骨架)</li>
 </ol>
@@ -200,7 +207,7 @@ install (TARGETS ${PROJECT_NAME}_node DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATI
 install (PROGRAMS scripts/myscript DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
 install (DIRECTORY launch DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION})
 
-</code></pre><h3 id="running-system">RUNNING SYSTEM</h3>
+</code></pre><h3 id="114-running-system">1.1.4. RUNNING SYSTEM</h3>
 <p>Run ROS using plain:</p>
 <pre><code>roscore
 </code></pre><p>Alternatively, roslaunch will run its own roscore automatically if it cannot find one.</p>
@@ -237,7 +244,7 @@ Adjust using rqt_logger_level and monitor via rqt_console. To enable debug outpu
 </code></pre><p>And add the following to your sesssion:</p>
 <pre><code>export ROSCONSOLE_CONFIG_FILE=$/HOME/.ros/config/rosconsole.config
 </code></pre><p>Use the roslaunch <code>--screen flag</code> to force all the node output to the screen, as if each declared <code>&lt;node&gt;</code> had the output=&quot;screen&rdquo; attribite.</p>
-<h2 id="启动小海龟">启动小海龟</h2>
+<h2 id="12-启动小海龟">1.2. 启动小海龟</h2>
 <ol>
 <li>启动终端  启动ROS MASTER<br>
 <code>roscore</code></li>
@@ -247,7 +254,7 @@ rosrun 功能包名  节点名称<br>
 <li>启动新终端 启动海龟控制节点<br>
 <code>rosrun turtlesim turtle_teleop_key</code></li>
 </ol>
-<h2 id="分析小海龟话题和服务">分析小海龟话题和服务</h2>
+<h2 id="13-分析小海龟话题和服务">1.3. 分析小海龟话题和服务</h2>
 <ol>
 <li>基于qt的可视化工具 <code>rqt graph</code></li>
 </ol>
@@ -275,7 +282,7 @@ rosrun 功能包名  节点名称<br>
 <p><code>rostopic list</code> 打印当前系统的所有的话题列表</p>
 </li>
 </ul>
-<h2 id="使用命令行工具让海龟动起来-话题通讯">使用命令行工具让海龟动起来 （话题通讯）</h2>
+<h2 id="14-使用命令行工具让海龟动起来-话题通讯">1.4. 使用命令行工具让海龟动起来 （话题通讯）</h2>
 <ul>
 <li>rostopic pub(发布) 话题名 消息结构 消息内容</li>
 <li>结果： 海龟只动了一下</li>
@@ -305,7 +312,7 @@ z: 1.0 &quot;
 rosmsg show 消息结构<br>
 <code>rosmsg show geometry_msgs/Twist</code></li>
 </ul>
-<h2 id="添加新海龟-服务通讯">添加新海龟 （服务通讯）</h2>
+<h2 id="15-添加新海龟-服务通讯">1.5. 添加新海龟 （服务通讯）</h2>
 <ul>
 <li>查看所有服务列表<br>
 <code>rosservice list</code></li>
@@ -317,7 +324,7 @@ y: 0.0
 theta: 0.0 
 name: 'turtle2'&quot; 
 </code></pre><p>服务通讯成功在命令行会有一个反馈信息</p>
-<h2 id="话题记录和复现">话题记录和复现</h2>
+<h2 id="16-话题记录和复现">1.6. 话题记录和复现</h2>
 <ul>
 <li>话题记录 <code>rosbag record </code><br>
 -a 表示 all 保存所有的数据 <br>
@@ -335,7 +342,7 @@ name: 'turtle2'&quot;
 rosbag play 文件名</li>
 </ul>
 <pre><code>rosbag play cmd record.bag  
-</code></pre><h2 id="参考文献references">参考文献（References）</h2>
+</code></pre><h2 id="17-参考文献references">1.7. 参考文献（References）</h2>
 <p>[1]<a href="https://www.bilibili.com/video/BV1zt411G7Vn?p=8">古月ROS入门21讲——第八讲</a><br>
 [2]<a href="https://zhidao.baidu.com/question/351365849.html">linux命令结尾加斜杠与不加斜杠的区别</a><br>
 [3]<a href="https://zhidao.baidu.com/question/180892800.html">界面最大化<code>Alt</code>+<code>Space</code>+<code>X</code></a><br>
