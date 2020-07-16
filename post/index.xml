@@ -6,10 +6,25 @@
     <description>Recent content in Posts on 云居小栈</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 16 Jul 2020 21:50:13 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 16 Jul 2020 22:48:51 +0800</lastBuildDate>
     
 	<atom:link href="https://894276610.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[代码]Ros系统安装步骤</title>
+      <link>https://894276610.github.io/post/ros_install_tips/</link>
+      <pubDate>Thu, 16 Jul 2020 22:48:51 +0800</pubDate>
+      
+      <guid>https://894276610.github.io/post/ros_install_tips/</guid>
+      <description>当时安装ROS困难重重
+总体上是按照这个步骤走的
+中间有几个步骤为ROS网站设置了本地DNS
+具体记不太清了
+都是在CSDN 找到的解决方案
+1.
+$ sudo sh -c &#39;echo &amp;quot;deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main&amp;quot; &amp;gt; /etc/apt/sources.list.d/ros-latest.list&#39;   $ sudo apt-key adv --keyserver &#39;hkp://keyserver.ubuntu.com:80&#39; --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654   $ sudo apt update $ sudo apt install ros-melodic-desktop-full（使用中科大镜像）   sudo rosdep init rosdep update   $ echo &amp;quot;source /opt/ros/melodic/setup.bash&amp;quot;&amp;gt;&amp;gt; ~/.bashrc $ source ~/.bashrc   $ sudo apt install python-rosinstall python-rosinstall-generator python-wstool build-essential 参考资料： 古月ROS入门21讲</description>
+    </item>
     
     <item>
       <title>[学习笔记]古月ROS入门21讲——第八讲</title>
@@ -22,7 +37,7 @@
     </item>
     
     <item>
-      <title>[学习笔记]古月ROS入门21讲——第七讲]</title>
+      <title>[学习笔记]古月ROS入门21讲——第七讲</title>
       <link>https://894276610.github.io/post/guyueros21/guyueros21_07/</link>
       <pubDate>Thu, 16 Jul 2020 21:41:46 +0800</pubDate>
       
