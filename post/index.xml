@@ -6,19 +6,38 @@
     <description>Recent content in Posts on 云居小栈</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 16 Jul 2020 21:20:13 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 16 Jul 2020 21:50:13 +0800</lastBuildDate>
     
 	<atom:link href="https://894276610.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>[学习笔记]古月ROS入门21讲——第八讲</title>
-      <link>https://894276610.github.io/post/guyueros21_08/</link>
-      <pubDate>Thu, 16 Jul 2020 21:20:13 +0800</pubDate>
+      <link>https://894276610.github.io/post/guyueros21/guyueros21_08/</link>
+      <pubDate>Thu, 16 Jul 2020 21:50:13 +0800</pubDate>
       
-      <guid>https://894276610.github.io/post/guyueros21_08/</guid>
+      <guid>https://894276610.github.io/post/guyueros21/guyueros21_08/</guid>
       <description>1. 第八讲 ROS 命令行的使用  1. 第八讲 ROS 命令行的使用  1.1. ROS 命令行工具  1.1.1. Workspace 相关命令 1.1.2. Package 相关命令 1.1.3. CMakeLists.txt 1.1.4. RUNNING SYSTEM   1.2. 启动小海龟 1.3. 分析小海龟话题和服务 1.4. 使用命令行工具让海龟动起来 （话题通讯） 1.5. 添加新海龟 （服务通讯） 1.6. 话题记录和复现 1.7. 参考文献（References）    1.1. ROS 命令行工具 常用命令
  rostopic rosservice rosnode rosparam rosmsg rossrv  1.1.1. Workspace 相关命令  Create workspace   mkdir catkin_ws &amp;amp;&amp;amp; cd catkin_ws wstool init src catkin_make source devel/setup.</description>
+    </item>
+    
+    <item>
+      <title>[学习笔记]古月ROS入门21讲——第七讲]</title>
+      <link>https://894276610.github.io/post/guyueros21/guyueros21_07/</link>
+      <pubDate>Thu, 16 Jul 2020 21:41:46 +0800</pubDate>
+      
+      <guid>https://894276610.github.io/post/guyueros21/guyueros21_07/</guid>
+      <description>第七讲 ROS核心概念  第七讲 ROS核心概念  通信机制：  节点(node): 节点管理器(ROS Master)：   话题通信  话题（Topic） 消息（Message）   服务通信 服务（service） 参数（Parameter）全局共享字典 文件系统  功能包（Package） 功能包清单（Package manifest） 元功能包（Meta Packages）      通信机制： 节点(node): 执行单元
+完成具体功能的进程
+图像识别，图像驱动&amp;hellip;
+可以分布在不同机器上
+每一个节点的编程语言可不固定
+可执行文件
+节点在系统中的名称必须是统一的
+节点管理器(ROS Master)： 控制中心
+ 为节点提供命名和注册服务 跟踪和记录话题/服务通信，辅助节点相互查找、建立连接 提供参数服务器（后面会讲）全局对象字典，节点使用此服务器存储和检索运行时的参数  话题通信 单向传输
+话题（Topic）  节点之间用来传输数据的重要总线 使用发布/订阅模型，数据由发布者传输到订阅者，同一个话题的订阅者或发布者可以不唯一  消息（Message）  具有一定数据类型和数据结构，也可以自定义类型 使用编程语言无关的.msg 文件定义，编译过程中生成对应的代码文件  服务通信 有反馈的通讯
+服务（service）  同步通信机制 使用客户端/服务器模型，客户端发送请求数据，服务器完成处理后返回应答数据； 使用编程语言无关的.</description>
     </item>
     
     <item>
