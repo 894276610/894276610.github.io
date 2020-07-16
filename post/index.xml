@@ -6,10 +6,20 @@
     <description>Recent content in Posts on 云居小栈</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 14 Jul 2020 17:42:54 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 16 Jul 2020 21:20:13 +0800</lastBuildDate>
     
 	<atom:link href="https://894276610.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[学习笔记]古月ROS入门21讲——第八讲</title>
+      <link>https://894276610.github.io/post/guyueros21_08/</link>
+      <pubDate>Thu, 16 Jul 2020 21:20:13 +0800</pubDate>
+      
+      <guid>https://894276610.github.io/post/guyueros21_08/</guid>
+      <description>第八讲 ROS 命令行的使用  第八讲 ROS 命令行的使用  ROS 命令行工具  Workspace 相关命令 Package 相关命令   参考文献（References）    ROS 命令行工具 常用命令
+ rostopic rosservice rosnode rosparam rosmsg rossrv  Workspace 相关命令  Create workspace   mkdir catkin_ws &amp;amp;&amp;amp; cd catkin_ws wstool init src catkin_make source devel/setup.bash  catkin_make是在catkin工作区中构建代码的便捷工具。 catkin_make遵循catkin工作区的标准布局 source命令功能：使Shell读入指定的Shell程序文件并依次执行文件中的所有语句 source命令通常用于重新执行刚修改的初始化文件，使之立即生效，而不必注销并重新登录  Add Repo to Workspace roscd; cd ../src wstool set repo_name \ --git http://github.com/org/repo_name.git \ --version=kinetic-devel wstool up    roscd是ros系统中的命令，它可以直接切换到指定目录（ros系统中的软件包） roscd只能切换到那些路径已经包含在ROS_PACKAGE_PATH环境变量中的软件包</description>
+    </item>
     
     <item>
       <title>Markdown基础</title>
