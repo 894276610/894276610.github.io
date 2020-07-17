@@ -17,7 +17,7 @@
       <pubDate>Thu, 16 Jul 2020 22:48:51 +0800</pubDate>
       
       <guid>https://894276610.github.io/post/ros_install_tips/</guid>
-      <description>当时安装ROS困难重重
+      <description>当时安装ROS 18.04 困难重重
 总体上是按照这个步骤走的
 中间有几个步骤为ROS网站设置了本地DNS
 具体记不太清了

@@ -24,7 +24,7 @@
 结果：拍出来发现实在不忍直视
 最终版本 AppStore Portrait by img.iy (ios)
 这款软件有傻瓜处理功能
-恰好能刻画主要特征 省略次要特征（主要是青春痘）
+恰好能刻画主要特征 省略次要特征（青春痘）
 这个模板整体感觉还成，就用它了
 参考资料： 无 （闲逛中收获的软件）</description>
     </item>
@@ -77,7 +77,7 @@ catkin_make install 设置环境变量  source devel/setup.bash 检查环境变�
       <pubDate>Thu, 16 Jul 2020 22:48:51 +0800</pubDate>
       
       <guid>https://894276610.github.io/post/ros_install_tips/</guid>
-      <description>当时安装ROS困难重重
+      <description>当时安装ROS 18.04 困难重重
 总体上是按照这个步骤走的
 中间有几个步骤为ROS网站设置了本地DNS
 具体记不太清了
@@ -173,7 +173,7 @@ draft: false
       <pubDate>Sun, 12 Jul 2020 15:01:05 +0800</pubDate>
       
       <guid>https://894276610.github.io/post/firstblog/</guid>
-      <description>This is my first blog!</description>
+      <description>This is my first blog! (憋说这个标题拼错了，这个标题就是这个设计)</description>
     </item>
     
   </channel>
