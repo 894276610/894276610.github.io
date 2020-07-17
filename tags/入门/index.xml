@@ -6,10 +6,33 @@
     <description>Recent content in 入门 on 云居小栈</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 17 Jul 2020 09:46:06 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 17 Jul 2020 20:52:13 +0800</lastBuildDate>
     
 	<atom:link href="https://894276610.github.io/tags/%E5%85%A5%E9%97%A8/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[学习笔记]古月ROS入门21讲——第十一讲</title>
+      <link>https://894276610.github.io/post/guyueros21/guyueros21_11/</link>
+      <pubDate>Fri, 17 Jul 2020 20:52:13 +0800</pubDate>
+      
+      <guid>https://894276610.github.io/post/guyueros21/guyueros21_11/</guid>
+      <description>第十一讲 订阅者Subscriber的编程实现 1. 创建订阅者代码（C++）  初始化ROS节点 订阅需要的话题 循环等待话题消息 接收到消息后进入回调函数 在回调函数中完成消息处理  2. 配置功能包CMakeList.txt 功能包的build
+CMakeList
+ add_executable(pose_subscriber src/pose_subscriber.cpp) target_link_libraries(pose_subscriber ${catkin_LIBRARIES}) 3. 根目录做编译,运行发布者程序  catkin_make source devel/setup.bash roscore rosrun turtlesim turtlesim_node rosrun learning_topic velocity_publisher 4. 运行订阅者程序 rosrun learning_topic pose_subscriber 参考资料 [1]古月ROS入门21讲——第十一讲</description>
+    </item>
+    
+    <item>
+      <title>[学习笔记]古月ROS入门21讲——第十讲</title>
+      <link>https://894276610.github.io/post/guyueros21/guyueros21_10/</link>
+      <pubDate>Fri, 17 Jul 2020 13:21:15 +0800</pubDate>
+      
+      <guid>https://894276610.github.io/post/guyueros21/guyueros21_10/</guid>
+      <description>发布者publisher的编程实现  发布者publisher的编程实现  1. 创建功能包 2. 创建发布者代码（C++） 3. 编辑功能包的CMakeList.txt 文件 4. 编译并运行发布者 5. 运行测试 参考文献    1. 创建功能包 cd ~catkin_ws/src catkin_create_pkg learning_topic roscpp rospy std_msgs gepmetry_msgs turtlesim 2. 创建发布者代码（C++）  初始化ROS节点 向ROS Master 注册节点信息  话题名 话题消息类型   创建消息数据 按照一定频率循环发布消息 此处需要具备基本C++知识  3. 编辑功能包的CMakeList.txt 文件  在build部分添加 add_executable(velocity_publisher src/velocity_publisher.cpp) target_link_libraries(velocity_publisher ${catkin_LIBRARIES}) 第一行代码： 把.cpp 变成左边这个可执行文件
+第二行代码： 把可执行文件与Ros库做链接 C++接口
+  4. 编译并运行发布者 回到根目录空间下
+cd ~/catkin_ws catkin_make source devel/setup.</description>
+    </item>
     
     <item>
       <title>[学习笔记]古月ROS入门21讲——第九讲</title>
