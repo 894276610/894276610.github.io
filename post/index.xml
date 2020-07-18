@@ -6,10 +6,72 @@
     <description>Recent content in Posts on 云居小栈</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 17 Jul 2020 21:53:46 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 18 Jul 2020 21:47:13 +0800</lastBuildDate>
     
 	<atom:link href="https://894276610.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[学习笔记]古月ROS入门21讲——第十四讲</title>
+      <link>https://894276610.github.io/post/guyueros21/guyueros21_14/</link>
+      <pubDate>Sat, 18 Jul 2020 21:47:13 +0800</pubDate>
+      
+      <guid>https://894276610.github.io/post/guyueros21/guyueros21_14/</guid>
+      <description>第十四讲 服务Server的编程实现  第十四讲 服务Server的编程实现  创建服务端实现代码 配置服务端代码编译规则 编译并运行    创建服务端实现代码 turtle_command_server 缺少一个分号，需要补全
+配置服务端代码编译规则 add_executable(turtle_command_server src/turtle_command_server.cpp) target_link_libraries(turtle_command_server ${catkin_LIBRARIES}) 编译并运行 cd ~/catkin_ws catkin_make source devel/setup.bash roscore rosrun turtlesim turtlesim_node rosrun learning_service turtle_command_server rosservice call /turtle_command &amp;quot;{}&amp;quot; rosservice call /turtle_command &amp;quot;{}&amp;quot; 参考资料
+[1]古月ROS入门21讲——第十四讲</description>
+    </item>
+    
+    <item>
+      <title>[学习笔记]古月ROS入门21讲——第十三讲</title>
+      <link>https://894276610.github.io/post/guyueros21/guyueros21_13/</link>
+      <pubDate>Sat, 18 Jul 2020 21:22:13 +0800</pubDate>
+      
+      <guid>https://894276610.github.io/post/guyueros21/guyueros21_13/</guid>
+      <description>第十三讲 客户端Client的编程实现  第十三讲 客户端Client的编程实现  创建功能包 创建客户端代码 配置客户端代码编译规则 编译运行    创建功能包  cd ~/catkin_ws/src catkin_create_pkg learning_service roscpp rospy std_msgs geometry_msgs turtlesim 创建客户端代码  初始化ROS节点 创建Client实例 发布服务请求数据 等待Server处理之后的应答结果  配置客户端代码编译规则 功能包CMakeLists.txt
+##build##
+add_executable(turtle_spawn src/turtle_spawn.cpp) target_link_libraries(turtle_spawn ${catkin_LIBRARIES}) 编译运行 catkin_ws路径
+catkin_make roscore rosrun turtlesim turtlesim_node rosrun learning_service turtle_spawn 参考资料
+[1]古月ROS入门21讲——第十三讲</description>
+    </item>
+    
+    <item>
+      <title>[学习笔记]古月ROS入门21讲——第十二讲</title>
+      <link>https://894276610.github.io/post/guyueros21/guyueros21_12/</link>
+      <pubDate>Sat, 18 Jul 2020 18:52:13 +0800</pubDate>
+      
+      <guid>https://894276610.github.io/post/guyueros21/guyueros21_12/</guid>
+      <description>第十二讲 话题消息的定义与使用  第十二讲 话题消息的定义与使用  自定义话题消息 创建发布者代码 配置代码编译规则 编译并运行发布者和订阅者    自定义话题消息   定义msg文件 在learning_topic 中创建文件夹 msg
+创建person.msg 文件
+是 uint 不是 unit 别敲错了
+## uint8 实在std_msgs 中做定义的第二步需配置 ## string name uint8 sex uint8 age uint8 unknown = 0 uint8 male = 1 uint8 female = 2   在package.xml 中添加功能包依赖
+动态生成程序的依赖
+&amp;lt;build_depend&amp;gt;message_generation&amp;lt;/build_depend&amp;gt; &amp;lt;exec_depend&amp;gt;message_runtime&amp;lt;/exec_depend&amp;gt; 粘贴到与其相同格式的地方
+  在CMakeList.txt添加编译选项
+find_package(... message_generation) ## Declare ROS Messages, services and actions ## add_message_files(FILES person.</description>
+    </item>
+    
+    <item>
+      <title>[Cpp]琐碎细节-待续</title>
+      <link>https://894276610.github.io/post/studycpp/details/</link>
+      <pubDate>Sat, 18 Jul 2020 15:53:46 +0800</pubDate>
+      
+      <guid>https://894276610.github.io/post/studycpp/details/</guid>
+      <description>namespace，是指标识符的各种可见范围
+参考资料：
+[1]命名空间-namespace含义</description>
+    </item>
+    
+    <item>
+      <title>[Cpp]Overload_operator</title>
+      <link>https://894276610.github.io/post/studycpp/overload_operator/</link>
+      <pubDate>Sat, 18 Jul 2020 13:46:53 +0800</pubDate>
+      
+      <guid>https://894276610.github.io/post/studycpp/overload_operator/</guid>
+      <description>新Tag引言：
+电管专业只开C和JAVA两门编程语言课程。C++ 必然得自己啃完。
+运算符重载 # include&amp;lt;iostream&amp;gt; using namespace std; class Fraction{ private: int numerator; //分子  int denominator; //分母  public : //Constructor  //No parameter  Fraction(); //Two parameter  Fraction(int,int); //copy type  Fraction(const Fraction &amp;amp;fraction1); //Destructor  ~Fraction(){} //friend function  friend Fraction operator /(Fraction &amp;amp;a, Fraction &amp;amp;b); //operator overloading  Fraction operator *(Fraction &amp;amp;a); Fraction operator +(Fraction &amp;amp;a); void show(){ cout&amp;lt;&amp;lt;numerator&amp;lt;&amp;lt;&amp;#34;\n&amp;#34;&amp;lt;&amp;lt;denominator&amp;lt;&amp;lt;&amp;#34;\n&amp;#34;; } }; //Constructor  //class_name :: class_name (parameter)  Fraction :: Fraction (){ numerator = 1; denominator = 1; } Fraction :: Fraction (int numerator, int denominator){ this-&amp;gt;numerator = numerator ; this-&amp;gt;denominator = denominator ; } Fraction :: Fraction (const Fraction &amp;amp;fraction1){ numerator = fraction1.</description>
+    </item>
     
     <item>
       <title>[花絮]头像制作思路</title>

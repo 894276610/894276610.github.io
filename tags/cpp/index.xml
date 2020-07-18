@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cpp on 云居小栈</title>
+    <link>https://894276610.github.io/tags/cpp/</link>
+    <description>Recent content in Cpp on 云居小栈</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 18 Jul 2020 15:53:46 +0800</lastBuildDate>
+    
+	<atom:link href="https://894276610.github.io/tags/cpp/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[Cpp]琐碎细节-待续</title>
+      <link>https://894276610.github.io/post/studycpp/details/</link>
+      <pubDate>Sat, 18 Jul 2020 15:53:46 +0800</pubDate>
+      
+      <guid>https://894276610.github.io/post/studycpp/details/</guid>
+      <description>namespace，是指标识符的各种可见范围
+参考资料：
+[1]命名空间-namespace含义</description>
+    </item>
+    
+    <item>
+      <title>[Cpp]Overload_operator</title>
+      <link>https://894276610.github.io/post/studycpp/overload_operator/</link>
+      <pubDate>Sat, 18 Jul 2020 13:46:53 +0800</pubDate>
+      
+      <guid>https://894276610.github.io/post/studycpp/overload_operator/</guid>
+      <description>新Tag引言：
+电管专业只开C和JAVA两门编程语言课程。C++ 必然得自己啃完。
+运算符重载 # include&amp;lt;iostream&amp;gt; using namespace std; class Fraction{ private: int numerator; //分子  int denominator; //分母  public : //Constructor  //No parameter  Fraction(); //Two parameter  Fraction(int,int); //copy type  Fraction(const Fraction &amp;amp;fraction1); //Destructor  ~Fraction(){} //friend function  friend Fraction operator /(Fraction &amp;amp;a, Fraction &amp;amp;b); //operator overloading  Fraction operator *(Fraction &amp;amp;a); Fraction operator +(Fraction &amp;amp;a); void show(){ cout&amp;lt;&amp;lt;numerator&amp;lt;&amp;lt;&amp;#34;\n&amp;#34;&amp;lt;&amp;lt;denominator&amp;lt;&amp;lt;&amp;#34;\n&amp;#34;; } }; //Constructor  //class_name :: class_name (parameter)  Fraction :: Fraction (){ numerator = 1; denominator = 1; } Fraction :: Fraction (int numerator, int denominator){ this-&amp;gt;numerator = numerator ; this-&amp;gt;denominator = denominator ; } Fraction :: Fraction (const Fraction &amp;amp;fraction1){ numerator = fraction1.</description>
+    </item>
+    
+  </channel>
+</rss>
