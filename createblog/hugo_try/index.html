@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>搭建博客(HUGO) - 云居小栈</title>
+<meta name="description" content="Learning">
+<meta name="generator" content="Hugo 0.73.0" />
+<link href="https://894276610.github.io//index.xml" rel="alternate" type="application/rss+xml">
+<link rel="canonical" href="https://894276610.github.io/createblog/hugo_try/">
+<link rel="stylesheet" href="https://894276610.github.io/css/theme.min.css">
+<script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+<link rel="stylesheet" href="https://894276610.github.io/css/chroma.min.css">
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery.easing@1.4.1/jquery.easing.min.js"></script>
+<script src="https://894276610.github.io/js/bundle.js"></script><style>
+:root {}
+</style>
+<meta property="og:title" content="搭建博客(HUGO)" />
+<meta property="og:description" content="这篇博客总结了使用HUGO在Linux系统搭建部署博客的基本步骤
+关键词： HUGO LINUX GITHUB GIT
+1. 下载安装HUGO 1.1 从Github下载HUGO安装包 Github的gohugo发布了一系列安装包
+可以下载.deb 文件来安装到linux系统中
+1.2 安装HUGO 在终端输入安装命令
+sudo dpkg -i yourpackage.deb  2.建立本地站点 2.1让HUGO软件帮我们创建本地空站点 hugo new site yoursitename  2.2下载并应用网页主题 网页主题模板库地址：https://themes.gohugo.io/
+选好模板，按照模板下方文档的提示GIT CLONE
+在终端进入yoursitename/themes文件夹下
+git clone UrlOfTheme  2.3创建本地站点草稿 hugo server -t yourtheme --buildDrafts  创建之后可以在本地端口1313查看网页
+3.增加博客内容 3.1新建一篇博客 hugo new post/blogname.md  这个.md文件内容即为博客内容
+3.2注意draft参数修改为false 在自动生成的日期下方一行有draft参数
+为了在真正生成网页时看到博客内容
+需要将其修改为
+draft: false
+4.建立GITHUB仓库 在github 新建仓库(repository)
+仓库名称格式设为 yourgithubname.github.io
+格式别弄错！
+5.部署网页 5.1生成部署文件public hugo --theme=yourtheme --baseUrl=&quot;https://yourgithubname.github.io/&quot; --buildDrafts  5." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://894276610.github.io/createblog/hugo_try/" />
+<meta property="article:published_time" content="2020-07-14T14:24:47+08:00" />
+<meta property="article:modified_time" content="2020-07-14T14:24:47+08:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="搭建博客(HUGO)"/>
+<meta name="twitter:description" content="这篇博客总结了使用HUGO在Linux系统搭建部署博客的基本步骤
+关键词： HUGO LINUX GITHUB GIT
+1. 下载安装HUGO 1.1 从Github下载HUGO安装包 Github的gohugo发布了一系列安装包
+可以下载.deb 文件来安装到linux系统中
+1.2 安装HUGO 在终端输入安装命令
+sudo dpkg -i yourpackage.deb  2.建立本地站点 2.1让HUGO软件帮我们创建本地空站点 hugo new site yoursitename  2.2下载并应用网页主题 网页主题模板库地址：https://themes.gohugo.io/
+选好模板，按照模板下方文档的提示GIT CLONE
+在终端进入yoursitename/themes文件夹下
+git clone UrlOfTheme  2.3创建本地站点草稿 hugo server -t yourtheme --buildDrafts  创建之后可以在本地端口1313查看网页
+3.增加博客内容 3.1新建一篇博客 hugo new post/blogname.md  这个.md文件内容即为博客内容
+3.2注意draft参数修改为false 在自动生成的日期下方一行有draft参数
+为了在真正生成网页时看到博客内容
+需要将其修改为
+draft: false
+4.建立GITHUB仓库 在github 新建仓库(repository)
+仓库名称格式设为 yourgithubname.github.io
+格式别弄错！
+5.部署网页 5.1生成部署文件public hugo --theme=yourtheme --baseUrl=&quot;https://yourgithubname.github.io/&quot; --buildDrafts  5."/>
+<meta itemprop="name" content="搭建博客(HUGO)">
+<meta itemprop="description" content="这篇博客总结了使用HUGO在Linux系统搭建部署博客的基本步骤
+关键词： HUGO LINUX GITHUB GIT
+1. 下载安装HUGO 1.1 从Github下载HUGO安装包 Github的gohugo发布了一系列安装包
+可以下载.deb 文件来安装到linux系统中
+1.2 安装HUGO 在终端输入安装命令
+sudo dpkg -i yourpackage.deb  2.建立本地站点 2.1让HUGO软件帮我们创建本地空站点 hugo new site yoursitename  2.2下载并应用网页主题 网页主题模板库地址：https://themes.gohugo.io/
+选好模板，按照模板下方文档的提示GIT CLONE
+在终端进入yoursitename/themes文件夹下
+git clone UrlOfTheme  2.3创建本地站点草稿 hugo server -t yourtheme --buildDrafts  创建之后可以在本地端口1313查看网页
+3.增加博客内容 3.1新建一篇博客 hugo new post/blogname.md  这个.md文件内容即为博客内容
+3.2注意draft参数修改为false 在自动生成的日期下方一行有draft参数
+为了在真正生成网页时看到博客内容
+需要将其修改为
+draft: false
+4.建立GITHUB仓库 在github 新建仓库(repository)
+仓库名称格式设为 yourgithubname.github.io
+格式别弄错！
+5.部署网页 5.1生成部署文件public hugo --theme=yourtheme --baseUrl=&quot;https://yourgithubname.github.io/&quot; --buildDrafts  5.">
+<meta itemprop="datePublished" content="2020-07-14T14:24:47&#43;08:00" />
+<meta itemprop="dateModified" content="2020-07-14T14:24:47&#43;08:00" />
+<meta itemprop="wordCount" content="107">
+
+
+
+<meta itemprop="keywords" content="" /></head>
+<body><div class="container"><header>
+<h1>云居小栈</h1>
+
+ <span class="version">Version 0.9.2</span>
+<a href="https://github.com/thingsym/hugo-theme-techdoc" class="github"><i class="fab fa-github"></i></a>
+<p class="description">Learning</p>
+
+</header>
+
+<div class="content-container">
+<main><h1>搭建博客(HUGO)</h1>
+<p>这篇博客总结了使用<strong>HUGO</strong>在Linux系统搭建部署博客的基本步骤<br>
+关键词： HUGO LINUX GITHUB GIT</p>
+<h2 id="1-下载安装hugo">1. 下载安装HUGO</h2>
+<h3 id="11-从github下载hugo安装包">1.1 从Github下载HUGO安装包</h3>
+<p>Github的gohugo发布了一系列安装包<br>
+可以下载.deb 文件来安装到linux系统中</p>
+<h3 id="12-安装hugo">1.2 安装HUGO</h3>
+<p>在终端输入安装命令</p>
+<pre><code>sudo dpkg -i yourpackage.deb  
+</code></pre>
+<h2 id="2建立本地站点">2.建立本地站点</h2>
+<h3 id="21让hugo软件帮我们创建本地空站点">2.1让HUGO软件帮我们创建本地空站点</h3>
+<pre><code>hugo new site yoursitename
+</code></pre>
+<h3 id="22下载并应用网页主题">2.2下载并应用网页主题</h3>
+<p>网页主题模板库地址：https://themes.gohugo.io/<br>
+选好模板，按照模板下方文档的提示GIT CLONE<br>
+在终端进入yoursitename/themes文件夹下</p>
+<pre><code>git clone UrlOfTheme  
+</code></pre>
+<h3 id="23创建本地站点草稿">2.3创建本地站点草稿</h3>
+<pre><code>hugo server -t yourtheme --buildDrafts
+</code></pre>
+<p>创建之后可以在本地端口1313查看网页</p>
+<h2 id="3增加博客内容">3.增加博客内容</h2>
+<h3 id="31新建一篇博客">3.1新建一篇博客</h3>
+<pre><code>hugo new post/blogname.md
+</code></pre>
+<p>这个.md文件内容即为博客内容</p>
+<h3 id="32注意draft参数修改为false">3.2注意draft参数修改为false</h3>
+<p>在自动生成的日期下方一行有draft参数<br>
+为了在真正生成网页时看到博客内容<br>
+需要将其修改为<br>
+draft: false</p>
+<h2 id="4建立github仓库">4.建立GITHUB仓库</h2>
+<p>在github 新建仓库(repository)<br>
+仓库名称格式设为 yourgithubname.github.io<br>
+<strong>格式别弄错！</strong></p>
+<h2 id="5部署网页">5.部署网页</h2>
+<h3 id="51生成部署文件public">5.1生成部署文件public</h3>
+<pre><code>hugo --theme=yourtheme --baseUrl=&quot;https://yourgithubname.github.io/&quot; --buildDrafts
+</code></pre>
+<h3 id="52将public文件夹推送至仓库">5.2将public文件夹推送至仓库</h3>
+<p>路径切换到 public, 使用 git 命令管理代码并推送至仓库</p>
+<pre><code>git init
+git add .
+git commit -m &quot;your comment for this version&quot;
+git remote add origin https://github.com/yourgithubname/yourgithubname.github.io.git
+git pull origin master
+git push -u origin master
+</code></pre>
+<h2 id="6打开网页">6.打开网页</h2>
+<p>博客网址：
+<a href="https://yourgithubname.github.io">https://yourgithubname.github.io</a></p>
+<h2 id="参考文献">参考文献</h2>
+<p>【1】<a href="https://www.bilibili.com/video/BV1q4411i7gL">程序羊HUGO教程</a><br>
+【2】<a href="https://www.bilibili.com/video/BV19J411j7SZ">Git教程</a><br>
+【3】<a href="https://www.bilibili.com/video/BV1LA411h7Yc">VS code 入门</a></p>
+<div class="edit-meta">
+Last updated on 14 Jul 2020
+
+
+<br>
+Published on 14 Jul 2020
+<br><a href="https://github.com/thingsym/hugo-theme-techdoc/edit/master/content/CreateBlog%5chugo_try.md" class="edit-page"><i class="fas fa-pen-square"></i> Edit on GitHub</a></div><nav class="pagination"><a class="nav nav-prev" href="https://894276610.github.io/createblog/markdownlanguage/" title="Markdown基础"><i class="fas fa-arrow-left" aria-hidden="true"></i> Prev - Markdown基础</a>
+<a class="nav nav-next" href="https://894276610.github.io/createblog/firstblog/" title="Bolg">Next - Bolg <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+</nav><footer><p class="powered">Powered by <a href="https://gohugo.io">Hugo</a>. Theme by <a href="https://themes.gohugo.io/hugo-theme-techdoc/">TechDoc</a>. Designed by <a href="https://github.com/thingsym/hugo-theme-techdoc">Thingsym</a>.</p>
+</footer>
+</main><div class="sidebar">
+
+<nav class="slide-menu">
+<ul>
+<li class=""><a href="https://894276610.github.io/">Home</a></li>
+
+
+
+<li class=" has-sub-menu"><a href="https://894276610.github.io/studycpp/">StudyCpps<span class="mark closed">+</span></a>
+  
+<ul class="sub-menu">
+<li class=""><a href="https://894276610.github.io/studycpp/houjie/houjiecpp_01/">[Cpp]侯捷——头文件、类</a></li>
+<li class=""><a href="https://894276610.github.io/studycpp/book01/">[Cpp]Book_List</a></li>
+<li class=""><a href="https://894276610.github.io/studycpp/details/">[Cpp]琐碎细节-待续</a></li>
+<li class=""><a href="https://894276610.github.io/studycpp/overload_operator/">[Cpp]Overload_operator</a></li>
+</ul>
+  
+</li>
+
+<li class=" has-sub-menu"><a href="https://894276610.github.io/guyuero/">GuYueRos<span class="mark closed">+</span></a>
+  
+<ul class="sub-menu">
+<li class=""><a href="https://894276610.github.io/guyuero/guyueros21_14/">[Notes]古月ROS_14</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/guyueros21_13/">[Notes]古月ROS_13</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/guyueros21_12/">[Notes]古月ROS_12</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/guyueros21_11/">[Notes]古月ROS_11</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/guyueros21_10/">[Notes]古月ROS_10</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/guyueros21_09/">[Notes]古月ROS_9</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/ros_install_tips/">[Code]Ros系统安装步骤</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/guyueros21_08/">[Notes]古月ROS_8</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/guyueros21_07/">[Notes]古月ROS_7</a></li>
+</ul>
+  
+</li>
+
+<li class=" has-sub-menu"><a href="https://894276610.github.io/extrathing/">ExtraThings<span class="mark closed">+</span></a>
+  
+<ul class="sub-menu">
+<li class=""><a href="https://894276610.github.io/extrathing/titlephoto/">[花絮]头像制作思路</a></li>
+</ul>
+  
+</li>
+
+<li class="parent has-sub-menu"><a href="https://894276610.github.io/createblog/">CreateBlogs<span class="mark opened">-</span></a>
+  
+<ul class="sub-menu">
+<li class=""><a href="https://894276610.github.io/createblog/markdownlanguage/">Markdown基础</a></li>
+<li class="active"><a href="https://894276610.github.io/createblog/hugo_try/">搭建博客(HUGO)</a></li>
+<li class=""><a href="https://894276610.github.io/createblog/firstblog/">Bolg</a></li>
+</ul>
+  
+</li>
+</ul>
+</nav>
+
+
+
+<div class="sidebar-footer"></div>
+</div>
+</div><a href="#" id="backtothetop-fixed" class="backtothetop"
+ data-backtothetop-duration="600"
+ data-backtothetop-easing="easeOutQuart"
+ data-backtothetop-fixed-fadeIn="1000"
+ data-backtothetop-fixed-fadeOut="1000"
+ data-backtothetop-fixed-bottom="10"
+ data-backtothetop-fixed-right="20">
+<span class="fa-layers fa-fw">
+<i class="fas fa-circle"></i>
+<i class="fas fa-arrow-circle-up"></i>
+</span></a>
+</div>
+</body>
+</html>

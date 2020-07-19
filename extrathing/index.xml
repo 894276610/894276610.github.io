@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ExtraThings on 云居小栈</title>
+    <link>https://894276610.github.io/extrathing/</link>
+    <description>Recent content in ExtraThings on 云居小栈</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 17 Jul 2020 21:53:46 +0800</lastBuildDate>
+    
+	<atom:link href="https://894276610.github.io/extrathing/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[花絮]头像制作思路</title>
+      <link>https://894276610.github.io/extrathing/titlephoto/</link>
+      <pubDate>Fri, 17 Jul 2020 21:53:46 +0800</pubDate>
+      
+      <guid>https://894276610.github.io/extrathing/titlephoto/</guid>
+      <description>原始想法 最开始想使用微信头像
+觉得过浅色图片和这个深色背景很不搭配
+就&amp;hellip;另想办法
+中间想法 使用黑白像素或者条纹风格图片
+结果：拍出来发现实在不忍直视
+最终版本 AppStore Portrait by img.iy (ios)
+这款软件有傻瓜处理功能
+恰好能刻画主要特征 省略次要特征（青春痘）
+这个模板整体感觉还成，就用它了
+参考资料： 无 （闲逛中收获的软件）</description>
+    </item>
+    
+  </channel>
+</rss>
