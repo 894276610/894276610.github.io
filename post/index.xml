@@ -6,10 +6,35 @@
     <description>Recent content in Posts on 云居小栈</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 18 Jul 2020 21:47:13 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 19 Jul 2020 16:49:29 +0800</lastBuildDate>
     
 	<atom:link href="https://894276610.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[Cpp]侯捷——头文件、类</title>
+      <link>https://894276610.github.io/post/studycpp/houjie/houjiecpp_01/</link>
+      <pubDate>Sun, 19 Jul 2020 16:49:29 +0800</pubDate>
+      
+      <guid>https://894276610.github.io/post/studycpp/houjie/houjiecpp_01/</guid>
+      <description>数据与函数 Class的两个经典分类 C++ 代码的基本形式 头文件 构造函数放在 private 区域  数据与函数 C 语言中全局数据， 所有函数可以处理它，会产生一些问题
+C++ 具有封装的特性，数据和函数包在一起，创建对象，处理这些数据
+Class的两个经典分类 带有指针的类（字符串）
+成员属性：字符
+成员方法：拷贝、插入、附加、输出 创建方式： complex c1(1,2); complex c2; complex* pc = new complex(0,1); 不带指针的类（复数） 多半比用写析构函数 成员属性：实部、虚部 成员方法： 四则运算，共轭正弦 创建方式： string s1(&amp;ldquo;Hello&amp;rdquo;); string s2(&amp;ldquo;World&amp;rdquo;); string* ps = new string;
+C++ 代码的基本形式  Classes Declaration (header files) Standard Library (header files) .cpp  #include #include&amp;quot;complex.h&amp;rdquo; ex. main()    延伸扩展名不一定是.h 或 .cpp
+#include&amp;lt;iostream.h&amp;gt; &amp;mdash;&amp;mdash;&amp;gt; #include&amp;lt;iostream&amp;gt;</description>
+    </item>
+    
+    <item>
+      <title>[Cpp]Book_List</title>
+      <link>https://894276610.github.io/post/studycpp/book01/</link>
+      <pubDate>Sun, 19 Jul 2020 15:49:29 +0800</pubDate>
+      
+      <guid>https://894276610.github.io/post/studycpp/book01/</guid>
+      <description>《C++标准程序库》《C++ Primer Plus》经典（砖头书），我曾在三处听到推荐
+ 程序羊(codesheep)公众号 机器人学习规划(科学上网) 侯捷老师视频课 推荐  我为了在多抓鱼二手书平台凑包邮又购买了《Linux命令速查手册》和《Git学习指南》两本工具书 ，后续打算写点笔记。</description>
+    </item>
     
     <item>
       <title>[学习笔记]古月ROS入门21讲——第十四讲</title>
@@ -75,10 +100,10 @@ find_package(... message_generation) ## Declare ROS Messages, services and actio
     
     <item>
       <title>[花絮]头像制作思路</title>
-      <link>https://894276610.github.io/post/titlephoto/</link>
+      <link>https://894276610.github.io/post/extra/titlephoto/</link>
       <pubDate>Fri, 17 Jul 2020 21:53:46 +0800</pubDate>
       
-      <guid>https://894276610.github.io/post/titlephoto/</guid>
+      <guid>https://894276610.github.io/post/extra/titlephoto/</guid>
       <description>原始想法 最开始想使用微信头像
 觉得过浅色图片和这个深色背景很不搭配
 就&amp;hellip;另想办法
@@ -135,10 +160,10 @@ catkin_make install 设置环境变量  source devel/setup.bash 检查环境变�
     
     <item>
       <title>[代码]Ros系统安装步骤</title>
-      <link>https://894276610.github.io/post/ros_install_tips/</link>
+      <link>https://894276610.github.io/post/guyueros21/ros_install_tips/</link>
       <pubDate>Thu, 16 Jul 2020 22:48:51 +0800</pubDate>
       
-      <guid>https://894276610.github.io/post/ros_install_tips/</guid>
+      <guid>https://894276610.github.io/post/guyueros21/ros_install_tips/</guid>
       <description>当时安装ROS 18.04 困难重重
 总体上是按照这个步骤走的
 中间有几个步骤为ROS网站设置了本地DNS
@@ -235,7 +260,7 @@ draft: false
       <pubDate>Sun, 12 Jul 2020 15:01:05 +0800</pubDate>
       
       <guid>https://894276610.github.io/post/firstblog/</guid>
-      <description>This is my first blog! (憋说这个标题拼错了，这个标题就是这个设计)</description>
+      <description>This is my first blog! (憋说这个标题拼错了，是这设计)</description>
     </item>
     
   </channel>

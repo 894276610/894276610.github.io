@@ -95,10 +95,10 @@ catkin_make install 设置环境变量  source devel/setup.bash 检查环境变�
     
     <item>
       <title>[代码]Ros系统安装步骤</title>
-      <link>https://894276610.github.io/post/ros_install_tips/</link>
+      <link>https://894276610.github.io/post/guyueros21/ros_install_tips/</link>
       <pubDate>Thu, 16 Jul 2020 22:48:51 +0800</pubDate>
       
-      <guid>https://894276610.github.io/post/ros_install_tips/</guid>
+      <guid>https://894276610.github.io/post/guyueros21/ros_install_tips/</guid>
       <description>当时安装ROS 18.04 困难重重
 总体上是按照这个步骤走的
 中间有几个步骤为ROS网站设置了本地DNS
