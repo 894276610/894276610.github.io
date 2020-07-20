@@ -5,10 +5,126 @@
     <link>https://894276610.github.io/tags/%E5%85%A5%E9%97%A8/</link>
     <description>Recent content in 入门 on 云居小栈</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 18 Jul 2020 21:47:13 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 21 Jul 2020 01:28:45 +0800</lastBuildDate>
     
 	<atom:link href="https://894276610.github.io/tags/%E5%85%A5%E9%97%A8/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[Notes]古月ROS_20</title>
+      <link>https://894276610.github.io/guyuero/guyueros21_20/</link>
+      <pubDate>Tue, 21 Jul 2020 01:28:45 +0800</pubDate>
+      
+      <guid>https://894276610.github.io/guyuero/guyueros21_20/</guid>
+      <description>第二十讲 常用可视化工具的使用 qt工具箱  rqt 综合工具 rqt_console 日志输出 rqt_graph 计算图 rqt_plot 数据绘图 rqt_image_view 图像渲染  Rviz 机器人开发过程中的数据可视化界面 数据显示平台，得要有数据
+roscore rosrun rviz rviz (直接输入rviz 也行)
+三维物理仿真平台  测试机器人算法 机器人设计 显示情景下的回溯测试  roslaunch gazebo_ros willowgarage_world.launch 参考资料
+[1]古月ROS入门21讲——第二十讲</description>
+    </item>
+    
+    <item>
+      <title>[Notes]古月ROS_21</title>
+      <link>https://894276610.github.io/guyuero/guyueros21_21/</link>
+      <pubDate>Tue, 21 Jul 2020 01:28:45 +0800</pubDate>
+      
+      <guid>https://894276610.github.io/guyuero/guyueros21_21/</guid>
+      <description>第二十一讲 课程总结与进阶攻略  基础概述   课程介绍 Linux ROS系统安装  核心概念   什么是 ROS ROS 核心概念 ROS 命令行使用  编程基础   创建工作空间与功能包 话题、服务编程 参数使用与编程方法  常用组件   tf 坐标系统 launch 启动文件 常用可视化工具  进阶展望  机器人控制与仿真
+Gazebo + ROS + ros_control
+即时定位与地图建模
+推荐资料：
+ 机器人控制与仿真 即时定位与地图建模_gmapping 即时定位与地图建模_hector  视频资料：
+ 斯坦福大学公开课&amp;ndash;机器人学 交通大学&amp;ndash;机器人学 Andrew Davison 机器人讲座课程 ROSl理论与实践(以移动机器人为例) ETH - Robotic Systems Lab ROS机械臂开发：从入门到实战  资源整理：
+ ROS ROS Wiki ROSCon 2012-2019 ROS Robots Ubuntu Wiki 古月居 zhangrelay的专栏 易科机器人实验室 开源机器人学学习指南  google.</description>
+    </item>
+    
+    <item>
+      <title>[Notes]古月ROS_19</title>
+      <link>https://894276610.github.io/guyuero/guyueros21_19/</link>
+      <pubDate>Mon, 20 Jul 2020 22:45:13 +0800</pubDate>
+      
+      <guid>https://894276610.github.io/guyuero/guyueros21_19/</guid>
+      <description>第十九讲 launch 启动文件的使用方法 launch 文件常用语法 功能：通过xml文件实现多节点的配置和启动
+ launch文件中的根元素采用标签定义
+ 启动节点
+&amp;lt;node pkg=&amp;#34;package-name&amp;#34; type=“executable-name” name=&amp;#34;node-name&amp;#34; /&amp;gt; 三个基础属性
+ name：节点运行时的名称。取代节点初始化的节点名，防止重名。 pkg: 节点的可执行文件名称 type: 节点可执行文件名称  其他一些可选命令
+ output
+是否要打印日志信息 respawn 是否要重启 required
+是否必须启动 ns
+解决命名冲突 args
+给每个节点输入参数  / 参数设置
+设置ROS系统运行中的参数,存储在参数服务器中
+&amp;lt;param name=&amp;#34;output_frame&amp;#34; value=&amp;#34;odom&amp;#34; /&amp;gt;  name: 参数名 value:参数值
+加载参数文件中的多个参数  &amp;lt;rosparam file=&amp;#34;params.yaml&amp;#34; command=&amp;#34;load&amp;#34; ns= &amp;#34;params&amp;#34; /&amp;gt; 调用：
+ launch 文件内部的局部变量，仅限于launch文件使用
+&amp;lt;arg name=&amp;#34;arg-name&amp;#34; default=&amp;#34;arg-value&amp;#34; /&amp;gt;  name: 参数名 value: 参数值  重映射 重映射ROS计算图资源的命名</description>
+    </item>
+    
+    <item>
+      <title>[Notes]古月ROS_18</title>
+      <link>https://894276610.github.io/guyuero/guyueros21_18/</link>
+      <pubDate>Mon, 20 Jul 2020 21:49:13 +0800</pubDate>
+      
+      <guid>https://894276610.github.io/guyuero/guyueros21_18/</guid>
+      <description>第十八讲 tf坐标系广播与监听的编程实现  创建功能包  cd ~/catkin_ws/src catkin_create_pkg learning_tf roscpp cospy tf turtlesim  创建tf广播器代码（C++）
+  创建tf监听器代码（C++） 代码
+  配置CMakeList编译规则
+    设置要编译的代码和可执行文件
+  设置链接库
+add_executable(turtle_tf_broadcaster src/turtle_tf_broadcaster.cpp) target_link_libraries(turtle_tf_broadcaster ${catkin_LIBRARIES}) add_executable(turtle_tf_listener src/turtle_tf_broadcaster.cpp) target_link_libraries(turtle_tf_listener ${catkinLIBRARIES})   在根目录编译运行 catkin_make
+重映射：两个下划线加name:=  catkin_make source devel/setup.bash roscore rosrun turtlesim turtlesim_node rosrun learning_tf turtle_tf_broadcaster __name:=turtle1_tf_broadcaster /turtle1 rosrun learning_tf turtle_tf_broadcaster __name:=turtle2_tf_broadcaster /turtle2 rosrun learning_tf turtle_tf_listener rosrun turtlesim turtle_teleop_key 参考资料
+[1]古月ROS入门21讲——第十八讲 [2]机器人学导论——分析、系统及应用 [3]机器人导论（原书第三版）</description>
+    </item>
+    
+    <item>
+      <title>[Notes]古月ROS_17</title>
+      <link>https://894276610.github.io/guyuero/guyueros21_17/</link>
+      <pubDate>Mon, 20 Jul 2020 16:49:13 +0800</pubDate>
+      
+      <guid>https://894276610.github.io/guyuero/guyueros21_17/</guid>
+      <description>ROS中的坐标系管理系统 机器人中的坐标变换 跟随同步的例程
+sudo apt-get install ros-melodic-turtle-tf roslaunch turtle_tf turtle_tf_demo.launch rosrun turtlesim turtle_teleop_key rosrun tf view_frames 命令行工具
+rosrun tf tf_echo turtle1 turtle2 可视化工具
+rosrun rviz rviz -d `rospack find turtle_tf` /rviz/turtle_rviz.rviz Add world coordination
+参考资料
+[1]古月ROS入门21讲——第十七讲 [2]机器人学导论——分析、系统及应用 [3]机器人导论（原书第三版）</description>
+    </item>
+    
+    <item>
+      <title>[Notes]古月ROS_16</title>
+      <link>https://894276610.github.io/guyuero/guyueros21_16/</link>
+      <pubDate>Mon, 20 Jul 2020 15:40:13 +0800</pubDate>
+      
+      <guid>https://894276610.github.io/guyuero/guyueros21_16/</guid>
+      <description>第十六讲 参数的使用与编程方法 参数模型 Ros Master
+ Parameter Server (全局字典)  /robot_name:&amp;ldquo;my_robot&amp;rdquo; /robot_radius:0.4 /robot_height:0.5    参数模型使用方法  创建功能包(第10、13讲也有类似步骤)  cd ~/catkin_ws/src catkin_crete_pkg learning_parameter roscpp rospy std_srvs 参数命令行使用   yaml 参数文件  background_b:255 background_g:86 background_r:69 rosdistro:&amp;#39;melodic&amp;#39; roslaunch: uris:{host_hcx_vpc__43763:&amp;#39;http://hcx-vpc:43763/&amp;#39;} rosversion:&amp;#39;1.14.3&amp;#39; run_id:........  列出当前所有参数
+rosparam list 显示某个参数值 rosparam get param_key 设置某个参数值
+rosparam set param_key param_value 保存参数到文件
+rosparam dump file_name 从文件读取参数 rosparam load file_name 删除参数
+rosparam delete param_key  小海龟例：
+roscore rosrun turtlesim turtlesim_node rosparam list rosparam get /background_b rosparam get /background_g rosparam get /rosdistro rosparam get /rosversion rosparam set /background_b 100 请求服务之后才会更改背景值</description>
+    </item>
+    
+    <item>
+      <title>[Notes]古月ROS_15</title>
+      <link>https://894276610.github.io/guyuero/guyueros21_15/</link>
+      <pubDate>Mon, 20 Jul 2020 15:20:13 +0800</pubDate>
+      
+      <guid>https://894276610.github.io/guyuero/guyueros21_15/</guid>
+      <description>第十五讲 服务数据的定义与使用 自定义数据类型并且使用
+自定义服务数据
+定义服务数据  定义srv
+三个横线以上是request以下是response数据 在learning_service文件夹中创建srv文件夹
+并在里面新建Person.srv 文件  string name uint8 age uint8 sex uint8 unknown = 0 uint8 male = 1 uint8 female = 2 --- string result  package.xml中添加功能包依赖
+动态生成程序的依赖
+这一步和第十二讲中service的实现是类似的
+&amp;lt;build_depend&amp;gt;message_generation&amp;lt;/build_depend&amp;gt; &amp;lt;exec_depend&amp;gt;message_runtime&amp;lt;/exec_depend&amp;gt;   在CMakeList.txt添加编译选项
+除了需要修改为.srv文件以外
+这一步和第十二讲中service的实现是类似的
+find_package(... message_generation) ## Declare ROS Messages, services and actions ## add_message_files(FILES person.srv) generate_messages(DEPENDENCIES std_msgs) catkin_package(CATKIN_DEPENDS ... message_runtime)   编译生成语言相关文件
+   catkin_make （查看生成的代码文件）
+devel/include/learning_service/  Person.</description>
+    </item>
     
     <item>
       <title>[Notes]古月ROS_14</title>
@@ -27,6 +143,17 @@
       <pubDate>Sat, 18 Jul 2020 21:47:13 +0800</pubDate>
       
       <guid>https://894276610.github.io/post/guyueros21/guyueros21_14/</guid>
+      <description>第十四讲 服务Server的编程实现  第十四讲 服务Server的编程实现  创建服务端实现代码 配置服务端代码编译规则 编译并运行    创建服务端实现代码 turtle_command_server 缺少一个分号，需要补全
+配置服务端代码编译规则 add_executable(turtle_command_server src/turtle_command_server.cpp) target_link_libraries(turtle_command_server ${catkin_LIBRARIES}) 编译并运行 cd ~/catkin_ws catkin_make source devel/setup.bash roscore rosrun turtlesim turtlesim_node rosrun learning_service turtle_command_server rosservice call /turtle_command &amp;quot;{}&amp;quot; rosservice call /turtle_command &amp;quot;{}&amp;quot; 参考资料
+[1]古月ROS入门21讲——第十四讲</description>
+    </item>
+    
+    <item>
+      <title>[学习笔记]古月ROS入门21讲——第十四讲</title>
+      <link>https://894276610.github.io/post/guyueros21/guyueros21_15/</link>
+      <pubDate>Sat, 18 Jul 2020 21:47:13 +0800</pubDate>
+      
+      <guid>https://894276610.github.io/post/guyueros21/guyueros21_15/</guid>
       <description>第十四讲 服务Server的编程实现  第十四讲 服务Server的编程实现  创建服务端实现代码 配置服务端代码编译规则 编译并运行    创建服务端实现代码 turtle_command_server 缺少一个分号，需要补全
 配置服务端代码编译规则 add_executable(turtle_command_server src/turtle_command_server.cpp) target_link_libraries(turtle_command_server ${catkin_LIBRARIES}) 编译并运行 cd ~/catkin_ws catkin_make source devel/setup.bash roscore rosrun turtlesim turtlesim_node rosrun learning_service turtle_command_server rosservice call /turtle_command &amp;quot;{}&amp;quot; rosservice call /turtle_command &amp;quot;{}&amp;quot; 参考资料
 [1]古月ROS入门21讲——第十四讲</description>
