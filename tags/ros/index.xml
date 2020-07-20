@@ -5,10 +5,25 @@
     <link>https://894276610.github.io/tags/ros/</link>
     <description>Recent content in Ros on 云居小栈</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 21 Jul 2020 01:28:45 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 21 Jul 2020 01:55:45 +0800</lastBuildDate>
     
 	<atom:link href="https://894276610.github.io/tags/ros/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[Notes]古月ROS_21</title>
+      <link>https://894276610.github.io/guyuero/guyueros21_21/</link>
+      <pubDate>Tue, 21 Jul 2020 01:55:45 +0800</pubDate>
+      
+      <guid>https://894276610.github.io/guyuero/guyueros21_21/</guid>
+      <description>第二十一讲 课程总结与进阶攻略  基础概述   课程介绍 Linux ROS系统安装  核心概念   什么是 ROS ROS 核心概念 ROS 命令行使用  编程基础   创建工作空间与功能包 话题、服务编程 参数使用与编程方法  常用组件   tf 坐标系统 launch 启动文件 常用可视化工具  进阶展望  机器人控制与仿真
+Gazebo + ROS + ros_control
+即时定位与地图建模
+推荐资料：
+ 机器人控制与仿真 即时定位与地图建模_gmapping 即时定位与地图建模_hector  视频资料：
+ 斯坦福大学公开课&amp;ndash;机器人学 交通大学&amp;ndash;机器人学 Andrew Davison 机器人讲座课程 ROSl理论与实践(以移动机器人为例) ETH - Robotic Systems Lab ROS机械臂开发：从入门到实战  资源整理：
+ ROS ROS Wiki ROSCon 2012-2019 ROS Robots Ubuntu Wiki 古月居 zhangrelay的专栏 易科机器人实验室 开源机器人学学习指南  google.</description>
+    </item>
     
     <item>
       <title>[Notes]古月ROS_20</title>
@@ -20,21 +35,6 @@
 roscore rosrun rviz rviz (直接输入rviz 也行)
 三维物理仿真平台  测试机器人算法 机器人设计 显示情景下的回溯测试  roslaunch gazebo_ros willowgarage_world.launch 参考资料
 [1]古月ROS入门21讲——第二十讲</description>
-    </item>
-    
-    <item>
-      <title>[Notes]古月ROS_21</title>
-      <link>https://894276610.github.io/guyuero/guyueros21_21/</link>
-      <pubDate>Tue, 21 Jul 2020 01:28:45 +0800</pubDate>
-      
-      <guid>https://894276610.github.io/guyuero/guyueros21_21/</guid>
-      <description>第二十一讲 课程总结与进阶攻略  基础概述   课程介绍 Linux ROS系统安装  核心概念   什么是 ROS ROS 核心概念 ROS 命令行使用  编程基础   创建工作空间与功能包 话题、服务编程 参数使用与编程方法  常用组件   tf 坐标系统 launch 启动文件 常用可视化工具  进阶展望  机器人控制与仿真
-Gazebo + ROS + ros_control
-即时定位与地图建模
-推荐资料：
- 机器人控制与仿真 即时定位与地图建模_gmapping 即时定位与地图建模_hector  视频资料：
- 斯坦福大学公开课&amp;ndash;机器人学 交通大学&amp;ndash;机器人学 Andrew Davison 机器人讲座课程 ROSl理论与实践(以移动机器人为例) ETH - Robotic Systems Lab ROS机械臂开发：从入门到实战  资源整理：
- ROS ROS Wiki ROSCon 2012-2019 ROS Robots Ubuntu Wiki 古月居 zhangrelay的专栏 易科机器人实验室 开源机器人学学习指南  google.</description>
     </item>
     
     <item>
