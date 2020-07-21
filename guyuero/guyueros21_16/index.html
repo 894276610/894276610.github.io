@@ -3,8 +3,8 @@
 <head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<title>[Notes]古月ROS_16 - 云居小栈</title>
-<meta name="description" content=" 2020年07月21日酉时 更新">
+<title>[Notes16]Parameters - 云居小栈</title>
+<meta name="description" content=" 更新时间： 2020年07月21日酉时 ">
 <meta name="generator" content="Hugo 0.73.0" />
 <link href="https://894276610.github.io//index.xml" rel="alternate" type="application/rss+xml">
 <link rel="canonical" href="https://894276610.github.io/guyuero/guyueros21_16/">
@@ -16,7 +16,7 @@
 <script src="https://894276610.github.io/js/bundle.js"></script><style>
 :root {}
 </style>
-<meta property="og:title" content="[Notes]古月ROS_16" />
+<meta property="og:title" content="[Notes16]Parameters" />
 <meta property="og:description" content="第十六讲 参数的使用与编程方法 参数模型 Ros Master
  Parameter Server (全局字典)  /robot_name:&ldquo;my_robot&rdquo; /robot_radius:0.4 /robot_height:0.5    参数模型使用方法  创建功能包(第10、13讲也有类似步骤)  cd ~/catkin_ws/src catkin_crete_pkg learning_parameter roscpp rospy std_srvs 参数命令行使用   yaml 参数文件  background_b:255 background_g:86 background_r:69 rosdistro:&#39;melodic&#39; roslaunch: uris:{host_hcx_vpc__43763:&#39;http://hcx-vpc:43763/&#39;} rosversion:&#39;1.14.3&#39; run_id:........  列出当前所有参数
 rosparam list 显示某个参数值 rosparam get param_key 设置某个参数值
@@ -29,7 +29,7 @@ roscore rosrun turtlesim turtlesim_node rosparam list rosparam get /background_b
 <meta property="article:published_time" content="2020-07-20T15:40:13+08:00" />
 <meta property="article:modified_time" content="2020-07-20T15:40:13+08:00" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="[Notes]古月ROS_16"/>
+<meta name="twitter:title" content="[Notes16]Parameters"/>
 <meta name="twitter:description" content="第十六讲 参数的使用与编程方法 参数模型 Ros Master
  Parameter Server (全局字典)  /robot_name:&ldquo;my_robot&rdquo; /robot_radius:0.4 /robot_height:0.5    参数模型使用方法  创建功能包(第10、13讲也有类似步骤)  cd ~/catkin_ws/src catkin_crete_pkg learning_parameter roscpp rospy std_srvs 参数命令行使用   yaml 参数文件  background_b:255 background_g:86 background_r:69 rosdistro:&#39;melodic&#39; roslaunch: uris:{host_hcx_vpc__43763:&#39;http://hcx-vpc:43763/&#39;} rosversion:&#39;1.14.3&#39; run_id:........  列出当前所有参数
 rosparam list 显示某个参数值 rosparam get param_key 设置某个参数值
@@ -37,7 +37,7 @@ rosparam set param_key param_value 保存参数到文件
 rosparam dump file_name 从文件读取参数 rosparam load file_name 删除参数
 rosparam delete param_key  小海龟例：
 roscore rosrun turtlesim turtlesim_node rosparam list rosparam get /background_b rosparam get /background_g rosparam get /rosdistro rosparam get /rosversion rosparam set /background_b 100 请求服务之后才会更改背景值"/>
-<meta itemprop="name" content="[Notes]古月ROS_16">
+<meta itemprop="name" content="[Notes16]Parameters">
 <meta itemprop="description" content="第十六讲 参数的使用与编程方法 参数模型 Ros Master
  Parameter Server (全局字典)  /robot_name:&ldquo;my_robot&rdquo; /robot_radius:0.4 /robot_height:0.5    参数模型使用方法  创建功能包(第10、13讲也有类似步骤)  cd ~/catkin_ws/src catkin_crete_pkg learning_parameter roscpp rospy std_srvs 参数命令行使用   yaml 参数文件  background_b:255 background_g:86 background_r:69 rosdistro:&#39;melodic&#39; roslaunch: uris:{host_hcx_vpc__43763:&#39;http://hcx-vpc:43763/&#39;} rosversion:&#39;1.14.3&#39; run_id:........  列出当前所有参数
 rosparam list 显示某个参数值 rosparam get param_key 设置某个参数值
@@ -55,7 +55,7 @@ roscore rosrun turtlesim turtlesim_node rosparam list rosparam get /background_b
 <body><div class="container"><header>
 <h1>云居小栈</h1>
 <a href="https://github.com/894276610/894276610.github.io" class="github"><i class="fab fa-github"></i></a>
-<p class="description"> 2020年07月21日酉时 更新</p>
+<p class="description"> 更新时间： 2020年07月21日酉时 </p>
 
 </header>
 <div class="global-menu">
@@ -65,7 +65,7 @@ roscore rosrun turtlesim turtlesim_node rosparam list rosparam get /background_b
 </nav>
 </div>
 <div class="content-container">
-<main><h1>[Notes]古月ROS_16</h1>
+<main><h1>[Notes16]Parameters</h1>
 <h1 id="第十六讲-参数的使用与编程方法">第十六讲 参数的使用与编程方法</h1>
 <h2 id="参数模型">参数模型</h2>
 <p>Ros Master</p>
@@ -203,8 +203,8 @@ Last updated on 20 Jul 2020
 
 <br>
 Published on 20 Jul 2020
-<br><a href="https://github.com/894276610/894276610.github.io/edit/master/content/GuYueRo%5c%c2%96GuYueRos21_16.md" class="edit-page"><i class="fas fa-pen-square"></i> Edit on GitHub</a></div><nav class="pagination"><a class="nav nav-prev" href="https://894276610.github.io/guyuero/guyueros21_17/" title="[Notes]古月ROS_17"><i class="fas fa-arrow-left" aria-hidden="true"></i> Prev - [Notes]古月ROS_17</a>
-<a class="nav nav-next" href="https://894276610.github.io/guyuero/guyueros21_15/" title="[Notes]古月ROS_15">Next - [Notes]古月ROS_15 <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+<br><a href="https://github.com/894276610/894276610.github.io/edit/master/content/GuYueRo%5c%c2%96GuYueRos21_16.md" class="edit-page"><i class="fas fa-pen-square"></i> Edit on GitHub</a></div><nav class="pagination"><a class="nav nav-prev" href="https://894276610.github.io/guyuero/guyueros21_17/" title="[Notes17]Transformation"><i class="fas fa-arrow-left" aria-hidden="true"></i> Prev - [Notes17]Transformation</a>
+<a class="nav nav-next" href="https://894276610.github.io/guyuero/guyueros21_15/" title="[Notes15]define service">Next - [Notes15]define service <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
 </nav><footer><p class="powered">Powered by <a href="https://gohugo.io">Hugo</a>. Theme by <a href="https://themes.gohugo.io/hugo-theme-techdoc/">TechDoc</a>. Designed by <a href="https://github.com/thingsym/hugo-theme-techdoc">Thingsym</a>.</p>
 </footer>
 </main><div class="sidebar">
@@ -229,22 +229,23 @@ Published on 20 Jul 2020
 <li class="parent has-sub-menu"><a href="https://894276610.github.io/guyuero/">GuYueRos<span class="mark opened">-</span></a>
   
 <ul class="sub-menu">
-<li class=""><a href="https://894276610.github.io/guyuero/guyueros21_21/">[Notes]古月ROS_21</a></li>
-<li class=""><a href="https://894276610.github.io/guyuero/guyueros21_20/">[Notes]古月ROS_20</a></li>
-<li class=""><a href="https://894276610.github.io/guyuero/guyueros21_19/">[Notes]古月ROS_19</a></li>
-<li class=""><a href="https://894276610.github.io/guyuero/guyueros21_18/">[Notes]古月ROS_18</a></li>
-<li class=""><a href="https://894276610.github.io/guyuero/guyueros21_17/">[Notes]古月ROS_17</a></li>
-<li class="active"><a href="https://894276610.github.io/guyuero/guyueros21_16/">[Notes]古月ROS_16</a></li>
-<li class=""><a href="https://894276610.github.io/guyuero/guyueros21_15/">[Notes]古月ROS_15</a></li>
-<li class=""><a href="https://894276610.github.io/guyuero/guyueros21_14/">[Notes]古月ROS_14</a></li>
-<li class=""><a href="https://894276610.github.io/guyuero/guyueros21_13/">[Notes]古月ROS_13</a></li>
-<li class=""><a href="https://894276610.github.io/guyuero/guyueros21_12/">[Notes]古月ROS_12</a></li>
-<li class=""><a href="https://894276610.github.io/guyuero/guyueros21_11/">[Notes]古月ROS_11</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/guyueros21_21/">[Notes21]Summary</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/guyueros21_20/">[Notes20]Visual aids</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/guyueros21_19/">[Notes19]launch file</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/guyueros21_18/">[Notes18]Broadcaster and listener</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/guyueros21_17/">[Notes17]Transformation</a></li>
+<li class="active"><a href="https://894276610.github.io/guyuero/guyueros21_16/">[Notes16]Parameters</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/guyueros21_15/">[Notes15]define service</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/guyueros21_14/">[Notes14]Server</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/guyueros21_13/">[Notes13]Client</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/guyueros21_12&#43;/">[Note12&#43;]Topic_define</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/guyueros21_12/">[Notes12]Topic define</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/guyueros21_11/">[Notes11]Subscriber</a></li>
 <li class=""><a href="https://894276610.github.io/guyuero/guyueros21_10/">[Notes]古月ROS_10</a></li>
-<li class=""><a href="https://894276610.github.io/guyuero/guyueros21_09/">[Notes]古月ROS_9</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/guyueros21_09/">[Notes9]Workspace and package</a></li>
 <li class=""><a href="https://894276610.github.io/guyuero/ros_install_tips/">[Code]Ros系统安装步骤</a></li>
-<li class=""><a href="https://894276610.github.io/guyuero/guyueros21_08/">[Notes]古月ROS_8</a></li>
-<li class=""><a href="https://894276610.github.io/guyuero/guyueros21_07/">[Notes]古月ROS_7</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/guyueros21_08/">[Notes8]Ros Command Line</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/guyueros21_07/">[Notes7]Ros Concept</a></li>
 </ul>
   
 </li>

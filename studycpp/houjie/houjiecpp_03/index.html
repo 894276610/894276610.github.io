@@ -4,7 +4,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <title>[Cpp] P9  - 云居小栈</title>
-<meta name="description" content=" 2020年07月21日酉时 更新">
+<meta name="description" content=" 更新时间： 2020年07月21日酉时 ">
 <meta name="generator" content="Hugo 0.73.0" />
 <link href="https://894276610.github.io//index.xml" rel="alternate" type="application/rss+xml">
 <link rel="canonical" href="https://894276610.github.io/studycpp/houjie/houjiecpp_03/">
@@ -35,7 +35,7 @@ class Account{ public: static double m_rate; //declaration  static void set_rate
 class Account{ public: static double m_rate; //declaration  static void set_rate(const double&amp; x){ m_rate = x; } }; //definition //这里要不要给初值都可以 double Account :: m_rate = 8.0; int main(){ //静态函数通过类调用  Account::set_rate(5.0); //静态函数通过产生的实例对象调用  Account a; a.set_rate(7.0); } 构造函数放在 private 区域 //设计模式 Singleton //单体 外界只能用一份 class A{ public: static A&amp; getInstance(){ return a; } setup(){......} private: A(); A(const A&amp; rhs); }; A&amp; A::gitInstance(){ static A a; return a; } 函数模板 使用的时候不必指出class">
 <meta itemprop="datePublished" content="2020-07-21T10:57:29&#43;08:00" />
 <meta itemprop="dateModified" content="2020-07-21T10:57:29&#43;08:00" />
-<meta itemprop="wordCount" content="126">
+<meta itemprop="wordCount" content="237">
 
 
 
@@ -43,7 +43,7 @@ class Account{ public: static double m_rate; //declaration  static void set_rate
 <body><div class="container"><header>
 <h1>云居小栈</h1>
 <a href="https://github.com/894276610/894276610.github.io" class="github"><i class="fab fa-github"></i></a>
-<p class="description"> 2020年07月21日酉时 更新</p>
+<p class="description"> 更新时间： 2020年07月21日酉时 </p>
 
 </header>
 <div class="global-menu">
@@ -128,7 +128,48 @@ int main(){
     cout&lt;&lt;...;
     return 0;
 }
-</code></pre><p>参考资料：<br>
+</code></pre><h2 id="设计模式-adapter">设计模式 Adapter</h2>
+<pre><code>template &lt;class T&gt;  
+class queue{
+    ...
+protected:
+    deque&lt;T&gt; c; //底层容器
+public:  
+    //完全使用 c的操作函数完成  
+    bool empty() const { return c.empty();} 
+    size_type size() const { return c.size(); }
+    reference front() { return c.front(); }
+    reference back() {return c.back(); } 
+
+    //
+    void push (const value_type&amp; x) { c.push_back(x); }
+    void pop() { c.pop_front() ; }
+}
+</code></pre><h2 id="composition-关系下的构造和析构">composition 关系下的构造和析构</h2>
+<p>构造由内而外<br>
+析构由外而内</p>
+<h2 id="委托-delegation--composition-by-reference">委托 Delegation  Composition by reference</h2>
+<p>包含另外一个类的指针</p>
+<h2 id="pimpl-设计方法">pimpl 设计方法</h2>
+<p>pointer to implementation
+Handle/Body
+一个类对外提供接口（将来可以指向不同的实现类）
+另一个类具体实现</p>
+<h2 id="构造由内而外-析构由外而内">构造由内而外 析构由外而内</h2>
+<p>Derived::Derived(&hellip;) : Base() { };
+Derived::~Derived(&hellip;){&hellip; ~Base};</p>
+<h2 id="inheritance-with-virtual-function">Inheritance with virtual function</h2>
+<p>在任何一个成员函数之前加<br>
+virtual 关键字</p>
+<ol>
+<li>non-virtual 不希望子类重新定义 覆写<br>
+没有virtual 关键字</li>
+<li>virtual 希望子类重新定义 覆写
+virtual void error(const std::string&amp; msg);</li>
+<li>pure virtual 子类一定要重新定义<br>
+virtual void draw() const = 0;</li>
+</ol>
+<p>参考资料：<br>
 [1]<a href="https://www.bilibili.com/video/BV1844118771?p=9">C++系统工程师（适合有一定基础）</a></p>
 <div class="edit-meta">
 Last updated on 21 Jul 2020
@@ -162,22 +203,23 @@ Published on 21 Jul 2020
 <li class=" has-sub-menu"><a href="https://894276610.github.io/guyuero/">GuYueRos<span class="mark closed">+</span></a>
   
 <ul class="sub-menu">
-<li class=""><a href="https://894276610.github.io/guyuero/guyueros21_21/">[Notes]古月ROS_21</a></li>
-<li class=""><a href="https://894276610.github.io/guyuero/guyueros21_20/">[Notes]古月ROS_20</a></li>
-<li class=""><a href="https://894276610.github.io/guyuero/guyueros21_19/">[Notes]古月ROS_19</a></li>
-<li class=""><a href="https://894276610.github.io/guyuero/guyueros21_18/">[Notes]古月ROS_18</a></li>
-<li class=""><a href="https://894276610.github.io/guyuero/guyueros21_17/">[Notes]古月ROS_17</a></li>
-<li class=""><a href="https://894276610.github.io/guyuero/guyueros21_16/">[Notes]古月ROS_16</a></li>
-<li class=""><a href="https://894276610.github.io/guyuero/guyueros21_15/">[Notes]古月ROS_15</a></li>
-<li class=""><a href="https://894276610.github.io/guyuero/guyueros21_14/">[Notes]古月ROS_14</a></li>
-<li class=""><a href="https://894276610.github.io/guyuero/guyueros21_13/">[Notes]古月ROS_13</a></li>
-<li class=""><a href="https://894276610.github.io/guyuero/guyueros21_12/">[Notes]古月ROS_12</a></li>
-<li class=""><a href="https://894276610.github.io/guyuero/guyueros21_11/">[Notes]古月ROS_11</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/guyueros21_21/">[Notes21]Summary</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/guyueros21_20/">[Notes20]Visual aids</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/guyueros21_19/">[Notes19]launch file</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/guyueros21_18/">[Notes18]Broadcaster and listener</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/guyueros21_17/">[Notes17]Transformation</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/guyueros21_16/">[Notes16]Parameters</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/guyueros21_15/">[Notes15]define service</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/guyueros21_14/">[Notes14]Server</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/guyueros21_13/">[Notes13]Client</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/guyueros21_12&#43;/">[Note12&#43;]Topic_define</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/guyueros21_12/">[Notes12]Topic define</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/guyueros21_11/">[Notes11]Subscriber</a></li>
 <li class=""><a href="https://894276610.github.io/guyuero/guyueros21_10/">[Notes]古月ROS_10</a></li>
-<li class=""><a href="https://894276610.github.io/guyuero/guyueros21_09/">[Notes]古月ROS_9</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/guyueros21_09/">[Notes9]Workspace and package</a></li>
 <li class=""><a href="https://894276610.github.io/guyuero/ros_install_tips/">[Code]Ros系统安装步骤</a></li>
-<li class=""><a href="https://894276610.github.io/guyuero/guyueros21_08/">[Notes]古月ROS_8</a></li>
-<li class=""><a href="https://894276610.github.io/guyuero/guyueros21_07/">[Notes]古月ROS_7</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/guyueros21_08/">[Notes8]Ros Command Line</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/guyueros21_07/">[Notes7]Ros Concept</a></li>
 </ul>
   
 </li>

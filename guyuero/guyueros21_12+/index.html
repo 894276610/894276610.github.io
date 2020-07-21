@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>[Note12&#43;]Topic_define - 云居小栈</title>
+<meta name="description" content=" 更新时间： 2020年07月21日酉时 ">
+<meta name="generator" content="Hugo 0.73.0" />
+<link href="https://894276610.github.io//index.xml" rel="alternate" type="application/rss+xml">
+<link rel="canonical" href="https://894276610.github.io/guyuero/guyueros21_12&#43;/">
+<link rel="stylesheet" href="https://894276610.github.io/css/theme.min.css">
+<script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+<link rel="stylesheet" href="https://894276610.github.io/css/chroma.min.css">
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery.easing@1.4.1/jquery.easing.min.js"></script>
+<script src="https://894276610.github.io/js/bundle.js"></script><style>
+:root {}
+</style>
+<meta property="og:title" content="[Note12&#43;]Topic_define" />
+<meta property="og:description" content="第十二讲 话题消息的定义与使用  第十二讲 话题消息的定义与使用  自定义话题消息 创建发布者代码 配置代码编译规则 编译并运行发布者和订阅者    自定义话题消息   定义msg文件 在learning_topic 中 msg文件夹下
+创建Phone.msg 文件
+是 uint 不是 unit 别敲错了
+## uint8 实在std_msgs 中做定义的第二步需配置 ## string brand uint8 price uint8 sizes uint8 big = 0 uint8 small = 1   在package.xml 中添加功能包依赖
+动态生成程序的依赖
+（这个部分写过就不用重复写辽）
+&lt;build_depend&gt;message_generation&lt;/build_depend&gt; &lt;exec_depend&gt;message_runtime&lt;/exec_depend&gt; 粘贴到与其相同格式的地方
+  在CMakeList.txt添加编译选项
+注意：先把相似的add完再generate
+find_package(... message_generation) ## Declare ROS Messages, services and actions ## add_message_files(FILES Person." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://894276610.github.io/guyuero/guyueros21_12&#43;/" />
+<meta property="article:published_time" content="2020-07-18T18:52:13+08:00" />
+<meta property="article:modified_time" content="2020-07-18T18:52:13+08:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="[Note12&#43;]Topic_define"/>
+<meta name="twitter:description" content="第十二讲 话题消息的定义与使用  第十二讲 话题消息的定义与使用  自定义话题消息 创建发布者代码 配置代码编译规则 编译并运行发布者和订阅者    自定义话题消息   定义msg文件 在learning_topic 中 msg文件夹下
+创建Phone.msg 文件
+是 uint 不是 unit 别敲错了
+## uint8 实在std_msgs 中做定义的第二步需配置 ## string brand uint8 price uint8 sizes uint8 big = 0 uint8 small = 1   在package.xml 中添加功能包依赖
+动态生成程序的依赖
+（这个部分写过就不用重复写辽）
+&lt;build_depend&gt;message_generation&lt;/build_depend&gt; &lt;exec_depend&gt;message_runtime&lt;/exec_depend&gt; 粘贴到与其相同格式的地方
+  在CMakeList.txt添加编译选项
+注意：先把相似的add完再generate
+find_package(... message_generation) ## Declare ROS Messages, services and actions ## add_message_files(FILES Person."/>
+<meta itemprop="name" content="[Note12&#43;]Topic_define">
+<meta itemprop="description" content="第十二讲 话题消息的定义与使用  第十二讲 话题消息的定义与使用  自定义话题消息 创建发布者代码 配置代码编译规则 编译并运行发布者和订阅者    自定义话题消息   定义msg文件 在learning_topic 中 msg文件夹下
+创建Phone.msg 文件
+是 uint 不是 unit 别敲错了
+## uint8 实在std_msgs 中做定义的第二步需配置 ## string brand uint8 price uint8 sizes uint8 big = 0 uint8 small = 1   在package.xml 中添加功能包依赖
+动态生成程序的依赖
+（这个部分写过就不用重复写辽）
+&lt;build_depend&gt;message_generation&lt;/build_depend&gt; &lt;exec_depend&gt;message_runtime&lt;/exec_depend&gt; 粘贴到与其相同格式的地方
+  在CMakeList.txt添加编译选项
+注意：先把相似的add完再generate
+find_package(... message_generation) ## Declare ROS Messages, services and actions ## add_message_files(FILES Person.">
+<meta itemprop="datePublished" content="2020-07-18T18:52:13&#43;08:00" />
+<meta itemprop="dateModified" content="2020-07-18T18:52:13&#43;08:00" />
+<meta itemprop="wordCount" content="243">
+
+
+
+<meta itemprop="keywords" content="Ros,入门," /></head>
+<body><div class="container"><header>
+<h1>云居小栈</h1>
+<a href="https://github.com/894276610/894276610.github.io" class="github"><i class="fab fa-github"></i></a>
+<p class="description"> 更新时间： 2020年07月21日酉时 </p>
+
+</header>
+<div class="global-menu">
+<nav>
+<ul>
+<li><a href="/todo/">My Todo List</a></li></ul>
+</nav>
+</div>
+<div class="content-container">
+<main><h1>[Note12&#43;]Topic_define</h1>
+<h1 id="第十二讲-话题消息的定义与使用">第十二讲 话题消息的定义与使用</h1>
+<!-- raw HTML omitted -->
+<ul>
+<li><a href="#%E7%AC%AC%E5%8D%81%E4%BA%8C%E8%AE%B2-%E8%AF%9D%E9%A2%98%E6%B6%88%E6%81%AF%E7%9A%84%E5%AE%9A%E4%B9%89%E4%B8%8E%E4%BD%BF%E7%94%A8">第十二讲 话题消息的定义与使用</a>
+<ul>
+<li><a href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E8%AF%9D%E9%A2%98%E6%B6%88%E6%81%AF">自定义话题消息</a></li>
+<li><a href="#%E5%88%9B%E5%BB%BA%E5%8F%91%E5%B8%83%E8%80%85%E4%BB%A3%E7%A0%81">创建发布者代码</a></li>
+<li><a href="#%E9%85%8D%E7%BD%AE%E4%BB%A3%E7%A0%81%E7%BC%96%E8%AF%91%E8%A7%84%E5%88%99">配置代码编译规则</a></li>
+<li><a href="#%E7%BC%96%E8%AF%91%E5%B9%B6%E8%BF%90%E8%A1%8C%E5%8F%91%E5%B8%83%E8%80%85%E5%92%8C%E8%AE%A2%E9%98%85%E8%80%85">编译并运行发布者和订阅者</a></li>
+</ul>
+</li>
+</ul>
+<!-- raw HTML omitted -->
+<h2 id="自定义话题消息">自定义话题消息</h2>
+<ol>
+<li>
+<p>定义msg文件
+在learning_topic 中 msg文件夹下<br>
+创建Phone.msg 文件</p>
+<p>是 <code>uint</code> 不是 <code>unit</code> 别敲错了</p>
+<pre><code>## uint8 实在std_msgs 中做定义的第二步需配置 ##
+   
+string brand
+uint8 price  
+uint8 sizes  
+
+uint8 big = 0
+uint8 small = 1
+
+</code></pre></li>
+<li>
+<p>在package.xml 中添加功能包依赖<br>
+动态生成程序的依赖<br>
+（这个部分写过就不用重复写辽）</p>
+<pre><code>&lt;build_depend&gt;message_generation&lt;/build_depend&gt;  
+&lt;exec_depend&gt;message_runtime&lt;/exec_depend&gt;  
+</code></pre><p>粘贴到与其相同格式的地方</p>
+</li>
+<li>
+<p>在CMakeList.txt添加编译选项<br>
+注意：先把相似的add完再generate</p>
+<pre><code>find_package(... message_generation)  
+
+## Declare ROS Messages, services and actions ##
+
+add_message_files(FILES Person.msg)  
+add_message_files(FILES Phone.msg)
+generate_messages(DEPENDENCIES std_msgs)  
+catkin_package(CATKIN_DEPENDS ... message_runtime)
+</code></pre></li>
+<li>
+<p>在根目录下编译</p>
+<pre><code>catkin_make
+</code></pre></li>
+<li>
+<p>（查看生成的代码文件）<br>
+devel/include/learning_topic/Phone.h</p>
+</li>
+</ol>
+<h2 id="创建发布者代码">创建发布者代码</h2>
+<p>发布者</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;ros/ros.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&#34;learning_topic/Phone.h&#34;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(<span style="color:#66d9ef">int</span> argc, <span style="color:#66d9ef">char</span><span style="color:#f92672">**</span> argv)
+
+{
+
+   <span style="color:#75715e">//initialization
+</span><span style="color:#75715e"></span>
+   ros<span style="color:#f92672">::</span>init(argc, argv, <span style="color:#e6db74">&#34;publish_phone&#34;</span>);
+
+   <span style="color:#75715e">//create NodeHandle
+</span><span style="color:#75715e"></span>
+   ros<span style="color:#f92672">::</span>NodeHandle n;
+
+   <span style="color:#75715e">//Create a publisher
+</span><span style="color:#75715e"></span>
+   ros<span style="color:#f92672">::</span>Publisher phone_info_pub <span style="color:#f92672">=</span> n.advertise<span style="color:#f92672">&lt;</span>learning_topic<span style="color:#f92672">::</span>Phone<span style="color:#f92672">&gt;</span>(<span style="color:#e6db74">&#34;/phone_info&#34;</span>,<span style="color:#ae81ff">10</span>);
+
+   <span style="color:#75715e">//Set the frequency
+</span><span style="color:#75715e"></span>
+   ros<span style="color:#f92672">::</span>Rate loop_rate(<span style="color:#ae81ff">1</span>);
+
+   <span style="color:#66d9ef">while</span>(ros<span style="color:#f92672">::</span>ok())
+
+   {
+
+       <span style="color:#75715e">//Initialize Phone message
+</span><span style="color:#75715e"></span>
+       learning_topic<span style="color:#f92672">::</span>Phone phone_msg;
+
+       phone_msg.brand <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;HuaWei&#34;</span>;
+
+       phone_msg.price <span style="color:#f92672">=</span> <span style="color:#ae81ff">2.9</span>;
+
+       phone_msg.sizes  <span style="color:#f92672">=</span> learning_topic<span style="color:#f92672">::</span>Phone<span style="color:#f92672">::</span>big;
+
+       <span style="color:#75715e">//publish
+</span><span style="color:#75715e"></span>
+       phone_info_pub.publish(phone_msg);
+
+       ROS_INFO(<span style="color:#e6db74">&#34;Publish Person Info: brand %s price %d size %d&#34;</span>,
+
+                          phone_msg.brand.c_str(),phone_msg.price,phone_msg.sizes;
+
+       <span style="color:#75715e">//rate
+</span><span style="color:#75715e"></span>
+       loop_rate.sleep();
+
+   }
+
+       <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+
+}
+</code></pre></div><p>订阅者代码</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;ros/ros.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">#include</span> <span style="color:#75715e">&#34;learning_topic/Phone.h&#34;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span>
+
+
+<span style="color:#75715e">//callback function
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">phoneInfoCallback</span>(<span style="color:#66d9ef">const</span> learning_topic<span style="color:#f92672">::</span>Phone<span style="color:#f92672">::</span>ConstPtr<span style="color:#f92672">&amp;</span> msg)
+
+{
+
+    <span style="color:#75715e">// show the message
+</span><span style="color:#75715e"></span>
+    <span style="color:#75715e">// function usage: const char *c_str();
+</span><span style="color:#75715e"></span>
+    ROS_INFO(<span style="color:#e6db74">&#34;Phone Brand: %s  Price: %d Size: %d&#34;</span>,
+
+             msg<span style="color:#f92672">-&gt;</span>brand.c_str(),msg<span style="color:#f92672">-&gt;</span>price,msg<span style="color:#f92672">-&gt;</span>sizes);
+
+
+
+}
+
+
+
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(<span style="color:#66d9ef">int</span> argc, <span style="color:#66d9ef">char</span><span style="color:#f92672">**</span> argv)
+
+{
+
+    <span style="color:#75715e">//Initialization
+</span><span style="color:#75715e"></span>
+    ros<span style="color:#f92672">::</span>init(argc, argv, <span style="color:#e6db74">&#34;phone_subscriber&#34;</span>);
+
+
+
+    <span style="color:#75715e">//create handle
+</span><span style="color:#75715e"></span>
+    ros<span style="color:#f92672">::</span>NodeHandle n;
+
+
+
+    <span style="color:#75715e">//create subscriber
+</span><span style="color:#75715e"></span>
+    ros<span style="color:#f92672">::</span>Subscriber phone_info_sub <span style="color:#f92672">=</span> n.subscribe(<span style="color:#e6db74">&#34;/phone_info&#34;</span>, <span style="color:#ae81ff">10</span>,phoneInfoCallback );
+
+
+
+    <span style="color:#75715e">//wait for the message
+</span><span style="color:#75715e"></span>
+    ros<span style="color:#f92672">::</span>spin();
+
+
+
+    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+
+}
+
+</code></pre></div><h2 id="配置代码编译规则">配置代码编译规则</h2>
+<p>learning_topic 的CMakeList <code>##build##</code>下方</p>
+<ul>
+<li>设置需要编译的代码和生成可执行文件</li>
+<li>设置链接库</li>
+<li>添加依赖项</li>
+</ul>
+<pre><code>add_executable(phone_publisher src/phone_publisher.cpp)
+target_link_libraries(phone_publisher ${catkin_LIBRARIES}) 
+add_dependencies(phone_publisher ${PROJECT_NAME}_generate_messages_cpp)
+
+add_executable(phone_subscriber src/phone_subscriber.cpp)  
+target_link_libraries(phone_subscriber ${catkin_LIBRARIES})  
+add_dependencies(phone_subscriber ${PROJECT_NAME}_generate_messages_cpp)
+    
+</code></pre><h2 id="编译并运行发布者和订阅者">编译并运行发布者和订阅者</h2>
+<pre><code> cd ~/catkin_ws  
+ catkin_make  
+ source devel/setup.bash  
+ roscore  
+ rosrun learning_topic person_subscriber  
+ rosrun learning_topic person_publisher  
+</code></pre><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml">
+<span style="color:#f92672">&lt;launch&gt;</span>
+ <span style="color:#f92672">&lt;node</span> <span style="color:#a6e22e">pkg=</span><span style="color:#e6db74">&#34;learning_topic&#34;</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;phone_publisher&#34;</span> <span style="color:#a6e22e">type=</span><span style="color:#e6db74">&#34;phone_publisher&#34;</span> <span style="color:#a6e22e">output=</span><span style="color:#e6db74">&#34;screen&#34;</span><span style="color:#f92672">/&gt;</span>  
+ <span style="color:#f92672">&lt;node</span> <span style="color:#a6e22e">pkg=</span><span style="color:#e6db74">&#34;learning_topic&#34;</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;phone_subscriber&#34;</span> <span style="color:#a6e22e">type=</span><span style="color:#e6db74">&#34;phone_subscriber&#34;</span> <span style="color:#a6e22e">output=</span><span style="color:#e6db74">&#34;screen&#34;</span><span style="color:#f92672">/&gt;</span>
+
+<span style="color:#f92672">&lt;/launch&gt;</span>
+</code></pre></div><p>参考资料<br>
+[1]<a href="https://www.bilibili.com/video/BV1zt411G7Vn?p=12">古月ROS入门21讲——第十二讲</a></p>
+<div class="edit-meta">
+Last updated on 18 Jul 2020
+
+
+<br>
+Published on 18 Jul 2020
+<br><a href="https://github.com/894276610/894276610.github.io/edit/master/content/GuYueRo%5c%c2%96GuYueRos21_12&#43;.md" class="edit-page"><i class="fas fa-pen-square"></i> Edit on GitHub</a></div><nav class="pagination"><a class="nav nav-prev" href="https://894276610.github.io/guyuero/guyueros21_13/" title="[Notes13]Client"><i class="fas fa-arrow-left" aria-hidden="true"></i> Prev - [Notes13]Client</a>
+<a class="nav nav-next" href="https://894276610.github.io/guyuero/guyueros21_12/" title="[Notes12]Topic define">Next - [Notes12]Topic define <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+</nav><footer><p class="powered">Powered by <a href="https://gohugo.io">Hugo</a>. Theme by <a href="https://themes.gohugo.io/hugo-theme-techdoc/">TechDoc</a>. Designed by <a href="https://github.com/thingsym/hugo-theme-techdoc">Thingsym</a>.</p>
+</footer>
+</main><div class="sidebar">
+
+<nav class="slide-menu">
+<ul>
+<li class=""><a href="https://894276610.github.io/">Home</a></li>
+
+<li class=" has-sub-menu"><a href="https://894276610.github.io/studycpp/">StudyCpps<span class="mark closed">+</span></a>
+  
+<ul class="sub-menu">
+<li class=""><a href="https://894276610.github.io/studycpp/houjie/houjiecpp_02/">[Cpp] P6-P8 </a></li>
+<li class=""><a href="https://894276610.github.io/studycpp/houjie/houjiecpp_03/">[Cpp] P9 </a></li>
+<li class=""><a href="https://894276610.github.io/studycpp/houjie/houjiecpp_01/">[Cpp] P1-P5 complex </a></li>
+<li class=""><a href="https://894276610.github.io/studycpp/book01/">[Cpp]Book_List</a></li>
+<li class=""><a href="https://894276610.github.io/studycpp/details/">[Cpp]琐碎细节-待续</a></li>
+<li class=""><a href="https://894276610.github.io/studycpp/overload_operator/">[Cpp]Overload_operator</a></li>
+</ul>
+  
+</li>
+
+<li class="parent has-sub-menu"><a href="https://894276610.github.io/guyuero/">GuYueRos<span class="mark opened">-</span></a>
+  
+<ul class="sub-menu">
+<li class=""><a href="https://894276610.github.io/guyuero/guyueros21_21/">[Notes21]Summary</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/guyueros21_20/">[Notes20]Visual aids</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/guyueros21_19/">[Notes19]launch file</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/guyueros21_18/">[Notes18]Broadcaster and listener</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/guyueros21_17/">[Notes17]Transformation</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/guyueros21_16/">[Notes16]Parameters</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/guyueros21_15/">[Notes15]define service</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/guyueros21_14/">[Notes14]Server</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/guyueros21_13/">[Notes13]Client</a></li>
+<li class="active"><a href="https://894276610.github.io/guyuero/guyueros21_12&#43;/">[Note12&#43;]Topic_define</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/guyueros21_12/">[Notes12]Topic define</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/guyueros21_11/">[Notes11]Subscriber</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/guyueros21_10/">[Notes]古月ROS_10</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/guyueros21_09/">[Notes9]Workspace and package</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/ros_install_tips/">[Code]Ros系统安装步骤</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/guyueros21_08/">[Notes8]Ros Command Line</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/guyueros21_07/">[Notes7]Ros Concept</a></li>
+</ul>
+  
+</li>
+
+
+
+<li class=" has-sub-menu"><a href="https://894276610.github.io/extrathing/">ExtraThings<span class="mark closed">+</span></a>
+  
+<ul class="sub-menu">
+<li class=""><a href="https://894276610.github.io/extrathing/titlephoto/">[花絮]头像制作思路</a></li>
+</ul>
+  
+</li>
+
+<li class=" has-sub-menu"><a href="https://894276610.github.io/createblog/">CreateBlogs<span class="mark closed">+</span></a>
+  
+<ul class="sub-menu">
+<li class=""><a href="https://894276610.github.io/createblog/markdownlanguage/">Markdown_basic</a></li>
+<li class=""><a href="https://894276610.github.io/createblog/hugo_try/">HUGO</a></li>
+<li class=""><a href="https://894276610.github.io/createblog/firstblog/">Bolg</a></li>
+</ul>
+  
+</li>
+
+<li class=" has-sub-menu"><a href="https://894276610.github.io/introduction_to_robotics/">Introduction_to_robotics<span class="mark closed">+</span></a>
+  
+<ul class="sub-menu">
+<li class=""><a href="https://894276610.github.io/introduction_to_robotics/introduction/">[Robotics]Books</a></li>
+</ul>
+  
+</li>
+</ul>
+</nav>
+
+
+
+<div class="sidebar-footer"></div>
+</div>
+</div><a href="#" id="backtothetop-fixed" class="backtothetop"
+ data-backtothetop-duration="600"
+ data-backtothetop-easing="easeOutQuart"
+ data-backtothetop-fixed-fadeIn="1000"
+ data-backtothetop-fixed-fadeOut="1000"
+ data-backtothetop-fixed-bottom="10"
+ data-backtothetop-fixed-right="20">
+<span class="fa-layers fa-fw">
+<i class="fas fa-circle"></i>
+<i class="fas fa-arrow-circle-up"></i>
+</span></a>
+</div>
+</body>
+</html>

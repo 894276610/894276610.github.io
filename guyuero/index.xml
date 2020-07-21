@@ -11,7 +11,7 @@
     
     
     <item>
-      <title>[Notes]古月ROS_21</title>
+      <title>[Notes21]Summary</title>
       <link>https://894276610.github.io/guyuero/guyueros21_21/</link>
       <pubDate>Tue, 21 Jul 2020 01:55:45 +0800</pubDate>
       
@@ -26,7 +26,7 @@ Gazebo + ROS + ros_control
     </item>
     
     <item>
-      <title>[Notes]古月ROS_20</title>
+      <title>[Notes20]Visual aids</title>
       <link>https://894276610.github.io/guyuero/guyueros21_20/</link>
       <pubDate>Tue, 21 Jul 2020 01:28:45 +0800</pubDate>
       
@@ -38,7 +38,7 @@ roscore rosrun rviz rviz (直接输入rviz 也行)
     </item>
     
     <item>
-      <title>[Notes]古月ROS_19</title>
+      <title>[Notes19]launch file</title>
       <link>https://894276610.github.io/guyuero/guyueros21_19/</link>
       <pubDate>Mon, 20 Jul 2020 22:45:13 +0800</pubDate>
       
@@ -47,7 +47,7 @@ roscore rosrun rviz rviz (直接输入rviz 也行)
  launch文件中的根元素采用标签定义
  启动节点
 &amp;lt;node pkg=&amp;#34;package-name&amp;#34; type=“executable-name” name=&amp;#34;node-name&amp;#34; /&amp;gt; 三个基础属性
- name：节点运行时的名称。取代节点初始化的节点名，防止重名。 pkg: 节点的可执行文件名称 type: 节点可执行文件名称  其他一些可选命令
+ name：节点运行时的名称。取代节点初始化的节点名，防止重名。 pkg: 节点的功能包名称 type: 节点可执行文件名称  其他一些可选命令
  output
 是否要打印日志信息 respawn 是否要重启 required
 是否必须启动 ns
@@ -61,7 +61,7 @@ roscore rosrun rviz rviz (直接输入rviz 也行)
     </item>
     
     <item>
-      <title>[Notes]古月ROS_18</title>
+      <title>[Notes18]Broadcaster and listener</title>
       <link>https://894276610.github.io/guyuero/guyueros21_18/</link>
       <pubDate>Mon, 20 Jul 2020 21:49:13 +0800</pubDate>
       
@@ -77,7 +77,7 @@ add_executable(turtle_tf_broadcaster src/turtle_tf_broadcaster.cpp) target_link_
     </item>
     
     <item>
-      <title>[Notes]古月ROS_17</title>
+      <title>[Notes17]Transformation</title>
       <link>https://894276610.github.io/guyuero/guyueros21_17/</link>
       <pubDate>Mon, 20 Jul 2020 16:49:13 +0800</pubDate>
       
@@ -91,7 +91,7 @@ rosrun rviz rviz -d `rospack find turtle_tf` /rviz/turtle_rviz.rviz Add world co
     </item>
     
     <item>
-      <title>[Notes]古月ROS_16</title>
+      <title>[Notes16]Parameters</title>
       <link>https://894276610.github.io/guyuero/guyueros21_16/</link>
       <pubDate>Mon, 20 Jul 2020 15:40:13 +0800</pubDate>
       
@@ -106,7 +106,7 @@ roscore rosrun turtlesim turtlesim_node rosparam list rosparam get /background_b
     </item>
     
     <item>
-      <title>[Notes]古月ROS_15</title>
+      <title>[Notes15]define service</title>
       <link>https://894276610.github.io/guyuero/guyueros21_15/</link>
       <pubDate>Mon, 20 Jul 2020 15:20:13 +0800</pubDate>
       
@@ -127,7 +127,7 @@ devel/include/learning_service/  Person.</description>
     </item>
     
     <item>
-      <title>[Notes]古月ROS_14</title>
+      <title>[Notes14]Server</title>
       <link>https://894276610.github.io/guyuero/guyueros21_14/</link>
       <pubDate>Sat, 18 Jul 2020 21:47:13 +0800</pubDate>
       
@@ -138,7 +138,7 @@ devel/include/learning_service/  Person.</description>
     </item>
     
     <item>
-      <title>[Notes]古月ROS_13</title>
+      <title>[Notes13]Client</title>
       <link>https://894276610.github.io/guyuero/guyueros21_13/</link>
       <pubDate>Sat, 18 Jul 2020 21:22:13 +0800</pubDate>
       
@@ -151,7 +151,25 @@ catkin_make roscore rosrun turtlesim turtlesim_node rosrun learning_service turt
     </item>
     
     <item>
-      <title>[Notes]古月ROS_12</title>
+      <title>[Note12&#43;]Topic_define</title>
+      <link>https://894276610.github.io/guyuero/guyueros21_12&#43;/</link>
+      <pubDate>Sat, 18 Jul 2020 18:52:13 +0800</pubDate>
+      
+      <guid>https://894276610.github.io/guyuero/guyueros21_12&#43;/</guid>
+      <description>第十二讲 话题消息的定义与使用  第十二讲 话题消息的定义与使用  自定义话题消息 创建发布者代码 配置代码编译规则 编译并运行发布者和订阅者    自定义话题消息   定义msg文件 在learning_topic 中 msg文件夹下
+创建Phone.msg 文件
+是 uint 不是 unit 别敲错了
+## uint8 实在std_msgs 中做定义的第二步需配置 ## string brand uint8 price uint8 sizes uint8 big = 0 uint8 small = 1   在package.xml 中添加功能包依赖
+动态生成程序的依赖
+（这个部分写过就不用重复写辽）
+&amp;lt;build_depend&amp;gt;message_generation&amp;lt;/build_depend&amp;gt; &amp;lt;exec_depend&amp;gt;message_runtime&amp;lt;/exec_depend&amp;gt; 粘贴到与其相同格式的地方
+  在CMakeList.txt添加编译选项
+注意：先把相似的add完再generate
+find_package(... message_generation) ## Declare ROS Messages, services and actions ## add_message_files(FILES Person.</description>
+    </item>
+    
+    <item>
+      <title>[Notes12]Topic define</title>
       <link>https://894276610.github.io/guyuero/guyueros21_12/</link>
       <pubDate>Sat, 18 Jul 2020 18:52:13 +0800</pubDate>
       
@@ -167,7 +185,7 @@ find_package(... message_generation) ## Declare ROS Messages, services and actio
     </item>
     
     <item>
-      <title>[Notes]古月ROS_11</title>
+      <title>[Notes11]Subscriber</title>
       <link>https://894276610.github.io/guyuero/guyueros21_11/</link>
       <pubDate>Fri, 17 Jul 2020 20:52:13 +0800</pubDate>
       
@@ -183,14 +201,11 @@ CMakeList
       <pubDate>Fri, 17 Jul 2020 13:21:15 +0800</pubDate>
       
       <guid>https://894276610.github.io/guyuero/guyueros21_10/</guid>
-      <description>发布者publisher的编程实现  发布者publisher的编程实现  1. 创建功能包 2. 创建发布者代码（C++） 3. 编辑功能包的CMakeList.txt 文件 4. 编译并运行发布者 5. 运行测试 参考文献    1. 创建功能包 cd ~catkin_ws/src catkin_create_pkg learning_topic roscpp rospy std_msgs gepmetry_msgs turtlesim 2. 创建发布者代码（C++）  初始化ROS节点 向ROS Master 注册节点信息  话题名 话题消息类型   创建消息数据 按照一定频率循环发布消息 此处需要具备基本C++知识  3. 编辑功能包的CMakeList.txt 文件  在build部分添加 add_executable(velocity_publisher src/velocity_publisher.cpp) target_link_libraries(velocity_publisher ${catkin_LIBRARIES}) 第一行代码： 把.cpp 变成左边这个可执行文件
-第二行代码： 把可执行文件与Ros库做链接 C++接口
-  4. 编译并运行发布者 回到根目录空间下
-cd ~/catkin_ws catkin_make source devel/setup.</description>
+      <description>发布者publisher的编程实现  发布者publisher的编程实现  1. 创建功能包 2. 创建发布者代码（C++） 3. 编辑功能包的CMakeList.txt 文件 4. 编译并运行发布者 5. 运行测试 参考文献    1. 创建功能包 cd ~catkin_ws/src catkin_create_pkg learning_topic roscpp rospy std_msgs gepmetry_msgs turtlesim 2. 创建发布者代码（C++）  初始化ROS节点 向ROS Master 注册节点信息  话题名 话题消息类型   创建消息数据 按照一定频率循环发布消息 此处需要具备基本C++知识  /* Copyright 2020 GuYueHome (www.guyuehome.com).*/ /* 该例程将发布turtle1/cmd_vel话题，消息类型geometry_msgs::Twist*/ #include &amp;lt;ros/ros.h&amp;gt;#include &amp;lt;geometry_msgs/Twist.h&amp;gt; int main(int argc, char **argv) { // ROS节点初始化  //设置节点名称  ros::init(argc, argv, &amp;#34;velocity_publisher&amp;#34;); // 创建节点句柄  //管理ROS API 资源，后续调用需要用到  ros::NodeHandle n; // 创建一个Publisher，发布名为/turtle1/cmd_vel的topic，消息类型为geometry_msgs::Twist，队列长度10  ros::Publisher turtle_vel_pub = n.</description>
     </item>
     
     <item>
-      <title>[Notes]古月ROS_9</title>
+      <title>[Notes9]Workspace and package</title>
       <link>https://894276610.github.io/guyuero/guyueros21_09/</link>
       <pubDate>Fri, 17 Jul 2020 09:46:06 +0800</pubDate>
       
@@ -224,7 +239,7 @@ $ sudo sh -c &#39;echo &amp;quot;deb http://packages.ros.org/ros/ubuntu $(lsb_re
     </item>
     
     <item>
-      <title>[Notes]古月ROS_8</title>
+      <title>[Notes8]Ros Command Line</title>
       <link>https://894276610.github.io/guyuero/guyueros21_08/</link>
       <pubDate>Thu, 16 Jul 2020 21:50:13 +0800</pubDate>
       
@@ -234,7 +249,7 @@ $ sudo sh -c &#39;echo &amp;quot;deb http://packages.ros.org/ros/ubuntu $(lsb_re
     </item>
     
     <item>
-      <title>[Notes]古月ROS_7</title>
+      <title>[Notes7]Ros Concept</title>
       <link>https://894276610.github.io/guyuero/guyueros21_07/</link>
       <pubDate>Thu, 16 Jul 2020 21:41:46 +0800</pubDate>
       
