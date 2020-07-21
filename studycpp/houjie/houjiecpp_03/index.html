@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>[Cpp] P9  - 云居小栈</title>
+<meta name="description" content=" 2020年07月21日酉时 更新">
+<meta name="generator" content="Hugo 0.73.0" />
+<link href="https://894276610.github.io//index.xml" rel="alternate" type="application/rss+xml">
+<link rel="canonical" href="https://894276610.github.io/studycpp/houjie/houjiecpp_03/">
+<link rel="stylesheet" href="https://894276610.github.io/css/theme.min.css">
+<script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+<link rel="stylesheet" href="https://894276610.github.io/css/chroma.min.css">
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery.easing@1.4.1/jquery.easing.min.js"></script>
+<script src="https://894276610.github.io/js/bundle.js"></script><style>
+:root {}
+</style>
+<meta property="og:title" content="[Cpp] P9 " />
+<meta property="og:description" content="静态 static 静态函数没有this指针
+静态函数只能处理静态数据
+class Account{ public: static double m_rate; //declaration  static void set_rate(const double&amp; x){ m_rate = x; } }; //definition //这里要不要给初值都可以 double Account :: m_rate = 8.0; int main(){ //静态函数通过类调用  Account::set_rate(5.0); //静态函数通过产生的实例对象调用  Account a; a.set_rate(7.0); } 构造函数放在 private 区域 //设计模式 Singleton //单体 外界只能用一份 class A{ public: static A&amp; getInstance(){ return a; } setup(){......} private: A(); A(const A&amp; rhs); }; A&amp; A::gitInstance(){ static A a; return a; } 函数模板 使用的时候不必指出class" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://894276610.github.io/studycpp/houjie/houjiecpp_03/" />
+<meta property="article:published_time" content="2020-07-21T10:57:29+08:00" />
+<meta property="article:modified_time" content="2020-07-21T10:57:29+08:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="[Cpp] P9 "/>
+<meta name="twitter:description" content="静态 static 静态函数没有this指针
+静态函数只能处理静态数据
+class Account{ public: static double m_rate; //declaration  static void set_rate(const double&amp; x){ m_rate = x; } }; //definition //这里要不要给初值都可以 double Account :: m_rate = 8.0; int main(){ //静态函数通过类调用  Account::set_rate(5.0); //静态函数通过产生的实例对象调用  Account a; a.set_rate(7.0); } 构造函数放在 private 区域 //设计模式 Singleton //单体 外界只能用一份 class A{ public: static A&amp; getInstance(){ return a; } setup(){......} private: A(); A(const A&amp; rhs); }; A&amp; A::gitInstance(){ static A a; return a; } 函数模板 使用的时候不必指出class"/>
+<meta itemprop="name" content="[Cpp] P9 ">
+<meta itemprop="description" content="静态 static 静态函数没有this指针
+静态函数只能处理静态数据
+class Account{ public: static double m_rate; //declaration  static void set_rate(const double&amp; x){ m_rate = x; } }; //definition //这里要不要给初值都可以 double Account :: m_rate = 8.0; int main(){ //静态函数通过类调用  Account::set_rate(5.0); //静态函数通过产生的实例对象调用  Account a; a.set_rate(7.0); } 构造函数放在 private 区域 //设计模式 Singleton //单体 外界只能用一份 class A{ public: static A&amp; getInstance(){ return a; } setup(){......} private: A(); A(const A&amp; rhs); }; A&amp; A::gitInstance(){ static A a; return a; } 函数模板 使用的时候不必指出class">
+<meta itemprop="datePublished" content="2020-07-21T10:57:29&#43;08:00" />
+<meta itemprop="dateModified" content="2020-07-21T10:57:29&#43;08:00" />
+<meta itemprop="wordCount" content="126">
+
+
+
+<meta itemprop="keywords" content="Cpp," /></head>
+<body><div class="container"><header>
+<h1>云居小栈</h1>
+<a href="https://github.com/894276610/894276610.github.io" class="github"><i class="fab fa-github"></i></a>
+<p class="description"> 2020年07月21日酉时 更新</p>
+
+</header>
+<div class="global-menu">
+<nav>
+<ul>
+<li><a href="/todo/">My Todo List</a></li></ul>
+</nav>
+</div>
+<div class="content-container">
+<main><h1>[Cpp] P9 </h1>
+<h2 id="静态-static">静态 static</h2>
+<p>静态函数没有this指针<br>
+静态函数只能处理静态数据</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Account</span>{
+<span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
+    <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">double</span> m_rate;  <span style="color:#75715e">//declaration
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">set_rate</span>(<span style="color:#66d9ef">const</span> <span style="color:#66d9ef">double</span><span style="color:#f92672">&amp;</span> x){
+        m_rate <span style="color:#f92672">=</span> x;
+    }
+};
+
+<span style="color:#75715e">//definition 
+</span><span style="color:#75715e">//这里要不要给初值都可以  
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">double</span> Account <span style="color:#f92672">::</span> m_rate <span style="color:#f92672">=</span> <span style="color:#ae81ff">8.0</span>;
+
+
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(){
+    <span style="color:#75715e">//静态函数通过类调用
+</span><span style="color:#75715e"></span>    Account<span style="color:#f92672">::</span>set_rate(<span style="color:#ae81ff">5.0</span>);
+
+    <span style="color:#75715e">//静态函数通过产生的实例对象调用
+</span><span style="color:#75715e"></span>    Account a;
+    a.set_rate(<span style="color:#ae81ff">7.0</span>);
+}
+</code></pre></div><h2 id="构造函数放在-private-区域">构造函数放在 private 区域</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#75715e">//设计模式 Singleton  
+</span><span style="color:#75715e">//单体 外界只能用一份
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">A</span>{
+<span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
+    <span style="color:#66d9ef">static</span> A<span style="color:#f92672">&amp;</span> getInstance(){ <span style="color:#66d9ef">return</span> a; }
+    setup(){......}
+<span style="color:#66d9ef">private</span><span style="color:#f92672">:</span>  
+    A();
+    A(<span style="color:#66d9ef">const</span> A<span style="color:#f92672">&amp;</span> rhs);  
+};
+
+A<span style="color:#f92672">&amp;</span> A<span style="color:#f92672">::</span>gitInstance(){
+    <span style="color:#66d9ef">static</span> A a;
+    <span style="color:#66d9ef">return</span> a;
+}
+
+</code></pre></div><h2 id="函数模板">函数模板</h2>
+<p>使用的时候不必指出class<br>
+编译器会进行实参推导</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">template</span><span style="color:#f92672">&lt;</span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">T</span><span style="color:#f92672">&gt;</span> 
+<span style="color:#66d9ef">inline</span> 
+<span style="color:#66d9ef">const</span> T<span style="color:#f92672">&amp;</span> min(<span style="color:#66d9ef">const</span> T<span style="color:#f92672">&amp;</span> a, <span style="color:#66d9ef">const</span> T<span style="color:#f92672">&amp;</span> b){
+    <span style="color:#75715e">//比大小---类中操作符重载
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">return</span> b <span style="color:#f92672">&lt;</span> a <span style="color:#f92672">?</span> b : a;
+}
+
+</code></pre></div><h2 id="namespace">namespace</h2>
+<pre><code>namespace std
+{
+    ...
+}
+
+</code></pre><p>使用命名空间</p>
+<pre><code>#include&lt;iostream.h&gt;  
+using namespace std;
+
+int main(){
+    cin&lt;&lt; ...;
+    cout&lt;&lt;...;
+    return 0;
+}
+</code></pre><pre><code>#include&lt;iostream.h&gt;  
+using namespace std::cout;  
+
+int main(){
+    std::cin&lt;&lt; ...;
+    cout&lt;&lt;...;
+    return 0;
+}
+</code></pre><p>参考资料：<br>
+[1]<a href="https://www.bilibili.com/video/BV1844118771?p=9">C++系统工程师（适合有一定基础）</a></p>
+<div class="edit-meta">
+Last updated on 21 Jul 2020
+
+
+<br>
+Published on 21 Jul 2020
+<br><a href="https://github.com/894276610/894276610.github.io/edit/master/content/StudyCpp%5cHouJie%5cHouJieCpp_03.md" class="edit-page"><i class="fas fa-pen-square"></i> Edit on GitHub</a></div><nav class="pagination"><a class="nav nav-prev" href="https://894276610.github.io/studycpp/houjie/houjiecpp_02/" title="[Cpp] P6-P8 "><i class="fas fa-arrow-left" aria-hidden="true"></i> Prev - [Cpp] P6-P8 </a>
+<a class="nav nav-next" href="https://894276610.github.io/studycpp/houjie/houjiecpp_01/" title="[Cpp] P1-P5 complex ">Next - [Cpp] P1-P5 complex  <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+</nav><footer><p class="powered">Powered by <a href="https://gohugo.io">Hugo</a>. Theme by <a href="https://themes.gohugo.io/hugo-theme-techdoc/">TechDoc</a>. Designed by <a href="https://github.com/thingsym/hugo-theme-techdoc">Thingsym</a>.</p>
+</footer>
+</main><div class="sidebar">
+
+<nav class="slide-menu">
+<ul>
+<li class=""><a href="https://894276610.github.io/">Home</a></li>
+
+<li class="parent has-sub-menu"><a href="https://894276610.github.io/studycpp/">StudyCpps<span class="mark opened">-</span></a>
+  
+<ul class="sub-menu">
+<li class=""><a href="https://894276610.github.io/studycpp/houjie/houjiecpp_02/">[Cpp] P6-P8 </a></li>
+<li class="active"><a href="https://894276610.github.io/studycpp/houjie/houjiecpp_03/">[Cpp] P9 </a></li>
+<li class=""><a href="https://894276610.github.io/studycpp/houjie/houjiecpp_01/">[Cpp] P1-P5 complex </a></li>
+<li class=""><a href="https://894276610.github.io/studycpp/book01/">[Cpp]Book_List</a></li>
+<li class=""><a href="https://894276610.github.io/studycpp/details/">[Cpp]琐碎细节-待续</a></li>
+<li class=""><a href="https://894276610.github.io/studycpp/overload_operator/">[Cpp]Overload_operator</a></li>
+</ul>
+  
+</li>
+
+<li class=" has-sub-menu"><a href="https://894276610.github.io/guyuero/">GuYueRos<span class="mark closed">+</span></a>
+  
+<ul class="sub-menu">
+<li class=""><a href="https://894276610.github.io/guyuero/guyueros21_21/">[Notes]古月ROS_21</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/guyueros21_20/">[Notes]古月ROS_20</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/guyueros21_19/">[Notes]古月ROS_19</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/guyueros21_18/">[Notes]古月ROS_18</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/guyueros21_17/">[Notes]古月ROS_17</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/guyueros21_16/">[Notes]古月ROS_16</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/guyueros21_15/">[Notes]古月ROS_15</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/guyueros21_14/">[Notes]古月ROS_14</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/guyueros21_13/">[Notes]古月ROS_13</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/guyueros21_12/">[Notes]古月ROS_12</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/guyueros21_11/">[Notes]古月ROS_11</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/guyueros21_10/">[Notes]古月ROS_10</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/guyueros21_09/">[Notes]古月ROS_9</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/ros_install_tips/">[Code]Ros系统安装步骤</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/guyueros21_08/">[Notes]古月ROS_8</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/guyueros21_07/">[Notes]古月ROS_7</a></li>
+</ul>
+  
+</li>
+
+
+
+<li class=" has-sub-menu"><a href="https://894276610.github.io/extrathing/">ExtraThings<span class="mark closed">+</span></a>
+  
+<ul class="sub-menu">
+<li class=""><a href="https://894276610.github.io/extrathing/titlephoto/">[花絮]头像制作思路</a></li>
+</ul>
+  
+</li>
+
+<li class=" has-sub-menu"><a href="https://894276610.github.io/createblog/">CreateBlogs<span class="mark closed">+</span></a>
+  
+<ul class="sub-menu">
+<li class=""><a href="https://894276610.github.io/createblog/markdownlanguage/">Markdown_basic</a></li>
+<li class=""><a href="https://894276610.github.io/createblog/hugo_try/">HUGO</a></li>
+<li class=""><a href="https://894276610.github.io/createblog/firstblog/">Bolg</a></li>
+</ul>
+  
+</li>
+
+<li class=" has-sub-menu"><a href="https://894276610.github.io/introduction_to_robotics/">Introduction_to_robotics<span class="mark closed">+</span></a>
+  
+<ul class="sub-menu">
+<li class=""><a href="https://894276610.github.io/introduction_to_robotics/introduction/">[Robotics]Books</a></li>
+</ul>
+  
+</li>
+</ul>
+</nav>
+
+
+
+<div class="sidebar-footer"></div>
+</div>
+</div><a href="#" id="backtothetop-fixed" class="backtothetop"
+ data-backtothetop-duration="600"
+ data-backtothetop-easing="easeOutQuart"
+ data-backtothetop-fixed-fadeIn="1000"
+ data-backtothetop-fixed-fadeOut="1000"
+ data-backtothetop-fixed-bottom="10"
+ data-backtothetop-fixed-right="20">
+<span class="fa-layers fa-fw">
+<i class="fas fa-circle"></i>
+<i class="fas fa-arrow-circle-up"></i>
+</span></a>
+</div>
+</body>
+</html>

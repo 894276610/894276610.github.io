@@ -3,8 +3,8 @@
 <head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<title>[Cpp]侯捷——头文件、类 - 云居小栈</title>
-<meta name="description" content=" 2020年07月21日 寅时更新">
+<title>[Cpp] P1-P5 complex  - 云居小栈</title>
+<meta name="description" content=" 2020年07月21日酉时 更新">
 <meta name="generator" content="Hugo 0.73.0" />
 <link href="https://894276610.github.io//index.xml" rel="alternate" type="application/rss+xml">
 <link rel="canonical" href="https://894276610.github.io/studycpp/houjie/houjiecpp_01/">
@@ -16,8 +16,8 @@
 <script src="https://894276610.github.io/js/bundle.js"></script><style>
 :root {}
 </style>
-<meta property="og:title" content="[Cpp]侯捷——头文件、类" />
-<meta property="og:description" content="数据与函数 Class的两个经典分类 C&#43;&#43; 代码的基本形式 头文件 构造函数放在 private 区域  数据与函数 C 语言中全局数据， 所有函数可以处理它，会产生一些问题
+<meta property="og:title" content="[Cpp] P1-P5 complex " />
+<meta property="og:description" content="数据与函数 Class的两个经典分类 C&#43;&#43; 代码的基本形式 头文件 构造函数放在 private 区域 细节点总结  数据与函数 C 语言中全局数据， 所有函数可以处理它，会产生一些问题
 C&#43;&#43; 具有封装的特性，数据和函数包在一起，创建对象，处理这些数据
 Class的两个经典分类 带有指针的类（字符串）
 成员属性：字符
@@ -29,16 +29,16 @@ C&#43;&#43; 代码的基本形式  Classes Declaration (header files) Standard L
 <meta property="article:published_time" content="2020-07-19T16:49:29+08:00" />
 <meta property="article:modified_time" content="2020-07-19T16:49:29+08:00" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="[Cpp]侯捷——头文件、类"/>
-<meta name="twitter:description" content="数据与函数 Class的两个经典分类 C&#43;&#43; 代码的基本形式 头文件 构造函数放在 private 区域  数据与函数 C 语言中全局数据， 所有函数可以处理它，会产生一些问题
+<meta name="twitter:title" content="[Cpp] P1-P5 complex "/>
+<meta name="twitter:description" content="数据与函数 Class的两个经典分类 C&#43;&#43; 代码的基本形式 头文件 构造函数放在 private 区域 细节点总结  数据与函数 C 语言中全局数据， 所有函数可以处理它，会产生一些问题
 C&#43;&#43; 具有封装的特性，数据和函数包在一起，创建对象，处理这些数据
 Class的两个经典分类 带有指针的类（字符串）
 成员属性：字符
 成员方法：拷贝、插入、附加、输出 创建方式： complex c1(1,2); complex c2; complex* pc = new complex(0,1); 不带指针的类（复数） 多半比用写析构函数 成员属性：实部、虚部 成员方法： 四则运算，共轭正弦 创建方式： string s1(&ldquo;Hello&rdquo;); string s2(&ldquo;World&rdquo;); string* ps = new string;
 C&#43;&#43; 代码的基本形式  Classes Declaration (header files) Standard Library (header files) .cpp  #include #include&quot;complex.h&rdquo; ex. main()    延伸扩展名不一定是.h 或 .cpp
 #include&lt;iostream.h&gt; &mdash;&mdash;&gt; #include&lt;iostream&gt;"/>
-<meta itemprop="name" content="[Cpp]侯捷——头文件、类">
-<meta itemprop="description" content="数据与函数 Class的两个经典分类 C&#43;&#43; 代码的基本形式 头文件 构造函数放在 private 区域  数据与函数 C 语言中全局数据， 所有函数可以处理它，会产生一些问题
+<meta itemprop="name" content="[Cpp] P1-P5 complex ">
+<meta itemprop="description" content="数据与函数 Class的两个经典分类 C&#43;&#43; 代码的基本形式 头文件 构造函数放在 private 区域 细节点总结  数据与函数 C 语言中全局数据， 所有函数可以处理它，会产生一些问题
 C&#43;&#43; 具有封装的特性，数据和函数包在一起，创建对象，处理这些数据
 Class的两个经典分类 带有指针的类（字符串）
 成员属性：字符
@@ -47,7 +47,7 @@ C&#43;&#43; 代码的基本形式  Classes Declaration (header files) Standard L
 #include&lt;iostream.h&gt; &mdash;&mdash;&gt; #include&lt;iostream&gt;">
 <meta itemprop="datePublished" content="2020-07-19T16:49:29&#43;08:00" />
 <meta itemprop="dateModified" content="2020-07-19T16:49:29&#43;08:00" />
-<meta itemprop="wordCount" content="316">
+<meta itemprop="wordCount" content="551">
 
 
 
@@ -55,7 +55,7 @@ C&#43;&#43; 代码的基本形式  Classes Declaration (header files) Standard L
 <body><div class="container"><header>
 <h1>云居小栈</h1>
 <a href="https://github.com/894276610/894276610.github.io" class="github"><i class="fab fa-github"></i></a>
-<p class="description"> 2020年07月21日 寅时更新</p>
+<p class="description"> 2020年07月21日酉时 更新</p>
 
 </header>
 <div class="global-menu">
@@ -65,7 +65,7 @@ C&#43;&#43; 代码的基本形式  Classes Declaration (header files) Standard L
 </nav>
 </div>
 <div class="content-container">
-<main><h1>[Cpp]侯捷——头文件、类</h1>
+<main><h1>[Cpp] P1-P5 complex </h1>
 <!-- raw HTML omitted -->
 <ul>
 <li><a href="#%E6%95%B0%E6%8D%AE%E4%B8%8E%E5%87%BD%E6%95%B0">数据与函数</a></li>
@@ -73,6 +73,7 @@ C&#43;&#43; 代码的基本形式  Classes Declaration (header files) Standard L
 <li><a href="#c-%E4%BB%A3%E7%A0%81%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%BD%A2%E5%BC%8F">C++ 代码的基本形式</a></li>
 <li><a href="#%E5%A4%B4%E6%96%87%E4%BB%B6">头文件</a></li>
 <li><a href="#%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E6%94%BE%E5%9C%A8-private-%E5%8C%BA%E5%9F%9F">构造函数放在 private 区域</a></li>
+<li><a href="#%E7%BB%86%E8%8A%82%E7%82%B9%E6%80%BB%E7%BB%93">细节点总结</a></li>
 </ul>
 <!-- raw HTML omitted -->
 <h2 id="数据与函数">数据与函数</h2>
@@ -195,7 +196,92 @@ ___doapl (complex<span style="color:#f92672">*</span> ths, <span style="color:#6
 </span><span style="color:#75715e">*/</span>
 
 <span style="color:#75715e">// 布局 [2] &#34;class definition&#34;  
-</span><span style="color:#75715e"></span>complex<span style="color:#f92672">::</span>function ...
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">inline</span> complex<span style="color:#f92672">&amp;</span>
+__doapl(complex<span style="color:#f92672">*</span> ths, <span style="color:#66d9ef">const</span> complex<span style="color:#f92672">&amp;</span> r){
+    ths<span style="color:#f92672">-&gt;</span>real <span style="color:#f92672">+=</span> r.real;  
+    ths<span style="color:#f92672">-&gt;</span>imag <span style="color:#f92672">+=</span> r.imag;  
+    
+    <span style="color:#66d9ef">return</span> <span style="color:#f92672">*</span>ths;
+
+}
+
+<span style="color:#75715e">//操作符重载1 成员函数
+</span><span style="color:#75715e">//考虑连串使用，需要设计返回值
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">inline</span> complex<span style="color:#f92672">&amp;</span>
+complex<span style="color:#f92672">::</span><span style="color:#66d9ef">operator</span> <span style="color:#f92672">+=</span> (<span style="color:#66d9ef">const</span> complex<span style="color:#f92672">&amp;</span> r){
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">__doapl</span>(<span style="color:#66d9ef">this</span>, r)
+
+}
+
+<span style="color:#75715e">//全域函数，没有带类名称  
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">inline</span> <span style="color:#66d9ef">double</span>
+imag(<span style="color:#66d9ef">const</span> complex<span style="color:#f92672">&amp;</span> x){
+    <span style="color:#66d9ef">return</span> x.imag();
+}
+
+<span style="color:#66d9ef">inline</span> <span style="color:#66d9ef">double</span>
+<span style="color:#a6e22e">real</span>(<span style="color:#66d9ef">const</span> complex<span style="color:#f92672">&amp;</span> x){
+    <span style="color:#66d9ef">return</span> x.real();
+}  
+
+<span style="color:#75715e">//操作符重载2 非成员函数 无this  
+</span><span style="color:#75715e">//为了应对client的可能用法，写三个函数  
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">//因为是临时对象 typename()，生命周期短只有一行，这里返回值只能用值传递
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">inline</span> complex  
+<span style="color:#66d9ef">operator</span> <span style="color:#f92672">+</span> (<span style="color:#66d9ef">const</span> complex<span style="color:#f92672">&amp;</span> x, <span style="color:#66d9ef">const</span> complex<span style="color:#f92672">&amp;</span> y){
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">complex</span> (real(x) <span style="color:#f92672">+</span> real(y) , 
+                    imag(x) <span style="color:#f92672">+</span> imag(y));
+}
+
+<span style="color:#66d9ef">inline</span> complex
+<span style="color:#66d9ef">operator</span> <span style="color:#f92672">+</span> (<span style="color:#66d9ef">const</span> complex<span style="color:#f92672">&amp;</span> x, <span style="color:#66d9ef">double</span> y){
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">complex</span> (real(x) <span style="color:#f92672">+</span> y ,
+                    imag(x));
+}
+
+<span style="color:#66d9ef">inline</span> complex
+<span style="color:#66d9ef">operator</span> <span style="color:#f92672">+</span> (<span style="color:#66d9ef">double</span> x, <span style="color:#66d9ef">const</span> complex<span style="color:#f92672">&amp;</span> y ){
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">complex</span> (x <span style="color:#f92672">+</span> real(y) , imag(y));
+}
+
+<span style="color:#75715e">//操作符重载  正负号
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">inline</span> complex
+<span style="color:#66d9ef">operator</span> <span style="color:#f92672">+</span> (<span style="color:#66d9ef">const</span> complex<span style="color:#f92672">&amp;</span> x){
+    <span style="color:#66d9ef">return</span> x;
+}
+
+<span style="color:#66d9ef">inline</span> complex
+<span style="color:#66d9ef">operator</span> <span style="color:#f92672">-</span> (<span style="color:#66d9ef">const</span> complex<span style="color:#f92672">&amp;</span> x){
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">complex</span>(<span style="color:#f92672">-</span>real(x), <span style="color:#f92672">-</span>imag(x));
+}
+
+<span style="color:#75715e">//操作符重载， 判断是否相等  
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">inline</span> <span style="color:#66d9ef">bool</span>
+<span style="color:#66d9ef">operator</span> <span style="color:#f92672">==</span> (<span style="color:#66d9ef">const</span> complex<span style="color:#f92672">&amp;</span> x, <span style="color:#66d9ef">const</span> complex<span style="color:#f92672">&amp;</span> y){
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">real</span>(x) <span style="color:#f92672">==</span> real(y) <span style="color:#f92672">&amp;&amp;</span> imag(x) <span style="color:#f92672">==</span> imag(y) ;  
+}
+
+<span style="color:#66d9ef">inline</span>  <span style="color:#66d9ef">bool</span>
+<span style="color:#66d9ef">operator</span> <span style="color:#f92672">==</span> (<span style="color:#66d9ef">const</span> complex<span style="color:#f92672">&amp;</span> x, <span style="color:#66d9ef">double</span> y){
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">real</span>(x) <span style="color:#f92672">==</span> y <span style="color:#f92672">&amp;&amp;</span> imag(x) <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span> ;
+}
+
+<span style="color:#66d9ef">inline</span> <span style="color:#66d9ef">bool</span>  
+<span style="color:#66d9ef">operator</span> <span style="color:#f92672">==</span> (<span style="color:#66d9ef">double</span> x , <span style="color:#66d9ef">const</span> complex<span style="color:#f92672">&amp;</span> y){
+    <span style="color:#66d9ef">return</span> x <span style="color:#f92672">==</span> real(y) <span style="color:#f92672">&amp;&amp;</span> imag(y) <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>; 
+}
+
+<span style="color:#75715e">//判断不相等 共轭 略过
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">//&lt;&lt;操作符重载  这种操作符一定要是非成员函数
+</span><span style="color:#75715e"></span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;iostream.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span>ostream<span style="color:#f92672">&amp;</span>  
+<span style="color:#66d9ef">operator</span> <span style="color:#f92672">&lt;&lt;</span> (osrteam<span style="color:#f92672">&amp;</span> os, <span style="color:#66d9ef">const</span> complex<span style="color:#f92672">&amp;</span> x){
+    <span style="color:#66d9ef">return</span> os <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#39;(&#39;</span><span style="color:#f92672">&lt;&lt;</span> real(x)<span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#39;,&#39;</span> <span style="color:#f92672">&lt;&lt;</span> imag(x) <span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">&#39;)&#39;</span>;
+}
 <span style="color:#75715e">#endif
 </span></code></pre></div><h2 id="构造函数放在-private-区域">构造函数放在 private 区域</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#75715e">//设计模式 Singleton  
@@ -215,15 +301,30 @@ A<span style="color:#f92672">&amp;</span> A<span style="color:#f92672">::</span>
     <span style="color:#66d9ef">return</span> A;
 }
 
-</code></pre></div><p>参考资料：<br>
-[1]<a href="https://www.bilibili.com/video/BV1844118771?p=4">C++系统工程师（适合有一定基础）</a></p>
+</code></pre></div><p>传递着无需知道接收者是以reference形式接收</p>
+<h2 id="细节点总结">细节点总结</h2>
+<ul>
+<li>constructor initialization</li>
+<li>const
+<ul>
+<li><code>double real () const { return re ;}</code></li>
+</ul>
+</li>
+<li>Pass/Return by reference
+<ul>
+<li><code>complex&amp; operator += (const complex&amp;);</code>
+参考资料：<br>
+[1]<a href="https://www.bilibili.com/video/BV1844118771?p=4">C++系统工程师（适合有一定基础）</a></li>
+</ul>
+</li>
+</ul>
 <div class="edit-meta">
 Last updated on 19 Jul 2020
 
 
 <br>
 Published on 19 Jul 2020
-<br><a href="https://github.com/894276610/894276610.github.io/edit/master/content/StudyCpp%5cHouJie%5cHouJieCpp_01.md" class="edit-page"><i class="fas fa-pen-square"></i> Edit on GitHub</a></div><nav class="pagination"><a class="nav nav-prev" href="https://894276610.github.io/studycpp/" title="StudyCpps"><i class="fas fa-arrow-left" aria-hidden="true"></i> Prev - StudyCpps</a>
+<br><a href="https://github.com/894276610/894276610.github.io/edit/master/content/StudyCpp%5cHouJie%5cHouJieCpp_01.md" class="edit-page"><i class="fas fa-pen-square"></i> Edit on GitHub</a></div><nav class="pagination"><a class="nav nav-prev" href="https://894276610.github.io/studycpp/houjie/houjiecpp_03/" title="[Cpp] P9 "><i class="fas fa-arrow-left" aria-hidden="true"></i> Prev - [Cpp] P9 </a>
 <a class="nav nav-next" href="https://894276610.github.io/studycpp/book01/" title="[Cpp]Book_List">Next - [Cpp]Book_List <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
 </nav><footer><p class="powered">Powered by <a href="https://gohugo.io">Hugo</a>. Theme by <a href="https://themes.gohugo.io/hugo-theme-techdoc/">TechDoc</a>. Designed by <a href="https://github.com/thingsym/hugo-theme-techdoc">Thingsym</a>.</p>
 </footer>
@@ -232,6 +333,19 @@ Published on 19 Jul 2020
 <nav class="slide-menu">
 <ul>
 <li class=""><a href="https://894276610.github.io/">Home</a></li>
+
+<li class="parent has-sub-menu"><a href="https://894276610.github.io/studycpp/">StudyCpps<span class="mark opened">-</span></a>
+  
+<ul class="sub-menu">
+<li class=""><a href="https://894276610.github.io/studycpp/houjie/houjiecpp_02/">[Cpp] P6-P8 </a></li>
+<li class=""><a href="https://894276610.github.io/studycpp/houjie/houjiecpp_03/">[Cpp] P9 </a></li>
+<li class="active"><a href="https://894276610.github.io/studycpp/houjie/houjiecpp_01/">[Cpp] P1-P5 complex </a></li>
+<li class=""><a href="https://894276610.github.io/studycpp/book01/">[Cpp]Book_List</a></li>
+<li class=""><a href="https://894276610.github.io/studycpp/details/">[Cpp]琐碎细节-待续</a></li>
+<li class=""><a href="https://894276610.github.io/studycpp/overload_operator/">[Cpp]Overload_operator</a></li>
+</ul>
+  
+</li>
 
 <li class=" has-sub-menu"><a href="https://894276610.github.io/guyuero/">GuYueRos<span class="mark closed">+</span></a>
   
@@ -257,17 +371,6 @@ Published on 19 Jul 2020
 </li>
 
 
-
-<li class="parent has-sub-menu"><a href="https://894276610.github.io/studycpp/">StudyCpps<span class="mark opened">-</span></a>
-  
-<ul class="sub-menu">
-<li class="active"><a href="https://894276610.github.io/studycpp/houjie/houjiecpp_01/">[Cpp]侯捷——头文件、类</a></li>
-<li class=""><a href="https://894276610.github.io/studycpp/book01/">[Cpp]Book_List</a></li>
-<li class=""><a href="https://894276610.github.io/studycpp/details/">[Cpp]琐碎细节-待续</a></li>
-<li class=""><a href="https://894276610.github.io/studycpp/overload_operator/">[Cpp]Overload_operator</a></li>
-</ul>
-  
-</li>
 
 <li class=" has-sub-menu"><a href="https://894276610.github.io/extrathing/">ExtraThings<span class="mark closed">+</span></a>
   
