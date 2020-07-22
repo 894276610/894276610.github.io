@@ -11,11 +11,11 @@
     
     
     <item>
-      <title>[Code]Install Ros</title>
-      <link>https://894276610.github.io/guyuero/ros_install_tips/</link>
+      <title>[5]Install Ros</title>
+      <link>https://894276610.github.io/guyuero/05-install-ros/</link>
       <pubDate>Thu, 16 Jul 2020 22:48:51 +0800</pubDate>
       
-      <guid>https://894276610.github.io/guyuero/ros_install_tips/</guid>
+      <guid>https://894276610.github.io/guyuero/05-install-ros/</guid>
       <description>当时安装ROS 18.04 困难重重
 总体上是按照这个步骤走的
 中间有几个步骤为ROS网站设置了本地DNS

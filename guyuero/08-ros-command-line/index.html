@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>[8]Ros Command Line - 云居小栈</title>
+<meta name="description" content="发布日期：2020年07月23日 子时  ">
+<meta name="generator" content="Hugo 0.73.0" />
+<link href="https://894276610.github.io//index.xml" rel="alternate" type="application/rss+xml">
+<link rel="canonical" href="https://894276610.github.io/guyuero/08-ros-command-line/">
+<link rel="stylesheet" href="https://894276610.github.io/css/theme.min.css">
+<script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+<link rel="stylesheet" href="https://894276610.github.io/css/chroma.min.css">
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery.easing@1.4.1/jquery.easing.min.js"></script>
+<script src="https://894276610.github.io/js/bundle.js"></script><style>
+:root {}
+</style>
+<meta property="og:title" content="[8]Ros Command Line" />
+<meta property="og:description" content="1. 第八讲 ROS 命令行的使用  1. 第八讲 ROS 命令行的使用  1.1. ROS 命令行工具  1.1.1. Workspace 相关命令 1.1.2. Package 相关命令   1.7. 参考文献（References）    1.1. ROS 命令行工具 常用命令
+ rostopic rosservice rosnode rosparam rosmsg rossrv  1.1.1. Workspace 相关命令  Create workspace   mkdir catkin_ws &amp;&amp; cd catkin_ws wstool init src catkin_make source devel/setup.bash  catkin_make是在catkin工作区中构建代码的便捷工具。 catkin_make遵循catkin工作区的标准布局 source命令功能：使Shell读入指定的Shell程序文件并依次执行文件中的所有语句 source命令通常用于重新执行刚修改的初始化文件，使之立即生效，而不必注销并重新登录  Add Repo to Workspace roscd; cd ." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://894276610.github.io/guyuero/08-ros-command-line/" />
+<meta property="article:published_time" content="2020-07-16T21:50:13+08:00" />
+<meta property="article:modified_time" content="2020-07-16T21:50:13+08:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="[8]Ros Command Line"/>
+<meta name="twitter:description" content="1. 第八讲 ROS 命令行的使用  1. 第八讲 ROS 命令行的使用  1.1. ROS 命令行工具  1.1.1. Workspace 相关命令 1.1.2. Package 相关命令   1.7. 参考文献（References）    1.1. ROS 命令行工具 常用命令
+ rostopic rosservice rosnode rosparam rosmsg rossrv  1.1.1. Workspace 相关命令  Create workspace   mkdir catkin_ws &amp;&amp; cd catkin_ws wstool init src catkin_make source devel/setup.bash  catkin_make是在catkin工作区中构建代码的便捷工具。 catkin_make遵循catkin工作区的标准布局 source命令功能：使Shell读入指定的Shell程序文件并依次执行文件中的所有语句 source命令通常用于重新执行刚修改的初始化文件，使之立即生效，而不必注销并重新登录  Add Repo to Workspace roscd; cd ."/>
+<meta itemprop="name" content="[8]Ros Command Line">
+<meta itemprop="description" content="1. 第八讲 ROS 命令行的使用  1. 第八讲 ROS 命令行的使用  1.1. ROS 命令行工具  1.1.1. Workspace 相关命令 1.1.2. Package 相关命令   1.7. 参考文献（References）    1.1. ROS 命令行工具 常用命令
+ rostopic rosservice rosnode rosparam rosmsg rossrv  1.1.1. Workspace 相关命令  Create workspace   mkdir catkin_ws &amp;&amp; cd catkin_ws wstool init src catkin_make source devel/setup.bash  catkin_make是在catkin工作区中构建代码的便捷工具。 catkin_make遵循catkin工作区的标准布局 source命令功能：使Shell读入指定的Shell程序文件并依次执行文件中的所有语句 source命令通常用于重新执行刚修改的初始化文件，使之立即生效，而不必注销并重新登录  Add Repo to Workspace roscd; cd .">
+<meta itemprop="datePublished" content="2020-07-16T21:50:13&#43;08:00" />
+<meta itemprop="dateModified" content="2020-07-16T21:50:13&#43;08:00" />
+<meta itemprop="wordCount" content="621">
+
+
+
+<meta itemprop="keywords" content="Ros,入门," /></head>
+<body><div class="container"><header>
+<h1>云居小栈</h1>
+<a href="https://github.com/894276610/894276610.github.io" class="github"><i class="fab fa-github"></i></a>
+<p class="description">发布日期：2020年07月23日 子时  </p>
+
+</header>
+<div class="global-menu">
+<nav>
+<ul>
+<li><a href="/todo/">My Todo List</a></li></ul>
+</nav>
+</div>
+<div class="content-container">
+<main><h1>[8]Ros Command Line</h1>
+<h1 id="1-第八讲-ros-命令行的使用">1. 第八讲 ROS 命令行的使用</h1>
+<!-- raw HTML omitted -->
+<ul>
+<li><a href="#1-%E7%AC%AC%E5%85%AB%E8%AE%B2-ros-%E5%91%BD%E4%BB%A4%E8%A1%8C%E7%9A%84%E4%BD%BF%E7%94%A8">1. 第八讲 ROS 命令行的使用</a>
+<ul>
+<li><a href="#11-ros-%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%B7%A5%E5%85%B7">1.1. ROS 命令行工具</a>
+<ul>
+<li><a href="#111-workspace-%E7%9B%B8%E5%85%B3%E5%91%BD%E4%BB%A4">1.1.1. Workspace 相关命令</a></li>
+<li><a href="#112-package-%E7%9B%B8%E5%85%B3%E5%91%BD%E4%BB%A4">1.1.2. Package 相关命令</a></li>
+</ul>
+</li>
+<li><a href="#17-%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AEreferences">1.7. 参考文献（References）</a></li>
+</ul>
+</li>
+</ul>
+<!-- raw HTML omitted -->
+<h2 id="11-ros-命令行工具">1.1. ROS 命令行工具</h2>
+<p>常用命令</p>
+<ul>
+<li>rostopic</li>
+<li>rosservice</li>
+<li>rosnode</li>
+<li>rosparam</li>
+<li>rosmsg</li>
+<li>rossrv</li>
+</ul>
+<h3 id="111-workspace-相关命令">1.1.1. Workspace 相关命令</h3>
+<ol>
+<li>Create workspace</li>
+</ol>
+<pre><code>   mkdir catkin_ws &amp;&amp; cd catkin_ws  
+   wstool init src  
+   catkin_make      
+   source devel/setup.bash 
+</code></pre><ul>
+<li>catkin_make是在catkin工作区中构建代码的便捷工具。 catkin_make遵循catkin工作区的标准布局</li>
+<li>source命令功能：使Shell读入指定的Shell程序文件并依次执行文件中的所有语句</li>
+<li>source命令通常用于重新执行刚修改的初始化文件，使之立即生效，而不必注销并重新登录</li>
+</ul>
+<ol start="2">
+<li>Add Repo to Workspace
+<pre><code>roscd; cd ../src
+wstool set repo_name \
+--git http://github.com/org/repo_name.git \
+--version=kinetic-devel  
+wstool up
+</code></pre></li>
+</ol>
+<ul>
+<li>roscd是ros系统中的命令，它可以直接切换到指定目录（ros系统中的软件包）</li>
+<li>roscd只能切换到那些路径已经包含在ROS_PACKAGE_PATH环境变量中的软件包<br>
+这时候我们需要切换到ros系统的工作空间（catkin_ws）下，通过source命令将软件包添加到环境变量中，即：</li>
+</ul>
+<pre><code>    cd ~/catkin_ws
+    source ./devel/setup.bash
+</code></pre><ol start="3">
+<li>Resolve Dependencies in Workspace</li>
+</ol>
+<pre><code>sudo rosdep init # only once
+rosdep update
+rosdep install --from-paths src  --ignore-src \
+--rosdistro=${ROS_DISTRO} -y
+</code></pre><h3 id="112-package-相关命令">1.1.2. Package 相关命令</h3>
+<ol>
+<li>
+<p>Create a package</p>
+<pre><code>catkin_create_pkg package_name [dependencies]
+</code></pre></li>
+<li>
+<p>Package folders</p>
+<pre><code>include/package_name c++ header files
+
+src source files
+     python libraries in subdirectories
+ scripts     python nodes and scripts
+ msg,srv,action    Message,Service,and Action Definitions
+</code></pre></li>
+<li>
+<p>Release Repo Packages</p>
+<pre><code>catkin_generate_changelog
+# review &amp; commit changelogs
+catkin_prepare_release
+bloom-release --track kinetic --ros-distro kinetic repo_name
+</code></pre></li>
+<li>
+<p>Reminders</p>
+</li>
+</ol>
+<ul>
+<li>Testable logic</li>
+<li>Publish diagnostics</li>
+<li>Desktop dependencies in a separate package</li>
+</ul>
+<h3 id="113-cmakeliststxt">1.1.3. CMakeLists.txt</h3>
+<ol>
+<li>skeleton(骨架)</li>
+</ol>
+<pre><code>cmake_minimum_required(Version 2.8.3)
+project(package_name)
+find_package(catkin_required)
+catkin_package()
+</code></pre><ol start="2">
+<li>package dependencies</li>
+</ol>
+<p>To use headers or libraries in a package, or to use a packages&rsquo; exported CMake macros, express a build-time dependency:</p>
+<pre><code>find_package (catkin required components roscpp)
+</code></pre><p>Tell dependent packages what headers or libraries to pull in when your package is declared as a catkin component:</p>
+<pre><code>catkin_package(
+   INCLUDE_DIRS include
+   LIBRARIES ${project name}
+   catkin_depends roscpp
+)
+
+</code></pre><p>Note that any packages note as CATKIN_DEPENDS dependencies also be declared as a &lt;run_depend&gt; in package.xml</p>
+<ol start="3">
+<li>Messages,services<br>
+These go after find_package() , but before catkin_package().<br>
+Example:</li>
+</ol>
+<pre><code>find_package (CATKIN REQUIRED COMPONENTS message_generation std_msgs)
+add_message_files(Files MyMessage.msg)
+add_service_files(Files MyService.msg)
+generate_messages(DEPENDENCIES std_msgs)
+catkin_package(CATKIN_DEPENDS catkin_runtime std_msgs)ww
+</code></pre><ol start="4">
+<li>Build libraries, Excutables<br>
+Goes after the catkin_package() call</li>
+</ol>
+<pre><code>add library(${PROJECT_NAME} src/main)
+add excutable(${PROJECT_NAME}_node src/main)  
+target_link_libraries(${PROJECT_NAME}_node ${catkin_LIBRARIES})
+</code></pre><ol start="5">
+<li>Installation</li>
+</ol>
+<pre><code>install (TARGETS ${PROJECT_NAME} DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION})
+install (TARGETS ${PROJECT_NAME}_node DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
+install (PROGRAMS scripts/myscript DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
+install (DIRECTORY launch DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION})
+
+</code></pre><h3 id="114-running-system">1.1.4. RUNNING SYSTEM</h3>
+<p>Run ROS using plain:</p>
+<pre><code>roscore
+</code></pre><p>Alternatively, roslaunch will run its own roscore automatically if it cannot find one.</p>
+<pre><code>roslaunch my_package package_launchfile.launch
+</code></pre><p>suppress the behavior with the <code>--wait</code> flag</p>
+<ol>
+<li>Nodes, Topics, Messages</li>
+</ol>
+<pre><code>rosnode list  
+rostopic list
+rostopic echo cmd_vel
+rostopic hz cmd_vel
+rostopic info cmd_vel
+rosmsg show grometry_msgs/Twist
+</code></pre><ol start="2">
+<li>Remote connection<br>
+Master&rsquo;s ROS Environment</li>
+</ol>
+<ul>
+<li>ROS_IP or ROS_HOSTNAME set to this machine&rsquo;s network address</li>
+<li>ROS_MASTER_URI set to URI that containing that IP or hostname.</li>
+</ul>
+<p>Your environment:</p>
+<ul>
+<li>ROS_IP or ROS_HOSTNAME set to this machine&rsquo;s network address</li>
+<li>ROS_MASTER_URI set to URI that from the master.</li>
+</ul>
+<p>To debug, check ping from each side to the other, run roswtf on each side.</p>
+<ol start="3">
+<li>ROS console<br>
+Adjust using rqt_logger_level and monitor via rqt_console. To enable debug output across sessions,  edit the  /HOME/.ros/config/rosconsole.config and add a line for your package:</li>
+</ol>
+<pre><code>log4j.logger.ros.package_name=DEBUG
+</code></pre><p>And add the following to your sesssion:</p>
+<pre><code>export ROSCONSOLE_CONFIG_FILE=$/HOME/.ros/config/rosconsole.config
+</code></pre><p>Use the roslaunch <code>--screen flag</code> to force all the node output to the screen, as if each declared <code>&lt;node&gt;</code> had the output=&quot;screen&rdquo; attribite.</p>
+<h2 id="12-启动小海龟">1.2. 启动小海龟</h2>
+<ol>
+<li>启动终端  启动ROS MASTER<br>
+<code>roscore</code></li>
+<li>启动新终端 小海龟仿真器<br>
+rosrun 功能包名  节点名称<br>
+<code>rosrun turtlesim turtlesim_node</code></li>
+<li>启动新终端 启动海龟控制节点<br>
+<code>rosrun turtlesim turtle_teleop_key</code></li>
+</ol>
+<h2 id="13-分析小海龟话题和服务">1.3. 分析小海龟话题和服务</h2>
+<ol>
+<li>基于qt的可视化工具 <code>rqt graph</code></li>
+</ol>
+<ul>
+<li>可以显示计算图</li>
+<li>明白这个系统的全貌</li>
+</ul>
+<ol start="2">
+<li>显示节点相关信息的指令  <code>rosnode</code></li>
+</ol>
+<ul>
+<li>
+<p>显示节点列表 <code>rosnode list</code></p>
+</li>
+<li>
+<p>节点具体信息<code>rosnode info /turtlesim </code></p>
+<ul>
+<li>某个节点具体信息是什么样的</li>
+<li>可以看到它发布的订阅的话题</li>
+<li>服务配置、主机号等等
+3.跟话题相关的参数   <code>rostopic</code></li>
+</ul>
+</li>
+<li>
+<p><code>rostopic list</code> 打印当前系统的所有的话题列表</p>
+</li>
+</ul>
+<h2 id="14-使用命令行工具让海龟动起来-话题通讯">1.4. 使用命令行工具让海龟动起来 （话题通讯）</h2>
+<ul>
+<li>rostopic pub(发布) 话题名 消息结构 消息内容</li>
+<li>结果： 海龟只动了一下</li>
+</ul>
+<pre><code>rostopic pub /turtle1/cmd_vel geometry_msgs/Twist &quot;linear: 
+x: 1.0
+y: 0.0 
+z: 0.0 
+angular: 
+x: 0.0 
+y: 0.0 
+z: 1.0 &quot;
+</code></pre><ul>
+<li>改进方法：重复执行</li>
+<li>rostopic pub -r(r代表rate 单位Hz) 10</li>
+</ul>
+<pre><code>pub -r 10  /turtle1/cmd_vel geometry_msgs/Twist &quot;linear: 
+x: 1.0
+y: 0.0 
+z: 0.0 
+angular: 
+x: 0.0 
+y: 0.0 
+z: 1.0 &quot;
+</code></pre><ul>
+<li>查看消息结构到底是怎么样的<br>
+rosmsg show 消息结构<br>
+<code>rosmsg show geometry_msgs/Twist</code></li>
+</ul>
+<h2 id="15-添加新海龟-服务通讯">1.5. 添加新海龟 （服务通讯）</h2>
+<ul>
+<li>查看所有服务列表<br>
+<code>rosservice list</code></li>
+<li>请求服务</li>
+</ul>
+<pre><code>请求产生一个新海龟，设定初始坐标（屏幕左下为原点）
+rosservice call /spawn &quot;x: 0.0 
+y: 0.0 
+theta: 0.0 
+name: 'turtle2'&quot; 
+</code></pre><p>服务通讯成功在命令行会有一个反馈信息</p>
+<h2 id="16-话题记录和复现">1.6. 话题记录和复现</h2>
+<ul>
+<li>话题记录 <code>rosbag record </code><br>
+-a 表示 all 保存所有的数据 <br>
+-O 数据保存成一个压缩包 后边加上文件名</li>
+</ul>
+<pre><code>rosbag record -a -O cmd_record
+</code></pre><p>数据会保存在当前终端的默认路径下</p>
+<ul>
+<li>话题复现  <code>rosbag play </code><br>
+重启roscore<br>
+启动仿真器节点<br>
+不启动键盘控制节点<br>
+通过数据包复现指令
+（指令复现，起点可能不同）
+rosbag play 文件名</li>
+</ul>
+<pre><code>rosbag play cmd record.bag  
+</code></pre><h2 id="17-参考文献references">1.7. 参考文献（References）</h2>
+<p>[1]<a href="https://www.bilibili.com/video/BV1zt411G7Vn?p=8">古月ROS入门21讲——第八讲</a><br>
+[2]<a href="https://zhidao.baidu.com/question/351365849.html">linux命令结尾加斜杠与不加斜杠的区别</a><br>
+[3]<a href="https://zhidao.baidu.com/question/180892800.html">界面最大化<code>Alt</code>+<code>Space</code>+<code>X</code></a><br>
+[4]<a href="https://www.cnblogs.com/tanshengjiang/p/12148041.html">cd命令和roscd命令的区别，并解决环境变量问题</a></p>
+<div class="edit-meta">
+Last updated on 16 Jul 2020
+
+
+<br>
+Published on 16 Jul 2020
+<br><a href="https://github.com/894276610/894276610.github.io/edit/master/content/GuYueRo%5c08-Ros%20Command%20Line.md" class="edit-page"><i class="fas fa-pen-square"></i> Edit on GitHub</a></div><nav class="pagination"><a class="nav nav-prev" href="https://894276610.github.io/guyuero/05-install-ros/" title="[5]Install Ros"><i class="fas fa-arrow-left" aria-hidden="true"></i> Prev - [5]Install Ros</a>
+<a class="nav nav-next" href="https://894276610.github.io/guyuero/07-ros-concept/" title="[7]Ros Concept">Next - [7]Ros Concept <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+</nav><footer><p class="powered">Powered by <a href="https://gohugo.io">Hugo</a>. Theme by <a href="https://themes.gohugo.io/hugo-theme-techdoc/">TechDoc</a>. Designed by <a href="https://github.com/thingsym/hugo-theme-techdoc">Thingsym</a>.</p>
+</footer>
+</main><div class="sidebar">
+
+<nav class="slide-menu">
+<ul>
+<li class=""><a href="https://894276610.github.io/">Home</a></li>
+
+<li class=" has-sub-menu"><a href="https://894276610.github.io/studycpp/">StudyCpps<span class="mark closed">+</span></a>
+  
+<ul class="sub-menu">
+<li class=""><a href="https://894276610.github.io/studycpp/houjie/houjiecpp_02/">[Cpp] P6-P8 </a></li>
+<li class=""><a href="https://894276610.github.io/studycpp/houjie/houjiecpp_03/">[Cpp] P9 </a></li>
+<li class=""><a href="https://894276610.github.io/studycpp/houjie/houjiecpp_01/">[Cpp] P1-P5 complex </a></li>
+<li class=""><a href="https://894276610.github.io/studycpp/book01/">[Cpp]Book_List</a></li>
+<li class=""><a href="https://894276610.github.io/studycpp/details/">[Cpp]琐碎细节-待续</a></li>
+<li class=""><a href="https://894276610.github.io/studycpp/overload_operator/">[Cpp]Overload_operator</a></li>
+</ul>
+  
+</li>
+
+<li class="parent has-sub-menu"><a href="https://894276610.github.io/guyuero/">GuYueRos<span class="mark opened">-</span></a>
+  
+<ul class="sub-menu">
+<li class=""><a href="https://894276610.github.io/guyuero/21-summary/">[21]Summary</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/20-visual-aids/">[20]Visual aids</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/19-launch-file/">[19]launch file</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/18-broadcaster-and-listener/">[18]Broadcaster and listener</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/17-transformation/">[17]Transformation</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/16-parameters/">[16]Parameters</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/15-define-service/">[15]define service</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/14-server/">[14]Server</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/13-client/">[13]Client</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/12-topic-define/">[12]Topic define</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/12&#43;topic-define/">[12]Topic_define&#43;</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/11-subscriber/">[11]Subscriber</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/10-publisher/">[10]Publisher</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/09-workspace-and-package/">[9]Workspace and package</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/05-install-ros/">[5]Install Ros</a></li>
+<li class="active"><a href="https://894276610.github.io/guyuero/08-ros-command-line/">[8]Ros Command Line</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/07-ros-concept/">[7]Ros Concept</a></li>
+</ul>
+  
+</li>
+
+
+
+<li class=" has-sub-menu"><a href="https://894276610.github.io/extrathing/">ExtraThings<span class="mark closed">+</span></a>
+  
+<ul class="sub-menu">
+<li class=""><a href="https://894276610.github.io/extrathing/titlephoto/">[花絮]头像制作思路</a></li>
+</ul>
+  
+</li>
+
+<li class=" has-sub-menu"><a href="https://894276610.github.io/createblog/">CreateBlogs<span class="mark closed">+</span></a>
+  
+<ul class="sub-menu">
+<li class=""><a href="https://894276610.github.io/createblog/markdownlanguage/">Markdown_basic</a></li>
+<li class=""><a href="https://894276610.github.io/createblog/hugo_try/">HUGO</a></li>
+<li class=""><a href="https://894276610.github.io/createblog/firstblog/">Bolg</a></li>
+</ul>
+  
+</li>
+
+<li class=" has-sub-menu"><a href="https://894276610.github.io/introduction_to_robotics/">Introduction_to_robotics<span class="mark closed">+</span></a>
+  
+<ul class="sub-menu">
+<li class=""><a href="https://894276610.github.io/introduction_to_robotics/introduction/">[Robotics]Books</a></li>
+</ul>
+  
+</li>
+</ul>
+</nav>
+
+
+
+<div class="sidebar-footer"></div>
+</div>
+</div><a href="#" id="backtothetop-fixed" class="backtothetop"
+ data-backtothetop-duration="600"
+ data-backtothetop-easing="easeOutQuart"
+ data-backtothetop-fixed-fadeIn="1000"
+ data-backtothetop-fixed-fadeOut="1000"
+ data-backtothetop-fixed-bottom="10"
+ data-backtothetop-fixed-right="20">
+<span class="fa-layers fa-fw">
+<i class="fas fa-circle"></i>
+<i class="fas fa-arrow-circle-up"></i>
+</span></a>
+</div>
+</body>
+</html>

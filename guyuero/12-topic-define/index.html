@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>[12]Topic define - 云居小栈</title>
+<meta name="description" content="发布日期：2020年07月23日 子时  ">
+<meta name="generator" content="Hugo 0.73.0" />
+<link href="https://894276610.github.io//index.xml" rel="alternate" type="application/rss+xml">
+<link rel="canonical" href="https://894276610.github.io/guyuero/12-topic-define/">
+<link rel="stylesheet" href="https://894276610.github.io/css/theme.min.css">
+<script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+<link rel="stylesheet" href="https://894276610.github.io/css/chroma.min.css">
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery.easing@1.4.1/jquery.easing.min.js"></script>
+<script src="https://894276610.github.io/js/bundle.js"></script><style>
+:root {}
+</style>
+<meta property="og:title" content="[12]Topic define" />
+<meta property="og:description" content="第十二讲 话题消息的定义与使用  第十二讲 话题消息的定义与使用  自定义话题消息 创建发布者代码 配置代码编译规则 编译并运行发布者和订阅者    自定义话题消息   定义msg文件 在learning_topic 中创建文件夹 msg
+创建person.msg 文件
+是 uint 不是 unit 别敲错了
+## uint8 实在std_msgs 中做定义的第二步需配置 ## string name uint8 sex uint8 age uint8 unknown = 0 uint8 male = 1 uint8 female = 2   在package.xml 中添加功能包依赖
+动态生成程序的依赖
+&lt;build_depend&gt;message_generation&lt;/build_depend&gt; &lt;exec_depend&gt;message_runtime&lt;/exec_depend&gt; 粘贴到与其相同格式的地方
+  在CMakeList.txt添加编译选项
+find_package(... message_generation) ## Declare ROS Messages, services and actions ## add_message_files(FILES person." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://894276610.github.io/guyuero/12-topic-define/" />
+<meta property="article:published_time" content="2020-07-18T18:52:13+08:00" />
+<meta property="article:modified_time" content="2020-07-18T18:52:13+08:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="[12]Topic define"/>
+<meta name="twitter:description" content="第十二讲 话题消息的定义与使用  第十二讲 话题消息的定义与使用  自定义话题消息 创建发布者代码 配置代码编译规则 编译并运行发布者和订阅者    自定义话题消息   定义msg文件 在learning_topic 中创建文件夹 msg
+创建person.msg 文件
+是 uint 不是 unit 别敲错了
+## uint8 实在std_msgs 中做定义的第二步需配置 ## string name uint8 sex uint8 age uint8 unknown = 0 uint8 male = 1 uint8 female = 2   在package.xml 中添加功能包依赖
+动态生成程序的依赖
+&lt;build_depend&gt;message_generation&lt;/build_depend&gt; &lt;exec_depend&gt;message_runtime&lt;/exec_depend&gt; 粘贴到与其相同格式的地方
+  在CMakeList.txt添加编译选项
+find_package(... message_generation) ## Declare ROS Messages, services and actions ## add_message_files(FILES person."/>
+<meta itemprop="name" content="[12]Topic define">
+<meta itemprop="description" content="第十二讲 话题消息的定义与使用  第十二讲 话题消息的定义与使用  自定义话题消息 创建发布者代码 配置代码编译规则 编译并运行发布者和订阅者    自定义话题消息   定义msg文件 在learning_topic 中创建文件夹 msg
+创建person.msg 文件
+是 uint 不是 unit 别敲错了
+## uint8 实在std_msgs 中做定义的第二步需配置 ## string name uint8 sex uint8 age uint8 unknown = 0 uint8 male = 1 uint8 female = 2   在package.xml 中添加功能包依赖
+动态生成程序的依赖
+&lt;build_depend&gt;message_generation&lt;/build_depend&gt; &lt;exec_depend&gt;message_runtime&lt;/exec_depend&gt; 粘贴到与其相同格式的地方
+  在CMakeList.txt添加编译选项
+find_package(... message_generation) ## Declare ROS Messages, services and actions ## add_message_files(FILES person.">
+<meta itemprop="datePublished" content="2020-07-18T18:52:13&#43;08:00" />
+<meta itemprop="dateModified" content="2020-07-18T18:52:13&#43;08:00" />
+<meta itemprop="wordCount" content="107">
+
+
+
+<meta itemprop="keywords" content="Ros,入门," /></head>
+<body><div class="container"><header>
+<h1>云居小栈</h1>
+<a href="https://github.com/894276610/894276610.github.io" class="github"><i class="fab fa-github"></i></a>
+<p class="description">发布日期：2020年07月23日 子时  </p>
+
+</header>
+<div class="global-menu">
+<nav>
+<ul>
+<li><a href="/todo/">My Todo List</a></li></ul>
+</nav>
+</div>
+<div class="content-container">
+<main><h1>[12]Topic define</h1>
+<h1 id="第十二讲-话题消息的定义与使用">第十二讲 话题消息的定义与使用</h1>
+<!-- raw HTML omitted -->
+<ul>
+<li><a href="#%E7%AC%AC%E5%8D%81%E4%BA%8C%E8%AE%B2-%E8%AF%9D%E9%A2%98%E6%B6%88%E6%81%AF%E7%9A%84%E5%AE%9A%E4%B9%89%E4%B8%8E%E4%BD%BF%E7%94%A8">第十二讲 话题消息的定义与使用</a>
+<ul>
+<li><a href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E8%AF%9D%E9%A2%98%E6%B6%88%E6%81%AF">自定义话题消息</a></li>
+<li><a href="#%E5%88%9B%E5%BB%BA%E5%8F%91%E5%B8%83%E8%80%85%E4%BB%A3%E7%A0%81">创建发布者代码</a></li>
+<li><a href="#%E9%85%8D%E7%BD%AE%E4%BB%A3%E7%A0%81%E7%BC%96%E8%AF%91%E8%A7%84%E5%88%99">配置代码编译规则</a></li>
+<li><a href="#%E7%BC%96%E8%AF%91%E5%B9%B6%E8%BF%90%E8%A1%8C%E5%8F%91%E5%B8%83%E8%80%85%E5%92%8C%E8%AE%A2%E9%98%85%E8%80%85">编译并运行发布者和订阅者</a></li>
+</ul>
+</li>
+</ul>
+<!-- raw HTML omitted -->
+<h2 id="自定义话题消息">自定义话题消息</h2>
+<ol>
+<li>
+<p>定义msg文件
+在learning_topic 中创建文件夹 msg<br>
+创建person.msg 文件</p>
+<p>是 <code>uint</code> 不是 <code>unit</code> 别敲错了</p>
+<pre><code>## uint8 实在std_msgs 中做定义的第二步需配置 ##
+   
+ string name  
+ uint8 sex  
+ uint8 age  
+
+ uint8 unknown = 0
+ uint8 male = 1
+ uint8 female = 2
+
+</code></pre></li>
+<li>
+<p>在package.xml 中添加功能包依赖<br>
+动态生成程序的依赖</p>
+<pre><code>&lt;build_depend&gt;message_generation&lt;/build_depend&gt;  
+&lt;exec_depend&gt;message_runtime&lt;/exec_depend&gt;  
+</code></pre><p>粘贴到与其相同格式的地方</p>
+</li>
+<li>
+<p>在CMakeList.txt添加编译选项</p>
+<pre><code>find_package(... message_generation)  
+
+## Declare ROS Messages, services and actions ##
+
+add_message_files(FILES person.msg)  
+generate_messages(DEPENDENCIES std_msgs)  
+catkin_package(CATKIN_DEPENDS ... message_runtime)
+</code></pre></li>
+<li>
+<p>在根目录下编译</p>
+<pre><code>catkin_make
+</code></pre></li>
+<li>
+<p>（查看生成的代码文件）<br>
+devel/include/learning_topic/person.h</p>
+</li>
+</ol>
+<h2 id="创建发布者代码">创建发布者代码</h2>
+<p>复制发布者/订阅者代码到src中</p>
+<h2 id="配置代码编译规则">配置代码编译规则</h2>
+<p>learning_topic 的CMakeList <code>##build##</code>下方</p>
+<ul>
+<li>设置需要编译的代码和生成可执行文件</li>
+<li>设置链接库</li>
+<li>添加依赖项</li>
+</ul>
+<pre><code>    add_executable(person_publisher src/person_publisher.cpp)  
+    target_link_libraries(person_publisher ${catkin_LIBRARIES})  
+    add_dependencies(person_publisher ${PROJECT_NAME}_generate_messages_cpp) 
+
+    add_executable(person_subscriber src/person_subscriber.cpp)  
+    target_link_libraries(person_subscriber ${catkin_LIBRARIES})  
+    add_dependencies(person_subscriber ${PROJECT_NAME}_generate_messages_cpp)
+    
+</code></pre><h2 id="编译并运行发布者和订阅者">编译并运行发布者和订阅者</h2>
+<pre><code> cd ~/catkin_ws  
+ catkin_make  
+ source devel/setup.bash  
+ roscore  
+ rosrun learning_topic person_subscriber  
+ rosrun learning_topic person_publisher  
+</code></pre><p>参考资料<br>
+[1]<a href="https://www.bilibili.com/video/BV1zt411G7Vn?p=12">古月ROS入门21讲——第十二讲</a></p>
+<div class="edit-meta">
+Last updated on 18 Jul 2020
+
+
+<br>
+Published on 18 Jul 2020
+<br><a href="https://github.com/894276610/894276610.github.io/edit/master/content/GuYueRo%5c12-Topic%20define.md" class="edit-page"><i class="fas fa-pen-square"></i> Edit on GitHub</a></div><nav class="pagination"><a class="nav nav-prev" href="https://894276610.github.io/guyuero/13-client/" title="[13]Client"><i class="fas fa-arrow-left" aria-hidden="true"></i> Prev - [13]Client</a>
+<a class="nav nav-next" href="https://894276610.github.io/guyuero/12&#43;topic-define/" title="[12]Topic_define&#43;">Next - [12]Topic_define&#43; <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+</nav><footer><p class="powered">Powered by <a href="https://gohugo.io">Hugo</a>. Theme by <a href="https://themes.gohugo.io/hugo-theme-techdoc/">TechDoc</a>. Designed by <a href="https://github.com/thingsym/hugo-theme-techdoc">Thingsym</a>.</p>
+</footer>
+</main><div class="sidebar">
+
+<nav class="slide-menu">
+<ul>
+<li class=""><a href="https://894276610.github.io/">Home</a></li>
+
+<li class=" has-sub-menu"><a href="https://894276610.github.io/studycpp/">StudyCpps<span class="mark closed">+</span></a>
+  
+<ul class="sub-menu">
+<li class=""><a href="https://894276610.github.io/studycpp/houjie/houjiecpp_02/">[Cpp] P6-P8 </a></li>
+<li class=""><a href="https://894276610.github.io/studycpp/houjie/houjiecpp_03/">[Cpp] P9 </a></li>
+<li class=""><a href="https://894276610.github.io/studycpp/houjie/houjiecpp_01/">[Cpp] P1-P5 complex </a></li>
+<li class=""><a href="https://894276610.github.io/studycpp/book01/">[Cpp]Book_List</a></li>
+<li class=""><a href="https://894276610.github.io/studycpp/details/">[Cpp]琐碎细节-待续</a></li>
+<li class=""><a href="https://894276610.github.io/studycpp/overload_operator/">[Cpp]Overload_operator</a></li>
+</ul>
+  
+</li>
+
+<li class="parent has-sub-menu"><a href="https://894276610.github.io/guyuero/">GuYueRos<span class="mark opened">-</span></a>
+  
+<ul class="sub-menu">
+<li class=""><a href="https://894276610.github.io/guyuero/21-summary/">[21]Summary</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/20-visual-aids/">[20]Visual aids</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/19-launch-file/">[19]launch file</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/18-broadcaster-and-listener/">[18]Broadcaster and listener</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/17-transformation/">[17]Transformation</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/16-parameters/">[16]Parameters</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/15-define-service/">[15]define service</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/14-server/">[14]Server</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/13-client/">[13]Client</a></li>
+<li class="active"><a href="https://894276610.github.io/guyuero/12-topic-define/">[12]Topic define</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/12&#43;topic-define/">[12]Topic_define&#43;</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/11-subscriber/">[11]Subscriber</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/10-publisher/">[10]Publisher</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/09-workspace-and-package/">[9]Workspace and package</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/05-install-ros/">[5]Install Ros</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/08-ros-command-line/">[8]Ros Command Line</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/07-ros-concept/">[7]Ros Concept</a></li>
+</ul>
+  
+</li>
+
+
+
+<li class=" has-sub-menu"><a href="https://894276610.github.io/extrathing/">ExtraThings<span class="mark closed">+</span></a>
+  
+<ul class="sub-menu">
+<li class=""><a href="https://894276610.github.io/extrathing/titlephoto/">[花絮]头像制作思路</a></li>
+</ul>
+  
+</li>
+
+<li class=" has-sub-menu"><a href="https://894276610.github.io/createblog/">CreateBlogs<span class="mark closed">+</span></a>
+  
+<ul class="sub-menu">
+<li class=""><a href="https://894276610.github.io/createblog/markdownlanguage/">Markdown_basic</a></li>
+<li class=""><a href="https://894276610.github.io/createblog/hugo_try/">HUGO</a></li>
+<li class=""><a href="https://894276610.github.io/createblog/firstblog/">Bolg</a></li>
+</ul>
+  
+</li>
+
+<li class=" has-sub-menu"><a href="https://894276610.github.io/introduction_to_robotics/">Introduction_to_robotics<span class="mark closed">+</span></a>
+  
+<ul class="sub-menu">
+<li class=""><a href="https://894276610.github.io/introduction_to_robotics/introduction/">[Robotics]Books</a></li>
+</ul>
+  
+</li>
+</ul>
+</nav>
+
+
+
+<div class="sidebar-footer"></div>
+</div>
+</div><a href="#" id="backtothetop-fixed" class="backtothetop"
+ data-backtothetop-duration="600"
+ data-backtothetop-easing="easeOutQuart"
+ data-backtothetop-fixed-fadeIn="1000"
+ data-backtothetop-fixed-fadeOut="1000"
+ data-backtothetop-fixed-bottom="10"
+ data-backtothetop-fixed-right="20">
+<span class="fa-layers fa-fw">
+<i class="fas fa-circle"></i>
+<i class="fas fa-arrow-circle-up"></i>
+</span></a>
+</div>
+</body>
+</html>
