@@ -17,34 +17,19 @@
 :root {}
 </style>
 <meta property="og:title" content="[18]Broadcaster and listener" />
-<meta property="og:description" content="第十八讲 tf坐标系广播与监听的编程实现  第十八讲 tf坐标系广播与监听的编程实现  1. 创建功能包 2. 创建tf广播器代码（C&#43;&#43;） 3. 创建tf监听器代码（C&#43;&#43;） 4. 配置CMakeList编译规则 5. 在根目录编译运行    1. 创建功能包 cd ~/catkin_ws/src catkin_create_pkg learning_tf roscpp cospy tf turtlesim 2. 创建tf广播器代码（C&#43;&#43;） 3. 创建tf监听器代码（C&#43;&#43;） 代码
-4. 配置CMakeList编译规则   设置要编译的代码和可执行文件
-  设置链接库
-add_executable(turtle_tf_broadcaster src/turtle_tf_broadcaster.cpp) target_link_libraries(turtle_tf_broadcaster ${catkin_LIBRARIES}) add_executable(turtle_tf_listener src/turtle_tf_broadcaster.cpp) target_link_libraries(turtle_tf_listener ${catkin_LIBRARIES})   5. 在根目录编译运行 catkin_make
-重映射：两个下划线加name:=
-catkin_make source devel/setup.bash roscore rosrun turtlesim turtlesim_node rosrun learning_tf turtle_tf_broadcaster __name:=turtle1_tf_broadcaster /turtle1 rosrun learning_tf turtle_tf_broadcaster __name:=turtle2_tf_broadcaster /turtle2 rosrun learning_tf turtle_tf_listener rosrun turtlesim turtle_teleop_key 参考资料" />
+<meta property="og:description" content="第十八讲 tf坐标系广播与监听的编程实现  第十八讲 tf坐标系广播与监听的编程实现  1. 创建功能包 2. 创建tf广播器代码（C&#43;&#43;） 3. 创建tf监听器代码（C&#43;&#43;） 4. 配置CMakeList编译规则 5. 在根目录编译运行    1. 创建功能包 cd ~/catkin_ws/src catkin_create_pkg learning_tf roscpp cospy tf turtlesim 2. 创建tf广播器代码（C&#43;&#43;） /*********************************************************************** Copyright 2020 GuYueHome (www.guyuehome.com). ***********************************************************************/ /** * 该例程产生tf数据，并计算、发布turtle2的速度指令 */ #include &lt;ros/ros.h&gt;#include &lt;tf/transform_broadcaster.h&gt;#include &lt;turtlesim/Pose.h&gt; std::string turtle_name; void poseCallback(const turtlesim::PoseConstPtr&amp; msg) { // 创建tf的广播器 	static tf::TransformBroadcaster br; // 初始化tf数据 	tf::Transform transform; transform.setOrigin( tf::Vector3(msg-&gt;x, msg-&gt;y, 0.0) ); tf::Quaternion q; q." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://894276610.github.io/guyuero/18-broadcaster-and-listener/" />
 <meta property="article:published_time" content="2020-07-20T21:49:13+08:00" />
 <meta property="article:modified_time" content="2020-07-20T21:49:13+08:00" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="[18]Broadcaster and listener"/>
-<meta name="twitter:description" content="第十八讲 tf坐标系广播与监听的编程实现  第十八讲 tf坐标系广播与监听的编程实现  1. 创建功能包 2. 创建tf广播器代码（C&#43;&#43;） 3. 创建tf监听器代码（C&#43;&#43;） 4. 配置CMakeList编译规则 5. 在根目录编译运行    1. 创建功能包 cd ~/catkin_ws/src catkin_create_pkg learning_tf roscpp cospy tf turtlesim 2. 创建tf广播器代码（C&#43;&#43;） 3. 创建tf监听器代码（C&#43;&#43;） 代码
-4. 配置CMakeList编译规则   设置要编译的代码和可执行文件
-  设置链接库
-add_executable(turtle_tf_broadcaster src/turtle_tf_broadcaster.cpp) target_link_libraries(turtle_tf_broadcaster ${catkin_LIBRARIES}) add_executable(turtle_tf_listener src/turtle_tf_broadcaster.cpp) target_link_libraries(turtle_tf_listener ${catkin_LIBRARIES})   5. 在根目录编译运行 catkin_make
-重映射：两个下划线加name:=
-catkin_make source devel/setup.bash roscore rosrun turtlesim turtlesim_node rosrun learning_tf turtle_tf_broadcaster __name:=turtle1_tf_broadcaster /turtle1 rosrun learning_tf turtle_tf_broadcaster __name:=turtle2_tf_broadcaster /turtle2 rosrun learning_tf turtle_tf_listener rosrun turtlesim turtle_teleop_key 参考资料"/>
+<meta name="twitter:description" content="第十八讲 tf坐标系广播与监听的编程实现  第十八讲 tf坐标系广播与监听的编程实现  1. 创建功能包 2. 创建tf广播器代码（C&#43;&#43;） 3. 创建tf监听器代码（C&#43;&#43;） 4. 配置CMakeList编译规则 5. 在根目录编译运行    1. 创建功能包 cd ~/catkin_ws/src catkin_create_pkg learning_tf roscpp cospy tf turtlesim 2. 创建tf广播器代码（C&#43;&#43;） /*********************************************************************** Copyright 2020 GuYueHome (www.guyuehome.com). ***********************************************************************/ /** * 该例程产生tf数据，并计算、发布turtle2的速度指令 */ #include &lt;ros/ros.h&gt;#include &lt;tf/transform_broadcaster.h&gt;#include &lt;turtlesim/Pose.h&gt; std::string turtle_name; void poseCallback(const turtlesim::PoseConstPtr&amp; msg) { // 创建tf的广播器 	static tf::TransformBroadcaster br; // 初始化tf数据 	tf::Transform transform; transform.setOrigin( tf::Vector3(msg-&gt;x, msg-&gt;y, 0.0) ); tf::Quaternion q; q."/>
 <meta itemprop="name" content="[18]Broadcaster and listener">
-<meta itemprop="description" content="第十八讲 tf坐标系广播与监听的编程实现  第十八讲 tf坐标系广播与监听的编程实现  1. 创建功能包 2. 创建tf广播器代码（C&#43;&#43;） 3. 创建tf监听器代码（C&#43;&#43;） 4. 配置CMakeList编译规则 5. 在根目录编译运行    1. 创建功能包 cd ~/catkin_ws/src catkin_create_pkg learning_tf roscpp cospy tf turtlesim 2. 创建tf广播器代码（C&#43;&#43;） 3. 创建tf监听器代码（C&#43;&#43;） 代码
-4. 配置CMakeList编译规则   设置要编译的代码和可执行文件
-  设置链接库
-add_executable(turtle_tf_broadcaster src/turtle_tf_broadcaster.cpp) target_link_libraries(turtle_tf_broadcaster ${catkin_LIBRARIES}) add_executable(turtle_tf_listener src/turtle_tf_broadcaster.cpp) target_link_libraries(turtle_tf_listener ${catkin_LIBRARIES})   5. 在根目录编译运行 catkin_make
-重映射：两个下划线加name:=
-catkin_make source devel/setup.bash roscore rosrun turtlesim turtlesim_node rosrun learning_tf turtle_tf_broadcaster __name:=turtle1_tf_broadcaster /turtle1 rosrun learning_tf turtle_tf_broadcaster __name:=turtle2_tf_broadcaster /turtle2 rosrun learning_tf turtle_tf_listener rosrun turtlesim turtle_teleop_key 参考资料">
+<meta itemprop="description" content="第十八讲 tf坐标系广播与监听的编程实现  第十八讲 tf坐标系广播与监听的编程实现  1. 创建功能包 2. 创建tf广播器代码（C&#43;&#43;） 3. 创建tf监听器代码（C&#43;&#43;） 4. 配置CMakeList编译规则 5. 在根目录编译运行    1. 创建功能包 cd ~/catkin_ws/src catkin_create_pkg learning_tf roscpp cospy tf turtlesim 2. 创建tf广播器代码（C&#43;&#43;） /*********************************************************************** Copyright 2020 GuYueHome (www.guyuehome.com). ***********************************************************************/ /** * 该例程产生tf数据，并计算、发布turtle2的速度指令 */ #include &lt;ros/ros.h&gt;#include &lt;tf/transform_broadcaster.h&gt;#include &lt;turtlesim/Pose.h&gt; std::string turtle_name; void poseCallback(const turtlesim::PoseConstPtr&amp; msg) { // 创建tf的广播器 	static tf::TransformBroadcaster br; // 初始化tf数据 	tf::Transform transform; transform.setOrigin( tf::Vector3(msg-&gt;x, msg-&gt;y, 0.0) ); tf::Quaternion q; q.">
 <meta itemprop="datePublished" content="2020-07-20T21:49:13&#43;08:00" />
 <meta itemprop="dateModified" content="2020-07-20T21:49:13&#43;08:00" />
-<meta itemprop="wordCount" content="72">
+<meta itemprop="wordCount" content="296">
 
 
 
@@ -81,9 +66,125 @@ catkin_make source devel/setup.bash roscore rosrun turtlesim turtlesim_node rosr
 <pre><code>cd ~/catkin_ws/src  
 catkin_create_pkg learning_tf roscpp cospy tf turtlesim  
 </code></pre><h2 id="2-创建tf广播器代码c">2. 创建tf广播器代码（C++）</h2>
-<h2 id="3-创建tf监听器代码c">3. 创建tf监听器代码（C++）</h2>
-<p>代码</p>
-<h2 id="4-配置cmakelist编译规则">4. 配置CMakeList编译规则</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#75715e">/***********************************************************************
+</span><span style="color:#75715e">Copyright 2020 GuYueHome (www.guyuehome.com).
+</span><span style="color:#75715e">***********************************************************************/</span>
+
+<span style="color:#75715e">/**
+</span><span style="color:#75715e"> * 该例程产生tf数据，并计算、发布turtle2的速度指令
+</span><span style="color:#75715e"> */</span>
+
+<span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;ros/ros.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;tf/transform_broadcaster.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;turtlesim/Pose.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span>
+std<span style="color:#f92672">::</span>string turtle_name;
+
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">poseCallback</span>(<span style="color:#66d9ef">const</span> turtlesim<span style="color:#f92672">::</span>PoseConstPtr<span style="color:#f92672">&amp;</span> msg)
+{
+	<span style="color:#75715e">// 创建tf的广播器
+</span><span style="color:#75715e"></span>	<span style="color:#66d9ef">static</span> tf<span style="color:#f92672">::</span>TransformBroadcaster br;
+
+	<span style="color:#75715e">// 初始化tf数据
+</span><span style="color:#75715e"></span>	tf<span style="color:#f92672">::</span>Transform transform;
+	transform.setOrigin( tf<span style="color:#f92672">::</span>Vector3(msg<span style="color:#f92672">-&gt;</span>x, msg<span style="color:#f92672">-&gt;</span>y, <span style="color:#ae81ff">0.0</span>) );
+	tf<span style="color:#f92672">::</span>Quaternion q;
+	q.setRPY(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, msg<span style="color:#f92672">-&gt;</span>theta);
+	transform.setRotation(q);
+
+	<span style="color:#75715e">// 广播world与海龟坐标系之间的tf数据
+</span><span style="color:#75715e"></span>	br.sendTransform(tf<span style="color:#f92672">::</span>StampedTransform(transform, ros<span style="color:#f92672">::</span>Time<span style="color:#f92672">::</span>now(), <span style="color:#e6db74">&#34;world&#34;</span>, turtle_name));
+}
+
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(<span style="color:#66d9ef">int</span> argc, <span style="color:#66d9ef">char</span><span style="color:#f92672">**</span> argv)
+{
+    <span style="color:#75715e">// 初始化ROS节点
+</span><span style="color:#75715e"></span>	ros<span style="color:#f92672">::</span>init(argc, argv, <span style="color:#e6db74">&#34;my_tf_broadcaster&#34;</span>);
+
+	<span style="color:#75715e">// 输入参数作为海龟的名字
+</span><span style="color:#75715e"></span>	<span style="color:#66d9ef">if</span> (argc <span style="color:#f92672">!=</span> <span style="color:#ae81ff">2</span>)
+	{
+		ROS_ERROR(<span style="color:#e6db74">&#34;need turtle name as argument&#34;</span>); 
+		<span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>;
+	}
+
+	turtle_name <span style="color:#f92672">=</span> argv[<span style="color:#ae81ff">1</span>];
+
+	<span style="color:#75715e">// 订阅海龟的位姿话题
+</span><span style="color:#75715e"></span>	ros<span style="color:#f92672">::</span>NodeHandle node;
+	ros<span style="color:#f92672">::</span>Subscriber sub <span style="color:#f92672">=</span> node.subscribe(turtle_name<span style="color:#f92672">+</span><span style="color:#e6db74">&#34;/pose&#34;</span>, <span style="color:#ae81ff">10</span>, <span style="color:#f92672">&amp;</span>poseCallback);
+
+    <span style="color:#75715e">// 循环等待回调函数
+</span><span style="color:#75715e"></span>	ros<span style="color:#f92672">::</span>spin();
+
+	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+};
+
+</code></pre></div><h2 id="3-创建tf监听器代码c">3. 创建tf监听器代码（C++）</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#75715e">/***********************************************************************
+</span><span style="color:#75715e">Copyright 2020 GuYueHome (www.guyuehome.com).
+</span><span style="color:#75715e">***********************************************************************/</span>
+
+<span style="color:#75715e">/**
+</span><span style="color:#75715e"> * 该例程监听tf数据，并计算、发布turtle2的速度指令
+</span><span style="color:#75715e"> */</span>
+
+<span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;ros/ros.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;tf/transform_listener.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;geometry_msgs/Twist.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;turtlesim/Spawn.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(<span style="color:#66d9ef">int</span> argc, <span style="color:#66d9ef">char</span><span style="color:#f92672">**</span> argv)
+{
+	<span style="color:#75715e">// 初始化ROS节点
+</span><span style="color:#75715e"></span>	ros<span style="color:#f92672">::</span>init(argc, argv, <span style="color:#e6db74">&#34;my_tf_listener&#34;</span>);
+
+    <span style="color:#75715e">// 创建节点句柄
+</span><span style="color:#75715e"></span>	ros<span style="color:#f92672">::</span>NodeHandle node;
+
+	<span style="color:#75715e">// 请求产生turtle2
+</span><span style="color:#75715e"></span>	ros<span style="color:#f92672">::</span>service<span style="color:#f92672">::</span>waitForService(<span style="color:#e6db74">&#34;/spawn&#34;</span>);
+	ros<span style="color:#f92672">::</span>ServiceClient add_turtle <span style="color:#f92672">=</span> node.serviceClient<span style="color:#f92672">&lt;</span>turtlesim<span style="color:#f92672">::</span>Spawn<span style="color:#f92672">&gt;</span>(<span style="color:#e6db74">&#34;/spawn&#34;</span>);
+	turtlesim<span style="color:#f92672">::</span>Spawn srv;
+	add_turtle.call(srv);
+
+	<span style="color:#75715e">// 创建发布turtle2速度控制指令的发布者
+</span><span style="color:#75715e"></span>	ros<span style="color:#f92672">::</span>Publisher turtle_vel <span style="color:#f92672">=</span> node.advertise<span style="color:#f92672">&lt;</span>geometry_msgs<span style="color:#f92672">::</span>Twist<span style="color:#f92672">&gt;</span>(<span style="color:#e6db74">&#34;/turtle2/cmd_vel&#34;</span>, <span style="color:#ae81ff">10</span>);
+
+	<span style="color:#75715e">// 创建tf的监听器
+</span><span style="color:#75715e"></span>	tf<span style="color:#f92672">::</span>TransformListener listener;
+
+	ros<span style="color:#f92672">::</span>Rate rate(<span style="color:#ae81ff">10.0</span>);
+	<span style="color:#66d9ef">while</span> (node.ok())
+	{
+		<span style="color:#75715e">// 获取turtle1与turtle2坐标系之间的tf数据
+</span><span style="color:#75715e"></span>		tf<span style="color:#f92672">::</span>StampedTransform transform;
+		<span style="color:#66d9ef">try</span>
+		{
+			listener.waitForTransform(<span style="color:#e6db74">&#34;/turtle2&#34;</span>, <span style="color:#e6db74">&#34;/turtle1&#34;</span>, ros<span style="color:#f92672">::</span>Time(<span style="color:#ae81ff">0</span>), ros<span style="color:#f92672">::</span>Duration(<span style="color:#ae81ff">3.0</span>));
+			listener.lookupTransform(<span style="color:#e6db74">&#34;/turtle2&#34;</span>, <span style="color:#e6db74">&#34;/turtle1&#34;</span>, ros<span style="color:#f92672">::</span>Time(<span style="color:#ae81ff">0</span>), transform);
+		}
+		<span style="color:#66d9ef">catch</span> (tf<span style="color:#f92672">::</span>TransformException <span style="color:#f92672">&amp;</span>ex) 
+		{
+			ROS_ERROR(<span style="color:#e6db74">&#34;%s&#34;</span>,ex.what());
+			ros<span style="color:#f92672">::</span>Duration(<span style="color:#ae81ff">1.0</span>).sleep();
+			<span style="color:#66d9ef">continue</span>;
+		}
+
+		<span style="color:#75715e">// 根据turtle1与turtle2坐标系之间的位置关系，发布turtle2的速度控制指令
+</span><span style="color:#75715e"></span>		geometry_msgs<span style="color:#f92672">::</span>Twist vel_msg;
+		vel_msg.angular.z <span style="color:#f92672">=</span> <span style="color:#ae81ff">4.0</span> <span style="color:#f92672">*</span> atan2(transform.getOrigin().y(),
+				                        transform.getOrigin().x());
+		vel_msg.linear.x <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.5</span> <span style="color:#f92672">*</span> sqrt(pow(transform.getOrigin().x(), <span style="color:#ae81ff">2</span>) <span style="color:#f92672">+</span>
+				                      pow(transform.getOrigin().y(), <span style="color:#ae81ff">2</span>));
+		turtle_vel.publish(vel_msg);
+
+		rate.sleep();
+	}
+	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+};
+
+</code></pre></div><h2 id="4-配置cmakelist编译规则">4. 配置CMakeList编译规则</h2>
 <ul>
 <li>
 <p>设置要编译的代码和可执行文件</p>
@@ -93,7 +194,7 @@ catkin_create_pkg learning_tf roscpp cospy tf turtlesim
 <pre><code>add_executable(turtle_tf_broadcaster src/turtle_tf_broadcaster.cpp)  
 target_link_libraries(turtle_tf_broadcaster ${catkin_LIBRARIES})  
 
-add_executable(turtle_tf_listener src/turtle_tf_broadcaster.cpp)  
+add_executable(turtle_tf_listener src/turtle_tf_listener.cpp)  
 target_link_libraries(turtle_tf_listener ${catkin_LIBRARIES})
 </code></pre></li>
 </ul>
@@ -109,7 +210,23 @@ rosrun learning_tf turtle_tf_broadcaster __name:=turtle2_tf_broadcaster /turtle2
 rosrun learning_tf turtle_tf_listener  
 rosrun turtlesim turtle_teleop_key  
 
-</code></pre><p>参考资料<br>
+</code></pre><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;launch&gt;</span>
+	
+	<span style="color:#f92672">&lt;node</span> <span style="color:#a6e22e">pkg=</span><span style="color:#e6db74">&#34;turtlesim&#34;</span> <span style="color:#a6e22e">type=</span><span style="color:#e6db74">&#34;turtlesim_node&#34;</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;sim&#34;</span><span style="color:#f92672">/&gt;</span>
+	<span style="color:#f92672">&lt;node</span> <span style="color:#a6e22e">pkg=</span><span style="color:#e6db74">&#34;turtlesim&#34;</span> <span style="color:#a6e22e">type=</span><span style="color:#e6db74">&#34;turtle_teleop_key&#34;</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;teleop&#34;</span> <span style="color:#a6e22e">output=</span><span style="color:#e6db74">&#34;screen&#34;</span><span style="color:#f92672">/&gt;</span>
+	
+	<span style="color:#f92672">&lt;node</span> <span style="color:#a6e22e">pkg=</span><span style="color:#e6db74">&#34;learning_tf&#34;</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;turtle1_tf_broadcaster&#34;</span> <span style="color:#a6e22e">args=</span><span style="color:#e6db74">&#34;/turtle1&#34;</span> 
+	<span style="color:#a6e22e">type=</span><span style="color:#e6db74">&#34;turtle_tf_broadcaster&#34;</span> <span style="color:#a6e22e">output=</span><span style="color:#e6db74">&#34;screen&#34;</span><span style="color:#f92672">/&gt;</span>
+
+	<span style="color:#f92672">&lt;node</span> <span style="color:#a6e22e">pkg=</span><span style="color:#e6db74">&#34;learning_tf&#34;</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;turtle2_tf_broadcaster&#34;</span> <span style="color:#a6e22e">args=</span><span style="color:#e6db74">&#34;/turtle2&#34;</span> 
+	<span style="color:#a6e22e">type=</span><span style="color:#e6db74">&#34;turtle_tf_broadcaster&#34;</span> <span style="color:#a6e22e">output=</span><span style="color:#e6db74">&#34;screen&#34;</span><span style="color:#f92672">/&gt;</span>
+
+     
+	<span style="color:#f92672">&lt;node</span> <span style="color:#a6e22e">pkg=</span><span style="color:#e6db74">&#34;learning_tf&#34;</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;listener&#34;</span> <span style="color:#a6e22e">type=</span><span style="color:#e6db74">&#34;turtle_tf_listener&#34;</span> <span style="color:#a6e22e">output=</span><span style="color:#e6db74">&#34;screen&#34;</span><span style="color:#f92672">/&gt;</span>
+
+<span style="color:#f92672">&lt;/launch&gt;</span>
+
+</code></pre></div><p>参考资料<br>
 [1]<a href="https://www.bilibili.com/video/BV1zt411G7Vn?p=18">古月ROS入门21讲——第十八讲</a>
 [2]<a href="https://pan.baidu.com/s/1jGisgS2">机器人学导论——分析、系统及应用</a>
 [3]<a href="https://pan.baidu.com/s/1mgz9cdq">机器人导论（原书第三版）</a></p>

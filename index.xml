@@ -64,21 +64,19 @@ roscore rosrun rviz rviz (直接输入rviz 也行)
       <pubDate>Mon, 20 Jul 2020 22:45:13 +0800</pubDate>
       
       <guid>https://894276610.github.io/guyuero/19-launch-file/</guid>
-      <description>第十九讲 launch 启动文件的使用方法 launch 文件常用语法 功能：通过xml文件实现多节点的配置和启动
- launch文件中的根元素采用标签定义
- 启动节点
+      <description>第十九讲 launch 启动文件的使用方法  第十九讲 launch 启动文件的使用方法  launch 文件常用语法  &amp;lt;launch&amp;gt; &amp;lt;node&amp;gt; &amp;lt;param&amp;gt;/&amp;lt;rosparam&amp;gt; &amp;lt;arg&amp;gt; &amp;lt;remap&amp;gt;重映射 &amp;lt;include&amp;gt;嵌套   launch 示例    launch 文件常用语法 功能：通过xml文件实现多节点的配置和启动
+&amp;lt;launch&amp;gt; launch文件中的根元素采用标签定义
+&amp;lt;node&amp;gt; 启动节点
 &amp;lt;node pkg=&amp;#34;package-name&amp;#34; type=“executable-name” name=&amp;#34;node-name&amp;#34; /&amp;gt; 三个基础属性
  name：节点运行时的名称。取代节点初始化的节点名，防止重名。 pkg: 节点的功能包名称 type: 节点可执行文件名称  其他一些可选命令
  output
 是否要打印日志信息 respawn 是否要重启 required
 是否必须启动 ns
 解决命名冲突 args
-给每个节点输入参数  / 参数设置
+给每个节点输入参数  &amp;lt;param&amp;gt;/&amp;lt;rosparam&amp;gt; 参数设置
 设置ROS系统运行中的参数,存储在参数服务器中
 &amp;lt;param name=&amp;#34;output_frame&amp;#34; value=&amp;#34;odom&amp;#34; /&amp;gt;  name: 参数名 value:参数值
-加载参数文件中的多个参数  &amp;lt;rosparam file=&amp;#34;params.yaml&amp;#34; command=&amp;#34;load&amp;#34; ns= &amp;#34;params&amp;#34; /&amp;gt; 调用：
- launch 文件内部的局部变量，仅限于launch文件使用
-&amp;lt;arg name=&amp;#34;arg-name&amp;#34; default=&amp;#34;arg-value&amp;#34; /&amp;gt;  name: 参数名 value: 参数值  重映射 重映射ROS计算图资源的命名</description>
+加载参数文件中的多个参数  &amp;lt;rosparam file=&amp;#34;params.</description>
     </item>
     
     <item>
@@ -87,12 +85,7 @@ roscore rosrun rviz rviz (直接输入rviz 也行)
       <pubDate>Mon, 20 Jul 2020 21:49:13 +0800</pubDate>
       
       <guid>https://894276610.github.io/guyuero/18-broadcaster-and-listener/</guid>
-      <description>第十八讲 tf坐标系广播与监听的编程实现  第十八讲 tf坐标系广播与监听的编程实现  1. 创建功能包 2. 创建tf广播器代码（C++） 3. 创建tf监听器代码（C++） 4. 配置CMakeList编译规则 5. 在根目录编译运行    1. 创建功能包 cd ~/catkin_ws/src catkin_create_pkg learning_tf roscpp cospy tf turtlesim 2. 创建tf广播器代码（C++） 3. 创建tf监听器代码（C++） 代码
-4. 配置CMakeList编译规则   设置要编译的代码和可执行文件
-  设置链接库
-add_executable(turtle_tf_broadcaster src/turtle_tf_broadcaster.cpp) target_link_libraries(turtle_tf_broadcaster ${catkin_LIBRARIES}) add_executable(turtle_tf_listener src/turtle_tf_broadcaster.cpp) target_link_libraries(turtle_tf_listener ${catkin_LIBRARIES})   5. 在根目录编译运行 catkin_make
-重映射：两个下划线加name:=
-catkin_make source devel/setup.bash roscore rosrun turtlesim turtlesim_node rosrun learning_tf turtle_tf_broadcaster __name:=turtle1_tf_broadcaster /turtle1 rosrun learning_tf turtle_tf_broadcaster __name:=turtle2_tf_broadcaster /turtle2 rosrun learning_tf turtle_tf_listener rosrun turtlesim turtle_teleop_key 参考资料</description>
+      <description>第十八讲 tf坐标系广播与监听的编程实现  第十八讲 tf坐标系广播与监听的编程实现  1. 创建功能包 2. 创建tf广播器代码（C++） 3. 创建tf监听器代码（C++） 4. 配置CMakeList编译规则 5. 在根目录编译运行    1. 创建功能包 cd ~/catkin_ws/src catkin_create_pkg learning_tf roscpp cospy tf turtlesim 2. 创建tf广播器代码（C++） /*********************************************************************** Copyright 2020 GuYueHome (www.guyuehome.com). ***********************************************************************/ /** * 该例程产生tf数据，并计算、发布turtle2的速度指令 */ #include &amp;lt;ros/ros.h&amp;gt;#include &amp;lt;tf/transform_broadcaster.h&amp;gt;#include &amp;lt;turtlesim/Pose.h&amp;gt; std::string turtle_name; void poseCallback(const turtlesim::PoseConstPtr&amp;amp; msg) { // 创建tf的广播器 	static tf::TransformBroadcaster br; // 初始化tf数据 	tf::Transform transform; transform.setOrigin( tf::Vector3(msg-&amp;gt;x, msg-&amp;gt;y, 0.0) ); tf::Quaternion q; q.</description>
     </item>
     
     <item>
