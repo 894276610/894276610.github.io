@@ -5,36 +5,10 @@
     <link>https://894276610.github.io/createblog/</link>
     <description>Recent content in CreateBlogs on 云居小栈</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 14 Jul 2020 17:42:54 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 14 Jul 2020 14:24:47 +0800</lastBuildDate>
     
 	<atom:link href="https://894276610.github.io/createblog/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Markdown_basic</title>
-      <link>https://894276610.github.io/createblog/markdownlanguage/</link>
-      <pubDate>Tue, 14 Jul 2020 17:42:54 +0800</pubDate>
-      
-      <guid>https://894276610.github.io/createblog/markdownlanguage/</guid>
-      <description>Markdown编辑注重键盘操作，省去费时的鼠标操作，享受码字过程以及优质排版。
-这篇博客简单记录一下基本的Markdown使用入门
- 准备工作 基本操作 参考文献 其他花絮  准备工作 VS code有丰富的插件，可以支持Markdown编辑以及预览
-其实还有很多专注Markdown文本编辑的软件
- Typora Joplin Cmd Markdown  如果你选择VS code, 那么可能需要安装以下插件：
- Markdown Toc 生成目录 Markdown All in One 实现基本语法 Markdown Preview Enhanced 实现预览效果
-点击VS code 软件内图标输入相应插件并下载  基本操作   换行
-行末加两个空格再按回车
-  加粗，倾斜
-**加粗** =&amp;gt; 加粗
-快捷键 Ctrl + B
-*倾斜* =&amp;gt; 倾斜
-快捷键 Ctrl + I
-  标题格式
-### 三级标题
-#### 四级标题
-最多支持六级标题
-  插入图片</description>
-    </item>
     
     <item>
       <title>HUGO</title>
