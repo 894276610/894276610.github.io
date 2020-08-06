@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>[Robotics]Transformation - 云居小栈</title>
+<meta name="description" content="发布日期：2020年07月25日 子时  ">
+<meta name="generator" content="Hugo 0.73.0" />
+<link href="https://example.com/index.xml" rel="alternate" type="application/rss+xml">
+<link rel="canonical" href="https://example.com/introduction_to_robotics/coordinate_transformation/">
+<link rel="stylesheet" href="https://example.com/css/theme.min.css">
+<script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+<link rel="stylesheet" href="https://example.com/css/chroma.min.css">
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery.easing@1.4.1/jquery.easing.min.js"></script>
+<script src="https://example.com/js/bundle.js"></script><style>
+:root {}
+</style>
+<meta property="og:title" content="[Robotics]Transformation" />
+<meta property="og:description" content="坐标变换这个部分在ROS中已经有了封装好的程序，只需要调用即可，没有必要再去写。在使用之前了解以下实现的原理非常必要。
+博客笔记是在阅读原书之后进行概括和浓缩。
+空间描述和变换 存在着一个世界坐标系，任何问题都能够参照这个坐标系。
+1. 位置描述 点的位置可以用一个3*1位置矢量来表示。 注意：这里位置矢量用一个前置的上标来表明其参考的坐标系。 $$ {}^{A}P = \begin{bmatrix} p{x}\
+p_{y}\
+p_{z}\
+\end{bmatrix} $$
+2.姿态描述  用$\hat{{}^{}X{B}}、\hat{{}^{}Y{B}}$和$\hat{{}^{}Z{B}}$表示{B}主轴单位矢量，当用{A}表达时，写成$\hat{{}^{A}X{B}} \hat{{}^{A}Y{B}}\hat{{}^{A}Z{B}}$ 按顺序排成3*3的矩阵，我们称这个矩阵为旋转矩阵 这旋转矩阵是{B}相对于{A}的表达，所以使用符号$_{B}^{A}R$表示 最右边矩阵的前置上标被省略了，因为点乘结果和坐标系无关，为方向余弦 $$ {B}^{A}R = \begin{bmatrix} \hat{{}^{A}X_{B}} &amp;\hat{_{}^{A}Y_{B}}&amp;\hat{_{}^{A}Z_{B}} \end{bmatrix}= \begin{bmatrix} r_{11} &amp;r_{12} &amp;r_{13} \
+r_{21} &amp;r_{22} &amp;r_{23}\
+r_{31} &amp;r_{32} &amp;r_{33} \end{bmatrix} = \begin{bmatrix} \hat{X_{B}}\cdot\hat{X_{A}} &amp;\hat{Y_{B}}\cdot\hat{X_{A}} &amp;\hat{Z_{B}}\cdot\hat{X_{A}} \
+\hat{X_{B}}\cdot\hat{Y_{A}} &amp;\hat{Y_{B}}\cdot\hat{Y_{A}} &amp;\hat{Z_{B}}\cdot\hat{Y_{A}} \
+\hat{X_{B}}\cdot\hat{Z_{A}} &amp;\hat{Y_{B}}\cdot\hat{Z_{A}} &amp;\hat{Z_{B}}\cdot\hat{Z_{A}} \end{bmatrix} $$  $$ { }{B}^{A} R=\left[\begin{array}{cc} {}^{A} \hat{X}{B} &amp; {}^{A}\hat{Y}{B}^{} &amp; {}^{A}\hat{Z}{B} \end{array}\right]=\left[\begin{array}{c} { }^{B} \hat{X}{A}^{T} \" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://example.com/introduction_to_robotics/coordinate_transformation/" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="[Robotics]Transformation"/>
+<meta name="twitter:description" content="坐标变换这个部分在ROS中已经有了封装好的程序，只需要调用即可，没有必要再去写。在使用之前了解以下实现的原理非常必要。
+博客笔记是在阅读原书之后进行概括和浓缩。
+空间描述和变换 存在着一个世界坐标系，任何问题都能够参照这个坐标系。
+1. 位置描述 点的位置可以用一个3*1位置矢量来表示。 注意：这里位置矢量用一个前置的上标来表明其参考的坐标系。 $$ {}^{A}P = \begin{bmatrix} p{x}\
+p_{y}\
+p_{z}\
+\end{bmatrix} $$
+2.姿态描述  用$\hat{{}^{}X{B}}、\hat{{}^{}Y{B}}$和$\hat{{}^{}Z{B}}$表示{B}主轴单位矢量，当用{A}表达时，写成$\hat{{}^{A}X{B}} \hat{{}^{A}Y{B}}\hat{{}^{A}Z{B}}$ 按顺序排成3*3的矩阵，我们称这个矩阵为旋转矩阵 这旋转矩阵是{B}相对于{A}的表达，所以使用符号$_{B}^{A}R$表示 最右边矩阵的前置上标被省略了，因为点乘结果和坐标系无关，为方向余弦 $$ {B}^{A}R = \begin{bmatrix} \hat{{}^{A}X_{B}} &amp;\hat{_{}^{A}Y_{B}}&amp;\hat{_{}^{A}Z_{B}} \end{bmatrix}= \begin{bmatrix} r_{11} &amp;r_{12} &amp;r_{13} \
+r_{21} &amp;r_{22} &amp;r_{23}\
+r_{31} &amp;r_{32} &amp;r_{33} \end{bmatrix} = \begin{bmatrix} \hat{X_{B}}\cdot\hat{X_{A}} &amp;\hat{Y_{B}}\cdot\hat{X_{A}} &amp;\hat{Z_{B}}\cdot\hat{X_{A}} \
+\hat{X_{B}}\cdot\hat{Y_{A}} &amp;\hat{Y_{B}}\cdot\hat{Y_{A}} &amp;\hat{Z_{B}}\cdot\hat{Y_{A}} \
+\hat{X_{B}}\cdot\hat{Z_{A}} &amp;\hat{Y_{B}}\cdot\hat{Z_{A}} &amp;\hat{Z_{B}}\cdot\hat{Z_{A}} \end{bmatrix} $$  $$ { }{B}^{A} R=\left[\begin{array}{cc} {}^{A} \hat{X}{B} &amp; {}^{A}\hat{Y}{B}^{} &amp; {}^{A}\hat{Z}{B} \end{array}\right]=\left[\begin{array}{c} { }^{B} \hat{X}{A}^{T} \"/>
+<meta itemprop="name" content="[Robotics]Transformation">
+<meta itemprop="description" content="坐标变换这个部分在ROS中已经有了封装好的程序，只需要调用即可，没有必要再去写。在使用之前了解以下实现的原理非常必要。
+博客笔记是在阅读原书之后进行概括和浓缩。
+空间描述和变换 存在着一个世界坐标系，任何问题都能够参照这个坐标系。
+1. 位置描述 点的位置可以用一个3*1位置矢量来表示。 注意：这里位置矢量用一个前置的上标来表明其参考的坐标系。 $$ {}^{A}P = \begin{bmatrix} p{x}\
+p_{y}\
+p_{z}\
+\end{bmatrix} $$
+2.姿态描述  用$\hat{{}^{}X{B}}、\hat{{}^{}Y{B}}$和$\hat{{}^{}Z{B}}$表示{B}主轴单位矢量，当用{A}表达时，写成$\hat{{}^{A}X{B}} \hat{{}^{A}Y{B}}\hat{{}^{A}Z{B}}$ 按顺序排成3*3的矩阵，我们称这个矩阵为旋转矩阵 这旋转矩阵是{B}相对于{A}的表达，所以使用符号$_{B}^{A}R$表示 最右边矩阵的前置上标被省略了，因为点乘结果和坐标系无关，为方向余弦 $$ {B}^{A}R = \begin{bmatrix} \hat{{}^{A}X_{B}} &amp;\hat{_{}^{A}Y_{B}}&amp;\hat{_{}^{A}Z_{B}} \end{bmatrix}= \begin{bmatrix} r_{11} &amp;r_{12} &amp;r_{13} \
+r_{21} &amp;r_{22} &amp;r_{23}\
+r_{31} &amp;r_{32} &amp;r_{33} \end{bmatrix} = \begin{bmatrix} \hat{X_{B}}\cdot\hat{X_{A}} &amp;\hat{Y_{B}}\cdot\hat{X_{A}} &amp;\hat{Z_{B}}\cdot\hat{X_{A}} \
+\hat{X_{B}}\cdot\hat{Y_{A}} &amp;\hat{Y_{B}}\cdot\hat{Y_{A}} &amp;\hat{Z_{B}}\cdot\hat{Y_{A}} \
+\hat{X_{B}}\cdot\hat{Z_{A}} &amp;\hat{Y_{B}}\cdot\hat{Z_{A}} &amp;\hat{Z_{B}}\cdot\hat{Z_{A}} \end{bmatrix} $$  $$ { }{B}^{A} R=\left[\begin{array}{cc} {}^{A} \hat{X}{B} &amp; {}^{A}\hat{Y}{B}^{} &amp; {}^{A}\hat{Z}{B} \end{array}\right]=\left[\begin{array}{c} { }^{B} \hat{X}{A}^{T} \">
+
+<meta itemprop="wordCount" content="86">
+
+
+
+<meta itemprop="keywords" content="" /></head>
+<body><div class="container"><header>
+<h1>云居小栈</h1>
+<a href="https://github.com/894276610/894276610.github.io" class="github"><i class="fab fa-github"></i></a>
+<p class="description">发布日期：2020年07月25日 子时  </p>
+
+</header>
+<div class="global-menu">
+<nav>
+<ul>
+<li><a href="/todo/">My Todo List</a></li></ul>
+</nav>
+</div>
+<div class="content-container">
+<main><h1>[Robotics]Transformation</h1>
+<p>坐标变换这个部分在ROS中已经有了封装好的程序，只需要调用即可，没有必要再去写。在使用之前了解以下实现的原理非常必要。</p>
+<p>博客笔记是在阅读原书之后进行概括和浓缩。</p>
+<h2 id="空间描述和变换">空间描述和变换</h2>
+<p>存在着一个世界坐标系，任何问题都能够参照这个坐标系。</p>
+<h3 id="1-位置描述">1. 位置描述</h3>
+<p>点的位置可以用一个3*1位置矢量来表示。
+注意：这里位置矢量用一个前置的上标来表明其参考的坐标系。
+$$
+<em>{}^{A}P =
+\begin{bmatrix}
+p</em>{x}\<br>
+p_{y}\<br>
+p_{z}\<br>
+\end{bmatrix}
+$$</p>
+<h3 id="2姿态描述">2.姿态描述</h3>
+<ul>
+<li>用$\hat{<em>{}^{}X</em>{B}}、\hat{<em>{}^{}Y</em>{B}}$和$\hat{<em>{}^{}Z</em>{B}}$表示{B}主轴单位矢量，当用{A}表达时，写成$\hat{<em>{}^{A}X</em>{B}} \hat{<em>{}^{A}Y</em>{B}}\hat{<em>{}^{A}Z</em>{B}}$</li>
+<li>按顺序排成3*3的矩阵，我们称这个矩阵为<strong>旋转矩阵</strong></li>
+<li>这旋转矩阵是{B}相对于{A}的表达，所以使用符号$_{B}^{A}R$表示</li>
+<li>最右边矩阵的前置上标被省略了，因为点乘结果和坐标系无关，为<strong>方向余弦</strong>
+$$
+<em>{B}^{A}R =
+\begin{bmatrix}
+\hat{</em>{}^{A}X_{B}} &amp;\hat{_{}^{A}Y_{B}}&amp;\hat{_{}^{A}Z_{B}}
+\end{bmatrix}=
+\begin{bmatrix}
+r_{11}  &amp;r_{12}  &amp;r_{13} \<br>
+r_{21}  &amp;r_{22}  &amp;r_{23}\<br>
+r_{31}  &amp;r_{32}  &amp;r_{33}
+\end{bmatrix}
+=
+\begin{bmatrix}
+\hat{X_{B}}\cdot\hat{X_{A}}  &amp;\hat{Y_{B}}\cdot\hat{X_{A}}  &amp;\hat{Z_{B}}\cdot\hat{X_{A}}  \<br>
+\hat{X_{B}}\cdot\hat{Y_{A}} &amp;\hat{Y_{B}}\cdot\hat{Y_{A}}  &amp;\hat{Z_{B}}\cdot\hat{Y_{A}} \<br>
+\hat{X_{B}}\cdot\hat{Z_{A}} &amp;\hat{Y_{B}}\cdot\hat{Z_{A}}  &amp;\hat{Z_{B}}\cdot\hat{Z_{A}}
+\end{bmatrix}
+$$</li>
+</ul>
+<p>$$
+{ }<em>{B}^{A} R=\left[\begin{array}{cc}
+<em>{}^{A} \hat{X}</em>{B} &amp; <em>{}^{A}\hat{Y}</em>{B}^{} &amp; <em>{}^{A}\hat{Z}</em>{B}
+\end{array}\right]=\left[\begin{array}{c}
+{ }^{B} \hat{X}</em>{A}^{T} \<br>
+{ }^{B} \hat{Y}<em>{A}^{T} \<br>
+{ }^{B} \hat{Z}</em>{A}^{T}
+\end{array}\right]
+={ }<em>{A}^{B} R</em>{}^{T}
+$$</p>
+<p>[1]<a href="https://pan.baidu.com/s/1jGisgS2">机器人学导论——分析、系统及应用</a>
+[2]<a href="https://pan.baidu.com/s/1mgz9cdq">机器人学导论（原书第三版）</a></p>
+<div class="edit-meta">
+
+<br><a href="https://github.com/894276610/894276610.github.io/edit/master/content/Introduction_to_robotics%5ccoordinate_transformation.md" class="edit-page"><i class="fas fa-pen-square"></i> Edit on GitHub</a></div><nav class="pagination"><a class="nav nav-prev" href="https://example.com/introduction_to_robotics/introduction/" title="[Robotics]Books"><i class="fas fa-arrow-left" aria-hidden="true"></i> Prev - [Robotics]Books</a>
+<a class="nav nav-next" href="https://example.com/introduction_to_robotics/introduction/" title="[Robotics]Books">Next - [Robotics]Books <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+</nav><footer><p class="powered">Powered by <a href="https://gohugo.io">Hugo</a>. Theme by <a href="https://themes.gohugo.io/hugo-theme-techdoc/">TechDoc</a>. Designed by <a href="https://github.com/thingsym/hugo-theme-techdoc">Thingsym</a>.</p>
+</footer>
+</main><div class="sidebar">
+
+<nav class="slide-menu">
+<ul>
+<li class=""><a href="https://example.com">Home</a></li>
+
+<li class=" has-sub-menu"><a href="https://example.com/%E5%8C%97%E9%82%AE%E6%9C%BA%E5%99%A8%E4%BA%BA%E5%9F%B9%E8%AE%AD/">北邮机器人培训s<span class="mark closed">+</span></a>
+  
+<ul class="sub-menu">
+<li class=""><a href="https://example.com/%E5%8C%97%E9%82%AE%E6%9C%BA%E5%99%A8%E4%BA%BA%E5%9F%B9%E8%AE%AD/01-tree/">[1]tree</a></li>
+</ul>
+  
+</li>
+
+<li class=" has-sub-menu"><a href="https://example.com/studycpp/">StudyCpps<span class="mark closed">+</span></a>
+  
+<ul class="sub-menu">
+<li class=""><a href="https://example.com/studycpp/houjie/houjiecpp_02/">[Cpp] P6-P8 </a></li>
+<li class=""><a href="https://example.com/studycpp/houjie/houjiecpp_03/">[Cpp] P9 </a></li>
+<li class=""><a href="https://example.com/studycpp/houjie/houjiecpp_01/">[Cpp] P1-P5 complex </a></li>
+<li class=""><a href="https://example.com/studycpp/book01/">[Cpp]Book_List</a></li>
+<li class=""><a href="https://example.com/studycpp/details/">[Cpp]琐碎细节-待续</a></li>
+<li class=""><a href="https://example.com/studycpp/overload_operator/">[Cpp]Overload_operator</a></li>
+</ul>
+  
+</li>
+
+<li class=" has-sub-menu"><a href="https://example.com/guyuero/">GuYueRos<span class="mark closed">+</span></a>
+  
+<ul class="sub-menu">
+<li class=""><a href="https://example.com/guyuero/21-summary/">[21]Summary</a></li>
+<li class=""><a href="https://example.com/guyuero/20-visual-aids/">[20]Visual aids</a></li>
+<li class=""><a href="https://example.com/guyuero/19-launch-file/">[19]launch file</a></li>
+<li class=""><a href="https://example.com/guyuero/18-broadcaster-and-listener/">[18]Broadcaster and listener</a></li>
+<li class=""><a href="https://example.com/guyuero/17-transformation/">[17]Transformation</a></li>
+<li class=""><a href="https://example.com/guyuero/16-parameters/">[16]Parameters</a></li>
+<li class=""><a href="https://example.com/guyuero/15-define-service/">[15]define service</a></li>
+<li class=""><a href="https://example.com/guyuero/14-server/">[14]Server</a></li>
+<li class=""><a href="https://example.com/guyuero/13-client/">[13]Client</a></li>
+<li class=""><a href="https://example.com/guyuero/12-topic-define/">[12]Topic define</a></li>
+<li class=""><a href="https://example.com/guyuero/12&#43;topic-define/">[12]Topic_define&#43;</a></li>
+<li class=""><a href="https://example.com/guyuero/11-subscriber/">[11]Subscriber</a></li>
+<li class=""><a href="https://example.com/guyuero/10-publisher/">[10]Publisher</a></li>
+<li class=""><a href="https://example.com/guyuero/09-workspace-and-package/">[9]Workspace and package</a></li>
+<li class=""><a href="https://example.com/guyuero/05-install-ros/">[5]Install Ros</a></li>
+<li class=""><a href="https://example.com/guyuero/08-ros-command-line/">[8]Ros Command Line</a></li>
+<li class=""><a href="https://example.com/guyuero/07-ros-concept/">[7]Ros Concept</a></li>
+</ul>
+  
+</li>
+
+
+
+<li class=" has-sub-menu"><a href="https://example.com/extrathing/">ExtraThings<span class="mark closed">+</span></a>
+  
+<ul class="sub-menu">
+<li class=""><a href="https://example.com/extrathing/titlephoto/">[花絮]头像制作思路</a></li>
+</ul>
+  
+</li>
+
+<li class=" has-sub-menu"><a href="https://example.com/createblog/">CreateBlogs<span class="mark closed">+</span></a>
+  
+<ul class="sub-menu">
+<li class=""><a href="https://example.com/createblog/markdownlanguage/">Markdown_basic</a></li>
+<li class=""><a href="https://example.com/createblog/hugo_try/">HUGO</a></li>
+<li class=""><a href="https://example.com/createblog/firstblog/">Bolg</a></li>
+</ul>
+  
+</li>
+
+<li class="parent has-sub-menu"><a href="https://example.com/introduction_to_robotics/">Introduction_to_robotics<span class="mark opened">-</span></a>
+  
+<ul class="sub-menu">
+<li class=""><a href="https://example.com/introduction_to_robotics/introduction/">[Robotics]Books</a></li>
+<li class="active"><a href="https://example.com/introduction_to_robotics/coordinate_transformation/">[Robotics]Transformation</a></li>
+</ul>
+  
+</li>
+</ul>
+</nav>
+
+
+
+<div class="sidebar-footer"></div>
+</div>
+</div><a href="#" id="backtothetop-fixed" class="backtothetop"
+ data-backtothetop-duration="600"
+ data-backtothetop-easing="easeOutQuart"
+ data-backtothetop-fixed-fadeIn="1000"
+ data-backtothetop-fixed-fadeOut="1000"
+ data-backtothetop-fixed-bottom="10"
+ data-backtothetop-fixed-right="20">
+<span class="fa-layers fa-fw">
+<i class="fas fa-circle"></i>
+<i class="fas fa-arrow-circle-up"></i>
+</span></a>
+</div>
+</body>
+</html>

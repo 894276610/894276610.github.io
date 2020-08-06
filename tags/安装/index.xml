@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>安装 on 云居小栈</title>
-    <link>https://894276610.github.io/tags/%E5%AE%89%E8%A3%85/</link>
+    <link>https://example.com/tags/%E5%AE%89%E8%A3%85/</link>
     <description>Recent content in 安装 on 云居小栈</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Thu, 16 Jul 2020 22:48:51 +0800</lastBuildDate>
     
-	<atom:link href="https://894276610.github.io/tags/%E5%AE%89%E8%A3%85/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://example.com/tags/%E5%AE%89%E8%A3%85/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>[5]Install Ros</title>
-      <link>https://894276610.github.io/guyuero/05-install-ros/</link>
+      <link>https://example.com/guyuero/05-install-ros/</link>
       <pubDate>Thu, 16 Jul 2020 22:48:51 +0800</pubDate>
       
-      <guid>https://894276610.github.io/guyuero/05-install-ros/</guid>
+      <guid>https://example.com/guyuero/05-install-ros/</guid>
       <description>当时安装ROS 18.04 困难重重
 总体上是按照这个步骤走的
 中间有几个步骤为ROS网站设置了本地DNS
@@ -27,10 +27,10 @@ $ sudo sh -c &#39;echo &amp;quot;deb http://packages.ros.org/ros/ubuntu $(lsb_re
     
     <item>
       <title>[代码]Ros系统安装步骤</title>
-      <link>https://894276610.github.io/post/guyueros21/ros_install_tips/</link>
+      <link>https://example.com/post/guyueros21/ros_install_tips/</link>
       <pubDate>Thu, 16 Jul 2020 22:48:51 +0800</pubDate>
       
-      <guid>https://894276610.github.io/post/guyueros21/ros_install_tips/</guid>
+      <guid>https://example.com/post/guyueros21/ros_install_tips/</guid>
       <description>当时安装ROS 18.04 困难重重
 总体上是按照这个步骤走的
 中间有几个步骤为ROS网站设置了本地DNS

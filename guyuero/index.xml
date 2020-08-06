@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>GuYueRos on 云居小栈</title>
-    <link>https://894276610.github.io/guyuero/</link>
+    <link>https://example.com/guyuero/</link>
     <description>Recent content in GuYueRos on 云居小栈</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Tue, 21 Jul 2020 01:55:45 +0800</lastBuildDate>
     
-	<atom:link href="https://894276610.github.io/guyuero/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://example.com/guyuero/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>[21]Summary</title>
-      <link>https://894276610.github.io/guyuero/21-summary/</link>
+      <link>https://example.com/guyuero/21-summary/</link>
       <pubDate>Tue, 21 Jul 2020 01:55:45 +0800</pubDate>
       
-      <guid>https://894276610.github.io/guyuero/21-summary/</guid>
+      <guid>https://example.com/guyuero/21-summary/</guid>
       <description>第二十一讲 课程总结与进阶攻略  基础概述   课程介绍 Linux ROS系统安装  核心概念   什么是 ROS ROS 核心概念 ROS 命令行使用  编程基础   创建工作空间与功能包 话题、服务编程 参数使用与编程方法  常用组件   tf 坐标系统 launch 启动文件 常用可视化工具  进阶展望  机器人控制与仿真
 Gazebo + ROS + ros_control
 即时定位与地图建模
@@ -27,10 +27,10 @@ Gazebo + ROS + ros_control
     
     <item>
       <title>[20]Visual aids</title>
-      <link>https://894276610.github.io/guyuero/20-visual-aids/</link>
+      <link>https://example.com/guyuero/20-visual-aids/</link>
       <pubDate>Tue, 21 Jul 2020 01:28:45 +0800</pubDate>
       
-      <guid>https://894276610.github.io/guyuero/20-visual-aids/</guid>
+      <guid>https://example.com/guyuero/20-visual-aids/</guid>
       <description>第二十讲 常用可视化工具的使用 qt工具箱  rqt 综合工具 rqt_console 日志输出 rqt_graph 计算图 rqt_plot 数据绘图 rqt_image_view 图像渲染  Rviz 机器人开发过程中的数据可视化界面 数据显示平台，得要有数据
 roscore rosrun rviz rviz (直接输入rviz 也行)
 三维物理仿真平台  测试机器人算法 机器人设计 显示情景下的回溯测试  roslaunch gazebo_ros willowgarage_world.launch 参考资料
@@ -39,10 +39,10 @@ roscore rosrun rviz rviz (直接输入rviz 也行)
     
     <item>
       <title>[19]launch file</title>
-      <link>https://894276610.github.io/guyuero/19-launch-file/</link>
+      <link>https://example.com/guyuero/19-launch-file/</link>
       <pubDate>Mon, 20 Jul 2020 22:45:13 +0800</pubDate>
       
-      <guid>https://894276610.github.io/guyuero/19-launch-file/</guid>
+      <guid>https://example.com/guyuero/19-launch-file/</guid>
       <description>第十九讲 launch 启动文件的使用方法  第十九讲 launch 启动文件的使用方法  launch 文件常用语法  &amp;lt;launch&amp;gt; &amp;lt;node&amp;gt; &amp;lt;param&amp;gt;/&amp;lt;rosparam&amp;gt; &amp;lt;arg&amp;gt; &amp;lt;remap&amp;gt;重映射 &amp;lt;include&amp;gt;嵌套   launch 示例    launch 文件常用语法 功能：通过xml文件实现多节点的配置和启动
 &amp;lt;launch&amp;gt; launch文件中的根元素采用标签定义
 &amp;lt;node&amp;gt; 启动节点
@@ -60,19 +60,19 @@ roscore rosrun rviz rviz (直接输入rviz 也行)
     
     <item>
       <title>[18]Broadcaster and listener</title>
-      <link>https://894276610.github.io/guyuero/18-broadcaster-and-listener/</link>
+      <link>https://example.com/guyuero/18-broadcaster-and-listener/</link>
       <pubDate>Mon, 20 Jul 2020 21:49:13 +0800</pubDate>
       
-      <guid>https://894276610.github.io/guyuero/18-broadcaster-and-listener/</guid>
+      <guid>https://example.com/guyuero/18-broadcaster-and-listener/</guid>
       <description>第十八讲 tf坐标系广播与监听的编程实现  第十八讲 tf坐标系广播与监听的编程实现  1. 创建功能包 2. 创建tf广播器代码（C++） 3. 创建tf监听器代码（C++） 4. 配置CMakeList编译规则 5. 在根目录编译运行    1. 创建功能包 cd ~/catkin_ws/src catkin_create_pkg learning_tf roscpp cospy tf turtlesim 2. 创建tf广播器代码（C++） /*********************************************************************** Copyright 2020 GuYueHome (www.guyuehome.com). ***********************************************************************/ /** * 该例程产生tf数据，并计算、发布turtle2的速度指令 */ #include &amp;lt;ros/ros.h&amp;gt;#include &amp;lt;tf/transform_broadcaster.h&amp;gt;#include &amp;lt;turtlesim/Pose.h&amp;gt; std::string turtle_name; void poseCallback(const turtlesim::PoseConstPtr&amp;amp; msg) { // 创建tf的广播器 	static tf::TransformBroadcaster br; // 初始化tf数据 	tf::Transform transform; transform.setOrigin( tf::Vector3(msg-&amp;gt;x, msg-&amp;gt;y, 0.0) ); tf::Quaternion q; q.</description>
     </item>
     
     <item>
       <title>[17]Transformation</title>
-      <link>https://894276610.github.io/guyuero/17-transformation/</link>
+      <link>https://example.com/guyuero/17-transformation/</link>
       <pubDate>Mon, 20 Jul 2020 16:49:13 +0800</pubDate>
       
-      <guid>https://894276610.github.io/guyuero/17-transformation/</guid>
+      <guid>https://example.com/guyuero/17-transformation/</guid>
       <description>ROS中的坐标系管理系统 机器人中的坐标变换 跟随同步的例程
 sudo apt-get install ros-melodic-turtle-tf roslaunch turtle_tf turtle_tf_demo.launch rosrun turtlesim turtle_teleop_key 生成tf树Pdf
 rosrun tf view_frames 命令行工具
@@ -86,10 +86,10 @@ Add tf
     
     <item>
       <title>[16]Parameters</title>
-      <link>https://894276610.github.io/guyuero/16-parameters/</link>
+      <link>https://example.com/guyuero/16-parameters/</link>
       <pubDate>Mon, 20 Jul 2020 15:40:13 +0800</pubDate>
       
-      <guid>https://894276610.github.io/guyuero/16-parameters/</guid>
+      <guid>https://example.com/guyuero/16-parameters/</guid>
       <description>第十六讲 参数的使用与编程方法  第十六讲 参数的使用与编程方法  参数模型 参数模型使用方法 编程方法 （C++） 程序的编译规则 编译运行    参数模型 Ros Master
  Parameter Server (全局字典)  /robot_name:&amp;ldquo;my_robot&amp;rdquo; /robot_radius:0.4 /robot_height:0.5    参数模型使用方法  创建功能包(第10、13讲也有类似步骤)  cd ~/catkin_ws/src catkin_crete_pkg learning_parameter roscpp rospy std_srvs 参数命令行使用   yaml 参数文件  background_b:255 background_g:86 background_r:69 rosdistro:&amp;#39;melodic&amp;#39; roslaunch: uris:{host_hcx_vpc__43763:&amp;#39;http://hcx-vpc:43763/&amp;#39;} rosversion:&amp;#39;1.14.3&amp;#39; run_id:........  列出当前所有参数
 rosparam list 显示某个参数值 rosparam get param_key 设置某个参数值
@@ -99,10 +99,10 @@ rosparam dump file_name 从文件读取参数 rosparam load file_name 删除参�
     
     <item>
       <title>[15]define service</title>
-      <link>https://894276610.github.io/guyuero/15-define-service/</link>
+      <link>https://example.com/guyuero/15-define-service/</link>
       <pubDate>Mon, 20 Jul 2020 15:20:13 +0800</pubDate>
       
-      <guid>https://894276610.github.io/guyuero/15-define-service/</guid>
+      <guid>https://example.com/guyuero/15-define-service/</guid>
       <description>第十五讲 服务数据的定义与使用  第十五讲 服务数据的定义与使用  定义服务数据  1. 定义srv 2. package.xml中添加功能包依赖 3. 在CMakeList.txt添加编译选项 4. 编译生成语言相关文件 5. （查看生成的代码文件）   创建发布者代码  1.服务端 2.客户端   配置代码编译规则 编译并运行服务端和客户端    自定义数据类型并且使用
 自定义服务数据
 定义服务数据 1. 定义srv 三个横线以上是request以下是response数据
@@ -112,10 +112,10 @@ string name uint8 age uint8 sex uint8 unknown = 0 uint8 male = 1 uint8 female = 
     
     <item>
       <title>[14]Server</title>
-      <link>https://894276610.github.io/guyuero/14-server/</link>
+      <link>https://example.com/guyuero/14-server/</link>
       <pubDate>Sat, 18 Jul 2020 21:47:13 +0800</pubDate>
       
-      <guid>https://894276610.github.io/guyuero/14-server/</guid>
+      <guid>https://example.com/guyuero/14-server/</guid>
       <description>第十四讲 服务Server的编程实现  第十四讲 服务Server的编程实现  创建服务端实现代码 配置服务端代码编译规则 编译并运行    创建服务端实现代码 turtle_command_server 缺少一个分号，需要补全
 查看Trigger类型结构
 rossrv show std_srvs/Trigger 服务端代码（C++）
@@ -124,19 +124,19 @@ rossrv show std_srvs/Trigger 服务端代码（C++）
     
     <item>
       <title>[13]Client</title>
-      <link>https://894276610.github.io/guyuero/13-client/</link>
+      <link>https://example.com/guyuero/13-client/</link>
       <pubDate>Sat, 18 Jul 2020 21:22:13 +0800</pubDate>
       
-      <guid>https://894276610.github.io/guyuero/13-client/</guid>
+      <guid>https://example.com/guyuero/13-client/</guid>
       <description>第十三讲 客户端Client的编程实现  第十三讲 客户端Client的编程实现  创建功能包 创建客户端代码 配置客户端代码编译规则 编译运行    创建功能包  cd ~/catkin_ws/src catkin_create_pkg learning_service roscpp rospy std_msgs geometry_msgs turtlesim 创建客户端代码  初始化ROS节点 创建Client实例 发布服务请求数据 等待Server处理之后的应答结果  /*********************************************************************** Copyright 2020 GuYueHome (www.guyuehome.com). ***********************************************************************/ /** * 该例程将请求/spawn服务，服务数据类型turtlesim::Spawn */ #include &amp;lt;ros/ros.h&amp;gt;#include &amp;lt;turtlesim/Spawn.h&amp;gt; int main(int argc, char** argv) { // 初始化ROS节点 	ros::init(argc, argv, &amp;#34;turtle_spawn&amp;#34;); // 创建节点句柄 	ros::NodeHandle node; // 发现/spawn服务后，创建一个服务客户端，连接名为/spawn的service  //阻塞型函数，只有这个服务存在了才能继续进行 	ros::service::waitForService(&amp;#34;/spawn&amp;#34;); ros::ServiceClient add_turtle = node.</description>
     </item>
     
     <item>
       <title>[12]Topic define</title>
-      <link>https://894276610.github.io/guyuero/12-topic-define/</link>
+      <link>https://example.com/guyuero/12-topic-define/</link>
       <pubDate>Sat, 18 Jul 2020 18:52:13 +0800</pubDate>
       
-      <guid>https://894276610.github.io/guyuero/12-topic-define/</guid>
+      <guid>https://example.com/guyuero/12-topic-define/</guid>
       <description>第十二讲 话题消息的定义与使用  第十二讲 话题消息的定义与使用  自定义话题消息 创建发布者代码 配置代码编译规则 编译并运行发布者和订阅者    自定义话题消息   定义msg文件 在learning_topic 中创建文件夹 msg
 创建person.msg 文件
 是 uint 不是 unit 别敲错了
@@ -149,10 +149,10 @@ find_package(... message_generation) ## Declare ROS Messages, services and actio
     
     <item>
       <title>[12]Topic_define&#43;</title>
-      <link>https://894276610.github.io/guyuero/12&#43;topic-define/</link>
+      <link>https://example.com/guyuero/12&#43;topic-define/</link>
       <pubDate>Sat, 18 Jul 2020 18:52:13 +0800</pubDate>
       
-      <guid>https://894276610.github.io/guyuero/12&#43;topic-define/</guid>
+      <guid>https://example.com/guyuero/12&#43;topic-define/</guid>
       <description>第十二讲 话题消息的定义与使用  第十二讲 话题消息的定义与使用  自定义话题消息 创建发布者代码 配置代码编译规则 编译并运行发布者和订阅者    自定义话题消息   定义msg文件 在learning_topic 中 msg文件夹下
 创建Phone.msg 文件
 是 uint 不是 unit 别敲错了
@@ -167,10 +167,10 @@ find_package(... message_generation) ## Declare ROS Messages, services and actio
     
     <item>
       <title>[11]Subscriber</title>
-      <link>https://894276610.github.io/guyuero/11-subscriber/</link>
+      <link>https://example.com/guyuero/11-subscriber/</link>
       <pubDate>Fri, 17 Jul 2020 20:52:13 +0800</pubDate>
       
-      <guid>https://894276610.github.io/guyuero/11-subscriber/</guid>
+      <guid>https://example.com/guyuero/11-subscriber/</guid>
       <description>第十一讲 订阅者Subscriber的编程实现 1. 创建订阅者代码（C++）  初始化ROS节点 订阅需要的话题 循环等待话题消息 接收到消息后进入回调函数 在回调函数中完成消息处理  2. 配置功能包CMakeList.txt 功能包的build
 CMakeList
  add_executable(pose_subscriber src/pose_subscriber.cpp) target_link_libraries(pose_subscriber ${catkin_LIBRARIES}) 3. 根目录做编译,运行发布者程序  catkin_make source devel/setup.bash roscore rosrun turtlesim turtlesim_node rosrun learning_topic velocity_publisher 4. 运行订阅者程序 rosrun learning_topic pose_subscriber 参考资料 [1]古月ROS入门21讲——第十一讲</description>
@@ -178,19 +178,19 @@ CMakeList
     
     <item>
       <title>[10]Publisher</title>
-      <link>https://894276610.github.io/guyuero/10-publisher/</link>
+      <link>https://example.com/guyuero/10-publisher/</link>
       <pubDate>Fri, 17 Jul 2020 13:21:15 +0800</pubDate>
       
-      <guid>https://894276610.github.io/guyuero/10-publisher/</guid>
+      <guid>https://example.com/guyuero/10-publisher/</guid>
       <description>发布者publisher的编程实现  发布者publisher的编程实现  1. 创建功能包 2. 创建发布者代码（C++） 3. 编辑功能包的CMakeList.txt 文件 4. 编译并运行发布者 5. 运行测试 参考文献    1. 创建功能包 cd ~catkin_ws/src catkin_create_pkg learning_topic roscpp rospy std_msgs gepmetry_msgs turtlesim 2. 创建发布者代码（C++）  初始化ROS节点 向ROS Master 注册节点信息  话题名 话题消息类型   创建消息数据 按照一定频率循环发布消息 此处需要具备基本C++知识  /* Copyright 2020 GuYueHome (www.guyuehome.com).*/ /* 该例程将发布turtle1/cmd_vel话题，消息类型geometry_msgs::Twist*/ #include &amp;lt;ros/ros.h&amp;gt;#include &amp;lt;geometry_msgs/Twist.h&amp;gt; int main(int argc, char **argv) { // ROS节点初始化 	//设置节点名称 	ros::init(argc, argv, &amp;#34;velocity_publisher&amp;#34;); // 创建节点句柄 	//管理ROS API 资源，后续调用需要用到 	ros::NodeHandle n; // 创建一个Publisher，发布名为/turtle1/cmd_vel的topic，消息类型为geometry_msgs::Twist，队列长度10 	ros::Publisher turtle_vel_pub = n.</description>
     </item>
     
     <item>
       <title>[9]Workspace and package</title>
-      <link>https://894276610.github.io/guyuero/09-workspace-and-package/</link>
+      <link>https://example.com/guyuero/09-workspace-and-package/</link>
       <pubDate>Fri, 17 Jul 2020 09:46:06 +0800</pubDate>
       
-      <guid>https://894276610.github.io/guyuero/09-workspace-and-package/</guid>
+      <guid>https://example.com/guyuero/09-workspace-and-package/</guid>
       <description>创建工作空间与功能包  创建工作空间与功能包  工作空间 功能包    工作空间 工作空间存放工程文件
  src (source space) build (build space)
 编译中间文件
@@ -206,10 +206,10 @@ catkin_make install 设置环境变量  source devel/setup.bash 检查环境变�
     
     <item>
       <title>[5]Install Ros</title>
-      <link>https://894276610.github.io/guyuero/05-install-ros/</link>
+      <link>https://example.com/guyuero/05-install-ros/</link>
       <pubDate>Thu, 16 Jul 2020 22:48:51 +0800</pubDate>
       
-      <guid>https://894276610.github.io/guyuero/05-install-ros/</guid>
+      <guid>https://example.com/guyuero/05-install-ros/</guid>
       <description>当时安装ROS 18.04 困难重重
 总体上是按照这个步骤走的
 中间有几个步骤为ROS网站设置了本地DNS
@@ -221,20 +221,20 @@ $ sudo sh -c &#39;echo &amp;quot;deb http://packages.ros.org/ros/ubuntu $(lsb_re
     
     <item>
       <title>[8]Ros Command Line</title>
-      <link>https://894276610.github.io/guyuero/08-ros-command-line/</link>
+      <link>https://example.com/guyuero/08-ros-command-line/</link>
       <pubDate>Thu, 16 Jul 2020 21:50:13 +0800</pubDate>
       
-      <guid>https://894276610.github.io/guyuero/08-ros-command-line/</guid>
+      <guid>https://example.com/guyuero/08-ros-command-line/</guid>
       <description>1. 第八讲 ROS 命令行的使用  1. 第八讲 ROS 命令行的使用  1.1. ROS 命令行工具  1.1.1. Workspace 相关命令 1.1.2. Package 相关命令   1.7. 参考文献（References）    1.1. ROS 命令行工具 常用命令
  rostopic rosservice rosnode rosparam rosmsg rossrv  1.1.1. Workspace 相关命令  Create workspace   mkdir catkin_ws &amp;amp;&amp;amp; cd catkin_ws wstool init src catkin_make source devel/setup.bash  catkin_make是在catkin工作区中构建代码的便捷工具。 catkin_make遵循catkin工作区的标准布局 source命令功能：使Shell读入指定的Shell程序文件并依次执行文件中的所有语句 source命令通常用于重新执行刚修改的初始化文件，使之立即生效，而不必注销并重新登录  Add Repo to Workspace roscd; cd .</description>
     </item>
     
     <item>
       <title>[7]Ros Concept</title>
-      <link>https://894276610.github.io/guyuero/07-ros-concept/</link>
+      <link>https://example.com/guyuero/07-ros-concept/</link>
       <pubDate>Thu, 16 Jul 2020 21:41:46 +0800</pubDate>
       
-      <guid>https://894276610.github.io/guyuero/07-ros-concept/</guid>
+      <guid>https://example.com/guyuero/07-ros-concept/</guid>
       <description>第七讲 ROS核心概念  第七讲 ROS核心概念  通信机制：  节点(node): 节点管理器(ROS Master)：   话题通信  话题（Topic） 消息（Message）   服务通信 服务（service） 参数（Parameter）全局共享字典 文件系统  功能包（Package） 功能包清单（Package manifest） 元功能包（Meta Packages）   参考资料    通信机制： 节点(node): 执行单元
 完成具体功能的进程
 图像识别，图像驱动&amp;hellip;

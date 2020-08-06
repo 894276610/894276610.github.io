@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>CreateBlogs on 云居小栈</title>
-    <link>https://894276610.github.io/createblog/</link>
+    <link>https://example.com/createblog/</link>
     <description>Recent content in CreateBlogs on 云居小栈</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Tue, 14 Jul 2020 17:42:54 +0800</lastBuildDate>
     
-	<atom:link href="https://894276610.github.io/createblog/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://example.com/createblog/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Markdown_basic</title>
-      <link>https://894276610.github.io/createblog/markdownlanguage/</link>
+      <link>https://example.com/createblog/markdownlanguage/</link>
       <pubDate>Tue, 14 Jul 2020 17:42:54 +0800</pubDate>
       
-      <guid>https://894276610.github.io/createblog/markdownlanguage/</guid>
+      <guid>https://example.com/createblog/markdownlanguage/</guid>
       <description>Markdown编辑注重键盘操作，省去费时的鼠标操作，享受码字过程以及优质排版。
 这篇博客简单记录一下基本的Markdown使用入门
  准备工作 基本操作 参考文献 其他花絮  准备工作 VS code有丰富的插件，可以支持Markdown编辑以及预览
@@ -38,10 +38,10 @@
     
     <item>
       <title>HUGO</title>
-      <link>https://894276610.github.io/createblog/hugo_try/</link>
+      <link>https://example.com/createblog/hugo_try/</link>
       <pubDate>Tue, 14 Jul 2020 14:24:47 +0800</pubDate>
       
-      <guid>https://894276610.github.io/createblog/hugo_try/</guid>
+      <guid>https://example.com/createblog/hugo_try/</guid>
       <description>这篇博客总结了使用HUGO在Linux系统搭建部署博客的基本步骤
 关键词： HUGO LINUX GITHUB GIT
 1. 下载安装HUGO 1.1 从Github下载HUGO安装包 Github的gohugo发布了一系列安装包
@@ -64,10 +64,10 @@ draft: false
     
     <item>
       <title>Bolg</title>
-      <link>https://894276610.github.io/createblog/firstblog/</link>
+      <link>https://example.com/createblog/firstblog/</link>
       <pubDate>Sun, 12 Jul 2020 15:01:05 +0800</pubDate>
       
-      <guid>https://894276610.github.io/createblog/firstblog/</guid>
+      <guid>https://example.com/createblog/firstblog/</guid>
       <description>This is my first blog! (憋说这个标题拼错了，是这设计)</description>
     </item>
     

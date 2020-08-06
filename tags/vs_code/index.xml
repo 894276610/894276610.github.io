@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>VS_CODE on 云居小栈</title>
-    <link>https://894276610.github.io/tags/vs_code/</link>
+    <link>https://example.com/tags/vs_code/</link>
     <description>Recent content in VS_CODE on 云居小栈</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Tue, 14 Jul 2020 17:42:54 +0800</lastBuildDate>
     
-	<atom:link href="https://894276610.github.io/tags/vs_code/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://example.com/tags/vs_code/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Markdown_basic</title>
-      <link>https://894276610.github.io/createblog/markdownlanguage/</link>
+      <link>https://example.com/createblog/markdownlanguage/</link>
       <pubDate>Tue, 14 Jul 2020 17:42:54 +0800</pubDate>
       
-      <guid>https://894276610.github.io/createblog/markdownlanguage/</guid>
+      <guid>https://example.com/createblog/markdownlanguage/</guid>
       <description>Markdown编辑注重键盘操作，省去费时的鼠标操作，享受码字过程以及优质排版。
 这篇博客简单记录一下基本的Markdown使用入门
  准备工作 基本操作 参考文献 其他花絮  准备工作 VS code有丰富的插件，可以支持Markdown编辑以及预览
@@ -38,10 +38,10 @@
     
     <item>
       <title>Markdown基础</title>
-      <link>https://894276610.github.io/post/markdownlanguage/</link>
+      <link>https://example.com/post/markdownlanguage/</link>
       <pubDate>Tue, 14 Jul 2020 17:42:54 +0800</pubDate>
       
-      <guid>https://894276610.github.io/post/markdownlanguage/</guid>
+      <guid>https://example.com/post/markdownlanguage/</guid>
       <description>Markdown编辑注重键盘操作，省去费时的鼠标操作，享受码字过程以及优质排版。
 这篇博客简单记录一下基本的Markdown使用入门
  准备工作 基本操作 参考文献 其他花絮  准备工作 VS code有丰富的插件，可以支持Markdown编辑以及预览
