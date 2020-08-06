@@ -63,7 +63,14 @@ catkin_make install 设置环境变量  source devel/setup.bash 检查环境变�
 
 
 
-<meta itemprop="keywords" content="Ros,入门," /><link rel="stylesheet" href="/katex/katex.min.css"/></head>
+<meta itemprop="keywords" content="Ros,入门," />    .hasJax{
+    font: inherit;
+    font-size: 100%;
+    background: inherit;
+    border: inherit;
+    /*color: #515151;*/
+}
+</head>
 <body><div class="container"><header>
 <h1>云居小栈</h1>
 <a href="https://github.com/894276610/894276610.github.io" class="github"><i class="fab fa-github"></i></a>
@@ -178,7 +185,22 @@ Last updated on 17 Jul 2020
 Published on 17 Jul 2020
 <br><a href="https://github.com/894276610/894276610.github.io/edit/master/content/GuYueRo%5c09-Workspace%20and%20package.md" class="edit-page"><i class="fas fa-pen-square"></i> Edit on GitHub</a></div><nav class="pagination"><a class="nav nav-prev" href="https://894276610.github.io/guyuero/10-publisher/" title="[10]Publisher"><i class="fas fa-arrow-left" aria-hidden="true"></i> Prev - [10]Publisher</a>
 <a class="nav nav-next" href="https://894276610.github.io/guyuero/05-install-ros/" title="[5]Install Ros">Next - [5]Install Ros <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
-</nav><footer><p class="powered">Powered by <a href="https://gohugo.io">Hugo</a>. Theme by <a href="https://themes.gohugo.io/hugo-theme-techdoc/">TechDoc</a>. Designed by <a href="https://github.com/thingsym/hugo-theme-techdoc">Thingsym</a>.</p>
+</nav><footer><script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [['$','$'], ['\\(','\\)']],
+            displayMath: [['$$','$$'], ['\[','\]']],
+            processEscapes: true,
+            processEnvironments: true,
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+            TeX: {
+                equationNumbers: { autoNumber: "AMS" },
+                extensions: ["AMSmath.js", "AMSsymbols.js"]
+            }
+        }
+    });
+</script>
+<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script><p class="powered">Powered by <a href="https://gohugo.io">Hugo</a>. Theme by <a href="https://themes.gohugo.io/hugo-theme-techdoc/">TechDoc</a>. Designed by <a href="https://github.com/thingsym/hugo-theme-techdoc">Thingsym</a>.</p>
 </footer>
 </main><div class="sidebar">
 

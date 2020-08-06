@@ -33,7 +33,8 @@
 p_{y}\
 p_{z}\
 \end{bmatrix} $$
-2.姿态描述  用$\hat{{}^{}X{B}}、\hat{{}^{}Y{B}}$和$\hat{{}^{}Z{B}}$表示{B}主轴单位矢量，当用{A}表达时，写成$\hat{{}^{A}X{B}} \hat{{}^{A}Y{B}}\hat{{}^{A}Z{B}}$ 按顺序排成3*3的矩阵，我们称这个矩阵为旋转矩阵 这旋转矩阵是{B}相对于{A}的表达，所以使用符号$_{B}^{A}R$表示 最右边矩阵的前置上标被省略了，因为点乘结果和坐标系无关，为方向余弦 $$ {B}^{A}R = \begin{bmatrix} \hat{{}^{A}X_{B}} &amp;amp;\hat{_{}^{A}Y_{B}}&amp;amp;\hat{_{}^{A}Z_{B}} \end{bmatrix}= \begin{bmatrix} r_{11} &amp;amp;r_{12} &amp;amp;r_{13} \
+2.姿态描述  用$\hat{{}^{}X{B}}、\hat{{}^{}Y{B}}$和$\hat{{}^{}Z{B}}$表示{B}主轴单位矢量，当用{A}表达时，写成$\hat{{}^{A}X{B}} \hat{{}^{A}Y{B}}\hat{{}^{A}Z{B}}$ 按顺序排成3*3的矩阵，我们称这个矩阵为旋转矩阵 这旋转矩阵是{B}相对于{A}的表达，所以使用符号$_{B}^{A}R$表示 最右边矩阵的前置上标被省略了，因为点乘结果和坐标系无关，为方向余弦
+$$ {B}^{A}R = \begin{bmatrix} \hat{{}^{A}X_{B}} &amp;amp;\hat{_{}^{A}Y_{B}}&amp;amp;\hat{_{}^{A}Z_{B}} \end{bmatrix}= \begin{bmatrix} r_{11} &amp;amp;r_{12} &amp;amp;r_{13} \
 r_{21} &amp;amp;r_{22} &amp;amp;r_{23}\
 r_{31} &amp;amp;r_{32} &amp;amp;r_{33} \end{bmatrix} = \begin{bmatrix} \hat{X_{B}}\cdot\hat{X_{A}} &amp;amp;\hat{Y_{B}}\cdot\hat{X_{A}} &amp;amp;\hat{Z_{B}}\cdot\hat{X_{A}} \
 \hat{X_{B}}\cdot\hat{Y_{A}} &amp;amp;\hat{Y_{B}}\cdot\hat{Y_{A}} &amp;amp;\hat{Z_{B}}\cdot\hat{Y_{A}} \
