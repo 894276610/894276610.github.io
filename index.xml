@@ -2,40 +2,40 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Home title on 云居小栈</title>
-    <link>https://example.com/</link>
+    <link>https://894276610.github.io/</link>
     <description>Recent content in Home title on 云居小栈</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Thu, 19 Oct 2017 15:26:15 +0000</lastBuildDate>
     
-	<atom:link href="https://example.com/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://894276610.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>[1]tree</title>
-      <link>https://example.com/%E5%8C%97%E9%82%AE%E6%9C%BA%E5%99%A8%E4%BA%BA%E5%9F%B9%E8%AE%AD/01-tree/</link>
+      <link>https://894276610.github.io/%E5%8C%97%E9%82%AE%E6%9C%BA%E5%99%A8%E4%BA%BA%E5%9F%B9%E8%AE%AD/01-tree/</link>
       <pubDate>Wed, 05 Aug 2020 15:49:29 +0800</pubDate>
       
-      <guid>https://example.com/%E5%8C%97%E9%82%AE%E6%9C%BA%E5%99%A8%E4%BA%BA%E5%9F%B9%E8%AE%AD/01-tree/</guid>
+      <guid>https://894276610.github.io/%E5%8C%97%E9%82%AE%E6%9C%BA%E5%99%A8%E4%BA%BA%E5%9F%B9%E8%AE%AD/01-tree/</guid>
       <description>权限修改 sudo password root su root  安装tree命令 apt-get install tree  测试使用 tree //显示当前目录的子目录以及文件   效果展示：
 参考资料： 北邮机器人队培训系列教程</description>
     </item>
     
     <item>
       <title>[Cpp] P6-P8 </title>
-      <link>https://example.com/studycpp/houjie/houjiecpp_02/</link>
+      <link>https://894276610.github.io/studycpp/houjie/houjiecpp_02/</link>
       <pubDate>Tue, 21 Jul 2020 10:57:29 +0800</pubDate>
       
-      <guid>https://example.com/studycpp/houjie/houjiecpp_02/</guid>
+      <guid>https://894276610.github.io/studycpp/houjie/houjiecpp_02/</guid>
       <description>字符串类 创建指针，需动态分配内存
 #ifndef __MYSTRING__ #define __MYSTRING__  class String{ public: String(const char* cstr = 0); //Big Three  String(const String&amp;amp; str); //拷贝构造  String&amp;amp; operator = (const String&amp;amp; str); //拷贝赋值  ~String(); //析构函数  char* get_c_str() const { return m_data;} private: char* m_data; }; // String::function{}  inline String :: String(const char* cstr = 0){ if(cstr) { m_data = new char[strlen(cstr) +1]; strcpy(m_data, cstr); } else { m_data = new char[1]; *m_data = &amp;#39;\0&amp;#39;; } } //destructor  inline String:: ~String() { delete[] m_data; } //copy constructor  inline String::String(const String&amp;amp; str){ m_data = new char[strlen(str.</description>
     </item>
     
     <item>
       <title>[Cpp] P9 </title>
-      <link>https://example.com/studycpp/houjie/houjiecpp_03/</link>
+      <link>https://894276610.github.io/studycpp/houjie/houjiecpp_03/</link>
       <pubDate>Tue, 21 Jul 2020 10:57:29 +0800</pubDate>
       
-      <guid>https://example.com/studycpp/houjie/houjiecpp_03/</guid>
+      <guid>https://894276610.github.io/studycpp/houjie/houjiecpp_03/</guid>
       <description>静态 static 静态函数没有this指针
 静态函数只能处理静态数据
 class Account{ public: static double m_rate; //declaration  static void set_rate(const double&amp;amp; x){ m_rate = x; } }; //definition //这里要不要给初值都可以 double Account :: m_rate = 8.0; int main(){ //静态函数通过类调用  Account::set_rate(5.0); //静态函数通过产生的实例对象调用  Account a; a.set_rate(7.0); } 构造函数放在 private 区域 //设计模式 Singleton //单体 外界只能用一份 class A{ public: static A&amp;amp; getInstance(){ return a; } setup(){......} private: A(); A(const A&amp;amp; rhs); }; A&amp;amp; A::gitInstance(){ static A a; return a; } 函数模板 使用的时候不必指出class</description>
@@ -43,10 +43,10 @@ class Account{ public: static double m_rate; //declaration  static void set_rate
     
     <item>
       <title>[21]Summary</title>
-      <link>https://example.com/guyuero/21-summary/</link>
+      <link>https://894276610.github.io/guyuero/21-summary/</link>
       <pubDate>Tue, 21 Jul 2020 01:55:45 +0800</pubDate>
       
-      <guid>https://example.com/guyuero/21-summary/</guid>
+      <guid>https://894276610.github.io/guyuero/21-summary/</guid>
       <description>第二十一讲 课程总结与进阶攻略  基础概述   课程介绍 Linux ROS系统安装  核心概念   什么是 ROS ROS 核心概念 ROS 命令行使用  编程基础   创建工作空间与功能包 话题、服务编程 参数使用与编程方法  常用组件   tf 坐标系统 launch 启动文件 常用可视化工具  进阶展望  机器人控制与仿真
 Gazebo + ROS + ros_control
 即时定位与地图建模
@@ -58,10 +58,10 @@ Gazebo + ROS + ros_control
     
     <item>
       <title>[20]Visual aids</title>
-      <link>https://example.com/guyuero/20-visual-aids/</link>
+      <link>https://894276610.github.io/guyuero/20-visual-aids/</link>
       <pubDate>Tue, 21 Jul 2020 01:28:45 +0800</pubDate>
       
-      <guid>https://example.com/guyuero/20-visual-aids/</guid>
+      <guid>https://894276610.github.io/guyuero/20-visual-aids/</guid>
       <description>第二十讲 常用可视化工具的使用 qt工具箱  rqt 综合工具 rqt_console 日志输出 rqt_graph 计算图 rqt_plot 数据绘图 rqt_image_view 图像渲染  Rviz 机器人开发过程中的数据可视化界面 数据显示平台，得要有数据
 roscore rosrun rviz rviz (直接输入rviz 也行)
 三维物理仿真平台  测试机器人算法 机器人设计 显示情景下的回溯测试  roslaunch gazebo_ros willowgarage_world.launch 参考资料
@@ -70,10 +70,10 @@ roscore rosrun rviz rviz (直接输入rviz 也行)
     
     <item>
       <title>[19]launch file</title>
-      <link>https://example.com/guyuero/19-launch-file/</link>
+      <link>https://894276610.github.io/guyuero/19-launch-file/</link>
       <pubDate>Mon, 20 Jul 2020 22:45:13 +0800</pubDate>
       
-      <guid>https://example.com/guyuero/19-launch-file/</guid>
+      <guid>https://894276610.github.io/guyuero/19-launch-file/</guid>
       <description>第十九讲 launch 启动文件的使用方法  第十九讲 launch 启动文件的使用方法  launch 文件常用语法  &amp;lt;launch&amp;gt; &amp;lt;node&amp;gt; &amp;lt;param&amp;gt;/&amp;lt;rosparam&amp;gt; &amp;lt;arg&amp;gt; &amp;lt;remap&amp;gt;重映射 &amp;lt;include&amp;gt;嵌套   launch 示例    launch 文件常用语法 功能：通过xml文件实现多节点的配置和启动
 &amp;lt;launch&amp;gt; launch文件中的根元素采用标签定义
 &amp;lt;node&amp;gt; 启动节点
@@ -91,19 +91,19 @@ roscore rosrun rviz rviz (直接输入rviz 也行)
     
     <item>
       <title>[18]Broadcaster and listener</title>
-      <link>https://example.com/guyuero/18-broadcaster-and-listener/</link>
+      <link>https://894276610.github.io/guyuero/18-broadcaster-and-listener/</link>
       <pubDate>Mon, 20 Jul 2020 21:49:13 +0800</pubDate>
       
-      <guid>https://example.com/guyuero/18-broadcaster-and-listener/</guid>
+      <guid>https://894276610.github.io/guyuero/18-broadcaster-and-listener/</guid>
       <description>第十八讲 tf坐标系广播与监听的编程实现  第十八讲 tf坐标系广播与监听的编程实现  1. 创建功能包 2. 创建tf广播器代码（C++） 3. 创建tf监听器代码（C++） 4. 配置CMakeList编译规则 5. 在根目录编译运行    1. 创建功能包 cd ~/catkin_ws/src catkin_create_pkg learning_tf roscpp cospy tf turtlesim 2. 创建tf广播器代码（C++） /*********************************************************************** Copyright 2020 GuYueHome (www.guyuehome.com). ***********************************************************************/ /** * 该例程产生tf数据，并计算、发布turtle2的速度指令 */ #include &amp;lt;ros/ros.h&amp;gt;#include &amp;lt;tf/transform_broadcaster.h&amp;gt;#include &amp;lt;turtlesim/Pose.h&amp;gt; std::string turtle_name; void poseCallback(const turtlesim::PoseConstPtr&amp;amp; msg) { // 创建tf的广播器 	static tf::TransformBroadcaster br; // 初始化tf数据 	tf::Transform transform; transform.setOrigin( tf::Vector3(msg-&amp;gt;x, msg-&amp;gt;y, 0.0) ); tf::Quaternion q; q.</description>
     </item>
     
     <item>
       <title>[17]Transformation</title>
-      <link>https://example.com/guyuero/17-transformation/</link>
+      <link>https://894276610.github.io/guyuero/17-transformation/</link>
       <pubDate>Mon, 20 Jul 2020 16:49:13 +0800</pubDate>
       
-      <guid>https://example.com/guyuero/17-transformation/</guid>
+      <guid>https://894276610.github.io/guyuero/17-transformation/</guid>
       <description>ROS中的坐标系管理系统 机器人中的坐标变换 跟随同步的例程
 sudo apt-get install ros-melodic-turtle-tf roslaunch turtle_tf turtle_tf_demo.launch rosrun turtlesim turtle_teleop_key 生成tf树Pdf
 rosrun tf view_frames 命令行工具
@@ -117,10 +117,10 @@ Add tf
     
     <item>
       <title>[16]Parameters</title>
-      <link>https://example.com/guyuero/16-parameters/</link>
+      <link>https://894276610.github.io/guyuero/16-parameters/</link>
       <pubDate>Mon, 20 Jul 2020 15:40:13 +0800</pubDate>
       
-      <guid>https://example.com/guyuero/16-parameters/</guid>
+      <guid>https://894276610.github.io/guyuero/16-parameters/</guid>
       <description>第十六讲 参数的使用与编程方法  第十六讲 参数的使用与编程方法  参数模型 参数模型使用方法 编程方法 （C++） 程序的编译规则 编译运行    参数模型 Ros Master
  Parameter Server (全局字典)  /robot_name:&amp;ldquo;my_robot&amp;rdquo; /robot_radius:0.4 /robot_height:0.5    参数模型使用方法  创建功能包(第10、13讲也有类似步骤)  cd ~/catkin_ws/src catkin_crete_pkg learning_parameter roscpp rospy std_srvs 参数命令行使用   yaml 参数文件  background_b:255 background_g:86 background_r:69 rosdistro:&amp;#39;melodic&amp;#39; roslaunch: uris:{host_hcx_vpc__43763:&amp;#39;http://hcx-vpc:43763/&amp;#39;} rosversion:&amp;#39;1.14.3&amp;#39; run_id:........  列出当前所有参数
 rosparam list 显示某个参数值 rosparam get param_key 设置某个参数值
@@ -130,10 +130,10 @@ rosparam dump file_name 从文件读取参数 rosparam load file_name 删除参�
     
     <item>
       <title>[15]define service</title>
-      <link>https://example.com/guyuero/15-define-service/</link>
+      <link>https://894276610.github.io/guyuero/15-define-service/</link>
       <pubDate>Mon, 20 Jul 2020 15:20:13 +0800</pubDate>
       
-      <guid>https://example.com/guyuero/15-define-service/</guid>
+      <guid>https://894276610.github.io/guyuero/15-define-service/</guid>
       <description>第十五讲 服务数据的定义与使用  第十五讲 服务数据的定义与使用  定义服务数据  1. 定义srv 2. package.xml中添加功能包依赖 3. 在CMakeList.txt添加编译选项 4. 编译生成语言相关文件 5. （查看生成的代码文件）   创建发布者代码  1.服务端 2.客户端   配置代码编译规则 编译并运行服务端和客户端    自定义数据类型并且使用
 自定义服务数据
 定义服务数据 1. 定义srv 三个横线以上是request以下是response数据
@@ -143,10 +143,10 @@ string name uint8 age uint8 sex uint8 unknown = 0 uint8 male = 1 uint8 female = 
     
     <item>
       <title>[Cpp] P1-P5 complex </title>
-      <link>https://example.com/studycpp/houjie/houjiecpp_01/</link>
+      <link>https://894276610.github.io/studycpp/houjie/houjiecpp_01/</link>
       <pubDate>Sun, 19 Jul 2020 16:49:29 +0800</pubDate>
       
-      <guid>https://example.com/studycpp/houjie/houjiecpp_01/</guid>
+      <guid>https://894276610.github.io/studycpp/houjie/houjiecpp_01/</guid>
       <description>数据与函数 Class的两个经典分类 C++ 代码的基本形式 头文件 构造函数放在 private 区域 细节点总结  数据与函数 C 语言中全局数据， 所有函数可以处理它，会产生一些问题
 C++ 具有封装的特性，数据和函数包在一起，创建对象，处理这些数据
 Class的两个经典分类 带有指针的类（字符串）
@@ -158,10 +158,10 @@ C++ 代码的基本形式  Classes Declaration (header files) Standard Library (
     
     <item>
       <title>[Cpp]侯捷——头文件、类</title>
-      <link>https://example.com/post/studycpp/houjie/houjiecpp_01/</link>
+      <link>https://894276610.github.io/post/studycpp/houjie/houjiecpp_01/</link>
       <pubDate>Sun, 19 Jul 2020 16:49:29 +0800</pubDate>
       
-      <guid>https://example.com/post/studycpp/houjie/houjiecpp_01/</guid>
+      <guid>https://894276610.github.io/post/studycpp/houjie/houjiecpp_01/</guid>
       <description>数据与函数 Class的两个经典分类 C++ 代码的基本形式 头文件 构造函数放在 private 区域  数据与函数 C 语言中全局数据， 所有函数可以处理它，会产生一些问题
 C++ 具有封装的特性，数据和函数包在一起，创建对象，处理这些数据
 Class的两个经典分类 带有指针的类（字符串）
@@ -173,30 +173,30 @@ C++ 代码的基本形式  Classes Declaration (header files) Standard Library (
     
     <item>
       <title>[Cpp]Book_List</title>
-      <link>https://example.com/post/studycpp/book01/</link>
+      <link>https://894276610.github.io/post/studycpp/book01/</link>
       <pubDate>Sun, 19 Jul 2020 15:49:29 +0800</pubDate>
       
-      <guid>https://example.com/post/studycpp/book01/</guid>
+      <guid>https://894276610.github.io/post/studycpp/book01/</guid>
       <description>《C++标准程序库》《C++ Primer Plus》经典（砖头书），我曾在三处听到推荐
  程序羊(codesheep)公众号 机器人学习规划(科学上网) 侯捷老师视频课 推荐  我为了在多抓鱼二手书平台凑包邮又购买了《Linux命令速查手册》和《Git学习指南》两本工具书 ，后续打算写点笔记。</description>
     </item>
     
     <item>
       <title>[Cpp]Book_List</title>
-      <link>https://example.com/studycpp/book01/</link>
+      <link>https://894276610.github.io/studycpp/book01/</link>
       <pubDate>Sun, 19 Jul 2020 15:49:29 +0800</pubDate>
       
-      <guid>https://example.com/studycpp/book01/</guid>
+      <guid>https://894276610.github.io/studycpp/book01/</guid>
       <description>《C++标准程序库》《C++ Primer Plus》经典（砖头书），我曾在三处听到推荐
  程序羊(codesheep)公众号 机器人学习规划(科学上网) 侯捷老师视频课 推荐  我为了在多抓鱼二手书平台凑包邮又购买了《Linux命令速查手册》和《Git学习指南》两本工具书 ，后续打算写点笔记。</description>
     </item>
     
     <item>
       <title>[14]Server</title>
-      <link>https://example.com/guyuero/14-server/</link>
+      <link>https://894276610.github.io/guyuero/14-server/</link>
       <pubDate>Sat, 18 Jul 2020 21:47:13 +0800</pubDate>
       
-      <guid>https://example.com/guyuero/14-server/</guid>
+      <guid>https://894276610.github.io/guyuero/14-server/</guid>
       <description>第十四讲 服务Server的编程实现  第十四讲 服务Server的编程实现  创建服务端实现代码 配置服务端代码编译规则 编译并运行    创建服务端实现代码 turtle_command_server 缺少一个分号，需要补全
 查看Trigger类型结构
 rossrv show std_srvs/Trigger 服务端代码（C++）
@@ -205,10 +205,10 @@ rossrv show std_srvs/Trigger 服务端代码（C++）
     
     <item>
       <title>[学习笔记]古月ROS入门21讲——第十四讲</title>
-      <link>https://example.com/post/guyueros21/guyueros21_14/</link>
+      <link>https://894276610.github.io/post/guyueros21/guyueros21_14/</link>
       <pubDate>Sat, 18 Jul 2020 21:47:13 +0800</pubDate>
       
-      <guid>https://example.com/post/guyueros21/guyueros21_14/</guid>
+      <guid>https://894276610.github.io/post/guyueros21/guyueros21_14/</guid>
       <description>第十四讲 服务Server的编程实现  第十四讲 服务Server的编程实现  创建服务端实现代码 配置服务端代码编译规则 编译并运行    创建服务端实现代码 turtle_command_server 缺少一个分号，需要补全
 配置服务端代码编译规则 add_executable(turtle_command_server src/turtle_command_server.cpp) target_link_libraries(turtle_command_server ${catkin_LIBRARIES}) 编译并运行 cd ~/catkin_ws catkin_make source devel/setup.bash roscore rosrun turtlesim turtlesim_node rosrun learning_service turtle_command_server rosservice call /turtle_command &amp;quot;{}&amp;quot; rosservice call /turtle_command &amp;quot;{}&amp;quot; 参考资料
 [1]古月ROS入门21讲——第十四讲</description>
@@ -216,10 +216,10 @@ rossrv show std_srvs/Trigger 服务端代码（C++）
     
     <item>
       <title>[学习笔记]古月ROS入门21讲——第十四讲</title>
-      <link>https://example.com/post/guyueros21/guyueros21_15/</link>
+      <link>https://894276610.github.io/post/guyueros21/guyueros21_15/</link>
       <pubDate>Sat, 18 Jul 2020 21:47:13 +0800</pubDate>
       
-      <guid>https://example.com/post/guyueros21/guyueros21_15/</guid>
+      <guid>https://894276610.github.io/post/guyueros21/guyueros21_15/</guid>
       <description>第十四讲 服务Server的编程实现  第十四讲 服务Server的编程实现  创建服务端实现代码 配置服务端代码编译规则 编译并运行    创建服务端实现代码 turtle_command_server 缺少一个分号，需要补全
 配置服务端代码编译规则 add_executable(turtle_command_server src/turtle_command_server.cpp) target_link_libraries(turtle_command_server ${catkin_LIBRARIES}) 编译并运行 cd ~/catkin_ws catkin_make source devel/setup.bash roscore rosrun turtlesim turtlesim_node rosrun learning_service turtle_command_server rosservice call /turtle_command &amp;quot;{}&amp;quot; rosservice call /turtle_command &amp;quot;{}&amp;quot; 参考资料
 [1]古月ROS入门21讲——第十四讲</description>
@@ -227,19 +227,19 @@ rossrv show std_srvs/Trigger 服务端代码（C++）
     
     <item>
       <title>[13]Client</title>
-      <link>https://example.com/guyuero/13-client/</link>
+      <link>https://894276610.github.io/guyuero/13-client/</link>
       <pubDate>Sat, 18 Jul 2020 21:22:13 +0800</pubDate>
       
-      <guid>https://example.com/guyuero/13-client/</guid>
+      <guid>https://894276610.github.io/guyuero/13-client/</guid>
       <description>第十三讲 客户端Client的编程实现  第十三讲 客户端Client的编程实现  创建功能包 创建客户端代码 配置客户端代码编译规则 编译运行    创建功能包  cd ~/catkin_ws/src catkin_create_pkg learning_service roscpp rospy std_msgs geometry_msgs turtlesim 创建客户端代码  初始化ROS节点 创建Client实例 发布服务请求数据 等待Server处理之后的应答结果  /*********************************************************************** Copyright 2020 GuYueHome (www.guyuehome.com). ***********************************************************************/ /** * 该例程将请求/spawn服务，服务数据类型turtlesim::Spawn */ #include &amp;lt;ros/ros.h&amp;gt;#include &amp;lt;turtlesim/Spawn.h&amp;gt; int main(int argc, char** argv) { // 初始化ROS节点 	ros::init(argc, argv, &amp;#34;turtle_spawn&amp;#34;); // 创建节点句柄 	ros::NodeHandle node; // 发现/spawn服务后，创建一个服务客户端，连接名为/spawn的service  //阻塞型函数，只有这个服务存在了才能继续进行 	ros::service::waitForService(&amp;#34;/spawn&amp;#34;); ros::ServiceClient add_turtle = node.</description>
     </item>
     
     <item>
       <title>[学习笔记]古月ROS入门21讲——第十三讲</title>
-      <link>https://example.com/post/guyueros21/guyueros21_13/</link>
+      <link>https://894276610.github.io/post/guyueros21/guyueros21_13/</link>
       <pubDate>Sat, 18 Jul 2020 21:22:13 +0800</pubDate>
       
-      <guid>https://example.com/post/guyueros21/guyueros21_13/</guid>
+      <guid>https://894276610.github.io/post/guyueros21/guyueros21_13/</guid>
       <description>第十三讲 客户端Client的编程实现  第十三讲 客户端Client的编程实现  创建功能包 创建客户端代码 配置客户端代码编译规则 编译运行    创建功能包  cd ~/catkin_ws/src catkin_create_pkg learning_service roscpp rospy std_msgs geometry_msgs turtlesim 创建客户端代码  初始化ROS节点 创建Client实例 发布服务请求数据 等待Server处理之后的应答结果  配置客户端代码编译规则 功能包CMakeLists.txt
 ##build##
 add_executable(turtle_spawn src/turtle_spawn.cpp) target_link_libraries(turtle_spawn ${catkin_LIBRARIES}) 编译运行 catkin_ws路径
@@ -249,10 +249,10 @@ catkin_make roscore rosrun turtlesim turtlesim_node rosrun learning_service turt
     
     <item>
       <title>[12]Topic define</title>
-      <link>https://example.com/guyuero/12-topic-define/</link>
+      <link>https://894276610.github.io/guyuero/12-topic-define/</link>
       <pubDate>Sat, 18 Jul 2020 18:52:13 +0800</pubDate>
       
-      <guid>https://example.com/guyuero/12-topic-define/</guid>
+      <guid>https://894276610.github.io/guyuero/12-topic-define/</guid>
       <description>第十二讲 话题消息的定义与使用  第十二讲 话题消息的定义与使用  自定义话题消息 创建发布者代码 配置代码编译规则 编译并运行发布者和订阅者    自定义话题消息   定义msg文件 在learning_topic 中创建文件夹 msg
 创建person.msg 文件
 是 uint 不是 unit 别敲错了
@@ -265,10 +265,10 @@ find_package(... message_generation) ## Declare ROS Messages, services and actio
     
     <item>
       <title>[12]Topic_define&#43;</title>
-      <link>https://example.com/guyuero/12&#43;topic-define/</link>
+      <link>https://894276610.github.io/guyuero/12&#43;topic-define/</link>
       <pubDate>Sat, 18 Jul 2020 18:52:13 +0800</pubDate>
       
-      <guid>https://example.com/guyuero/12&#43;topic-define/</guid>
+      <guid>https://894276610.github.io/guyuero/12&#43;topic-define/</guid>
       <description>第十二讲 话题消息的定义与使用  第十二讲 话题消息的定义与使用  自定义话题消息 创建发布者代码 配置代码编译规则 编译并运行发布者和订阅者    自定义话题消息   定义msg文件 在learning_topic 中 msg文件夹下
 创建Phone.msg 文件
 是 uint 不是 unit 别敲错了
@@ -283,10 +283,10 @@ find_package(... message_generation) ## Declare ROS Messages, services and actio
     
     <item>
       <title>[学习笔记]古月ROS入门21讲——第十二讲</title>
-      <link>https://example.com/post/guyueros21/guyueros21_12/</link>
+      <link>https://894276610.github.io/post/guyueros21/guyueros21_12/</link>
       <pubDate>Sat, 18 Jul 2020 18:52:13 +0800</pubDate>
       
-      <guid>https://example.com/post/guyueros21/guyueros21_12/</guid>
+      <guid>https://894276610.github.io/post/guyueros21/guyueros21_12/</guid>
       <description>第十二讲 话题消息的定义与使用  第十二讲 话题消息的定义与使用  自定义话题消息 创建发布者代码 配置代码编译规则 编译并运行发布者和订阅者    自定义话题消息   定义msg文件 在learning_topic 中创建文件夹 msg
 创建person.msg 文件
 是 uint 不是 unit 别敲错了
@@ -299,10 +299,10 @@ find_package(... message_generation) ## Declare ROS Messages, services and actio
     
     <item>
       <title>[Cpp]琐碎细节-待续</title>
-      <link>https://example.com/post/studycpp/details/</link>
+      <link>https://894276610.github.io/post/studycpp/details/</link>
       <pubDate>Sat, 18 Jul 2020 15:53:46 +0800</pubDate>
       
-      <guid>https://example.com/post/studycpp/details/</guid>
+      <guid>https://894276610.github.io/post/studycpp/details/</guid>
       <description>namespace，是指标识符的各种可见范围
 参考资料：
 [1]命名空间-namespace含义</description>
@@ -310,10 +310,10 @@ find_package(... message_generation) ## Declare ROS Messages, services and actio
     
     <item>
       <title>[Cpp]琐碎细节-待续</title>
-      <link>https://example.com/studycpp/details/</link>
+      <link>https://894276610.github.io/studycpp/details/</link>
       <pubDate>Sat, 18 Jul 2020 15:53:46 +0800</pubDate>
       
-      <guid>https://example.com/studycpp/details/</guid>
+      <guid>https://894276610.github.io/studycpp/details/</guid>
       <description>namespace，是指标识符的各种可见范围
 参考资料：
 [1]命名空间-namespace含义</description>
@@ -321,10 +321,10 @@ find_package(... message_generation) ## Declare ROS Messages, services and actio
     
     <item>
       <title>[Cpp]Overload_operator</title>
-      <link>https://example.com/post/studycpp/overload_operator/</link>
+      <link>https://894276610.github.io/post/studycpp/overload_operator/</link>
       <pubDate>Sat, 18 Jul 2020 13:46:53 +0800</pubDate>
       
-      <guid>https://example.com/post/studycpp/overload_operator/</guid>
+      <guid>https://894276610.github.io/post/studycpp/overload_operator/</guid>
       <description>新Tag引言：
 电管专业只开C和JAVA两门编程语言课程。C++ 必然得自己啃完。
 运算符重载 # include&amp;lt;iostream&amp;gt; using namespace std; class Fraction{ private: int numerator; //分子  int denominator; //分母  public : //Constructor  //No parameter  Fraction(); //Two parameter  Fraction(int,int); //copy type  Fraction(const Fraction &amp;amp;fraction1); //Destructor  ~Fraction(){} //friend function  friend Fraction operator /(Fraction &amp;amp;a, Fraction &amp;amp;b); //operator overloading  Fraction operator *(Fraction &amp;amp;a); Fraction operator +(Fraction &amp;amp;a); void show(){ cout&amp;lt;&amp;lt;numerator&amp;lt;&amp;lt;&amp;#34;\n&amp;#34;&amp;lt;&amp;lt;denominator&amp;lt;&amp;lt;&amp;#34;\n&amp;#34;; } }; //Constructor  //class_name :: class_name (parameter)  Fraction :: Fraction (){ numerator = 1; denominator = 1; } Fraction :: Fraction (int numerator, int denominator){ this-&amp;gt;numerator = numerator ; this-&amp;gt;denominator = denominator ; } Fraction :: Fraction (const Fraction &amp;amp;fraction1){ numerator = fraction1.</description>
@@ -332,10 +332,10 @@ find_package(... message_generation) ## Declare ROS Messages, services and actio
     
     <item>
       <title>[Cpp]Overload_operator</title>
-      <link>https://example.com/studycpp/overload_operator/</link>
+      <link>https://894276610.github.io/studycpp/overload_operator/</link>
       <pubDate>Sat, 18 Jul 2020 13:46:53 +0800</pubDate>
       
-      <guid>https://example.com/studycpp/overload_operator/</guid>
+      <guid>https://894276610.github.io/studycpp/overload_operator/</guid>
       <description>新Tag引言：
 电管专业只开C和JAVA两门编程语言课程。C++ 必然得自己啃完。
 运算符重载 # include&amp;lt;iostream&amp;gt; using namespace std; class Fraction{ private: int numerator; //分子  int denominator; //分母  public : //Constructor  //No parameter  Fraction(); //Two parameter  Fraction(int,int); //copy type  Fraction(const Fraction &amp;amp;fraction1); //Destructor  ~Fraction(){} //friend function  friend Fraction operator /(Fraction &amp;amp;a, Fraction &amp;amp;b); //operator overloading  Fraction operator *(Fraction &amp;amp;a); Fraction operator +(Fraction &amp;amp;a); void show(){ cout&amp;lt;&amp;lt;numerator&amp;lt;&amp;lt;&amp;#34;\n&amp;#34;&amp;lt;&amp;lt;denominator&amp;lt;&amp;lt;&amp;#34;\n&amp;#34;; } }; //Constructor  //class_name :: class_name (parameter)  Fraction :: Fraction (){ numerator = 1; denominator = 1; } Fraction :: Fraction (int numerator, int denominator){ this-&amp;gt;numerator = numerator ; this-&amp;gt;denominator = denominator ; } Fraction :: Fraction (const Fraction &amp;amp;fraction1){ numerator = fraction1.</description>
@@ -343,10 +343,10 @@ find_package(... message_generation) ## Declare ROS Messages, services and actio
     
     <item>
       <title>[花絮]头像制作思路</title>
-      <link>https://example.com/extrathing/titlephoto/</link>
+      <link>https://894276610.github.io/extrathing/titlephoto/</link>
       <pubDate>Fri, 17 Jul 2020 21:53:46 +0800</pubDate>
       
-      <guid>https://example.com/extrathing/titlephoto/</guid>
+      <guid>https://894276610.github.io/extrathing/titlephoto/</guid>
       <description>原始想法 最开始想使用微信头像
 觉得过浅色图片和这个深色背景很不搭配
 就&amp;hellip;另想办法
@@ -362,10 +362,10 @@ PS: 这篇博客原本在用m10c主题时写的，现在使用Tech-doc主题没�
     
     <item>
       <title>[花絮]头像制作思路</title>
-      <link>https://example.com/post/extra/titlephoto/</link>
+      <link>https://894276610.github.io/post/extra/titlephoto/</link>
       <pubDate>Fri, 17 Jul 2020 21:53:46 +0800</pubDate>
       
-      <guid>https://example.com/post/extra/titlephoto/</guid>
+      <guid>https://894276610.github.io/post/extra/titlephoto/</guid>
       <description>原来m10c主题使用了头像 现在这个主题已经不用辽~
 原始想法 最开始想使用微信头像
 觉得过浅色图片和这个深色背景很不搭配
@@ -381,10 +381,10 @@ PS: 这篇博客原本在用m10c主题时写的，现在使用Tech-doc主题没�
     
     <item>
       <title>[11]Subscriber</title>
-      <link>https://example.com/guyuero/11-subscriber/</link>
+      <link>https://894276610.github.io/guyuero/11-subscriber/</link>
       <pubDate>Fri, 17 Jul 2020 20:52:13 +0800</pubDate>
       
-      <guid>https://example.com/guyuero/11-subscriber/</guid>
+      <guid>https://894276610.github.io/guyuero/11-subscriber/</guid>
       <description>第十一讲 订阅者Subscriber的编程实现 1. 创建订阅者代码（C++）  初始化ROS节点 订阅需要的话题 循环等待话题消息 接收到消息后进入回调函数 在回调函数中完成消息处理  2. 配置功能包CMakeList.txt 功能包的build
 CMakeList
  add_executable(pose_subscriber src/pose_subscriber.cpp) target_link_libraries(pose_subscriber ${catkin_LIBRARIES}) 3. 根目录做编译,运行发布者程序  catkin_make source devel/setup.bash roscore rosrun turtlesim turtlesim_node rosrun learning_topic velocity_publisher 4. 运行订阅者程序 rosrun learning_topic pose_subscriber 参考资料 [1]古月ROS入门21讲——第十一讲</description>
@@ -392,10 +392,10 @@ CMakeList
     
     <item>
       <title>[学习笔记]古月ROS入门21讲——第十一讲</title>
-      <link>https://example.com/post/guyueros21/guyueros21_11/</link>
+      <link>https://894276610.github.io/post/guyueros21/guyueros21_11/</link>
       <pubDate>Fri, 17 Jul 2020 20:52:13 +0800</pubDate>
       
-      <guid>https://example.com/post/guyueros21/guyueros21_11/</guid>
+      <guid>https://894276610.github.io/post/guyueros21/guyueros21_11/</guid>
       <description>第十一讲 订阅者Subscriber的编程实现 1. 创建订阅者代码（C++）  初始化ROS节点 订阅需要的话题 循环等待话题消息 接收到消息后进入回调函数 在回调函数中完成消息处理  2. 配置功能包CMakeList.txt 功能包的build
 CMakeList
  add_executable(pose_subscriber src/pose_subscriber.cpp) target_link_libraries(pose_subscriber ${catkin_LIBRARIES}) 3. 根目录做编译,运行发布者程序  catkin_make source devel/setup.bash roscore rosrun turtlesim turtlesim_node rosrun learning_topic velocity_publisher 4. 运行订阅者程序 rosrun learning_topic pose_subscriber 参考资料 [1]古月ROS入门21讲——第十一讲</description>
@@ -403,19 +403,19 @@ CMakeList
     
     <item>
       <title>[10]Publisher</title>
-      <link>https://example.com/guyuero/10-publisher/</link>
+      <link>https://894276610.github.io/guyuero/10-publisher/</link>
       <pubDate>Fri, 17 Jul 2020 13:21:15 +0800</pubDate>
       
-      <guid>https://example.com/guyuero/10-publisher/</guid>
+      <guid>https://894276610.github.io/guyuero/10-publisher/</guid>
       <description>发布者publisher的编程实现  发布者publisher的编程实现  1. 创建功能包 2. 创建发布者代码（C++） 3. 编辑功能包的CMakeList.txt 文件 4. 编译并运行发布者 5. 运行测试 参考文献    1. 创建功能包 cd ~catkin_ws/src catkin_create_pkg learning_topic roscpp rospy std_msgs gepmetry_msgs turtlesim 2. 创建发布者代码（C++）  初始化ROS节点 向ROS Master 注册节点信息  话题名 话题消息类型   创建消息数据 按照一定频率循环发布消息 此处需要具备基本C++知识  /* Copyright 2020 GuYueHome (www.guyuehome.com).*/ /* 该例程将发布turtle1/cmd_vel话题，消息类型geometry_msgs::Twist*/ #include &amp;lt;ros/ros.h&amp;gt;#include &amp;lt;geometry_msgs/Twist.h&amp;gt; int main(int argc, char **argv) { // ROS节点初始化 	//设置节点名称 	ros::init(argc, argv, &amp;#34;velocity_publisher&amp;#34;); // 创建节点句柄 	//管理ROS API 资源，后续调用需要用到 	ros::NodeHandle n; // 创建一个Publisher，发布名为/turtle1/cmd_vel的topic，消息类型为geometry_msgs::Twist，队列长度10 	ros::Publisher turtle_vel_pub = n.</description>
     </item>
     
     <item>
       <title>[学习笔记]古月ROS入门21讲——第十讲</title>
-      <link>https://example.com/post/guyueros21/guyueros21_10/</link>
+      <link>https://894276610.github.io/post/guyueros21/guyueros21_10/</link>
       <pubDate>Fri, 17 Jul 2020 13:21:15 +0800</pubDate>
       
-      <guid>https://example.com/post/guyueros21/guyueros21_10/</guid>
+      <guid>https://894276610.github.io/post/guyueros21/guyueros21_10/</guid>
       <description>发布者publisher的编程实现  发布者publisher的编程实现  1. 创建功能包 2. 创建发布者代码（C++） 3. 编辑功能包的CMakeList.txt 文件 4. 编译并运行发布者 5. 运行测试 参考文献    1. 创建功能包 cd ~catkin_ws/src catkin_create_pkg learning_topic roscpp rospy std_msgs gepmetry_msgs turtlesim 2. 创建发布者代码（C++）  初始化ROS节点 向ROS Master 注册节点信息  话题名 话题消息类型   创建消息数据 按照一定频率循环发布消息 此处需要具备基本C++知识  3. 编辑功能包的CMakeList.txt 文件  在build部分添加 add_executable(velocity_publisher src/velocity_publisher.cpp) target_link_libraries(velocity_publisher ${catkin_LIBRARIES}) 第一行代码： 把.cpp 变成左边这个可执行文件
 第二行代码： 把可执行文件与Ros库做链接 C++接口
   4. 编译并运行发布者 回到根目录空间下
@@ -424,10 +424,10 @@ cd ~/catkin_ws catkin_make source devel/setup.</description>
     
     <item>
       <title>[9]Workspace and package</title>
-      <link>https://example.com/guyuero/09-workspace-and-package/</link>
+      <link>https://894276610.github.io/guyuero/09-workspace-and-package/</link>
       <pubDate>Fri, 17 Jul 2020 09:46:06 +0800</pubDate>
       
-      <guid>https://example.com/guyuero/09-workspace-and-package/</guid>
+      <guid>https://894276610.github.io/guyuero/09-workspace-and-package/</guid>
       <description>创建工作空间与功能包  创建工作空间与功能包  工作空间 功能包    工作空间 工作空间存放工程文件
  src (source space) build (build space)
 编译中间文件
@@ -443,10 +443,10 @@ catkin_make install 设置环境变量  source devel/setup.bash 检查环境变�
     
     <item>
       <title>[学习笔记]古月ROS入门21讲——第九讲</title>
-      <link>https://example.com/post/guyueros21/guyueros21_09/</link>
+      <link>https://894276610.github.io/post/guyueros21/guyueros21_09/</link>
       <pubDate>Fri, 17 Jul 2020 09:46:06 +0800</pubDate>
       
-      <guid>https://example.com/post/guyueros21/guyueros21_09/</guid>
+      <guid>https://894276610.github.io/post/guyueros21/guyueros21_09/</guid>
       <description>创建工作空间与功能包  创建工作空间与功能包  工作空间 功能包    工作空间 工作空间存放工程文件
  src (source space) build (build space)
 编译中间文件
@@ -462,10 +462,10 @@ catkin_make install 设置环境变量  source devel/setup.bash 检查环境变�
     
     <item>
       <title>[5]Install Ros</title>
-      <link>https://example.com/guyuero/05-install-ros/</link>
+      <link>https://894276610.github.io/guyuero/05-install-ros/</link>
       <pubDate>Thu, 16 Jul 2020 22:48:51 +0800</pubDate>
       
-      <guid>https://example.com/guyuero/05-install-ros/</guid>
+      <guid>https://894276610.github.io/guyuero/05-install-ros/</guid>
       <description>当时安装ROS 18.04 困难重重
 总体上是按照这个步骤走的
 中间有几个步骤为ROS网站设置了本地DNS
@@ -477,10 +477,10 @@ $ sudo sh -c &#39;echo &amp;quot;deb http://packages.ros.org/ros/ubuntu $(lsb_re
     
     <item>
       <title>[代码]Ros系统安装步骤</title>
-      <link>https://example.com/post/guyueros21/ros_install_tips/</link>
+      <link>https://894276610.github.io/post/guyueros21/ros_install_tips/</link>
       <pubDate>Thu, 16 Jul 2020 22:48:51 +0800</pubDate>
       
-      <guid>https://example.com/post/guyueros21/ros_install_tips/</guid>
+      <guid>https://894276610.github.io/post/guyueros21/ros_install_tips/</guid>
       <description>当时安装ROS 18.04 困难重重
 总体上是按照这个步骤走的
 中间有几个步骤为ROS网站设置了本地DNS
@@ -492,30 +492,30 @@ $ sudo sh -c &#39;echo &amp;quot;deb http://packages.ros.org/ros/ubuntu $(lsb_re
     
     <item>
       <title>[8]Ros Command Line</title>
-      <link>https://example.com/guyuero/08-ros-command-line/</link>
+      <link>https://894276610.github.io/guyuero/08-ros-command-line/</link>
       <pubDate>Thu, 16 Jul 2020 21:50:13 +0800</pubDate>
       
-      <guid>https://example.com/guyuero/08-ros-command-line/</guid>
+      <guid>https://894276610.github.io/guyuero/08-ros-command-line/</guid>
       <description>1. 第八讲 ROS 命令行的使用  1. 第八讲 ROS 命令行的使用  1.1. ROS 命令行工具  1.1.1. Workspace 相关命令 1.1.2. Package 相关命令   1.7. 参考文献（References）    1.1. ROS 命令行工具 常用命令
  rostopic rosservice rosnode rosparam rosmsg rossrv  1.1.1. Workspace 相关命令  Create workspace   mkdir catkin_ws &amp;amp;&amp;amp; cd catkin_ws wstool init src catkin_make source devel/setup.bash  catkin_make是在catkin工作区中构建代码的便捷工具。 catkin_make遵循catkin工作区的标准布局 source命令功能：使Shell读入指定的Shell程序文件并依次执行文件中的所有语句 source命令通常用于重新执行刚修改的初始化文件，使之立即生效，而不必注销并重新登录  Add Repo to Workspace roscd; cd .</description>
     </item>
     
     <item>
       <title>[学习笔记]古月ROS入门21讲——第八讲</title>
-      <link>https://example.com/post/guyueros21/guyueros21_08/</link>
+      <link>https://894276610.github.io/post/guyueros21/guyueros21_08/</link>
       <pubDate>Thu, 16 Jul 2020 21:50:13 +0800</pubDate>
       
-      <guid>https://example.com/post/guyueros21/guyueros21_08/</guid>
+      <guid>https://894276610.github.io/post/guyueros21/guyueros21_08/</guid>
       <description>1. 第八讲 ROS 命令行的使用  1. 第八讲 ROS 命令行的使用  1.1. ROS 命令行工具  1.1.1. Workspace 相关命令 1.1.2. Package 相关命令 1.1.3. CMakeLists.txt 1.1.4. RUNNING SYSTEM   1.2. 启动小海龟 1.3. 分析小海龟话题和服务 1.4. 使用命令行工具让海龟动起来 （话题通讯） 1.5. 添加新海龟 （服务通讯） 1.6. 话题记录和复现 1.7. 参考文献（References）    1.1. ROS 命令行工具 常用命令
  rostopic rosservice rosnode rosparam rosmsg rossrv  1.1.1. Workspace 相关命令  Create workspace   mkdir catkin_ws &amp;amp;&amp;amp; cd catkin_ws wstool init src catkin_make source devel/setup.</description>
     </item>
     
     <item>
       <title>[7]Ros Concept</title>
-      <link>https://example.com/guyuero/07-ros-concept/</link>
+      <link>https://894276610.github.io/guyuero/07-ros-concept/</link>
       <pubDate>Thu, 16 Jul 2020 21:41:46 +0800</pubDate>
       
-      <guid>https://example.com/guyuero/07-ros-concept/</guid>
+      <guid>https://894276610.github.io/guyuero/07-ros-concept/</guid>
       <description>第七讲 ROS核心概念  第七讲 ROS核心概念  通信机制：  节点(node): 节点管理器(ROS Master)：   话题通信  话题（Topic） 消息（Message）   服务通信 服务（service） 参数（Parameter）全局共享字典 文件系统  功能包（Package） 功能包清单（Package manifest） 元功能包（Meta Packages）   参考资料    通信机制： 节点(node): 执行单元
 完成具体功能的进程
 图像识别，图像驱动&amp;hellip;
@@ -531,10 +531,10 @@ $ sudo sh -c &#39;echo &amp;quot;deb http://packages.ros.org/ros/ubuntu $(lsb_re
     
     <item>
       <title>[学习笔记]古月ROS入门21讲——第七讲</title>
-      <link>https://example.com/post/guyueros21/guyueros21_07/</link>
+      <link>https://894276610.github.io/post/guyueros21/guyueros21_07/</link>
       <pubDate>Thu, 16 Jul 2020 21:41:46 +0800</pubDate>
       
-      <guid>https://example.com/post/guyueros21/guyueros21_07/</guid>
+      <guid>https://894276610.github.io/post/guyueros21/guyueros21_07/</guid>
       <description>第七讲 ROS核心概念  第七讲 ROS核心概念  通信机制：  节点(node): 节点管理器(ROS Master)：   话题通信  话题（Topic） 消息（Message）   服务通信 服务（service） 参数（Parameter）全局共享字典 文件系统  功能包（Package） 功能包清单（Package manifest） 元功能包（Meta Packages）   参考资料    通信机制： 节点(node): 执行单元
 完成具体功能的进程
 图像识别，图像驱动&amp;hellip;
@@ -550,10 +550,10 @@ $ sudo sh -c &#39;echo &amp;quot;deb http://packages.ros.org/ros/ubuntu $(lsb_re
     
     <item>
       <title>Markdown_basic</title>
-      <link>https://example.com/createblog/markdownlanguage/</link>
+      <link>https://894276610.github.io/createblog/markdownlanguage/</link>
       <pubDate>Tue, 14 Jul 2020 17:42:54 +0800</pubDate>
       
-      <guid>https://example.com/createblog/markdownlanguage/</guid>
+      <guid>https://894276610.github.io/createblog/markdownlanguage/</guid>
       <description>Markdown编辑注重键盘操作，省去费时的鼠标操作，享受码字过程以及优质排版。
 这篇博客简单记录一下基本的Markdown使用入门
  准备工作 基本操作 参考文献 其他花絮  准备工作 VS code有丰富的插件，可以支持Markdown编辑以及预览
@@ -576,10 +576,10 @@ $ sudo sh -c &#39;echo &amp;quot;deb http://packages.ros.org/ros/ubuntu $(lsb_re
     
     <item>
       <title>Markdown基础</title>
-      <link>https://example.com/post/markdownlanguage/</link>
+      <link>https://894276610.github.io/post/markdownlanguage/</link>
       <pubDate>Tue, 14 Jul 2020 17:42:54 +0800</pubDate>
       
-      <guid>https://example.com/post/markdownlanguage/</guid>
+      <guid>https://894276610.github.io/post/markdownlanguage/</guid>
       <description>Markdown编辑注重键盘操作，省去费时的鼠标操作，享受码字过程以及优质排版。
 这篇博客简单记录一下基本的Markdown使用入门
  准备工作 基本操作 参考文献 其他花絮  准备工作 VS code有丰富的插件，可以支持Markdown编辑以及预览
@@ -602,10 +602,10 @@ $ sudo sh -c &#39;echo &amp;quot;deb http://packages.ros.org/ros/ubuntu $(lsb_re
     
     <item>
       <title>HUGO</title>
-      <link>https://example.com/createblog/hugo_try/</link>
+      <link>https://894276610.github.io/createblog/hugo_try/</link>
       <pubDate>Tue, 14 Jul 2020 14:24:47 +0800</pubDate>
       
-      <guid>https://example.com/createblog/hugo_try/</guid>
+      <guid>https://894276610.github.io/createblog/hugo_try/</guid>
       <description>这篇博客总结了使用HUGO在Linux系统搭建部署博客的基本步骤
 关键词： HUGO LINUX GITHUB GIT
 1. 下载安装HUGO 1.1 从Github下载HUGO安装包 Github的gohugo发布了一系列安装包
@@ -628,10 +628,10 @@ draft: false
     
     <item>
       <title>搭建博客(HUGO)</title>
-      <link>https://example.com/post/hugo_try/</link>
+      <link>https://894276610.github.io/post/hugo_try/</link>
       <pubDate>Tue, 14 Jul 2020 14:24:47 +0800</pubDate>
       
-      <guid>https://example.com/post/hugo_try/</guid>
+      <guid>https://894276610.github.io/post/hugo_try/</guid>
       <description>这篇博客总结了使用HUGO在Linux系统搭建部署博客的基本步骤
 关键词： HUGO LINUX GITHUB GIT
 1. 下载安装HUGO 1.1 从Github下载HUGO安装包 Github的gohugo发布了一系列安装包
@@ -654,28 +654,28 @@ draft: false
     
     <item>
       <title>Bolg</title>
-      <link>https://example.com/createblog/firstblog/</link>
+      <link>https://894276610.github.io/createblog/firstblog/</link>
       <pubDate>Sun, 12 Jul 2020 15:01:05 +0800</pubDate>
       
-      <guid>https://example.com/createblog/firstblog/</guid>
+      <guid>https://894276610.github.io/createblog/firstblog/</guid>
       <description>This is my first blog! (憋说这个标题拼错了，是这设计)</description>
     </item>
     
     <item>
       <title>Bolg</title>
-      <link>https://example.com/post/firstblog/</link>
+      <link>https://894276610.github.io/post/firstblog/</link>
       <pubDate>Sun, 12 Jul 2020 15:01:05 +0800</pubDate>
       
-      <guid>https://example.com/post/firstblog/</guid>
+      <guid>https://894276610.github.io/post/firstblog/</guid>
       <description>This is my first blog! (憋说这个标题拼错了，是这设计)</description>
     </item>
     
     <item>
       <title>[Robotics]Books</title>
-      <link>https://example.com/introduction_to_robotics/introduction/</link>
+      <link>https://894276610.github.io/introduction_to_robotics/introduction/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/introduction_to_robotics/introduction/</guid>
+      <guid>https://894276610.github.io/introduction_to_robotics/introduction/</guid>
       <description>坐标变换相关内容需要参考《机器人学导论》内容
 《机器人学导论》的电子版链接如下：
 [1]机器人学导论——分析、系统及应用 [2]机器人学导论（原书第三版）</description>
@@ -683,10 +683,10 @@ draft: false
     
     <item>
       <title>[Robotics]Transformation</title>
-      <link>https://example.com/introduction_to_robotics/coordinate_transformation/</link>
+      <link>https://894276610.github.io/introduction_to_robotics/coordinate_transformation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/introduction_to_robotics/coordinate_transformation/</guid>
+      <guid>https://894276610.github.io/introduction_to_robotics/coordinate_transformation/</guid>
       <description>坐标变换这个部分在ROS中已经有了封装好的程序，只需要调用即可，没有必要再去写。在使用之前了解以下实现的原理非常必要。
 博客笔记是在阅读原书之后进行概括和浓缩。
 空间描述和变换 存在着一个世界坐标系，任何问题都能够参照这个坐标系。
@@ -703,10 +703,10 @@ r_{31} &amp;amp;r_{32} &amp;amp;r_{33} \end{bmatrix} = \begin{bmatrix} \hat{X_{B
     
     <item>
       <title>My Todo List</title>
-      <link>https://example.com/todo/</link>
+      <link>https://894276610.github.io/todo/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/todo/</guid>
+      <guid>https://894276610.github.io/todo/</guid>
       <description> Ros_21_glance_over C++  Primer Plus  ch8 (7.21-8.1) ch16 (8.1-8.10)   Video-1844118771  P1-P10 (7.25) P11-P20 (7.30) P21-P30 (8.2) P31-P40 (8.8) P41-P50 (8.14) P51-P60 (8.18) P61-P70 (8.24) P71-P76 (8.28)     ROS_21_examine_carefully  code reconstruction (7.22-8.1)  P10-12 P13-15 P16-17 P18 recovery the error P19-P21   &amp;ldquo;Introduction to Robotics&amp;rdquo;  Transformation of coordinates(7.21-8.1)      </description>
     </item>
     

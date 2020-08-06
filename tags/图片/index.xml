@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>图片 on 云居小栈</title>
-    <link>https://example.com/tags/%E5%9B%BE%E7%89%87/</link>
+    <link>https://894276610.github.io/tags/%E5%9B%BE%E7%89%87/</link>
     <description>Recent content in 图片 on 云居小栈</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Fri, 17 Jul 2020 21:53:46 +0800</lastBuildDate>
     
-	<atom:link href="https://example.com/tags/%E5%9B%BE%E7%89%87/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://894276610.github.io/tags/%E5%9B%BE%E7%89%87/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>[花絮]头像制作思路</title>
-      <link>https://example.com/extrathing/titlephoto/</link>
+      <link>https://894276610.github.io/extrathing/titlephoto/</link>
       <pubDate>Fri, 17 Jul 2020 21:53:46 +0800</pubDate>
       
-      <guid>https://example.com/extrathing/titlephoto/</guid>
+      <guid>https://894276610.github.io/extrathing/titlephoto/</guid>
       <description>原始想法 最开始想使用微信头像
 觉得过浅色图片和这个深色背景很不搭配
 就&amp;hellip;另想办法
@@ -31,10 +31,10 @@ PS: 这篇博客原本在用m10c主题时写的，现在使用Tech-doc主题没�
     
     <item>
       <title>[花絮]头像制作思路</title>
-      <link>https://example.com/post/extra/titlephoto/</link>
+      <link>https://894276610.github.io/post/extra/titlephoto/</link>
       <pubDate>Fri, 17 Jul 2020 21:53:46 +0800</pubDate>
       
-      <guid>https://example.com/post/extra/titlephoto/</guid>
+      <guid>https://894276610.github.io/post/extra/titlephoto/</guid>
       <description>原来m10c主题使用了头像 现在这个主题已经不用辽~
 原始想法 最开始想使用微信头像
 觉得过浅色图片和这个深色背景很不搭配

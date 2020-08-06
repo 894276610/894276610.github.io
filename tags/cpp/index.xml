@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Cpp on 云居小栈</title>
-    <link>https://example.com/tags/cpp/</link>
+    <link>https://894276610.github.io/tags/cpp/</link>
     <description>Recent content in Cpp on 云居小栈</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Tue, 21 Jul 2020 10:57:29 +0800</lastBuildDate>
     
-	<atom:link href="https://example.com/tags/cpp/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://894276610.github.io/tags/cpp/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>[Cpp] P6-P8 </title>
-      <link>https://example.com/studycpp/houjie/houjiecpp_02/</link>
+      <link>https://894276610.github.io/studycpp/houjie/houjiecpp_02/</link>
       <pubDate>Tue, 21 Jul 2020 10:57:29 +0800</pubDate>
       
-      <guid>https://example.com/studycpp/houjie/houjiecpp_02/</guid>
+      <guid>https://894276610.github.io/studycpp/houjie/houjiecpp_02/</guid>
       <description>字符串类 创建指针，需动态分配内存
 #ifndef __MYSTRING__ #define __MYSTRING__  class String{ public: String(const char* cstr = 0); //Big Three  String(const String&amp;amp; str); //拷贝构造  String&amp;amp; operator = (const String&amp;amp; str); //拷贝赋值  ~String(); //析构函数  char* get_c_str() const { return m_data;} private: char* m_data; }; // String::function{}  inline String :: String(const char* cstr = 0){ if(cstr) { m_data = new char[strlen(cstr) +1]; strcpy(m_data, cstr); } else { m_data = new char[1]; *m_data = &amp;#39;\0&amp;#39;; } } //destructor  inline String:: ~String() { delete[] m_data; } //copy constructor  inline String::String(const String&amp;amp; str){ m_data = new char[strlen(str.</description>
     </item>
     
     <item>
       <title>[Cpp] P9 </title>
-      <link>https://example.com/studycpp/houjie/houjiecpp_03/</link>
+      <link>https://894276610.github.io/studycpp/houjie/houjiecpp_03/</link>
       <pubDate>Tue, 21 Jul 2020 10:57:29 +0800</pubDate>
       
-      <guid>https://example.com/studycpp/houjie/houjiecpp_03/</guid>
+      <guid>https://894276610.github.io/studycpp/houjie/houjiecpp_03/</guid>
       <description>静态 static 静态函数没有this指针
 静态函数只能处理静态数据
 class Account{ public: static double m_rate; //declaration  static void set_rate(const double&amp;amp; x){ m_rate = x; } }; //definition //这里要不要给初值都可以 double Account :: m_rate = 8.0; int main(){ //静态函数通过类调用  Account::set_rate(5.0); //静态函数通过产生的实例对象调用  Account a; a.set_rate(7.0); } 构造函数放在 private 区域 //设计模式 Singleton //单体 外界只能用一份 class A{ public: static A&amp;amp; getInstance(){ return a; } setup(){......} private: A(); A(const A&amp;amp; rhs); }; A&amp;amp; A::gitInstance(){ static A a; return a; } 函数模板 使用的时候不必指出class</description>
@@ -33,10 +33,10 @@ class Account{ public: static double m_rate; //declaration  static void set_rate
     
     <item>
       <title>[Cpp] P1-P5 complex </title>
-      <link>https://example.com/studycpp/houjie/houjiecpp_01/</link>
+      <link>https://894276610.github.io/studycpp/houjie/houjiecpp_01/</link>
       <pubDate>Sun, 19 Jul 2020 16:49:29 +0800</pubDate>
       
-      <guid>https://example.com/studycpp/houjie/houjiecpp_01/</guid>
+      <guid>https://894276610.github.io/studycpp/houjie/houjiecpp_01/</guid>
       <description>数据与函数 Class的两个经典分类 C++ 代码的基本形式 头文件 构造函数放在 private 区域 细节点总结  数据与函数 C 语言中全局数据， 所有函数可以处理它，会产生一些问题
 C++ 具有封装的特性，数据和函数包在一起，创建对象，处理这些数据
 Class的两个经典分类 带有指针的类（字符串）
@@ -48,10 +48,10 @@ C++ 代码的基本形式  Classes Declaration (header files) Standard Library (
     
     <item>
       <title>[Cpp]侯捷——头文件、类</title>
-      <link>https://example.com/post/studycpp/houjie/houjiecpp_01/</link>
+      <link>https://894276610.github.io/post/studycpp/houjie/houjiecpp_01/</link>
       <pubDate>Sun, 19 Jul 2020 16:49:29 +0800</pubDate>
       
-      <guid>https://example.com/post/studycpp/houjie/houjiecpp_01/</guid>
+      <guid>https://894276610.github.io/post/studycpp/houjie/houjiecpp_01/</guid>
       <description>数据与函数 Class的两个经典分类 C++ 代码的基本形式 头文件 构造函数放在 private 区域  数据与函数 C 语言中全局数据， 所有函数可以处理它，会产生一些问题
 C++ 具有封装的特性，数据和函数包在一起，创建对象，处理这些数据
 Class的两个经典分类 带有指针的类（字符串）
@@ -63,30 +63,30 @@ C++ 代码的基本形式  Classes Declaration (header files) Standard Library (
     
     <item>
       <title>[Cpp]Book_List</title>
-      <link>https://example.com/post/studycpp/book01/</link>
+      <link>https://894276610.github.io/post/studycpp/book01/</link>
       <pubDate>Sun, 19 Jul 2020 15:49:29 +0800</pubDate>
       
-      <guid>https://example.com/post/studycpp/book01/</guid>
+      <guid>https://894276610.github.io/post/studycpp/book01/</guid>
       <description>《C++标准程序库》《C++ Primer Plus》经典（砖头书），我曾在三处听到推荐
  程序羊(codesheep)公众号 机器人学习规划(科学上网) 侯捷老师视频课 推荐  我为了在多抓鱼二手书平台凑包邮又购买了《Linux命令速查手册》和《Git学习指南》两本工具书 ，后续打算写点笔记。</description>
     </item>
     
     <item>
       <title>[Cpp]Book_List</title>
-      <link>https://example.com/studycpp/book01/</link>
+      <link>https://894276610.github.io/studycpp/book01/</link>
       <pubDate>Sun, 19 Jul 2020 15:49:29 +0800</pubDate>
       
-      <guid>https://example.com/studycpp/book01/</guid>
+      <guid>https://894276610.github.io/studycpp/book01/</guid>
       <description>《C++标准程序库》《C++ Primer Plus》经典（砖头书），我曾在三处听到推荐
  程序羊(codesheep)公众号 机器人学习规划(科学上网) 侯捷老师视频课 推荐  我为了在多抓鱼二手书平台凑包邮又购买了《Linux命令速查手册》和《Git学习指南》两本工具书 ，后续打算写点笔记。</description>
     </item>
     
     <item>
       <title>[Cpp]琐碎细节-待续</title>
-      <link>https://example.com/post/studycpp/details/</link>
+      <link>https://894276610.github.io/post/studycpp/details/</link>
       <pubDate>Sat, 18 Jul 2020 15:53:46 +0800</pubDate>
       
-      <guid>https://example.com/post/studycpp/details/</guid>
+      <guid>https://894276610.github.io/post/studycpp/details/</guid>
       <description>namespace，是指标识符的各种可见范围
 参考资料：
 [1]命名空间-namespace含义</description>
@@ -94,10 +94,10 @@ C++ 代码的基本形式  Classes Declaration (header files) Standard Library (
     
     <item>
       <title>[Cpp]琐碎细节-待续</title>
-      <link>https://example.com/studycpp/details/</link>
+      <link>https://894276610.github.io/studycpp/details/</link>
       <pubDate>Sat, 18 Jul 2020 15:53:46 +0800</pubDate>
       
-      <guid>https://example.com/studycpp/details/</guid>
+      <guid>https://894276610.github.io/studycpp/details/</guid>
       <description>namespace，是指标识符的各种可见范围
 参考资料：
 [1]命名空间-namespace含义</description>
@@ -105,10 +105,10 @@ C++ 代码的基本形式  Classes Declaration (header files) Standard Library (
     
     <item>
       <title>[Cpp]Overload_operator</title>
-      <link>https://example.com/post/studycpp/overload_operator/</link>
+      <link>https://894276610.github.io/post/studycpp/overload_operator/</link>
       <pubDate>Sat, 18 Jul 2020 13:46:53 +0800</pubDate>
       
-      <guid>https://example.com/post/studycpp/overload_operator/</guid>
+      <guid>https://894276610.github.io/post/studycpp/overload_operator/</guid>
       <description>新Tag引言：
 电管专业只开C和JAVA两门编程语言课程。C++ 必然得自己啃完。
 运算符重载 # include&amp;lt;iostream&amp;gt; using namespace std; class Fraction{ private: int numerator; //分子  int denominator; //分母  public : //Constructor  //No parameter  Fraction(); //Two parameter  Fraction(int,int); //copy type  Fraction(const Fraction &amp;amp;fraction1); //Destructor  ~Fraction(){} //friend function  friend Fraction operator /(Fraction &amp;amp;a, Fraction &amp;amp;b); //operator overloading  Fraction operator *(Fraction &amp;amp;a); Fraction operator +(Fraction &amp;amp;a); void show(){ cout&amp;lt;&amp;lt;numerator&amp;lt;&amp;lt;&amp;#34;\n&amp;#34;&amp;lt;&amp;lt;denominator&amp;lt;&amp;lt;&amp;#34;\n&amp;#34;; } }; //Constructor  //class_name :: class_name (parameter)  Fraction :: Fraction (){ numerator = 1; denominator = 1; } Fraction :: Fraction (int numerator, int denominator){ this-&amp;gt;numerator = numerator ; this-&amp;gt;denominator = denominator ; } Fraction :: Fraction (const Fraction &amp;amp;fraction1){ numerator = fraction1.</description>
@@ -116,10 +116,10 @@ C++ 代码的基本形式  Classes Declaration (header files) Standard Library (
     
     <item>
       <title>[Cpp]Overload_operator</title>
-      <link>https://example.com/studycpp/overload_operator/</link>
+      <link>https://894276610.github.io/studycpp/overload_operator/</link>
       <pubDate>Sat, 18 Jul 2020 13:46:53 +0800</pubDate>
       
-      <guid>https://example.com/studycpp/overload_operator/</guid>
+      <guid>https://894276610.github.io/studycpp/overload_operator/</guid>
       <description>新Tag引言：
 电管专业只开C和JAVA两门编程语言课程。C++ 必然得自己啃完。
 运算符重载 # include&amp;lt;iostream&amp;gt; using namespace std; class Fraction{ private: int numerator; //分子  int denominator; //分母  public : //Constructor  //No parameter  Fraction(); //Two parameter  Fraction(int,int); //copy type  Fraction(const Fraction &amp;amp;fraction1); //Destructor  ~Fraction(){} //friend function  friend Fraction operator /(Fraction &amp;amp;a, Fraction &amp;amp;b); //operator overloading  Fraction operator *(Fraction &amp;amp;a); Fraction operator +(Fraction &amp;amp;a); void show(){ cout&amp;lt;&amp;lt;numerator&amp;lt;&amp;lt;&amp;#34;\n&amp;#34;&amp;lt;&amp;lt;denominator&amp;lt;&amp;lt;&amp;#34;\n&amp;#34;; } }; //Constructor  //class_name :: class_name (parameter)  Fraction :: Fraction (){ numerator = 1; denominator = 1; } Fraction :: Fraction (int numerator, int denominator){ this-&amp;gt;numerator = numerator ; this-&amp;gt;denominator = denominator ; } Fraction :: Fraction (const Fraction &amp;amp;fraction1){ numerator = fraction1.</description>

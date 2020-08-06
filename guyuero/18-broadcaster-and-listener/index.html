@@ -6,20 +6,20 @@
 <title>[18]Broadcaster and listener - 云居小栈</title>
 <meta name="description" content="发布日期：2020年08月6日 午时  ">
 <meta name="generator" content="Hugo 0.73.0" />
-<link href="https://example.com/index.xml" rel="alternate" type="application/rss+xml">
-<link rel="canonical" href="https://example.com/guyuero/18-broadcaster-and-listener/">
-<link rel="stylesheet" href="https://example.com/css/theme.min.css">
+<link href="https://894276610.github.io//index.xml" rel="alternate" type="application/rss+xml">
+<link rel="canonical" href="https://894276610.github.io/guyuero/18-broadcaster-and-listener/">
+<link rel="stylesheet" href="https://894276610.github.io/css/theme.min.css">
 <script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
-<link rel="stylesheet" href="https://example.com/css/chroma.min.css">
+<link rel="stylesheet" href="https://894276610.github.io/css/chroma.min.css">
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery.easing@1.4.1/jquery.easing.min.js"></script>
-<script src="https://example.com/js/bundle.js"></script><style>
+<script src="https://894276610.github.io/js/bundle.js"></script><style>
 :root {}
 </style>
 <meta property="og:title" content="[18]Broadcaster and listener" />
 <meta property="og:description" content="第十八讲 tf坐标系广播与监听的编程实现  第十八讲 tf坐标系广播与监听的编程实现  1. 创建功能包 2. 创建tf广播器代码（C&#43;&#43;） 3. 创建tf监听器代码（C&#43;&#43;） 4. 配置CMakeList编译规则 5. 在根目录编译运行    1. 创建功能包 cd ~/catkin_ws/src catkin_create_pkg learning_tf roscpp cospy tf turtlesim 2. 创建tf广播器代码（C&#43;&#43;） /*********************************************************************** Copyright 2020 GuYueHome (www.guyuehome.com). ***********************************************************************/ /** * 该例程产生tf数据，并计算、发布turtle2的速度指令 */ #include &lt;ros/ros.h&gt;#include &lt;tf/transform_broadcaster.h&gt;#include &lt;turtlesim/Pose.h&gt; std::string turtle_name; void poseCallback(const turtlesim::PoseConstPtr&amp; msg) { // 创建tf的广播器 	static tf::TransformBroadcaster br; // 初始化tf数据 	tf::Transform transform; transform.setOrigin( tf::Vector3(msg-&gt;x, msg-&gt;y, 0.0) ); tf::Quaternion q; q." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://example.com/guyuero/18-broadcaster-and-listener/" />
+<meta property="og:url" content="https://894276610.github.io/guyuero/18-broadcaster-and-listener/" />
 <meta property="article:published_time" content="2020-07-20T21:49:13+08:00" />
 <meta property="article:modified_time" content="2020-07-20T21:49:13+08:00" />
 <meta name="twitter:card" content="summary"/>
@@ -236,86 +236,86 @@ Last updated on 20 Jul 2020
 
 <br>
 Published on 20 Jul 2020
-<br><a href="https://github.com/894276610/894276610.github.io/edit/master/content/GuYueRo%5c18-Broadcaster%20and%20listener.md" class="edit-page"><i class="fas fa-pen-square"></i> Edit on GitHub</a></div><nav class="pagination"><a class="nav nav-prev" href="https://example.com/guyuero/19-launch-file/" title="[19]launch file"><i class="fas fa-arrow-left" aria-hidden="true"></i> Prev - [19]launch file</a>
-<a class="nav nav-next" href="https://example.com/guyuero/17-transformation/" title="[17]Transformation">Next - [17]Transformation <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+<br><a href="https://github.com/894276610/894276610.github.io/edit/master/content/GuYueRo%5c18-Broadcaster%20and%20listener.md" class="edit-page"><i class="fas fa-pen-square"></i> Edit on GitHub</a></div><nav class="pagination"><a class="nav nav-prev" href="https://894276610.github.io/guyuero/19-launch-file/" title="[19]launch file"><i class="fas fa-arrow-left" aria-hidden="true"></i> Prev - [19]launch file</a>
+<a class="nav nav-next" href="https://894276610.github.io/guyuero/17-transformation/" title="[17]Transformation">Next - [17]Transformation <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
 </nav><footer><p class="powered">Powered by <a href="https://gohugo.io">Hugo</a>. Theme by <a href="https://themes.gohugo.io/hugo-theme-techdoc/">TechDoc</a>. Designed by <a href="https://github.com/thingsym/hugo-theme-techdoc">Thingsym</a>.</p>
 </footer>
 </main><div class="sidebar">
 
 <nav class="slide-menu">
 <ul>
-<li class=""><a href="https://example.com">Home</a></li>
+<li class=""><a href="https://894276610.github.io/">Home</a></li>
 
-<li class=" has-sub-menu"><a href="https://example.com/%E5%8C%97%E9%82%AE%E6%9C%BA%E5%99%A8%E4%BA%BA%E5%9F%B9%E8%AE%AD/">北邮机器人培训s<span class="mark closed">+</span></a>
+<li class=" has-sub-menu"><a href="https://894276610.github.io/%E5%8C%97%E9%82%AE%E6%9C%BA%E5%99%A8%E4%BA%BA%E5%9F%B9%E8%AE%AD/">北邮机器人培训s<span class="mark closed">+</span></a>
   
 <ul class="sub-menu">
-<li class=""><a href="https://example.com/%E5%8C%97%E9%82%AE%E6%9C%BA%E5%99%A8%E4%BA%BA%E5%9F%B9%E8%AE%AD/01-tree/">[1]tree</a></li>
+<li class=""><a href="https://894276610.github.io/%E5%8C%97%E9%82%AE%E6%9C%BA%E5%99%A8%E4%BA%BA%E5%9F%B9%E8%AE%AD/01-tree/">[1]tree</a></li>
 </ul>
   
 </li>
 
-<li class=" has-sub-menu"><a href="https://example.com/studycpp/">StudyCpps<span class="mark closed">+</span></a>
+<li class=" has-sub-menu"><a href="https://894276610.github.io/studycpp/">StudyCpps<span class="mark closed">+</span></a>
   
 <ul class="sub-menu">
-<li class=""><a href="https://example.com/studycpp/houjie/houjiecpp_02/">[Cpp] P6-P8 </a></li>
-<li class=""><a href="https://example.com/studycpp/houjie/houjiecpp_03/">[Cpp] P9 </a></li>
-<li class=""><a href="https://example.com/studycpp/houjie/houjiecpp_01/">[Cpp] P1-P5 complex </a></li>
-<li class=""><a href="https://example.com/studycpp/book01/">[Cpp]Book_List</a></li>
-<li class=""><a href="https://example.com/studycpp/details/">[Cpp]琐碎细节-待续</a></li>
-<li class=""><a href="https://example.com/studycpp/overload_operator/">[Cpp]Overload_operator</a></li>
+<li class=""><a href="https://894276610.github.io/studycpp/houjie/houjiecpp_02/">[Cpp] P6-P8 </a></li>
+<li class=""><a href="https://894276610.github.io/studycpp/houjie/houjiecpp_03/">[Cpp] P9 </a></li>
+<li class=""><a href="https://894276610.github.io/studycpp/houjie/houjiecpp_01/">[Cpp] P1-P5 complex </a></li>
+<li class=""><a href="https://894276610.github.io/studycpp/book01/">[Cpp]Book_List</a></li>
+<li class=""><a href="https://894276610.github.io/studycpp/details/">[Cpp]琐碎细节-待续</a></li>
+<li class=""><a href="https://894276610.github.io/studycpp/overload_operator/">[Cpp]Overload_operator</a></li>
 </ul>
   
 </li>
 
-<li class="parent has-sub-menu"><a href="https://example.com/guyuero/">GuYueRos<span class="mark opened">-</span></a>
+<li class="parent has-sub-menu"><a href="https://894276610.github.io/guyuero/">GuYueRos<span class="mark opened">-</span></a>
   
 <ul class="sub-menu">
-<li class=""><a href="https://example.com/guyuero/21-summary/">[21]Summary</a></li>
-<li class=""><a href="https://example.com/guyuero/20-visual-aids/">[20]Visual aids</a></li>
-<li class=""><a href="https://example.com/guyuero/19-launch-file/">[19]launch file</a></li>
-<li class="active"><a href="https://example.com/guyuero/18-broadcaster-and-listener/">[18]Broadcaster and listener</a></li>
-<li class=""><a href="https://example.com/guyuero/17-transformation/">[17]Transformation</a></li>
-<li class=""><a href="https://example.com/guyuero/16-parameters/">[16]Parameters</a></li>
-<li class=""><a href="https://example.com/guyuero/15-define-service/">[15]define service</a></li>
-<li class=""><a href="https://example.com/guyuero/14-server/">[14]Server</a></li>
-<li class=""><a href="https://example.com/guyuero/13-client/">[13]Client</a></li>
-<li class=""><a href="https://example.com/guyuero/12-topic-define/">[12]Topic define</a></li>
-<li class=""><a href="https://example.com/guyuero/12&#43;topic-define/">[12]Topic_define&#43;</a></li>
-<li class=""><a href="https://example.com/guyuero/11-subscriber/">[11]Subscriber</a></li>
-<li class=""><a href="https://example.com/guyuero/10-publisher/">[10]Publisher</a></li>
-<li class=""><a href="https://example.com/guyuero/09-workspace-and-package/">[9]Workspace and package</a></li>
-<li class=""><a href="https://example.com/guyuero/05-install-ros/">[5]Install Ros</a></li>
-<li class=""><a href="https://example.com/guyuero/08-ros-command-line/">[8]Ros Command Line</a></li>
-<li class=""><a href="https://example.com/guyuero/07-ros-concept/">[7]Ros Concept</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/21-summary/">[21]Summary</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/20-visual-aids/">[20]Visual aids</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/19-launch-file/">[19]launch file</a></li>
+<li class="active"><a href="https://894276610.github.io/guyuero/18-broadcaster-and-listener/">[18]Broadcaster and listener</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/17-transformation/">[17]Transformation</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/16-parameters/">[16]Parameters</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/15-define-service/">[15]define service</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/14-server/">[14]Server</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/13-client/">[13]Client</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/12-topic-define/">[12]Topic define</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/12&#43;topic-define/">[12]Topic_define&#43;</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/11-subscriber/">[11]Subscriber</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/10-publisher/">[10]Publisher</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/09-workspace-and-package/">[9]Workspace and package</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/05-install-ros/">[5]Install Ros</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/08-ros-command-line/">[8]Ros Command Line</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/07-ros-concept/">[7]Ros Concept</a></li>
 </ul>
   
 </li>
 
 
 
-<li class=" has-sub-menu"><a href="https://example.com/extrathing/">ExtraThings<span class="mark closed">+</span></a>
+<li class=" has-sub-menu"><a href="https://894276610.github.io/extrathing/">ExtraThings<span class="mark closed">+</span></a>
   
 <ul class="sub-menu">
-<li class=""><a href="https://example.com/extrathing/titlephoto/">[花絮]头像制作思路</a></li>
+<li class=""><a href="https://894276610.github.io/extrathing/titlephoto/">[花絮]头像制作思路</a></li>
 </ul>
   
 </li>
 
-<li class=" has-sub-menu"><a href="https://example.com/createblog/">CreateBlogs<span class="mark closed">+</span></a>
+<li class=" has-sub-menu"><a href="https://894276610.github.io/createblog/">CreateBlogs<span class="mark closed">+</span></a>
   
 <ul class="sub-menu">
-<li class=""><a href="https://example.com/createblog/markdownlanguage/">Markdown_basic</a></li>
-<li class=""><a href="https://example.com/createblog/hugo_try/">HUGO</a></li>
-<li class=""><a href="https://example.com/createblog/firstblog/">Bolg</a></li>
+<li class=""><a href="https://894276610.github.io/createblog/markdownlanguage/">Markdown_basic</a></li>
+<li class=""><a href="https://894276610.github.io/createblog/hugo_try/">HUGO</a></li>
+<li class=""><a href="https://894276610.github.io/createblog/firstblog/">Bolg</a></li>
 </ul>
   
 </li>
 
-<li class=" has-sub-menu"><a href="https://example.com/introduction_to_robotics/">Introduction_to_robotics<span class="mark closed">+</span></a>
+<li class=" has-sub-menu"><a href="https://894276610.github.io/introduction_to_robotics/">Introduction_to_robotics<span class="mark closed">+</span></a>
   
 <ul class="sub-menu">
-<li class=""><a href="https://example.com/introduction_to_robotics/introduction/">[Robotics]Books</a></li>
-<li class=""><a href="https://example.com/introduction_to_robotics/coordinate_transformation/">[Robotics]Transformation</a></li>
+<li class=""><a href="https://894276610.github.io/introduction_to_robotics/introduction/">[Robotics]Books</a></li>
+<li class=""><a href="https://894276610.github.io/introduction_to_robotics/coordinate_transformation/">[Robotics]Transformation</a></li>
 </ul>
   
 </li>
