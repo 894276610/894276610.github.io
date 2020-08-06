@@ -20,16 +20,9 @@
 <meta property="og:description" content="坐标变换这个部分在ROS中已经有了封装好的程序，只需要调用即可，没有必要再去写。在使用之前了解以下实现的原理非常必要。
 博客笔记是在阅读原书之后进行概括和浓缩。
 空间描述和变换 存在着一个世界坐标系，任何问题都能够参照这个坐标系。
-1. 位置描述 点的位置可以用一个3*1位置矢量来表示。 注意：这里位置矢量用一个前置的上标来表明其参考的坐标系。 $$ {}^{A}P = \begin{bmatrix} p{x}\
-p_{y}\
-p_{z}\
-\end{bmatrix} $$
-2.姿态描述  用$\hat{{}^{}X{B}}、\hat{{}^{}Y{B}}$和$\hat{{}^{}Z{B}}$表示{B}主轴单位矢量，当用{A}表达时，写成$\hat{{}^{A}X{B}} \hat{{}^{A}Y{B}}\hat{{}^{A}Z{B}}$ 按顺序排成3*3的矩阵，我们称这个矩阵为旋转矩阵 这旋转矩阵是{B}相对于{A}的表达，所以使用符号$_{B}^{A}R$表示 最右边矩阵的前置上标被省略了，因为点乘结果和坐标系无关，为方向余弦
-$$ {B}^{A}R = \begin{bmatrix} \hat{{}^{A}X_{B}} &amp;\hat{_{}^{A}Y_{B}}&amp;\hat{_{}^{A}Z_{B}} \end{bmatrix}= \begin{bmatrix} r_{11} &amp;r_{12} &amp;r_{13} \
-r_{21} &amp;r_{22} &amp;r_{23}\
-r_{31} &amp;r_{32} &amp;r_{33} \end{bmatrix} = \begin{bmatrix} \hat{X_{B}}\cdot\hat{X_{A}} &amp;\hat{Y_{B}}\cdot\hat{X_{A}} &amp;\hat{Z_{B}}\cdot\hat{X_{A}} \
-\hat{X_{B}}\cdot\hat{Y_{A}} &amp;\hat{Y_{B}}\cdot\hat{Y_{A}} &amp;\hat{Z_{B}}\cdot\hat{Y_{A}} \
-\hat{X_{B}}\cdot\hat{Z_{A}} &amp;\hat{Y_{B}}\cdot\hat{Z_{A}} &amp;\hat{Z_{B}}\cdot\hat{Z_{A}} \end{bmatrix} $$  $$ { }{B}^{A} R=\left[\begin{array}{cc} {}^{A} \hat{X}{B} &amp; {}^{A}\hat{Y}{B}^{} &amp; {}^{A}\hat{Z}{B} \end{array}\right]=\left[\begin{array}{c} { }^{B} \hat{X}{A}^{T} \" />
+1. 位置描述 点的位置可以用一个3*1位置矢量来表示。 注意：这里位置矢量用一个前置的上标来表明其参考的坐标系。 \( _{}^{A}P = \begin{bmatrix} p_{x}\\ p_{y}\\ p_{z}\\ \end{bmatrix} \)
+2.姿态描述  用$\hat{^X{B}}、\hat{^Y{B}}$和$\hat{^Z{B}}$表示{B}主轴单位矢量，当用{A}表达时，写成$\hat{^{A}X{B}} \hat{^{A}Y{B}}\hat{^{A}Z{B}}$ 按顺序排成3*3的矩阵，我们称这个矩阵为旋转矩阵 这旋转矩阵是{B}相对于{A}的表达，所以使用符号$_{B}^{A}R$表示 最右边矩阵的前置上标被省略了，因为点乘结果和坐标系无关，为方向余弦
+\( _{B}^{A}R = \begin{bmatrix} \hat{_{}^{A}X_{B}} &\hat{_{}^{A}Y_{B}}&\hat{_{}^{A}Z_{B}} \end{bmatrix}= \begin{bmatrix} r_{11} &r_{12} &r_{13} \\ r_{21} &r_{22} &r_{23}\\ r_{31} &r_{32} &r_{33} \end{bmatrix} = \begin{bmatrix} \hat{X_{B}}\cdot\hat{X_{A}} &\hat{Y_{B}}\cdot\hat{X_{A}} &\hat{Z_{B}}\cdot\hat{X_{A}} \\ \hat{X_{B}}\cdot\hat{Y_{A}} &\hat{Y_{B}}\cdot\hat{Y_{A}} &\hat{Z_{B}}\cdot\hat{Y_{A}} \\ \hat{X_{B}}\cdot\hat{Z_{A}} &\hat{Y_{B}}\cdot\hat{Z_{A}} &\hat{Z_{B}}\cdot\hat{Z_{A}} \end{bmatrix} \)   \[ { }_{B}^{A} R=\left[\begin{array}{cc} _{}^{A} \hat{X}_{B} & _{}^{A}\hat{Y}_{B}^{} & _{}^{A}\hat{Z}_{B} \end{array}\right]=\left[\begin{array}{c} { }^{B} \hat{X}_{A}^{T} \\ { }^{B} \hat{Y}_{A}^{T} \\ { }^{B} \hat{Z}_{A}^{T} \end{array}\right] ={ }_{A}^{B} R_{}^{T} \]" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://894276610.github.io/introduction_to_robotics/coordinate_transformation/" />
 
@@ -38,32 +31,18 @@ r_{31} &amp;r_{32} &amp;r_{33} \end{bmatrix} = \begin{bmatrix} \hat{X_{B}}\cdot\
 <meta name="twitter:description" content="坐标变换这个部分在ROS中已经有了封装好的程序，只需要调用即可，没有必要再去写。在使用之前了解以下实现的原理非常必要。
 博客笔记是在阅读原书之后进行概括和浓缩。
 空间描述和变换 存在着一个世界坐标系，任何问题都能够参照这个坐标系。
-1. 位置描述 点的位置可以用一个3*1位置矢量来表示。 注意：这里位置矢量用一个前置的上标来表明其参考的坐标系。 $$ {}^{A}P = \begin{bmatrix} p{x}\
-p_{y}\
-p_{z}\
-\end{bmatrix} $$
-2.姿态描述  用$\hat{{}^{}X{B}}、\hat{{}^{}Y{B}}$和$\hat{{}^{}Z{B}}$表示{B}主轴单位矢量，当用{A}表达时，写成$\hat{{}^{A}X{B}} \hat{{}^{A}Y{B}}\hat{{}^{A}Z{B}}$ 按顺序排成3*3的矩阵，我们称这个矩阵为旋转矩阵 这旋转矩阵是{B}相对于{A}的表达，所以使用符号$_{B}^{A}R$表示 最右边矩阵的前置上标被省略了，因为点乘结果和坐标系无关，为方向余弦
-$$ {B}^{A}R = \begin{bmatrix} \hat{{}^{A}X_{B}} &amp;\hat{_{}^{A}Y_{B}}&amp;\hat{_{}^{A}Z_{B}} \end{bmatrix}= \begin{bmatrix} r_{11} &amp;r_{12} &amp;r_{13} \
-r_{21} &amp;r_{22} &amp;r_{23}\
-r_{31} &amp;r_{32} &amp;r_{33} \end{bmatrix} = \begin{bmatrix} \hat{X_{B}}\cdot\hat{X_{A}} &amp;\hat{Y_{B}}\cdot\hat{X_{A}} &amp;\hat{Z_{B}}\cdot\hat{X_{A}} \
-\hat{X_{B}}\cdot\hat{Y_{A}} &amp;\hat{Y_{B}}\cdot\hat{Y_{A}} &amp;\hat{Z_{B}}\cdot\hat{Y_{A}} \
-\hat{X_{B}}\cdot\hat{Z_{A}} &amp;\hat{Y_{B}}\cdot\hat{Z_{A}} &amp;\hat{Z_{B}}\cdot\hat{Z_{A}} \end{bmatrix} $$  $$ { }{B}^{A} R=\left[\begin{array}{cc} {}^{A} \hat{X}{B} &amp; {}^{A}\hat{Y}{B}^{} &amp; {}^{A}\hat{Z}{B} \end{array}\right]=\left[\begin{array}{c} { }^{B} \hat{X}{A}^{T} \"/>
+1. 位置描述 点的位置可以用一个3*1位置矢量来表示。 注意：这里位置矢量用一个前置的上标来表明其参考的坐标系。 \( _{}^{A}P = \begin{bmatrix} p_{x}\\ p_{y}\\ p_{z}\\ \end{bmatrix} \)
+2.姿态描述  用$\hat{^X{B}}、\hat{^Y{B}}$和$\hat{^Z{B}}$表示{B}主轴单位矢量，当用{A}表达时，写成$\hat{^{A}X{B}} \hat{^{A}Y{B}}\hat{^{A}Z{B}}$ 按顺序排成3*3的矩阵，我们称这个矩阵为旋转矩阵 这旋转矩阵是{B}相对于{A}的表达，所以使用符号$_{B}^{A}R$表示 最右边矩阵的前置上标被省略了，因为点乘结果和坐标系无关，为方向余弦
+\( _{B}^{A}R = \begin{bmatrix} \hat{_{}^{A}X_{B}} &\hat{_{}^{A}Y_{B}}&\hat{_{}^{A}Z_{B}} \end{bmatrix}= \begin{bmatrix} r_{11} &r_{12} &r_{13} \\ r_{21} &r_{22} &r_{23}\\ r_{31} &r_{32} &r_{33} \end{bmatrix} = \begin{bmatrix} \hat{X_{B}}\cdot\hat{X_{A}} &\hat{Y_{B}}\cdot\hat{X_{A}} &\hat{Z_{B}}\cdot\hat{X_{A}} \\ \hat{X_{B}}\cdot\hat{Y_{A}} &\hat{Y_{B}}\cdot\hat{Y_{A}} &\hat{Z_{B}}\cdot\hat{Y_{A}} \\ \hat{X_{B}}\cdot\hat{Z_{A}} &\hat{Y_{B}}\cdot\hat{Z_{A}} &\hat{Z_{B}}\cdot\hat{Z_{A}} \end{bmatrix} \)   \[ { }_{B}^{A} R=\left[\begin{array}{cc} _{}^{A} \hat{X}_{B} & _{}^{A}\hat{Y}_{B}^{} & _{}^{A}\hat{Z}_{B} \end{array}\right]=\left[\begin{array}{c} { }^{B} \hat{X}_{A}^{T} \\ { }^{B} \hat{Y}_{A}^{T} \\ { }^{B} \hat{Z}_{A}^{T} \end{array}\right] ={ }_{A}^{B} R_{}^{T} \]"/>
 <meta itemprop="name" content="[Robotics]Transformation">
 <meta itemprop="description" content="坐标变换这个部分在ROS中已经有了封装好的程序，只需要调用即可，没有必要再去写。在使用之前了解以下实现的原理非常必要。
 博客笔记是在阅读原书之后进行概括和浓缩。
 空间描述和变换 存在着一个世界坐标系，任何问题都能够参照这个坐标系。
-1. 位置描述 点的位置可以用一个3*1位置矢量来表示。 注意：这里位置矢量用一个前置的上标来表明其参考的坐标系。 $$ {}^{A}P = \begin{bmatrix} p{x}\
-p_{y}\
-p_{z}\
-\end{bmatrix} $$
-2.姿态描述  用$\hat{{}^{}X{B}}、\hat{{}^{}Y{B}}$和$\hat{{}^{}Z{B}}$表示{B}主轴单位矢量，当用{A}表达时，写成$\hat{{}^{A}X{B}} \hat{{}^{A}Y{B}}\hat{{}^{A}Z{B}}$ 按顺序排成3*3的矩阵，我们称这个矩阵为旋转矩阵 这旋转矩阵是{B}相对于{A}的表达，所以使用符号$_{B}^{A}R$表示 最右边矩阵的前置上标被省略了，因为点乘结果和坐标系无关，为方向余弦
-$$ {B}^{A}R = \begin{bmatrix} \hat{{}^{A}X_{B}} &amp;\hat{_{}^{A}Y_{B}}&amp;\hat{_{}^{A}Z_{B}} \end{bmatrix}= \begin{bmatrix} r_{11} &amp;r_{12} &amp;r_{13} \
-r_{21} &amp;r_{22} &amp;r_{23}\
-r_{31} &amp;r_{32} &amp;r_{33} \end{bmatrix} = \begin{bmatrix} \hat{X_{B}}\cdot\hat{X_{A}} &amp;\hat{Y_{B}}\cdot\hat{X_{A}} &amp;\hat{Z_{B}}\cdot\hat{X_{A}} \
-\hat{X_{B}}\cdot\hat{Y_{A}} &amp;\hat{Y_{B}}\cdot\hat{Y_{A}} &amp;\hat{Z_{B}}\cdot\hat{Y_{A}} \
-\hat{X_{B}}\cdot\hat{Z_{A}} &amp;\hat{Y_{B}}\cdot\hat{Z_{A}} &amp;\hat{Z_{B}}\cdot\hat{Z_{A}} \end{bmatrix} $$  $$ { }{B}^{A} R=\left[\begin{array}{cc} {}^{A} \hat{X}{B} &amp; {}^{A}\hat{Y}{B}^{} &amp; {}^{A}\hat{Z}{B} \end{array}\right]=\left[\begin{array}{c} { }^{B} \hat{X}{A}^{T} \">
+1. 位置描述 点的位置可以用一个3*1位置矢量来表示。 注意：这里位置矢量用一个前置的上标来表明其参考的坐标系。 \( _{}^{A}P = \begin{bmatrix} p_{x}\\ p_{y}\\ p_{z}\\ \end{bmatrix} \)
+2.姿态描述  用$\hat{^X{B}}、\hat{^Y{B}}$和$\hat{^Z{B}}$表示{B}主轴单位矢量，当用{A}表达时，写成$\hat{^{A}X{B}} \hat{^{A}Y{B}}\hat{^{A}Z{B}}$ 按顺序排成3*3的矩阵，我们称这个矩阵为旋转矩阵 这旋转矩阵是{B}相对于{A}的表达，所以使用符号$_{B}^{A}R$表示 最右边矩阵的前置上标被省略了，因为点乘结果和坐标系无关，为方向余弦
+\( _{B}^{A}R = \begin{bmatrix} \hat{_{}^{A}X_{B}} &\hat{_{}^{A}Y_{B}}&\hat{_{}^{A}Z_{B}} \end{bmatrix}= \begin{bmatrix} r_{11} &r_{12} &r_{13} \\ r_{21} &r_{22} &r_{23}\\ r_{31} &r_{32} &r_{33} \end{bmatrix} = \begin{bmatrix} \hat{X_{B}}\cdot\hat{X_{A}} &\hat{Y_{B}}\cdot\hat{X_{A}} &\hat{Z_{B}}\cdot\hat{X_{A}} \\ \hat{X_{B}}\cdot\hat{Y_{A}} &\hat{Y_{B}}\cdot\hat{Y_{A}} &\hat{Z_{B}}\cdot\hat{Y_{A}} \\ \hat{X_{B}}\cdot\hat{Z_{A}} &\hat{Y_{B}}\cdot\hat{Z_{A}} &\hat{Z_{B}}\cdot\hat{Z_{A}} \end{bmatrix} \)   \[ { }_{B}^{A} R=\left[\begin{array}{cc} _{}^{A} \hat{X}_{B} & _{}^{A}\hat{Y}_{B}^{} & _{}^{A}\hat{Z}_{B} \end{array}\right]=\left[\begin{array}{c} { }^{B} \hat{X}_{A}^{T} \\ { }^{B} \hat{Y}_{A}^{T} \\ { }^{B} \hat{Z}_{A}^{T} \end{array}\right] ={ }_{A}^{B} R_{}^{T} \]">
 
-<meta itemprop="wordCount" content="86">
+<meta itemprop="wordCount" content="87">
 
 
 
@@ -90,55 +69,71 @@ r_{31} &amp;r_{32} &amp;r_{33} \end{bmatrix} = \begin{bmatrix} \hat{X_{B}}\cdot\
 <div class="content-container">
 <main><h1>[Robotics]Transformation</h1>
 <p>坐标变换这个部分在ROS中已经有了封装好的程序，只需要调用即可，没有必要再去写。在使用之前了解以下实现的原理非常必要。</p>
+
 <p>博客笔记是在阅读原书之后进行概括和浓缩。</p>
+
 <h2 id="空间描述和变换">空间描述和变换</h2>
+
 <p>存在着一个世界坐标系，任何问题都能够参照这个坐标系。</p>
+
 <h3 id="1-位置描述">1. 位置描述</h3>
+
 <p>点的位置可以用一个3*1位置矢量来表示。
 注意：这里位置矢量用一个前置的上标来表明其参考的坐标系。
-$$
-<em>{}^{A}P =
+<span  class="math">\(
+_{}^{A}P = 
 \begin{bmatrix}
-p</em>{x}\<br>
-p_{y}\<br>
-p_{z}\<br>
+ p_{x}\\
+ p_{y}\\
+ p_{z}\\
 \end{bmatrix}
-$$</p>
+\)</span></p>
+
 <h3 id="2姿态描述">2.姿态描述</h3>
+
 <ul>
-<li>用$\hat{<em>{}^{}X</em>{B}}、\hat{<em>{}^{}Y</em>{B}}$和$\hat{<em>{}^{}Z</em>{B}}$表示{B}主轴单位矢量，当用{A}表达时，写成$\hat{<em>{}^{A}X</em>{B}} \hat{<em>{}^{A}Y</em>{B}}\hat{<em>{}^{A}Z</em>{B}}$</li>
+<li>用$\hat{<em>^X</em>{B}}、\hat{<em>^Y</em>{B}}$和$\hat{<em>^Z</em>{B}}$表示{B}主轴单位矢量，当用{A}表达时，写成$\hat{<em>^{A}X</em>{B}} \hat{<em>^{A}Y</em>{B}}\hat{<em>^{A}Z</em>{B}}$</li>
 <li>按顺序排成3*3的矩阵，我们称这个矩阵为<strong>旋转矩阵</strong></li>
 <li>这旋转矩阵是{B}相对于{A}的表达，所以使用符号$_{B}^{A}R$表示</li>
 <li>最右边矩阵的前置上标被省略了，因为点乘结果和坐标系无关，为<strong>方向余弦</strong><br>
-$$
-<em>{B}^{A}R =
+<span  class="math">\(
+_{B}^{A}R =
 \begin{bmatrix}
-\hat{</em>{}^{A}X_{B}} &amp;\hat{_{}^{A}Y_{B}}&amp;\hat{_{}^{A}Z_{B}}
+\hat{_{}^{A}X_{B}} &\hat{_{}^{A}Y_{B}}&\hat{_{}^{A}Z_{B}}
 \end{bmatrix}=
 \begin{bmatrix}
-r_{11}  &amp;r_{12}  &amp;r_{13} \<br>
-r_{21}  &amp;r_{22}  &amp;r_{23}\<br>
-r_{31}  &amp;r_{32}  &amp;r_{33}
+r_{11}  &r_{12}  &r_{13} \\
+r_{21}  &r_{22}  &r_{23}\\
+r_{31}  &r_{32}  &r_{33}
 \end{bmatrix}
 =
 \begin{bmatrix}
-\hat{X_{B}}\cdot\hat{X_{A}}  &amp;\hat{Y_{B}}\cdot\hat{X_{A}}  &amp;\hat{Z_{B}}\cdot\hat{X_{A}}  \<br>
-\hat{X_{B}}\cdot\hat{Y_{A}} &amp;\hat{Y_{B}}\cdot\hat{Y_{A}}  &amp;\hat{Z_{B}}\cdot\hat{Y_{A}} \<br>
-\hat{X_{B}}\cdot\hat{Z_{A}} &amp;\hat{Y_{B}}\cdot\hat{Z_{A}}  &amp;\hat{Z_{B}}\cdot\hat{Z_{A}}
+\hat{X_{B}}\cdot\hat{X_{A}}  &\hat{Y_{B}}\cdot\hat{X_{A}}  &\hat{Z_{B}}\cdot\hat{X_{A}}  \\
+\hat{X_{B}}\cdot\hat{Y_{A}} &\hat{Y_{B}}\cdot\hat{Y_{A}}  &\hat{Z_{B}}\cdot\hat{Y_{A}} \\
+\hat{X_{B}}\cdot\hat{Z_{A}} &\hat{Y_{B}}\cdot\hat{Z_{A}}  &\hat{Z_{B}}\cdot\hat{Z_{A}} 
 \end{bmatrix}
-$$</li>
+\)</span>
+<br>
+<br>
+<br>
+<br></li>
 </ul>
-<p>$$
-{ }<em>{B}^{A} R=\left[\begin{array}{cc}
-<em>{}^{A} \hat{X}</em>{B} &amp; <em>{}^{A}\hat{Y}</em>{B}^{} &amp; <em>{}^{A}\hat{Z}</em>{B}
+
+<p><span  class="math">\[
+ { }_{B}^{A} R=\left[\begin{array}{cc}
+_{}^{A} \hat{X}_{B} & _{}^{A}\hat{Y}_{B}^{} & _{}^{A}\hat{Z}_{B}
 \end{array}\right]=\left[\begin{array}{c}
-{ }^{B} \hat{X}</em>{A}^{T} \<br>
-{ }^{B} \hat{Y}<em>{A}^{T} \<br>
-{ }^{B} \hat{Z}</em>{A}^{T}
+{ }^{B} \hat{X}_{A}^{T} \\
+{ }^{B} \hat{Y}_{A}^{T} \\
+{ }^{B} \hat{Z}_{A}^{T}
 \end{array}\right]
-={ }<em>{A}^{B} R</em>{}^{T}
-$$</p>
-<!-- raw HTML omitted -->
+={ }_{A}^{B} R_{}^{T}
+\]</span></p>
+
+<div class='hasJax'>
+$E=mc^2$
+</div>
+
 <p>[1]<a href="https://pan.baidu.com/s/1jGisgS2">机器人学导论——分析、系统及应用</a>
 [2]<a href="https://pan.baidu.com/s/1mgz9cdq">机器人学导论（原书第三版）</a></p>
 <div class="edit-meta">
@@ -259,6 +254,7 @@ $$</p>
 <i class="fas fa-circle"></i>
 <i class="fas fa-arrow-circle-up"></i>
 </span></a>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_SVG"></script>
 </div>
 </body>
 </html>
