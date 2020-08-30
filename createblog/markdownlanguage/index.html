@@ -4,7 +4,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <title>Markdown_basic - 云居小栈</title>
-<meta name="description" content="发布日期：2020年08月6日 午时  ">
+<meta name="description" content="发布日期：2020年08月30日 午时  ">
 <meta name="generator" content="Hugo 0.73.0" />
 <link href="https://894276610.github.io//index.xml" rel="alternate" type="application/rss+xml">
 <link rel="canonical" href="https://894276610.github.io/createblog/markdownlanguage/">
@@ -37,8 +37,8 @@
   插入图片" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://894276610.github.io/createblog/markdownlanguage/" />
-<meta property="article:published_time" content="2020-07-14T17:42:54+08:00" />
-<meta property="article:modified_time" content="2020-07-14T17:42:54+08:00" />
+<meta property="article:published_time" content="2020-08-06T17:42:54+08:00" />
+<meta property="article:modified_time" content="2020-08-06T17:42:54+08:00" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Markdown_basic"/>
 <meta name="twitter:description" content="Markdown编辑注重键盘操作，省去费时的鼠标操作，享受码字过程以及优质排版。
@@ -78,17 +78,17 @@
 #### 四级标题
 最多支持六级标题
   插入图片">
-<meta itemprop="datePublished" content="2020-07-14T17:42:54&#43;08:00" />
-<meta itemprop="dateModified" content="2020-07-14T17:42:54&#43;08:00" />
-<meta itemprop="wordCount" content="85">
+<meta itemprop="datePublished" content="2020-08-06T17:42:54&#43;08:00" />
+<meta itemprop="dateModified" content="2020-08-06T17:42:54&#43;08:00" />
+<meta itemprop="wordCount" content="93">
 
 
 
-<meta itemprop="keywords" content="MARKDOWN,VS_CODE," /></head>
+<meta itemprop="keywords" content="" /></head>
 <body><div class="container"><header>
 <h1>云居小栈</h1>
 <a href="https://github.com/894276610/894276610.github.io" class="github"><i class="fab fa-github"></i></a>
-<p class="description">发布日期：2020年08月6日 午时  </p>
+<p class="description">发布日期：2020年08月30日 午时  </p>
 
 </header>
 <div class="global-menu">
@@ -154,7 +154,13 @@
 <p>插入公式<br>
 支持Latax<br>
 <code>$$ E=mc^2 $$</code><br>
-在网站显示公式还需要额外的配置，留个坑</p>
+在网站显示公式还需要额外的两步：</p>
+<ol>
+<li>markdown文件添加markup: mmark</li>
+<li>在<code>themes/yourtheme/layouts/partials/footer.html</code>中添加
+<code>&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_SVG&quot;&gt;&lt;/script&gt;</code>
+$$ E=mc^2$$</li>
+</ol>
 </li>
 <li>
 <p>文字引用<br>
@@ -170,7 +176,8 @@
 【3】<a href="https://www.bilibili.com/video/BV1si4y1472o?from=search&amp;seid=7676104349202383334">Markdown+VSCODE实现最完美流畅写作体验</a><br>
 【4】<a href="https://blog.csdn.net/qq_34243930/article/details/104144428">生成目录问题修复</a><br>
 【5】<a href="https://blog.csdn.net/zoomlaziti/article/details/105770916">图片居中显示以及更改图片大小</a><br>
-【6】<a href="https://www.bilibili.com/video/BV1m4411c7ia?from=search&amp;seid=1886919704498101132">hugo详细教程</a></p>
+【6】<a href="https://www.bilibili.com/video/BV1m4411c7ia?from=search&amp;seid=1886919704498101132">hugo详细教程</a>
+【7】<a href="https://butui.me/post/yet-best-math-formula-support-for-hugo-with-mathjax/">公式渲染教程</a></p>
 <h1 id="其他花絮">其他花絮</h1>
 <ul>
 <li>HUGO插入图片折腾好几次，后来发现有些网站服务器上不去</li>
@@ -178,11 +185,11 @@
 <li>大理寺日志最后一集里出现了罗小黑哈哈哈</li>
 </ul>
 <div class="edit-meta">
-Last updated on 14 Jul 2020
+Last updated on 6 Aug 2020
 
 
 <br>
-Published on 14 Jul 2020
+Published on 6 Aug 2020
 <br><a href="https://github.com/894276610/894276610.github.io/edit/master/content/CreateBlog%5cMarkdownlanguage.md" class="edit-page"><i class="fas fa-pen-square"></i> Edit on GitHub</a></div><nav class="pagination"><a class="nav nav-prev" href="https://894276610.github.io/createblog/" title="CreateBlogs"><i class="fas fa-arrow-left" aria-hidden="true"></i> Prev - CreateBlogs</a>
 <a class="nav nav-next" href="https://894276610.github.io/createblog/hugo_try/" title="HUGO">Next - HUGO <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
 </nav><footer><p class="powered">Powered by <a href="https://gohugo.io">Hugo</a>. Theme by <a href="https://themes.gohugo.io/hugo-theme-techdoc/">TechDoc</a>. Designed by <a href="https://github.com/thingsym/hugo-theme-techdoc">Thingsym</a>.</p>
@@ -193,10 +200,23 @@ Published on 14 Jul 2020
 <ul>
 <li class=""><a href="https://894276610.github.io/">Home</a></li>
 
+<li class="parent has-sub-menu"><a href="https://894276610.github.io/createblog/">CreateBlogs<span class="mark opened">-</span></a>
+  
+<ul class="sub-menu">
+<li class="active"><a href="https://894276610.github.io/createblog/markdownlanguage/">Markdown_basic</a></li>
+<li class=""><a href="https://894276610.github.io/createblog/hugo_try/">HUGO</a></li>
+<li class=""><a href="https://894276610.github.io/createblog/firstblog/">Bolg</a></li>
+</ul>
+  
+</li>
+
 <li class=" has-sub-menu"><a href="https://894276610.github.io/%E5%8C%97%E9%82%AE%E6%9C%BA%E5%99%A8%E4%BA%BA%E5%9F%B9%E8%AE%AD/">北邮机器人培训s<span class="mark closed">+</span></a>
   
 <ul class="sub-menu">
-<li class=""><a href="https://894276610.github.io/%E5%8C%97%E9%82%AE%E6%9C%BA%E5%99%A8%E4%BA%BA%E5%9F%B9%E8%AE%AD/01-tree/">[1]tree</a></li>
+<li class=""><a href="https://894276610.github.io/%E5%8C%97%E9%82%AE%E6%9C%BA%E5%99%A8%E4%BA%BA%E5%9F%B9%E8%AE%AD/01-tree/">tree命令</a></li>
+<li class=""><a href="https://894276610.github.io/%E5%8C%97%E9%82%AE%E6%9C%BA%E5%99%A8%E4%BA%BA%E5%9F%B9%E8%AE%AD/02&#43;regular_expression/"></a></li>
+<li class=""><a href="https://894276610.github.io/%E5%8C%97%E9%82%AE%E6%9C%BA%E5%99%A8%E4%BA%BA%E5%9F%B9%E8%AE%AD/02-calculator/"></a></li>
+<li class=""><a href="https://894276610.github.io/%E5%8C%97%E9%82%AE%E6%9C%BA%E5%99%A8%E4%BA%BA%E5%9F%B9%E8%AE%AD/02-path_planning/"></a></li>
 </ul>
   
 </li>
@@ -248,21 +268,21 @@ Published on 14 Jul 2020
   
 </li>
 
-<li class="parent has-sub-menu"><a href="https://894276610.github.io/createblog/">CreateBlogs<span class="mark opened">-</span></a>
-  
-<ul class="sub-menu">
-<li class="active"><a href="https://894276610.github.io/createblog/markdownlanguage/">Markdown_basic</a></li>
-<li class=""><a href="https://894276610.github.io/createblog/hugo_try/">HUGO</a></li>
-<li class=""><a href="https://894276610.github.io/createblog/firstblog/">Bolg</a></li>
-</ul>
-  
-</li>
-
 <li class=" has-sub-menu"><a href="https://894276610.github.io/introduction_to_robotics/">Introduction_to_robotics<span class="mark closed">+</span></a>
   
 <ul class="sub-menu">
 <li class=""><a href="https://894276610.github.io/introduction_to_robotics/introduction/">[Robotics]Books</a></li>
 <li class=""><a href="https://894276610.github.io/introduction_to_robotics/coordinate_transformation/">[Robotics]Transformation</a></li>
+</ul>
+  
+</li>
+
+<li class=" has-sub-menu"><a href="https://894276610.github.io/studypython/">StudyPythons<span class="mark closed">+</span></a>
+  
+<ul class="sub-menu">
+<li class=""><a href="https://894276610.github.io/studypython/loadtext/"></a></li>
+<li class=""><a href="https://894276610.github.io/studypython/interpolation/">interpolation</a></li>
+<li class=""><a href="https://894276610.github.io/studypython/polynomial-fitting/">polynomial fitting</a></li>
 </ul>
   
 </li>

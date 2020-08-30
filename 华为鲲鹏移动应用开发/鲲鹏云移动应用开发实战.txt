@@ -1,0 +1,143 @@
+前言：  
+互联网终端PC  
+云手机 云计算+手机模拟器  
+
+人工智能技术应用必备要素  
+数据  算力  算法  场景  
+
++数据  
+大数据
+AI 
+
++算法  
+算法工程师，专家  
+
++场景  
+行业与算法的匹配  
+
++算力  
+计算机  
+CPU
+X86架构--能耗高
+ARM架构
+
+技术发展趋势
+晶圆代工厂工艺水平超过集成设计制造商  
+异构计算  
+云原生软件  
+
+应用发展趋势  
+5G AI AR/VR  
+超高清  
+智能驾驶  
+机器人  
+智慧城市  
+智能制造  
+IOT
+
+system on chip  
+芯片不仅是CPU  
+已经有了System  
+
+openEuler 社区  
+
+数据库 
+GaussDB  
+
+鲲鹏社区->鲲鹏云端实验室  
+
+鲲鹏职业认证  
+
+鲲鹏生态应用场景  
+通用：
+Hadoop  大数据
+
+基础设施：泰山服务器 
+操作系统： CentOS OpenEuler  
+编译器： OpenJDK GCC 
+加速特性： Erasure Code , OpenSSL , ZIP, KAL  
+大数据组件： MR, HDFS, YARN, Redis ...
+大数据平台：  Apache HDP/CDH 锐安大数据 中移动苏研 星环科技  
+
+
+SDS  分布式存储  
+
+综合性能比X86高10%以上  
+能耗低  
+安全可靠  
+简单易用
+Ceph 
+
+
+CPH  云手机
+云游戏，移动办公，云测试
+性能高
+普通手机模拟器，x86->ARM指令集翻译，会卡顿 ！！！ 
+兼容性好
+
+资源灵活分配
+虚拟化可扩容
+
+可靠易用  
+生命周期长  
+端云同构   
+鲲鹏服务器>手机AP/真机农场
+
+云手机架构  
+
+Android os
+Andoid Kernel
+Qemu for Android
+Linux kernel
+鲲鹏服务器+专业显卡+AI芯片  
+  
+
+Android 容器实现原理  (企业)
+
+云手机典型引用场景 
+托管型： 
+终端仿真  模拟真实手机，支撑系统层测试，比如手机ROM测试，视像头算法测试，EMUI测试等
+APP测试：支撑APP的功能，安全准入等测试  
+抢票：支撑抢票的APP应用  
+
+游戏性：云游戏在线试玩，将安卓游戏，迁移到云端运行，
+手机端只是一个输入输出。
+实现玩游戏免下载安装，即点即玩。
+
+办公型：
+VMI 移动办公，通过云手机支持移动办公，实现数据不落地。
+保障信息安全。
+移动应用云化  
+
+HPC  高性能计算
+
+Database  数据库   
+
+qemu 模拟器！！！
+开源的！！！
+
+Openssh
+ADB工具 
+aIrtest 链接云手机画面
+
+API 高分天气预报  
+Postman  API 测试工具  
+CloudIDE 华为鲲鹏 DEVCLOUD  编辑代码在云端  
+DevCloud  编译等等  
+
+端口5555
+
+公网IP  
+ProjectID 一样  
+
+注意：姓名及参数  
+
+android studio  
+云主机  
+Openssh  
+Minicap/minitouch  
++在云手机中运行 minicap minitouch  
++ 将minicap 和minitouch 使用的socket 端口 映射给云主机  
++ 客户端通过云主机端口 接收minicap 发送的画面， 上传给 minitouch   
+
+SSH隧道用户名：07fb10ca12800fe62f51c00ec03905d2

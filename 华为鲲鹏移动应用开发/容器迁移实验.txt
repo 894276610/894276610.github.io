@@ -1,0 +1,100 @@
+# 容器相关概念介绍  
+软件打包技术  
+使得软件具有可移植能力  
+软件的集装箱  
+
+容器与虚拟机  
+虚拟化层的位置  
+虚拟机中Guest OS(虚拟机操作系统内核)\ Hypervisor --> 容器中 Docker Engine 
+操作系统资源的使用方式  容器共享一个操作系统，体积相对较小  
+
+什么是Docker  
+几乎是事实上的容器标准  
+应用场景：  
+Web 应用的自动化打包和发布  
+
+Docker 容器与镜像  
+容器是镜像的实例  
+
+Docker架构  
+Client
+Docker_Host 
+Registry  
+
+Dockerfile  
+文本格式的配置文件  
+包含创建镜像所需要的全部指令   
+
+# 容器迁移的背景和原理  
+Docker 容器问题：  
+系统负载不均衡，主机硬件维护困难  
+容器x86->ARM  
+跨平台容器无法运行  
+
+容器迁移原理  
+1. 备份
+2. 恢复  
+
+容器迁移策略  
+Docker pull 获取镜像  
+Dockerfile 构建镜像  
+
+#容器迁移的主要流程  
+Docker 安装  
+Docker 构建基础镜像  
+Dockerfile 创建应用镜像  
+验证应用镜像  
+
+检查环境是否支持Docker  
+检查内核版本 
+```
+uname -r  
+```
+
+Docker 支持的 CentOS 版本要求  
++ CentOS 7 , 系统64 位， 系统内核版本为3.10以上  
++ CentOS 6.5+ ,系统64 位，系统内核版本为2.632-432+
+
+# 安装和启动Docker  
+[参考文档](https://docs.docker.com/install/linux/docker-ce/centos)  
+安装依赖软件包  
+安装Docker  
+```
+yun -y install docker 
+```
+启动Docker 服务  
+```
+systemctl start docker  
+```
+运行hello-world 
++ 由于本地没有 hello-world 这个镜像， 所以会下载一个helloo-world 镜像， 并在容器内运行
++ 对于本地没有的镜像，相当于先pull 再run 一个镜像   
+`docker run hello-world`
+
+Docker Hub  
+目前世界上最大的容器镜像仓库  
++ 查找 Docker Hub 上的CentOS 镜像  
+`docker search centos`  
+
+获取镜像  
++ 从docker hub 拉取官方的镜像arm64v8/centos, 标签为7  
+`docker pull arm64v8/centos:7`  
++ 查看拉取官方的镜像 arm64v8/centos, 本地镜像列表里查到REPOSITORY 为 arm64v8/centos，标签为7的镜像时，说明拉取成功  
+`docker images arm64v8/ventos:7`  
+
+启动和查看容器  
++ 使用镜像arm64v8/centos:7以交互模式启动一个容器， 在容器内执行 /bin/bash 命令  
+`docker run -it arm64v8/centos:7 /bin/bash`  
++ 如果需要推出 `Ctrl`+`D` 或者输入 exit  
++ 查看容器运行中和未运行的容器  
+`docker ps -a`  
+
+提交和查看新镜像 
++ 根据容器ID 创建一个新的镜像作为Redis 的基础镜像
+-a+作者 -m+文字说明 f+容器ID   
+`docker commit -a "huawei.com" -m "redis images" f4603f1f918at_arm64v8/centos:7`  
+
++ 查看新构建的基础镜像  
+
+
+

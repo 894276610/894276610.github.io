@@ -11,6 +11,32 @@
     
     
     <item>
+      <title>Markdown_basic</title>
+      <link>https://894276610.github.io/createblog/markdownlanguage/</link>
+      <pubDate>Thu, 06 Aug 2020 17:42:54 +0800</pubDate>
+      
+      <guid>https://894276610.github.io/createblog/markdownlanguage/</guid>
+      <description>Markdown编辑注重键盘操作，省去费时的鼠标操作，享受码字过程以及优质排版。
+这篇博客简单记录一下基本的Markdown使用入门
+ 准备工作 基本操作 参考文献 其他花絮  准备工作 VS code有丰富的插件，可以支持Markdown编辑以及预览
+其实还有很多专注Markdown文本编辑的软件
+ Typora Joplin Cmd Markdown  如果你选择VS code, 那么可能需要安装以下插件：
+ Markdown Toc 生成目录 Markdown All in One 实现基本语法 Markdown Preview Enhanced 实现预览效果
+点击VS code 软件内图标输入相应插件并下载  基本操作   换行
+行末加两个空格再按回车
+  加粗，倾斜
+**加粗** =&amp;gt; 加粗
+快捷键 Ctrl + B
+*倾斜* =&amp;gt; 倾斜
+快捷键 Ctrl + I
+  标题格式
+### 三级标题
+#### 四级标题
+最多支持六级标题
+  插入图片</description>
+    </item>
+    
+    <item>
       <title>tree命令</title>
       <link>https://894276610.github.io/%E5%8C%97%E9%82%AE%E6%9C%BA%E5%99%A8%E4%BA%BA%E5%9F%B9%E8%AE%AD/01-tree/</link>
       <pubDate>Wed, 05 Aug 2020 15:49:29 +0800</pubDate>
@@ -646,6 +672,54 @@ draft: false
     </item>
     
     <item>
+      <title></title>
+      <link>https://894276610.github.io/studypython/loadtext/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://894276610.github.io/studypython/loadtext/</guid>
+      <description>Python 文本载入
+import numpy as np import matplotlib.pyplot as plt #def load_data # 定义导入数字数据的函数 def load_data(filename): # 打开文件 fr = open(filename) # 设置存放数据的变量 x =[] y =[] # 按行读取数据 for line in fr.readlines(): # 数据预处理 # 去空 分割 line = line.strip().split() # 提取文件内容写入变量 x.append(float(line[0])) y.append(float(line[1])) # 转为矩阵形式方便后续插值 xmat = np.mat(x).T ymat = np.mat(y).T # 返回两个矩阵 return xmat, ymat #show xmat, ymat = load_data(&amp;#39;raw_number&amp;#39;) # 输出 矩阵内容， 矩阵维度， 数据类型 print(&amp;#39;xmat&amp;#39;,xmat,xmat.shape,type(xmat)) print(&amp;#39;ymat&amp;#39;,ymat,ymat.shape,type(ymat)) # scatter 散点图 # 需要将矩阵转化为array数组形式， 设置size，color plt.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://894276610.github.io/%E5%8C%97%E9%82%AE%E6%9C%BA%E5%99%A8%E4%BA%BA%E5%9F%B9%E8%AE%AD/02&#43;regular_expression/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://894276610.github.io/%E5%8C%97%E9%82%AE%E6%9C%BA%E5%99%A8%E4%BA%BA%E5%9F%B9%E8%AE%AD/02&#43;regular_expression/</guid>
+      <description>一段时间没有使用正则表达式，又有一点记不清楚了
+还是写点常用的加深印象
+   字符 描述     * 匹配前面的子表达式零次或多次   + 匹配前面的子表达式一次或多次   ？ 匹配前面的子表达式零次或一次   [xyz] 字符集合。匹配包含的任意一个字符   [^a-z] 负值字符范围。匹配任何不在指定范围内的任意字符   \d 匹配一个数字字符   . 除了换行符的任意字符   ^ 匹配开头   $ 匹配结尾    #打开一个文本文件 f = open (&amp;#39;123.txt&amp;#39;) #如果行的开头是1，那么打印这一行 for line in f: if line.startwith(&amp;#39;1&amp;#39;) and line.endwith(&amp;#39;\n&amp;#39;): print(line) import re a1 = &amp;#39;23dadfjgv23472&amp;#39; b1 = re.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://894276610.github.io/%E5%8C%97%E9%82%AE%E6%9C%BA%E5%99%A8%E4%BA%BA%E5%9F%B9%E8%AE%AD/02-calculator/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://894276610.github.io/%E5%8C%97%E9%82%AE%E6%9C%BA%E5%99%A8%E4%BA%BA%E5%9F%B9%E8%AE%AD/02-calculator/</guid>
+      <description>这篇文档参考汇总预备队里大神的作业
+作业1：计算器 设计python程序，输入字符串类型的数字运算，解析输出结果.
+计算两个数加减乘除即可,可以使用库函数.
+x = input() print(eval(x)) import re def calculation(str): # r表示其后的字符串按原样表示，不使用转义字符 pattern1=re.compile(r&amp;#39;-?\d+\.?-?\d*&amp;#39;) #regular expression 1 num = pattern1.findall(str) a=float(num[0]) b=float(num[1]) print(a,b) pattern2 = re.compile(r&amp;#39;[+\-\*\/]&amp;#39;)#regular expression 2 o = pattern2.findall(str,1) print(o) if o[0] == &amp;#39;+&amp;#39;: return a+b elif o[0] ==&amp;#39;-&amp;#39;: return a-b elif o[0] ==&amp;#39;*&amp;#39;: return a*b elif o[0] ==&amp;#39;/&amp;#39;: return a/b str = input() ans = calculation(str) print(ans) 使用python或c语言设计程序，已知三个控制点坐标（x1,y1）（x2,y2）（x3,y3）,规划一条路径
+参考资料： 北邮机器人队2020预备队培训（二） —— python入门 python基础教程</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://894276610.github.io/%E5%8C%97%E9%82%AE%E6%9C%BA%E5%99%A8%E4%BA%BA%E5%9F%B9%E8%AE%AD/02-path_planning/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://894276610.github.io/%E5%8C%97%E9%82%AE%E6%9C%BA%E5%99%A8%E4%BA%BA%E5%9F%B9%E8%AE%AD/02-path_planning/</guid>
+      <description>这篇文档参考汇总预备队里大神的作业
+作业2：使用python或c语言设计程序，已知三个控制点坐标（x1,y1）（x2,y2）（x3,y3）,规划一条路径
+新安装使用pycharm可能会出现numpy,matplotlib模块不存在的问题，
+可以在terminal中安装相应的包
+pip install numpy pip install matplotlib 首先是熟悉库函数的使用
+ 创建一个数组  import numpy as np a = np.array([1,2,3]) print(a)  创建一个多维数组  import numpy as np a = np.array([1,2],[3,4]) print(a)  最小维度  import numpy as np a = np.array([1,2,3,4,5],ndmin = 2) print(a)  参数设置  # dtype 参数  import numpy as np a = np.array([1,2,3], dtype = complex) print(a) 参考资料： numpy教程 北邮机器人队2020预备队培训（二） —— python入门 python基础教程</description>
+    </item>
+    
+    <item>
       <title>[Robotics]Books</title>
       <link>https://894276610.github.io/introduction_to_robotics/introduction/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -671,12 +745,32 @@ draft: false
     </item>
     
     <item>
+      <title>interpolation</title>
+      <link>https://894276610.github.io/studypython/interpolation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://894276610.github.io/studypython/interpolation/</guid>
+      <description>插值法
+import numpy as np import matplotlib.pyplot as plt #def load_data # 定义导入数字数据的函数 def load_data(filename): # 打开文件 fr = open(filename) # 设置存放数据的变量 x =[] y =[] # 按行读取数据 for line in fr.readlines(): # 数据预处理 #Python strip() 方法用于移除字符串头尾指定的字符（默认为空格或换行符）或字符序列 # 去空 分割 line = line.strip().split() # 提取文件内容写入变量 x.append(float(line[0])) y.append(float(line[1])) # 转为矩阵形式方便后续插值 xmat = np.mat(x).T ymat = np.mat(y).T # 返回两个矩阵 return xmat, ymat # 回归拟合 def interpolation(xmat,ymat): #设置参数 X = np.mat(np.zeros((4,4))) X[:,0] = xmat X[:,1] = xmat.</description>
+    </item>
+    
+    <item>
       <title>My Todo List</title>
       <link>https://894276610.github.io/todo/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://894276610.github.io/todo/</guid>
-      <description> Ros_21_glance_over C++  Primer Plus  ch8 (7.21-8.1) ch16 (8.1-8.10)   Video-1844118771  P1-P10 (7.25) P11-P20 (7.30) P21-P30 (8.2) P31-P40 (8.8) P41-P50 (8.14) P51-P60 (8.18) P61-P70 (8.24) P71-P76 (8.28)     ROS_21_examine_carefully  code reconstruction (7.22-8.1)  P10-12 P13-15 P16-17 P18 recovery the error P19-P21   &amp;ldquo;Introduction to Robotics&amp;rdquo;  Transformation of coordinates(7.21-8.1)      </description>
+      <description>   </description>
+    </item>
+    
+    <item>
+      <title>polynomial fitting</title>
+      <link>https://894276610.github.io/studypython/polynomial-fitting/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://894276610.github.io/studypython/polynomial-fitting/</guid>
+      <description>多项式拟合
+import numpy as np import matplotlib.pyplot as plt #def load_data # 定义导入数字数据的函数 def load_data(filename): # 打开文件 fr = open(filename) # 设置存放数据的变量 x =[] y =[] # 按行读取数据 for line in fr.readlines(): # 数据预处理 #Python strip() 方法用于移除字符串头尾指定的字符（默认为空格或换行符）或字符序列 # 去空 分割 line = line.strip().split() # 提取文件内容写入变量 x.append(float(line[0])) y.append(float(line[1])) # 转为矩阵形式方便后续插值 xmat = np.mat(x).T ymat = np.mat(y).T # 返回两个矩阵 return xmat, ymat # 回归拟合 def wb_calc(xmat, ymat,lam = 0,alpha = 0.0001,maxIter = 20000): #设置参数 m,n = xmat.</description>
     </item>
     
   </channel>

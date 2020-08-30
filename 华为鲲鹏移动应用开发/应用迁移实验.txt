@@ -1,0 +1,46 @@
+软件迁移实验：
+
+准备工作：
+putty远程登录软件
+winScp远程文件传输软件
+Porting-adviser
+PortingTest
+
+
+
+使用putty登录华为弹性云服务器：
+只需要输入IP地址和预先设定的密码即可
+
+检查GCC编译器版本：
+gcc -v
+发现版本为4.8.5符合要求  
+
+使用WinSCP传输文件到服务器  
+只需要输入IP地址和预先设定的密码
+拖动文件方便操作  
+
+在服务器解压Porting-Advisor文件  
+tar -zxvf Porting-advisor__2.2.T1_x86_64-linux.tar.gz
+进入安装包目录
+cd Porting-advisor_2.2.T1_x86_64-linux  
+安装Web方式  
+sh install.sh web
+IP地址为（这里我填写的是192.168.0.137）
+使用默认端口8084，默认tool port(7998)  
+
+使用WinSCP 在opt/portadv/portadmin 放入测试压缩包  
+putty 进入opt/portadv/portadmin
+
+解压源代码文件  
+unzip PortTest.zip
+
+在浏览器新建页面进入华为鲲鹏代码迁移工具网页
+https://117.78.1.125:8084
+
+系统默认用户名：portadmin
+系统默认密码：Admin@9000
+
+然后就是按照要求修改就成了。
+
+
+

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>云居小栈</title>
+<meta name="description" content="发布日期：2020年08月30日 午时  ">
+<meta name="generator" content="Hugo 0.73.0" />
+<link href="https://894276610.github.io//index.xml" rel="alternate" type="application/rss+xml">
+<link rel="canonical" href="https://894276610.github.io/%E5%8C%97%E9%82%AE%E6%9C%BA%E5%99%A8%E4%BA%BA%E5%9F%B9%E8%AE%AD/02-calculator/">
+<link rel="stylesheet" href="https://894276610.github.io/css/theme.min.css">
+<script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+<link rel="stylesheet" href="https://894276610.github.io/css/chroma.min.css">
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery.easing@1.4.1/jquery.easing.min.js"></script>
+<script src="https://894276610.github.io/js/bundle.js"></script><style>
+:root {}
+</style>
+<meta property="og:title" content="" />
+<meta property="og:description" content="这篇文档参考汇总预备队里大神的作业
+作业1：计算器 设计python程序，输入字符串类型的数字运算，解析输出结果.
+计算两个数加减乘除即可,可以使用库函数.
+x = input() print(eval(x)) import re def calculation(str): # r表示其后的字符串按原样表示，不使用转义字符 pattern1=re.compile(r&#39;-?\d&#43;\.?-?\d*&#39;) #regular expression 1 num = pattern1.findall(str) a=float(num[0]) b=float(num[1]) print(a,b) pattern2 = re.compile(r&#39;[&#43;\-\*\/]&#39;)#regular expression 2 o = pattern2.findall(str,1) print(o) if o[0] == &#39;&#43;&#39;: return a&#43;b elif o[0] ==&#39;-&#39;: return a-b elif o[0] ==&#39;*&#39;: return a*b elif o[0] ==&#39;/&#39;: return a/b str = input() ans = calculation(str) print(ans) 使用python或c语言设计程序，已知三个控制点坐标（x1,y1）（x2,y2）（x3,y3）,规划一条路径
+参考资料： 北邮机器人队2020预备队培训（二） —— python入门 python基础教程" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://894276610.github.io/%E5%8C%97%E9%82%AE%E6%9C%BA%E5%99%A8%E4%BA%BA%E5%9F%B9%E8%AE%AD/02-calculator/" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="这篇文档参考汇总预备队里大神的作业
+作业1：计算器 设计python程序，输入字符串类型的数字运算，解析输出结果.
+计算两个数加减乘除即可,可以使用库函数.
+x = input() print(eval(x)) import re def calculation(str): # r表示其后的字符串按原样表示，不使用转义字符 pattern1=re.compile(r&#39;-?\d&#43;\.?-?\d*&#39;) #regular expression 1 num = pattern1.findall(str) a=float(num[0]) b=float(num[1]) print(a,b) pattern2 = re.compile(r&#39;[&#43;\-\*\/]&#39;)#regular expression 2 o = pattern2.findall(str,1) print(o) if o[0] == &#39;&#43;&#39;: return a&#43;b elif o[0] ==&#39;-&#39;: return a-b elif o[0] ==&#39;*&#39;: return a*b elif o[0] ==&#39;/&#39;: return a/b str = input() ans = calculation(str) print(ans) 使用python或c语言设计程序，已知三个控制点坐标（x1,y1）（x2,y2）（x3,y3）,规划一条路径
+参考资料： 北邮机器人队2020预备队培训（二） —— python入门 python基础教程"/>
+<meta itemprop="name" content="">
+<meta itemprop="description" content="这篇文档参考汇总预备队里大神的作业
+作业1：计算器 设计python程序，输入字符串类型的数字运算，解析输出结果.
+计算两个数加减乘除即可,可以使用库函数.
+x = input() print(eval(x)) import re def calculation(str): # r表示其后的字符串按原样表示，不使用转义字符 pattern1=re.compile(r&#39;-?\d&#43;\.?-?\d*&#39;) #regular expression 1 num = pattern1.findall(str) a=float(num[0]) b=float(num[1]) print(a,b) pattern2 = re.compile(r&#39;[&#43;\-\*\/]&#39;)#regular expression 2 o = pattern2.findall(str,1) print(o) if o[0] == &#39;&#43;&#39;: return a&#43;b elif o[0] ==&#39;-&#39;: return a-b elif o[0] ==&#39;*&#39;: return a*b elif o[0] ==&#39;/&#39;: return a/b str = input() ans = calculation(str) print(ans) 使用python或c语言设计程序，已知三个控制点坐标（x1,y1）（x2,y2）（x3,y3）,规划一条路径
+参考资料： 北邮机器人队2020预备队培训（二） —— python入门 python基础教程">
+
+<meta itemprop="wordCount" content="67">
+
+
+
+<meta itemprop="keywords" content="" /></head>
+<body><div class="container"><header>
+<h1>云居小栈</h1>
+<a href="https://github.com/894276610/894276610.github.io" class="github"><i class="fab fa-github"></i></a>
+<p class="description">发布日期：2020年08月30日 午时  </p>
+
+</header>
+<div class="global-menu">
+<nav>
+<ul>
+<li><a href="/todo/">My Todo List</a></li></ul>
+</nav>
+</div>
+<div class="content-container">
+<main><h1></h1>
+<p>这篇文档参考汇总预备队里大神的作业<br>
+作业1：计算器
+设计python程序，输入字符串类型的数字运算，解析输出结果.<br>
+计算两个数加减乘除即可,可以使用库函数.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">x <span style="color:#f92672">=</span> input()
+<span style="color:#66d9ef">print</span>(eval(x))
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">import</span> re
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">calculation</span>(str):
+    <span style="color:#75715e"># r表示其后的字符串按原样表示，不使用转义字符</span>
+    pattern1<span style="color:#f92672">=</span>re<span style="color:#f92672">.</span>compile(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;-?\d+\.?-?\d*&#39;</span>) <span style="color:#75715e">#regular expression 1</span>
+    num <span style="color:#f92672">=</span> pattern1<span style="color:#f92672">.</span>findall(str)
+    a<span style="color:#f92672">=</span>float(num[<span style="color:#ae81ff">0</span>])
+    b<span style="color:#f92672">=</span>float(num[<span style="color:#ae81ff">1</span>])
+    <span style="color:#66d9ef">print</span>(a,b)
+    pattern2 <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>compile(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;[+\-\*\/]&#39;</span>)<span style="color:#75715e">#regular expression 2</span>
+    o <span style="color:#f92672">=</span> pattern2<span style="color:#f92672">.</span>findall(str,<span style="color:#ae81ff">1</span>)
+    <span style="color:#66d9ef">print</span>(o)
+    <span style="color:#66d9ef">if</span> o[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;+&#39;</span>:
+        <span style="color:#66d9ef">return</span> a<span style="color:#f92672">+</span>b
+    <span style="color:#66d9ef">elif</span> o[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">==</span><span style="color:#e6db74">&#39;-&#39;</span>:
+        <span style="color:#66d9ef">return</span> a<span style="color:#f92672">-</span>b
+    <span style="color:#66d9ef">elif</span> o[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">==</span><span style="color:#e6db74">&#39;*&#39;</span>:
+        <span style="color:#66d9ef">return</span> a<span style="color:#f92672">*</span>b
+    <span style="color:#66d9ef">elif</span> o[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">==</span><span style="color:#e6db74">&#39;/&#39;</span>:
+        <span style="color:#66d9ef">return</span> a<span style="color:#f92672">/</span>b
+
+str <span style="color:#f92672">=</span> input()
+ans <span style="color:#f92672">=</span> calculation(str)
+<span style="color:#66d9ef">print</span>(ans)
+</code></pre></div><p>使用python或c语言设计程序，已知三个控制点坐标（x1,y1）（x2,y2）（x3,y3）,规划一条路径</p>
+<p>参考资料：
+<a href="https://blog.csdn.net/qq_37668436/article/details/107633235">北邮机器人队2020预备队培训（二） —— python入门</a>
+<a href="https://www.runoob.com/python/python-tutorial.html">python基础教程</a></p>
+<div class="edit-meta">
+
+<br><a href="https://github.com/894276610/894276610.github.io/edit/master/content/%e5%8c%97%e9%82%ae%e6%9c%ba%e5%99%a8%e4%ba%ba%e5%9f%b9%e8%ae%ad%5c02-calculator.md" class="edit-page"><i class="fas fa-pen-square"></i> Edit on GitHub</a></div><nav class="pagination"><a class="nav nav-prev" href="https://894276610.github.io/%E5%8C%97%E9%82%AE%E6%9C%BA%E5%99%A8%E4%BA%BA%E5%9F%B9%E8%AE%AD/02&#43;regular_expression/" title=""><i class="fas fa-arrow-left" aria-hidden="true"></i> Prev - </a>
+<a class="nav nav-next" href="https://894276610.github.io/%E5%8C%97%E9%82%AE%E6%9C%BA%E5%99%A8%E4%BA%BA%E5%9F%B9%E8%AE%AD/02-path_planning/" title="">Next -  <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+</nav><footer><p class="powered">Powered by <a href="https://gohugo.io">Hugo</a>. Theme by <a href="https://themes.gohugo.io/hugo-theme-techdoc/">TechDoc</a>. Designed by <a href="https://github.com/thingsym/hugo-theme-techdoc">Thingsym</a>.</p>
+</footer>
+</main><div class="sidebar">
+
+<nav class="slide-menu">
+<ul>
+<li class=""><a href="https://894276610.github.io/">Home</a></li>
+
+<li class=" has-sub-menu"><a href="https://894276610.github.io/createblog/">CreateBlogs<span class="mark closed">+</span></a>
+  
+<ul class="sub-menu">
+<li class=""><a href="https://894276610.github.io/createblog/markdownlanguage/">Markdown_basic</a></li>
+<li class=""><a href="https://894276610.github.io/createblog/hugo_try/">HUGO</a></li>
+<li class=""><a href="https://894276610.github.io/createblog/firstblog/">Bolg</a></li>
+</ul>
+  
+</li>
+
+<li class="parent has-sub-menu"><a href="https://894276610.github.io/%E5%8C%97%E9%82%AE%E6%9C%BA%E5%99%A8%E4%BA%BA%E5%9F%B9%E8%AE%AD/">北邮机器人培训s<span class="mark opened">-</span></a>
+  
+<ul class="sub-menu">
+<li class=""><a href="https://894276610.github.io/%E5%8C%97%E9%82%AE%E6%9C%BA%E5%99%A8%E4%BA%BA%E5%9F%B9%E8%AE%AD/01-tree/">tree命令</a></li>
+<li class=""><a href="https://894276610.github.io/%E5%8C%97%E9%82%AE%E6%9C%BA%E5%99%A8%E4%BA%BA%E5%9F%B9%E8%AE%AD/02&#43;regular_expression/"></a></li>
+<li class="active"><a href="https://894276610.github.io/%E5%8C%97%E9%82%AE%E6%9C%BA%E5%99%A8%E4%BA%BA%E5%9F%B9%E8%AE%AD/02-calculator/"></a></li>
+<li class=""><a href="https://894276610.github.io/%E5%8C%97%E9%82%AE%E6%9C%BA%E5%99%A8%E4%BA%BA%E5%9F%B9%E8%AE%AD/02-path_planning/"></a></li>
+</ul>
+  
+</li>
+
+<li class=" has-sub-menu"><a href="https://894276610.github.io/studycpp/">StudyCpps<span class="mark closed">+</span></a>
+  
+<ul class="sub-menu">
+<li class=""><a href="https://894276610.github.io/studycpp/houjie/houjiecpp_02/">[Cpp] P6-P8 </a></li>
+<li class=""><a href="https://894276610.github.io/studycpp/houjie/houjiecpp_03/">[Cpp] P9 </a></li>
+<li class=""><a href="https://894276610.github.io/studycpp/houjie/houjiecpp_01/">[Cpp] P1-P5 complex </a></li>
+<li class=""><a href="https://894276610.github.io/studycpp/book01/">[Cpp]Book_List</a></li>
+<li class=""><a href="https://894276610.github.io/studycpp/details/">[Cpp]琐碎细节-待续</a></li>
+<li class=""><a href="https://894276610.github.io/studycpp/overload_operator/">[Cpp]Overload_operator</a></li>
+</ul>
+  
+</li>
+
+<li class=" has-sub-menu"><a href="https://894276610.github.io/guyuero/">GuYueRos<span class="mark closed">+</span></a>
+  
+<ul class="sub-menu">
+<li class=""><a href="https://894276610.github.io/guyuero/21-summary/">[21]Summary</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/20-visual-aids/">[20]Visual aids</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/19-launch-file/">[19]launch file</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/18-broadcaster-and-listener/">[18]Broadcaster and listener</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/17-transformation/">[17]Transformation</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/16-parameters/">[16]Parameters</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/15-define-service/">[15]define service</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/14-server/">[14]Server</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/13-client/">[13]Client</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/12-topic-define/">[12]Topic define</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/12&#43;topic-define/">[12]Topic_define&#43;</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/11-subscriber/">[11]Subscriber</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/10-publisher/">[10]Publisher</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/09-workspace-and-package/">[9]Workspace and package</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/05-install-ros/">[5]Install Ros</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/08-ros-command-line/">[8]Ros Command Line</a></li>
+<li class=""><a href="https://894276610.github.io/guyuero/07-ros-concept/">[7]Ros Concept</a></li>
+</ul>
+  
+</li>
+
+
+
+<li class=" has-sub-menu"><a href="https://894276610.github.io/extrathing/">ExtraThings<span class="mark closed">+</span></a>
+  
+<ul class="sub-menu">
+<li class=""><a href="https://894276610.github.io/extrathing/titlephoto/">[花絮]头像制作思路</a></li>
+</ul>
+  
+</li>
+
+<li class=" has-sub-menu"><a href="https://894276610.github.io/introduction_to_robotics/">Introduction_to_robotics<span class="mark closed">+</span></a>
+  
+<ul class="sub-menu">
+<li class=""><a href="https://894276610.github.io/introduction_to_robotics/introduction/">[Robotics]Books</a></li>
+<li class=""><a href="https://894276610.github.io/introduction_to_robotics/coordinate_transformation/">[Robotics]Transformation</a></li>
+</ul>
+  
+</li>
+
+<li class=" has-sub-menu"><a href="https://894276610.github.io/studypython/">StudyPythons<span class="mark closed">+</span></a>
+  
+<ul class="sub-menu">
+<li class=""><a href="https://894276610.github.io/studypython/loadtext/"></a></li>
+<li class=""><a href="https://894276610.github.io/studypython/interpolation/">interpolation</a></li>
+<li class=""><a href="https://894276610.github.io/studypython/polynomial-fitting/">polynomial fitting</a></li>
+</ul>
+  
+</li>
+</ul>
+</nav>
+
+
+
+<div class="sidebar-footer"></div>
+</div>
+</div><a href="#" id="backtothetop-fixed" class="backtothetop"
+ data-backtothetop-duration="600"
+ data-backtothetop-easing="easeOutQuart"
+ data-backtothetop-fixed-fadeIn="1000"
+ data-backtothetop-fixed-fadeOut="1000"
+ data-backtothetop-fixed-bottom="10"
+ data-backtothetop-fixed-right="20">
+<span class="fa-layers fa-fw">
+<i class="fas fa-circle"></i>
+<i class="fas fa-arrow-circle-up"></i>
+</span></a>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_SVG"></script>
+</div>
+</body>
+</html>

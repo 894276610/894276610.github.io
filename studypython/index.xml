@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>StudyPythons on 云居小栈</title>
+    <link>https://894276610.github.io/studypython/</link>
+    <description>Recent content in StudyPythons on 云居小栈</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	<atom:link href="https://894276610.github.io/studypython/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>https://894276610.github.io/studypython/loadtext/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://894276610.github.io/studypython/loadtext/</guid>
+      <description>Python 文本载入
+import numpy as np import matplotlib.pyplot as plt #def load_data # 定义导入数字数据的函数 def load_data(filename): # 打开文件 fr = open(filename) # 设置存放数据的变量 x =[] y =[] # 按行读取数据 for line in fr.readlines(): # 数据预处理 # 去空 分割 line = line.strip().split() # 提取文件内容写入变量 x.append(float(line[0])) y.append(float(line[1])) # 转为矩阵形式方便后续插值 xmat = np.mat(x).T ymat = np.mat(y).T # 返回两个矩阵 return xmat, ymat #show xmat, ymat = load_data(&amp;#39;raw_number&amp;#39;) # 输出 矩阵内容， 矩阵维度， 数据类型 print(&amp;#39;xmat&amp;#39;,xmat,xmat.shape,type(xmat)) print(&amp;#39;ymat&amp;#39;,ymat,ymat.shape,type(ymat)) # scatter 散点图 # 需要将矩阵转化为array数组形式， 设置size，color plt.</description>
+    </item>
+    
+    <item>
+      <title>interpolation</title>
+      <link>https://894276610.github.io/studypython/interpolation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://894276610.github.io/studypython/interpolation/</guid>
+      <description>插值法
+import numpy as np import matplotlib.pyplot as plt #def load_data # 定义导入数字数据的函数 def load_data(filename): # 打开文件 fr = open(filename) # 设置存放数据的变量 x =[] y =[] # 按行读取数据 for line in fr.readlines(): # 数据预处理 #Python strip() 方法用于移除字符串头尾指定的字符（默认为空格或换行符）或字符序列 # 去空 分割 line = line.strip().split() # 提取文件内容写入变量 x.append(float(line[0])) y.append(float(line[1])) # 转为矩阵形式方便后续插值 xmat = np.mat(x).T ymat = np.mat(y).T # 返回两个矩阵 return xmat, ymat # 回归拟合 def interpolation(xmat,ymat): #设置参数 X = np.mat(np.zeros((4,4))) X[:,0] = xmat X[:,1] = xmat.</description>
+    </item>
+    
+    <item>
+      <title>polynomial fitting</title>
+      <link>https://894276610.github.io/studypython/polynomial-fitting/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://894276610.github.io/studypython/polynomial-fitting/</guid>
+      <description>多项式拟合
+import numpy as np import matplotlib.pyplot as plt #def load_data # 定义导入数字数据的函数 def load_data(filename): # 打开文件 fr = open(filename) # 设置存放数据的变量 x =[] y =[] # 按行读取数据 for line in fr.readlines(): # 数据预处理 #Python strip() 方法用于移除字符串头尾指定的字符（默认为空格或换行符）或字符序列 # 去空 分割 line = line.strip().split() # 提取文件内容写入变量 x.append(float(line[0])) y.append(float(line[1])) # 转为矩阵形式方便后续插值 xmat = np.mat(x).T ymat = np.mat(y).T # 返回两个矩阵 return xmat, ymat # 回归拟合 def wb_calc(xmat, ymat,lam = 0,alpha = 0.0001,maxIter = 20000): #设置参数 m,n = xmat.</description>
+    </item>
+    
+  </channel>
+</rss>
